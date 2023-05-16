@@ -1,0 +1,13 @@
+.header-container {
+  background-image: linear-gradient(to right, rgb(39, 39, 71), gray);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.header-container__list {
+  /* list-style: none; */
+  display: flex;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
