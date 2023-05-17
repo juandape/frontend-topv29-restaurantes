@@ -1,13 +1,14 @@
-import { createBrowserRouter } from "react-router-dom";
-import Root from "../layout/root";
-import AboutPage from "../pages/about/About";
-import Home from "../pages/home/Home";
+import { createBrowserRouter } from 'react-router-dom';
+import React from 'react';
+import Root from '../layout/root';
+import AboutPage from '../pages/about/About';
+import Home from '../pages/home/Home';
 // import ProductCard, { loaderProduct } from "../components/ProductCard";
-import NotFound from "../pages/notfound/NotFound";
+import NotFound from '../pages/notfound/NotFound';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
     errorElement: <NotFound />,
     children: [
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
         // loader: loaderProducts,
       },
       {
-        path: "about",
+        path: 'about',
         element: <AboutPage />,
       },
       // {
