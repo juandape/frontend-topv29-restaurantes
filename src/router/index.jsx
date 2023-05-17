@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/root";
-import AboutPage from "../pages/About";
-import Home from "../pages/Home";
+import AboutPage from "../pages/about/About";
+import Home from "../pages/home/Home";
 // import ProductCard, { loaderProduct } from "../components/ProductCard";
-import NotFound from "../pages/NotFound";
+import NotFound from "../pages/notfound/NotFound";
 
 const router = createBrowserRouter([
   {
