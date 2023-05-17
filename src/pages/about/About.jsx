@@ -1,4 +1,5 @@
-import "./about.css";
+import './about.css';
+import React from 'react';
 
 function AboutPage() {
   return (
@@ -6,15 +7,9 @@ function AboutPage() {
       <h1 className="about--title">About Us</h1>
       <div className="about-container">
         <div className="about-container__info">
-          <img
-            src=""
-            alt="author image"
-            className="about-container--img"
-          />
+          <img src="http//" alt="autor" className="about-container--img" />
           <div className="about-container--description">
-            <h2 className="about-container--description--name">
-             nombres
-            </h2>
+            <h2 className="about-container--description--name">nombres</h2>
             <p className="about-container--description--text">
               Fullstack Developers, Make It Real students
             </p>
@@ -30,7 +25,9 @@ function AboutPage() {
         </div>
         <div className="about-container__social">
           <h3>
-            github: <a href="https://">@ @ @ </a>
+            github:
+            {' '}
+            <a href="https://">@ @ @ </a>
           </h3>
           <h3>
             email:

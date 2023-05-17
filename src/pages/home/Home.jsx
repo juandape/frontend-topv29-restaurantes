@@ -1,8 +1,8 @@
 // import { Link, useLoaderData } from "react-router-dom";
-import "./home.css";
+import React from 'react';
+import './home.css';
 
-const HomePage = () => {
-
+function HomePage() {
   return (
     <div>
       <h1>RESTAURANTES</h1>
@@ -10,11 +10,11 @@ const HomePage = () => {
       <p>imagen por aca</p>
     </div>
   );
-};
+}
 
 export default HomePage;
 
-// eslint-disable-next-line react-refresh/only-export-components
+// // eslint-disable-next-line react-refresh/only-export-components
 // export const loaderProducts = async () => {
 //   const response = await fetch("https://fakestoreapi.com/products");
 
