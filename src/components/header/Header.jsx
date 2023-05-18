@@ -26,6 +26,9 @@ function Header() {
           <div>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
+          <div>
+            <NavLink to='/'> LOGIN </NavLink>
+          </div>
         </div>
         <div
           className={`header-container--toggle ${isOpen && 'open'}`}
