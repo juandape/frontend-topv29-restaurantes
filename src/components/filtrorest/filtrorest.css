@@ -17,14 +17,52 @@
   text-align: center;
 }
 
-.container__filter--input{
-border-radius: 10px;
-background-color: rgb(225, 225, 240);
+.container__filter--input {
+  border-radius: 10px;
+  background-color: rgb(225, 225, 240);
 }
 
-.container__filter--button{
-border-radius: 10px;
-background-color:  rgb(225, 225, 240);
-color: black;
-font-weight: bold;
+.container__filter--button {
+  border-radius: 10px;
+  background-color: rgb(225, 225, 240);
+  color: black;
+  font-weight: bold;
+}
+
+.container__filter--button:hover{
+  background-color: orange;
+  color: white;
+}
+
+@media (min-width: 376px) {
+  .containter__filter {
+    flex-direction: row;
+    margin-top: -100px;
+    margin-bottom: 100px;
+    margin-left: 15px;
+    width: 400px;
+  }
+
+  .container__filter--label {
+    font-size: 25px;
+    padding: 7px;
+  }
+
+  .container__filter--input {
+    padding: 7px;
+  }
+
+  .container__filter--button {
+   padding: 7px;
+   font-size: 14px;
+  }
+}
+
+@media (min-width: 760px) {
+  .containter__filter {
+    flex-direction: row;
+    margin-top: -100px;
+    margin-left: 15px;
+    width: 500px;
+  }
 }

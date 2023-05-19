@@ -6,12 +6,14 @@ import './home.css';
 
 function HomePage() {
   return (
-    <div className='container__home'>
+    <>
       <RestFilter />
-      <h1>RESTAURANTES</h1>
-      <p>texto aqui</p>
-      <p>imagen por aca</p>
-    </div>
+      <div className='container__home'>
+        <h1>RESTAURANTES</h1>
+        <p>texto aqui</p>
+        <p>imagen por aca</p>
+      </div>
+    </>
   );
 }
 
