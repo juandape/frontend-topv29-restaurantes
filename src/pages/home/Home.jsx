@@ -7,9 +7,8 @@ import './home.css';
 function HomePage() {
   return (
     <div className='container__home'>
-      <h1>RESTAURANTES</h1>
       <RestFilter />
-      <EatFilter />
+      <h1>RESTAURANTES</h1>
       <p>texto aqui</p>
       <p>imagen por aca</p>
     </div>

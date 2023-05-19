@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import restaurantsdata from '../../assets/restaurantsdata.json';
+import './filtrorest.css'
 
-async function getEpisodes() {
-  const response = await fetch('https://rickandmortyapi.com/api/episode/');
+async function getData() {
+  const response = await fetch('');
   const data = await response.json();
   return data.results;
 }
@@ -25,10 +26,10 @@ function RestFilter() {
   }
 
   return (
-    <div>
-      <label>Busca tu restaurante  </label>
-      <input type="text" value={search} onChange={handleChange} />
-    <button onClick={handleClick}>Search</button>
+    <div className='containter__filter'>
+      <label className='container__filter--label'>Busca tu restaurante  </label>
+      <input className='container__filter--input' type="text" value={search} onChange={handleChange} />
+    <button className='container__filter--button' onClick={handleClick}>Search</button>
     </div>
   );
 }

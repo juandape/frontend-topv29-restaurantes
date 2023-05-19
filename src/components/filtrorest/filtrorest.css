@@ -1,0 +1,30 @@
+.containter__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: -100px;
+  margin-left: 75px;
+  width: 200px;
+  align-items: center;
+}
+
+.container__filter--label {
+  color: orange;
+  font-weight: bolder;
+  background: linear-gradient(to right, rgb(88, 86, 86) 0%, rgb(134, 129, 129));
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.container__filter--input{
+border-radius: 10px;
+background-color: rgb(225, 225, 240);
+}
+
+.container__filter--button{
+border-radius: 10px;
+background-color:  rgb(225, 225, 240);
+color: black;
+font-weight: bold;
+}
