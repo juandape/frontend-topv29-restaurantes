@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
+import './filtrocomida.css'
 
 function EatFilter() {
   return (
-    <div>
-      <select name='' id=''>
-        <option value='' disabled selected hidden>
-          escoge que quieres
-        </option>
-        <option value='1'>Desayunar</option>
-        <option value='2'>Almorzar</option>
-        <option value='3'>Comer</option>
-      </select>
-      <button>Go</button>
+    <div className='container__food'>
+      <button className='container__food--button'>
+        <label className='container__food--label' htmlFor="">Desayuno</label>
+        <img className='container__food--img' src="../public/images/desayuno.jpg" alt="desayuno" />
+      </button>
+      <button className='container__food--button'>
+      <label className='container__food--label' htmlFor="">Almuerzo</label>
+        <img className='container__food--img' src="../public/images/almuerzo.jpg" alt="desayuno" />
+      </button>
+      <button className='container__food--button'>
+      <label className='container__food--label' htmlFor="">Cena</label>
+        <img className='container__food--img' src="../public/images/cena.jpg" alt="desayuno" />
+      </button>
+      <button className='container__food--button'>
+      <label className='container__food--label' htmlFor="">Fast Food</label>
+        <img className='container__food--img' src="../public/images/fastfood.jpg" alt="desayuno" />
+      </button>
     </div>
   );
 }

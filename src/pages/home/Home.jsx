@@ -9,6 +9,7 @@ function HomePage() {
     <>
       <RestFilter />
       <div className='container__home'>
+        <EatFilter />
         <h1>RESTAURANTES</h1>
         <p>texto aqui</p>
         <p>imagen por aca</p>
