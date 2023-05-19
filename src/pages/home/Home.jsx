@@ -1,15 +1,10 @@
-// import { Link, useLoaderData } from "react-router-dom";
 import React from 'react';
-import RestFilter from '../../components/filtrorest/Filtrorestaurant';
-import EatFilter from '../../components/filtrocomida/Filtrocomida';
 import './home.css';
 
 function HomePage() {
   return (
     <div className='container__home'>
       <h1>RESTAURANTES</h1>
-      <RestFilter />
-      <EatFilter />
       <p>texto aqui</p>
       <p>imagen por aca</p>
     </div>
