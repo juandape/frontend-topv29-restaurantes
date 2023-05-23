@@ -32,3 +32,18 @@
     justify-content: space-around;
     color: aliceblue;
 }
+
+@media (max-width: 768px){
+    .container_fot{
+        background-color: #3b302a;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 2em 3em;
+        justify-content: space-between;
+        align-items:first baseline;
+    }
+
+
+
+}
