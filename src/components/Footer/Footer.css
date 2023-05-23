@@ -1,0 +1,34 @@
+.container_fot{
+    background-color: #3b302a;
+    display: flex;
+    padding: 2em 3em;
+    justify-content: space-between;
+    align-items:first baseline;
+}
+
+.fot{
+    width: 33.33%;
+    font-size: 0.7em;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fot_title{
+    font-size: 2em;
+
+
+}
+.contene{
+    background-color: #3b302a;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    padding: 2em 3em;
+    align-items:first baseline;
+}
+
+.contenedorRedes{
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    color: aliceblue;
+}
