@@ -27,8 +27,8 @@ function RestFilter() {
 
   return (
     <div className='containter__filter'>
-      <label className='container__filter--label'>Busca tu restaurante  </label>
-      <input className='container__filter--input' type="text" value={search} onChange={handleChange} />
+      {/* <label className='container__filter--label'>Busca tu restaurante  </label> */}
+      <input className='container__filter--input' type="text" value={search} placeholder='Busca tu restaurante' onChange={handleChange} />
     <button className='container__filter--button' onClick={handleClick}>Search</button>
     </div>
   );

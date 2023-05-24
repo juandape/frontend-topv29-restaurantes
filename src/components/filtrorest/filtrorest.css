@@ -8,28 +8,37 @@
   align-items: center;
 }
 
-.container__filter--label {
-  color: orange;
+/* .container__filter--label {
+  color: rgb(196, 131, 11);
   font-weight: bolder;
-  background: linear-gradient(to right, rgb(88, 86, 86) 0%, rgb(134, 129, 129));
+  background-color: white;
+  border: 1px solid orange;
   font-size: 18px;
   width: 100%;
+  text-align: center;
+  border-radius: 3px;
+} */
+::placeholder{
+  color: rgb(196, 131, 11);
   text-align: center;
 }
 
 .container__filter--input {
-  border-radius: 10px;
-  background-color: rgb(225, 225, 240);
+  border-radius: 5px;
+  border: 2px solid orange;
+  color: rgb(143, 96, 10);
+  padding: 5px;
 }
 
 .container__filter--button {
-  border-radius: 10px;
-  background-color: rgb(225, 225, 240);
-  color: black;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(196, 131, 11);
   font-weight: bold;
+  border-color: orange;
 }
 
-.container__filter--button:hover{
+.container__filter--button:hover {
   background-color: orange;
   color: white;
 }
@@ -43,18 +52,23 @@
     width: 400px;
   }
 
-  .container__filter--label {
+  ::placeholder{
+    font-size: 16px;
+  }
+
+  /* .container__filter--label {
     font-size: 25px;
     padding: 7px;
-  }
+  } */
 
   .container__filter--input {
     padding: 7px;
+    font-size: 18px;
   }
 
   .container__filter--button {
-   padding: 7px;
-   font-size: 14px;
+    padding: 7px;
+    font-size: 14px;
   }
 }
 
