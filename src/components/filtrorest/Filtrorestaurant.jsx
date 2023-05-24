@@ -1,36 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import './filtrorest.css';
 import axios from 'axios';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const url = 'https://api-restaurants.onrender.com/api/restaurants';
 
-
 function RestFilter() {
-  const [searchRest, setSearchRest] = useState([]);
-
+  const [restaurantes, setRestaurantes] = useState([]);
+  const [search, setSearch] = useState('');
   useEffect(() => {
     const getRestaurants = async () => {
       const { data, status } = await axios.get(url);
-      if (status === 200) setSearchRest(data);
+      if (status === 200) setRestaurantes(data);
     };
     getRestaurants();
   }, []);
 
-  console.log(searchRest);
+  console.log(restaurantes);
 
   const handleChange = (event) => {
-    // event.preventDefault();
-    setSearchRest(event.target.value);
+    setSearch(event.target.value);
+    filteredRestaurants(event.target.value);
   };
 
-  const handleClick = () => {
-    const filteredRestaurants = searchRest.filter((rest) => {
-      if (rest.name.toUpperCase().includes(searchRest.toUpperCase())) {
-        return console.log(rest.name)
+  const filteredRestaurants = (searching) => {
+   const resultado = restaurantes.filter((rest) => {
+      if (
+        rest.name.toString().toLowerCase().includes(searching.toLowerCase())
+      ) {
+        return rest;
       }
-      return null;
     });
-    filteredRestaurants();
+    setRestaurantes(resultado);
   };
+
+  //pendiente por resolver
+  const handleClick = (event) => {
+    event.preventDefault();
+    alert(filteredRestaurants(search))
+  }
 
   return (
     <div className='containter__filter'>
@@ -38,12 +46,12 @@ function RestFilter() {
       <input
         className='container__filter--input'
         type='text'
-        value={searchRest}
+        value={search}
         placeholder='Busca tu restaurante'
         onChange={handleChange}
       />
       <button className='container__filter--button' onClick={handleClick}>
-        Search
+        <FontAwesomeIcon icon={faSearch} />
       </button>
     </div>
   );

@@ -1,8 +1,7 @@
 .containter__filter {
   display: flex;
-  flex-direction: column;
   gap: 5px;
-  margin-top: -100px;
+  margin-top: -80px;
   margin-left: 75px;
   width: 200px;
   align-items: center;
@@ -32,6 +31,7 @@
 
 .container__filter--button {
   border-radius: 5px;
+  padding: 5px;
   background-color: white;
   color: rgb(196, 131, 11);
   font-weight: bold;
@@ -67,7 +67,7 @@
   }
 
   .container__filter--button {
-    padding: 7px;
+    padding: 10px;
     font-size: 14px;
   }
 }
