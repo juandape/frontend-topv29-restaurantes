@@ -34,10 +34,10 @@ function RestFilter() {
     setRestaurantes(resultado);
   };
 
-  //pendiente por resolver
+  //pendiente por resolver debe pintar el resultado de la busqueda
   const handleClick = (event) => {
     event.preventDefault();
-    alert(filteredRestaurants(search))
+    alert(restaurantes.map((rest) => rest.name))
   }
 
   return (
@@ -50,7 +50,7 @@ function RestFilter() {
         placeholder='Busca tu restaurante'
         onChange={handleChange}
       />
-      <button className='container__filter--button' onClick={handleClick}>
+      <button type='submit' className='container__filter--button' onClick={handleClick}>
         <FontAwesomeIcon icon={faSearch} />
       </button>
     </div>
