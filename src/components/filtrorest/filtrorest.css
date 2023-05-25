@@ -17,7 +17,7 @@
   text-align: center;
   border-radius: 3px;
 } */
-::placeholder{
+::placeholder {
   color: rgb(196, 131, 11);
   text-align: center;
 }
@@ -32,8 +32,8 @@
 .container__filter--button {
   border-radius: 5px;
   padding: 5px;
-  background-color: white;
-  color: rgb(196, 131, 11);
+  background-color: rgb(196, 131, 11);
+  color: white;
   font-weight: bold;
   border-color: orange;
 }
@@ -52,7 +52,7 @@
     width: 400px;
   }
 
-  ::placeholder{
+  ::placeholder {
     font-size: 16px;
   }
 

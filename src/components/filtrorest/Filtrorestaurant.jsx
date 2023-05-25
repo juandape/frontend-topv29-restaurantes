@@ -24,7 +24,7 @@ function RestFilter() {
   };
 
   const filteredRestaurants = (searching) => {
-   const resultado = restaurantes.filter((rest) => {
+    const resultado = restaurantes.filter((rest) => {
       if (
         rest.name.toString().toLowerCase().includes(searching.toLowerCase())
       ) {
@@ -34,11 +34,10 @@ function RestFilter() {
     setRestaurantes(resultado);
   };
 
-  //pendiente por resolver debe pintar el resultado de la busqueda
   const handleClick = (event) => {
     event.preventDefault();
-    alert(restaurantes.map((rest) => rest.name))
-  }
+    alert(restaurantes.map((rest) => rest.name));
+  };
 
   return (
     <div className='containter__filter'>
@@ -50,7 +49,11 @@ function RestFilter() {
         placeholder='Busca tu restaurante'
         onChange={handleChange}
       />
-      <button type='submit' className='container__filter--button' onClick={handleClick}>
+      <button
+        type='submit'
+        className='container__filter--button'
+        onClick={handleClick}
+      >
         <FontAwesomeIcon icon={faSearch} />
       </button>
     </div>
