@@ -1,4 +1,4 @@
-.container__food{
+.container__food {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -6,37 +6,36 @@
   text-align: center;
 }
 
-.container__food--label{
+.container__food--label {
   font-size: 16px;
-
 }
 
-.container__food--button{
+.container__food--button {
   border: transparent;
   background-color: white;
   border-radius: 50px;
 }
 
-.container__food--button:hover{
+.container__food--button:hover {
   width: 150px;
   cursor: pointer;
 }
 
-.container__food--img{
+.container__food--img {
   border-radius: 10px;
 }
 
-@media (min-width: 476px){
-  .container__food{
+@media (min-width: 476px) {
+  .container__food {
     display: flex;
     gap: 10px;
     width: 650px;
     text-align: center;
   }
-  .container__food--label{
+  .container__food--label {
     font-size: 15px;
   }
-  .container__food--button:hover{
+  .container__food--button:hover {
     width: 1700px;
     cursor: pointer;
   }
