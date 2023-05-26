@@ -13,19 +13,19 @@ function Formularioedit() {
     }
 );
 };
-const resta =7;
+  const resta ="3";
 
-const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
 event.preventDefault();
 
-  const url = `https://api-restaurants.onrender.com/api/restaurants/${resta}`
-  const config = {
-    method: 'PATCH',
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-    body: JSON.stringify(Restaurant),
-  }
+    const url = `https://api-restaurants.onrender.com/api/restaurants/${resta}`;
+    const config = {
+      method: 'PATCH',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify(Restaurant),
+    }
 
   try {
   const response = await fetch(url, config);
