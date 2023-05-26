@@ -8,19 +8,20 @@ import RegFormAdmin from '../../components/registerform/Regformadmin';
 import LoginFormUser from '../../components/loginform/Loginformuser';
 import RegFormUser from '../../components/registerform/Regformuser';
 
+
 function HomePage() {
   return (
     <>
-      {/* <RestFilter /> */}
+      <RestFilter />
       <div className='container__home'>
-        {/* <EatFilter /> */}
+        <EatFilter />
         <h1>RESTAURANTES</h1>
         <p>texto aqui</p>
         <p>imagen por aca</p>
         <RegFormAdmin />
-        <RegFormUser />
+        {/* <RegFormUser /> */}
         <LoginFormAdmin />
-        <LoginFormUser />
+        {/* <LoginFormUser /> */}
       </div>
     </>
   );

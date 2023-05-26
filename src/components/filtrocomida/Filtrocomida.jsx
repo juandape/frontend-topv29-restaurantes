@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './filtrocomida.css';
-
-const url = 'https://api-restaurants.onrender.com/api/restaurants';
+const BASE_URL = import.meta.env.VITE_API_URL;
+const url = `${BASE_URL}/api/restaurants`;
 
 function EatFilter() {
   const [foods, setFoods] = useState([]);
