@@ -1,12 +1,13 @@
 import React from 'react';
 import './home.css';
-
+import Addfood from '../../components/formaddfood/Addfood';
 function HomePage() {
   return (
     <div className='container__home'>
       <h1>RESTAURANTES</h1>
       <p>texto aqui</p>
       <p>imagen por aca</p>
+      <Addfood/>
     </div>
   );
 }
