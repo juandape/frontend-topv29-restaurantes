@@ -21,7 +21,8 @@ function HomePage() {
         {/* <RegFormUser /> */}
         <LoginFormAdmin />
         {/* <LoginFormUser /> */}
-      </div>
+        <Addfood/>
+    </div>
     </>
   );
 }
