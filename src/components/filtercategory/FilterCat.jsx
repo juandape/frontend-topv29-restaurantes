@@ -1,5 +1,5 @@
-
 import React { useState, useEffect} from "react";
+
 
 const FilterCat = () => {
     const [ Filter, SetFilter ] = useState ([]);
@@ -32,7 +32,6 @@ const FilterCat = () => {
     return(
         <div>
             <input value={search} onChange={ searcher } type="text" placeholder="Buscar por Categoría">
-
             </input>
             {results.map((categ) => (
                 <p key={ id }>
