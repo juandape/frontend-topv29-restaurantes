@@ -14,9 +14,9 @@ import CrearComentario from '../../components/comentarios/Comentarios';
 function HomePage() {
   return (
     <>
-      {/* <RestFilter /> */}
+      <RestFilter />
       <div className='container__home'>
-        {/* <EatFilter /> */}
+        <EatFilter />
         <h1>RESTAURANTES</h1>
         <p>texto aqui</p>
         <p>imagen por aca</p>
