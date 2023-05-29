@@ -1,0 +1,111 @@
+.container__comments{
+  text-align: center;
+  border: 3px solid orange;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px gray;
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 50px;
+  width: 340px;
+}
+
+.container__comments--title{
+  font-size: 20px;
+  color: rgb(190, 136, 34);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.container__comments--form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+}
+
+.container__comments--label{
+  font-size: 15px;
+  margin-left: 15px;
+  color: rgb(190, 136, 34);
+}
+
+.container__comments--input{
+  border-radius: 5px;
+  border-color: orange;
+  padding: 3px;
+  margin-right: 15px;
+}
+
+.container__comments--textarea{
+  border-radius: 5px;
+  border-color: orange;
+  padding: 8px 8px 80px 8px;
+  margin-right: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container__comments--button{
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.container__comments--button:hover{
+  background-color: rgba(255, 166, 0, 0.699);
+  color: white;
+  border: 1px solid orange;
+}
+
+@media (min-width: 376px) {
+  .container__comments {
+    padding: 20px;
+    width: 400px;
+  }
+
+  .container__comments--title {
+    font-size: 25px;
+    margin-bottom: 30px;
+    width: 400px;
+  }
+
+  .container__comments__form {
+    gap: 10px;
+  }
+
+  .container__comments--label {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .container__comments--input {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .container__comments--textarea {
+    font-size: 18px;
+    margin-right: 10px;
+    padding-bottom: 80px;
+  }
+
+  .container__comments--button {
+    padding: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+}
