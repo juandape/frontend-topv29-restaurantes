@@ -1,8 +1,6 @@
 import React from 'react';
 import RestFilter from '../../components/filtrorest/Filtrorestaurant';
 import EatFilter from '../../components/filtrocomida/Filtrocomida';
-import RestFilter from '../../components/filtrorest/Filtrorestaurant';
-import EatFilter from '../../components/filtrocomida/Filtrocomida';
 import './home.css';
 import LoginFormAdmin from '../../components/loginform/Loginformadmin';
 import RegFormAdmin from '../../components/registerform/Regformadmin';
@@ -24,7 +22,7 @@ function HomePage() {
         {/* <RegFormUser /> */}
         {/* <LoginFormAdmin /> */}
         {/* <LoginFormUser /> */}
-        <Addfood/>
+        {/*<Addfood/>*/}
         <CrearComentario />
     </div>
     </>
