@@ -1,4 +1,3 @@
-// import { Link, useLoaderData } from "react-router-dom";
 import React from 'react';
 import RestFilter from '../../components/filtrorest/Filtrorestaurant';
 import EatFilter from '../../components/filtrocomida/Filtrocomida';
@@ -23,8 +22,9 @@ function HomePage() {
         {/* <RegFormUser /> */}
         {/* <LoginFormAdmin /> */}
         {/* <LoginFormUser /> */}
+        <Addfood/>
         <CrearComentario />
-      </div>
+    </div>
     </>
   );
 }
