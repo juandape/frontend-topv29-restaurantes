@@ -33,8 +33,8 @@ function Star() {
             />
           </label>
         );
-        })}
-        <p>the rating is: {rating}.</p>
+      })}
+      <p>the rating is: {rating}</p>
 
 
     </div>
