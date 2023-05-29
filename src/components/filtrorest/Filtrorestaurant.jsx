@@ -3,7 +3,8 @@ import './filtrorest.css';
 import axios from 'axios';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const url = 'https://api-restaurants.onrender.com/api/restaurants';
+const BASE_URL = import.meta.env.VITE_API_URL
+const url = `${BASE_URL}/api/restaurants`;
 
 function RestFilter() {
   const [restaurantes, setRestaurantes] = useState([]);

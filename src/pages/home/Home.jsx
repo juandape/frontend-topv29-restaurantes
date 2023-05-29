@@ -1,17 +1,32 @@
 import React from 'react';
 import RestFilter from '../../components/filtrorest/Filtrorestaurant';
 import EatFilter from '../../components/filtrocomida/Filtrocomida';
+import RestFilter from '../../components/filtrorest/Filtrorestaurant';
+import EatFilter from '../../components/filtrocomida/Filtrocomida';
 import './home.css';
+import LoginFormAdmin from '../../components/loginform/Loginformadmin';
+import RegFormAdmin from '../../components/registerform/Regformadmin';
+import LoginFormUser from '../../components/loginform/Loginformuser';
+import RegFormUser from '../../components/registerform/Regformuser';
+import CrearComentario from '../../components/comentarios/Comentarios';
+
 
 function HomePage() {
   return (
     <>
-      <RestFilter />
+      {/* <RestFilter /> */}
       <div className='container__home'>
+        {/* <EatFilter /> */}
         <h1>RESTAURANTES</h1>
         <p>texto aqui</p>
         <p>imagen por aca</p>
-      </div>
+        {/* <RegFormAdmin /> */}
+        {/* <RegFormUser /> */}
+        {/* <LoginFormAdmin /> */}
+        {/* <LoginFormUser /> */}
+        <Addfood/>
+        <CrearComentario />
+    </div>
     </>
   );
 }
