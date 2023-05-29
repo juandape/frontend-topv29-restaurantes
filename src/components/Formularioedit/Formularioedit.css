@@ -1,0 +1,70 @@
+.main__contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(183, 196, 209);
+
+    margin-top: 2em;
+    padding: 2em;
+}
+.Form__ADD{
+    width: 60%;
+    height: 15vh;
+    color: rgb(253, 7, 253);
+    font-size: 4em;
+    text-align: center;
+    box-shadow: 10px 5px 5px black;
+    background-image : url(images/food.jpg);
+    padding: 2em;
+
+
+}
+.contact-form__column{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-top: .5em;
+    padding: .5em;
+    font-weight: bold;
+    color: orange;
+    font-weight: bolder;
+    background: linear-gradient(to right, rgb(88, 86, 86) 0%, rgb(134, 129, 129));
+    border-radius: 1em;
+    font-size: 1.2em;
+    text-align:center;
+
+}
+.contact-form__input{
+    width: 100%;
+    border-radius: 1em;
+    background-color: rgb(225, 225, 240);
+    padding: 1em;
+}
+
+.container__filter--button {
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1em;
+    margin: 1.5em;
+  }
+
+  .container__filter--button:hover{
+    background-color: orange;
+    border: 5.em blue solid ;
+    color: rgb(9, 9, 9);
+    cursor: pointer;
+  }
+
+
+@media (min-width:760px) {
+    .contact-form__column{
+        width: 40%;
+    }
+
+
+
+}
