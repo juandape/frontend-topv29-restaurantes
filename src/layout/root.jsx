@@ -2,6 +2,7 @@ import { Outlet, useNavigation } from 'react-router-dom';
 import React from 'react';
 
 import Delete from '../components/Delete/Delete';
+import Star from '../components/Star/Star';
 
 import Header from '../components/header/Header'
 import Footer from '../components/Footer/Footer';
@@ -16,6 +17,9 @@ function Root() {
     <>
       <Header />
       <main>{navigation.state === 'loading' ? 'Loading...' : <Outlet />}</main>
+      <Delete />
+      <Formularioedit />
+      <Star />
     </>
   );
 }
