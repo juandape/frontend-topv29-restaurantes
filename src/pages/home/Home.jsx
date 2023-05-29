@@ -1,4 +1,3 @@
-// import { Link, useLoaderData } from "react-router-dom";
 
 import React from 'react';
 import './home.css';
@@ -7,7 +6,7 @@ import credentials from '../../components/Ubication/credentials';
 const mapURL = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapKey}`
 function HomePage() {
   return (
-    <div>
+    <div className='container__home'>
       <h1>RESTAURANTES</h1>
       <p>texto aqui</p>
       <p>imagen por aca</p>

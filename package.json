@@ -9,7 +9,7 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "local-api": "json-server --watch db.json --port 8080 --routes routes.json",
-    "dev:api": "npm run all -p local-api dev"
+    "dev:api": "npm run dev & npm run local-api"
   },
   "dependencies": {
     "react": "^18.2.0",
