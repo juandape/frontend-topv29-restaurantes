@@ -5,14 +5,14 @@ import './header.css';
 
 function Header() {
   return (
-    <div className="header-container">
+    <div className='header-container'>
       <nav>
-        <div className="header-container__list">
+        <div className='header-container__list'>
           <div className>
-            <NavLink to="/"> Home </NavLink>
+            <NavLink to='/'> Home </NavLink>
           </div>
           <div>
-            <NavLink to="/about"> About </NavLink>
+            <NavLink to='/about'> About </NavLink>
           </div>
         </div>
       </nav>
