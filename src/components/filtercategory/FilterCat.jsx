@@ -1,5 +1,4 @@
-const { useEffect }=require("react");
-const { useState }=require("react")
+import React { useState, useEffect} from "react";
 
 
 const FilterCat = () => {
@@ -33,21 +32,12 @@ const FilterCat = () => {
     return(
         <div>
             <input value={search} onChange={ searcher } type="text" placeholder="Buscar por Categoría">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Restaurant Category</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { results.map((categ) => (
-                            <tr key={ categ.id }>
-                                <td>{categ.id}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
             </input>
+            {results.map((categ) => (
+                <p key={ id }>
+                    {categ.category}
+                </p>
+            ))}
         </div>
     )
 }

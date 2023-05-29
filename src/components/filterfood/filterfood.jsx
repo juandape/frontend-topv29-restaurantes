@@ -1,5 +1,7 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
+const { useState } = require("react");
+const { useEffect } = require("react")
+
 
 
 const FilterCat = () => {
