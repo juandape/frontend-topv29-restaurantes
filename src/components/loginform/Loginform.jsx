@@ -15,34 +15,34 @@ function LoginForm() {
       <form action='' onSubmit={handleSubmit}>
         <div className='container__login--form'>
           <label htmlFor='' className='container__login--label'>
-            Correo
+            Email
           </label>
           <input
             type='email'
             name='emaill'
             id='emaill'
             className='container__login--input'
-            placeholder='Ingresa tu email'
+            placeholder='your email'
             value={formValues.email}
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
           <label htmlFor='' className='container__login--label'>
-            Contraseña
+            Password
           </label>
           <input
             type='password'
             name='passl'
             id='passl'
             className='container__login--input'
-            placeholder='Ingresa tu contraseña'
+            placeholder='your password'
             value={formValues.password}
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
         </div>
         <button type='submit' className='container__login--button'>
-          Iniciar Sesión
+          Login
         </button>
       </form>
     </div>

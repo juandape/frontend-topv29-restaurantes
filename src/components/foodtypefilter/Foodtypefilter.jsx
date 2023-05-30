@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './filtrocomida.css';
+import './foodtypefilter.css';
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/restaurants`;
 
-function EatFilter() {
+function FoodTypeFilter() {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
     const getFood = async () => {
@@ -78,32 +78,32 @@ function EatFilter() {
         onClick={handleClickBreakfast}
       >
         <label className='container__food--label' htmlFor=''>
-          Desayuno
+          Breakfast
         </label>
         <img
           className='container__food--img'
-          src='/images/desayuno.jpg'
-          alt='desayuno'
+          src='/images/breakfast.jpg'
+          alt='breakfast'
         />
       </button>
       <button className='container__food--button' onClick={handleClickLunch}>
         <label className='container__food--label' htmlFor=''>
-          Almuerzo
+          Lunch
         </label>
         <img
           className='container__food--img'
-          src='/images/almuerzo.jpg'
-          alt='desayuno'
+          src='/images/lunch.jpg'
+          alt='lunch'
         />
       </button>
       <button className='container__food--button' onClick={handleClickDinner}>
         <label className='container__food--label' htmlFor=''>
-          Cena
+          Dinner
         </label>
         <img
           className='container__food--img'
-          src='/images/cena.jpg'
-          alt='desayuno'
+          src='/images/dinner.jpg'
+          alt='dinner'
         />
       </button>
       <button className='container__food--button' onClick={handleClickFastFood}>
@@ -113,11 +113,11 @@ function EatFilter() {
         <img
           className='container__food--img'
           src='/images/fastfood.jpg'
-          alt='desayuno'
+          alt='fast food'
         />
       </button>
     </div>
   );
 }
 
-export default EatFilter;
+export default FoodTypeFilter;

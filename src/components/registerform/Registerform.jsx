@@ -1,7 +1,7 @@
 import './regform.css';
 import React, { useState } from 'react';
 
-const defaultFormValues = { nombre: '', apellido: '', email: '', password: '', cpassword: '' };
+const defaultFormValues = { fullname: '', email: '', password: '', cpassword: '' };
 function RegisterForm() {
   const [formValues, setFormValues] = useState(defaultFormValues);
 
@@ -16,19 +16,19 @@ function RegisterForm() {
       <form action='' onSubmit={handleSubmit}>
         <div className='container__register__form'>
           <label htmlFor='' className='container__register--label'>
-            Nombre
+            Full Name
           </label>
           <input
             type='text'
-            name='nombre'
-            id='nombre'
+            name='fullname'
+            id='fullname'
             className='container__register--input'
-            placeholder='Escribe tu nombre'
-            value={formValues.nombre}
+            placeholder='your fullname'
+            value={formValues.fullname}
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
-          <label htmlFor='' className='container__register--label'>
+          {/* <label htmlFor='' className='container__register--label'>
             Apellido
           </label>
           <input
@@ -40,42 +40,42 @@ function RegisterForm() {
             value={formValues.apellido}
             onChange={(e) => setFormValues(e.target.value)}
             required
-          />
+          /> */}
           <label htmlFor='' className='container__register--label'>
-            Correo
+            Email
           </label>
           <input
             type='email'
             name='email'
             id='email'
             className='container__register--input'
-            placeholder='correo@email.com'
+            placeholder='email@dot.com'
             value={formValues.email}
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
           <label htmlFor='' className='container__register--label'>
-            Contraseña
+            Password
           </label>
           <input
             type='password'
             name='pass'
             id='pass'
             className='container__register--input'
-            placeholder='Escribe una contraseña'
+            placeholder='your password'
             value={formValues.password}
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
           <label htmlFor='' className='container__register--label'>
-            Confirmar contraseña
+            Confirm password
           </label>
           <input
             type='password'
             name='cpass'
             id='cpass'
             className='container__register--input'
-            placeholder='Confirma tu contraseña'
+            placeholder='confirm your password'
             value={formValues.cpassword}
             onChange={(e) => setFormValues(e.target.value)}
             required
@@ -85,7 +85,7 @@ function RegisterForm() {
           type='submit'
           className='container__register--button'
         >
-          Registrarse
+          Register
         </button>
       </form>
     </div>

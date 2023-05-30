@@ -6,7 +6,7 @@ function LoginFormUser() {
 
   return (
     <div>
-      <h2 className='container__login--title'>Iniciar Sesión Usuario</h2>
+      <h2 className='container__login--title'>Login User</h2>
       <LoginForm />
     </div>
   );

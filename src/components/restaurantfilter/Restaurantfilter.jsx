@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import './filtrorest.css';
+import './restaurantfilter.css';
 import axios from 'axios';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const BASE_URL = import.meta.env.VITE_API_URL
 const url = `${BASE_URL}/api/restaurants`;
 
-function RestFilter() {
-  const [restaurantes, setRestaurantes] = useState([]);
+function RestaurantFilter() {
+  const [restaurants, setRestaurants] = useState([]);
   const [search, setSearch] = useState('');
   useEffect(() => {
     const getRestaurants = async () => {
       const { data, status } = await axios.get(url);
-      if (status === 200) setRestaurantes(data);
+      if (status === 200) setRestaurants(data);
     };
     getRestaurants();
   }, []);
 
-  console.log(restaurantes);
+  console.log(restaurants);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -25,19 +25,19 @@ function RestFilter() {
   };
 
   const filteredRestaurants = (searching) => {
-    const resultado = restaurantes.filter((rest) => {
+    const resultado = restaurants.filter((rest) => {
       if (
         rest.name.toString().toLowerCase().includes(searching.toLowerCase())
       ) {
         return rest;
       }
     });
-    setRestaurantes(resultado);
+    setRestaurants(resultado);
   };
 
   const handleClick = (event) => {
     event.preventDefault();
-    alert(restaurantes.map((rest) => rest.name));
+    alert(restaurants.map((rest) => rest.name));
   };
 
   return (
@@ -47,7 +47,7 @@ function RestFilter() {
         className='container__filter--input'
         type='text'
         value={search}
-        placeholder='Busca tu restaurante'
+        placeholder='search restaurant'
         onChange={handleChange}
       />
       <button
@@ -61,4 +61,4 @@ function RestFilter() {
   );
 }
 
-export default RestFilter;
+export default RestaurantFilter;
