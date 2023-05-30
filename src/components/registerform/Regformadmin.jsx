@@ -4,7 +4,7 @@ import RegisterForm from './Registerform';
 function RegFormAdmin() {
   return (
     <div>
-      <h2 className='container__register--title'>Registro Administrador</h2>
+      <h2 className='container__register--title'>Sign up Admin</h2>
       <RegisterForm />
     </div>
   );

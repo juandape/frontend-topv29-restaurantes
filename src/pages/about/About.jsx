@@ -9,7 +9,7 @@ function AboutPage() {
         <div className="about-container__info">
           <img src="http//" alt="autor" className="about-container--img" />
           <div className="about-container--description">
-            <h2 className="about-container--description--name">nombres</h2>
+            <h2 className="about-container--description--name">Alex, Miguel, Juan</h2>
             <p className="about-container--description--text">
               Fullstack Developers, Make It Real students
             </p>

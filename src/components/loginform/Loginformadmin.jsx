@@ -6,7 +6,7 @@ function LoginFormAdmin() {
 
   return (
     <div>
-      <h2 className='container__login--title'>Iniciar Sesión Administrador</h2>
+      <h2 className='container__login--title'>Login Admin</h2>
       <LoginForm />
     </div>
   );
