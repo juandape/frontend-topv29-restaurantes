@@ -1,14 +1,29 @@
-// import { Link, useLoaderData } from "react-router-dom";
+
 import React from 'react';
+import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
+import RestaurantFilter from '../../components/restaurantfilter/restaurantfilter';
 import './home.css';
+import LoginFormAdmin from '../../components/loginform/Loginformadmin';
+import RegFormAdmin from '../../components/registerform/Regformadmin';
+import LoginFormUser from '../../components/loginform/Loginformuser';
+import RegFormUser from '../../components/registerform/Regformuser';
+import Feedback from '../../components/feedback/Feedback';
+
 
 function HomePage() {
   return (
-    <div>
-      <h1>RESTAURANTES</h1>
-      <p>texto aqui</p>
-      <p>imagen por aca</p>
+    <>
+      <RestaurantFilter />
+      <div className='container__home'>
+        <FoodTypeFilter />
+        <RegFormAdmin />
+        <RegFormUser />
+        <LoginFormAdmin />
+        <LoginFormUser />
+        {/*<Addfood/>*/}
+        <Feedback />
     </div>
+    </>
   );
 }
 

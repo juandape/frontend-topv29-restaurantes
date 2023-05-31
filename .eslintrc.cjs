@@ -17,5 +17,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    quotes: [1, 'single', { avoidEscape: true }],
+    jsx-quotes: [2, 'prefer-single'],
   },
 };
