@@ -13,6 +13,7 @@ import Feedback from '../../components/feedback/Feedback';
 function HomePage() {
   return (
     <>
+      <img src='images/food.jpg' alt='' />
       <RestaurantFilter />
       <div className='container__home'>
         <FoodTypeFilter />
