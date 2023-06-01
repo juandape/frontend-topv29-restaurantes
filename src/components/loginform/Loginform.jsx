@@ -1,7 +1,7 @@
 import './loginform.css';
 import React, { useState } from 'react';
 
-const defaultFormValues = { email: '', password: '' };
+export const defaultFormValues = { email: '', password: '' };
 function LoginForm() {
   const [formValues, setFormValues] = useState(defaultFormValues);
   function handleSubmit(event) {
