@@ -5,7 +5,9 @@ import './header.css';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const toggle = () => setDropdown(!dropdown);
+  const[dropdown1, setDropdown1] = useState(false);
+  const toggleLogin = () => setDropdown(!dropdown);
+  const toggleRegister = () => setDropdown1(!dropdown1);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -31,20 +33,20 @@ function Header() {
           <div className='header-container__items__login'>
             <div className='header-container__items__login--title'>
               <div
-                onClick={toggle}
-                className='header-container__items__login--item'
+                onClick={toggleLogin}
+                className='header-container__items__login--text'
               >
                 LOGIN
               </div>
               {dropdown && (
                 <div>
                   <NavLink to='/loginadmin'>
-                    <div className='header-container__items__login--item'>
+                    <div className='header-container__items__login--text'>
                       Admin
                     </div>
                   </NavLink>
                   <NavLink to='/loginuser'>
-                    <div className='header-container__items__login--item'>
+                    <div className='header-container__items__login--text'>
                       User
                     </div>
                   </NavLink>
@@ -54,43 +56,32 @@ function Header() {
           </div>
 
 
-          <div className='header-container__items__login'>
-            <div className='header-container__items__login--title'>
+
+
+          <div className='header-container__items__register'>
+            <div className='header-container__items__register--title'>
               <div
-                onClick={toggle}
-                className='header-container__items__login--item'
+                onClick={toggleRegister}
+                className='header-container__items__register--text'
               >
-                or REGISTER
+                REGISTER
               </div>
-              {dropdown && (
+              {dropdown1 && (
                 <div>
                   <NavLink to='/regadmin'>
-                    <div className='header-container__items__login--item'>
+                    <div className='header-container__items__register--text'>
                       Admin
                     </div>
                   </NavLink>
                   <NavLink to='/reguser'>
-                    <div className='header-container__items__login--item'>
+                    <div className='header-container__items__register--text'>
                       User
                     </div>
                   </NavLink>
                 </div>
               )}
             </div>
-          </div>-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          </div>
 
 
 

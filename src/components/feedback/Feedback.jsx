@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './feedback.css';
+import Star from '../Star/Star';
 
 const Feedback = () => {
   const [name, setName] = useState('');
@@ -28,7 +29,9 @@ const Feedback = () => {
   };
 
   return (
+    <>
     <div className='container__comments'>
+      <Star />
       <h2 className='container__comments--title'>Give Us A Feedback</h2>
       <form onSubmit={handleSubmit}>
         <div className='container__comments--form'>
@@ -58,7 +61,8 @@ const Feedback = () => {
           Send
         </button>
       </form>
-    </div>
+      </div>
+      </>
   );
 };
 

@@ -1,5 +1,33 @@
 .container__home{
   max-width: 350px;
   margin-top: 50px;
+}
 
+.container__home--promoimg{
+  display: flex;
+  flex-direction: column;
+}
+
+.container__home--promoimg--img{
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 10px;
+}
+
+@media(min-width: 376px){
+  .container__home{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .container__home--promoimg{
+    flex-direction: row;
+  }
+
+  .container__home--promoimg--img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  }
 }
