@@ -1,27 +1,21 @@
 
 import React from 'react';
 import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
-import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
+import RestaurantFilter from '../../components/restaurantfilter/restaurantfilter';
 import './home.css';
-import LoginFormAdmin from '../../components/loginform/Loginformadmin';
-import RegFormAdmin from '../../components/registerform/Regformadmin';
-import LoginFormUser from '../../components/loginform/Loginformuser';
-import RegFormUser from '../../components/registerform/Regformuser';
-import Feedback from '../../components/feedback/Feedback';
+import { NavLink } from 'react-router-dom';
 
 
 function HomePage() {
   return (
     <>
+      <img src='images/food.jpg' alt='' />
       <RestaurantFilter />
+      <div><NavLink to='/feedback'><button>Feedback</button></NavLink></div>
+
       <div className='container__home'>
         <FoodTypeFilter />
-        <RegFormAdmin />
-        <RegFormUser />
-        <LoginFormAdmin />
-        <LoginFormUser />
         {/*<Addfood/>*/}
-        <Feedback />
     </div>
     </>
   );

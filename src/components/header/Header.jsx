@@ -4,6 +4,8 @@ import './header.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+  const toggle = () => setDropdown(!dropdown);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -26,9 +28,75 @@ function Header() {
           <div>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          <div>
-            <NavLink to='/'> LOGIN </NavLink>
+          <div className='header-container__items__login'>
+            <div className='header-container__items__login--title'>
+              <div
+                onClick={toggle}
+                className='header-container__items__login--item'
+              >
+                LOGIN
+              </div>
+              {dropdown && (
+                <div>
+                  <NavLink to='/loginadmin'>
+                    <div className='header-container__items__login--item'>
+                      Admin
+                    </div>
+                  </NavLink>
+                  <NavLink to='/loginuser'>
+                    <div className='header-container__items__login--item'>
+                      User
+                    </div>
+                  </NavLink>
+                </div>
+              )}
+            </div>
           </div>
+
+
+          <div className='header-container__items__login'>
+            <div className='header-container__items__login--title'>
+              <div
+                onClick={toggle}
+                className='header-container__items__login--item'
+              >
+                or REGISTER
+              </div>
+              {dropdown && (
+                <div>
+                  <NavLink to='/regadmin'>
+                    <div className='header-container__items__login--item'>
+                      Admin
+                    </div>
+                  </NavLink>
+                  <NavLink to='/reguser'>
+                    <div className='header-container__items__login--item'>
+                      User
+                    </div>
+                  </NavLink>
+                </div>
+              )}
+            </div>
+          </div>-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <div
           className={`header-container--toggle ${isOpen && 'open'}`}
@@ -39,7 +107,6 @@ function Header() {
           <span></span>
         </div>
       </nav>
-      <img src='images/food.jpg' alt='' />
     </>
   );
 }
