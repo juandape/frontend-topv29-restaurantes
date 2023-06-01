@@ -17,9 +17,9 @@ function Root() {
     <>
       <Header />
       <main>{navigation.state === 'loading' ? 'Loading...' : <Outlet />}</main>
-      <Delete />
-      <Formularioedit />
-      <Star />
+      {/* <Delete /> */}
+      {/* <Formularioedit /> */}
+      {/* <Star /> */}
     </>
   );
 }

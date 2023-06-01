@@ -3,16 +3,15 @@
   border: 3px solid orange;
   border-radius: 5px;
   box-shadow: 5px 5px 8px gray;
-  margin-left: 5px;
+  margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 50px;
 }
 
 .container__register--title {
   font-size: 20px;
   color: rgb(190, 136, 34);
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 0 auto;
+  padding-top: 40px;
   text-align: center;
 }
 
