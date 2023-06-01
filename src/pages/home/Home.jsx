@@ -1,7 +1,7 @@
 
 import React from 'react';
 import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
-import RestaurantFilter from '../../components/restaurantfilter/restaurantfilter';
+import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
 import './home.css';
 import LoginFormAdmin from '../../components/loginform/Loginformadmin';
 import RegFormAdmin from '../../components/registerform/Regformadmin';
