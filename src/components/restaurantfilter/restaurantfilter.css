@@ -1,10 +1,12 @@
 .containter__filter {
   display: flex;
   gap: 5px;
-  margin-top: -80px;
-  margin-left: 75px;
-  width: 200px;
+  margin-top: -100px;
+  margin-bottom: 60px;
+  width: 100%;
   align-items: center;
+  justify-content: center;
+  background-color: white;
 }
 
 ::placeholder {
@@ -39,18 +41,11 @@
     flex-direction: row;
     margin-top: -100px;
     margin-bottom: 100px;
-    margin-left: 15px;
-    width: 400px;
   }
 
   ::placeholder {
     font-size: 16px;
   }
-
-  /* .container__filter--label {
-    font-size: 25px;
-    padding: 7px;
-  } */
 
   .container__filter--input {
     padding: 7px;
@@ -68,6 +63,5 @@
     flex-direction: row;
     margin-top: -100px;
     margin-left: 15px;
-    width: 500px;
   }
 }
