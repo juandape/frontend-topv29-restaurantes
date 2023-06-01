@@ -1,6 +1,6 @@
 footer{
-    width: 100%;
     margin-top:50px;
+    width: 820px;
 }
 
 .container_fot{
@@ -9,7 +9,7 @@ footer{
     padding: 2em 3em;
     justify-content: space-between;
     align-items:first baseline;
-    width: 1400px
+    width: 100%;
 }
 
 .fot{
@@ -30,7 +30,7 @@ footer{
     color: aliceblue;
     padding: 2em 3em;
     align-items:first baseline;
-    width: 1400px;
+    width: 100%;
 }
 
 .contenedorRedes{
