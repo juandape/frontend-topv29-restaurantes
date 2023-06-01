@@ -28,25 +28,76 @@ function Header() {
           <div>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-        <div className='header-container__items__login'>
-          <div className='header-container__items__login--title'>
-            <div
-              onClick={toggle}
-              className='header-container__items__login--item'
+          <div className='header-container__items__login'>
+            <div className='header-container__items__login--title'>
+              <div
+                onClick={toggle}
+                className='header-container__items__login--item'
               >
-              LOGIN
-            </div>
-            {dropdown && (
-              <div>
-                <div className='header-container__items__login--item'>Admin</div>
-                <div className='header-container__items__login--item'>User</div>
+                LOGIN
               </div>
-            )}
-          </div>
-        </div>
+              {dropdown && (
+                <div>
+                  <NavLink to='/loginadmin'>
+                    <div className='header-container__items__login--item'>
+                      Admin
+                    </div>
+                  </NavLink>
+                  <NavLink to='/loginuser'>
+                    <div className='header-container__items__login--item'>
+                      User
+                    </div>
+                  </NavLink>
+                </div>
+              )}
             </div>
+          </div>
 
 
+          <div className='header-container__items__login'>
+            <div className='header-container__items__login--title'>
+              <div
+                onClick={toggle}
+                className='header-container__items__login--item'
+              >
+                or REGISTER
+              </div>
+              {dropdown && (
+                <div>
+                  <NavLink to='/regadmin'>
+                    <div className='header-container__items__login--item'>
+                      Admin
+                    </div>
+                  </NavLink>
+                  <NavLink to='/reguser'>
+                    <div className='header-container__items__login--item'>
+                      User
+                    </div>
+                  </NavLink>
+                </div>
+              )}
+            </div>
+          </div>-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
         <div
           className={`header-container--toggle ${isOpen && 'open'}`}
           onClick={handleClick}
@@ -56,7 +107,6 @@ function Header() {
           <span></span>
         </div>
       </nav>
-      
     </>
   );
 }
