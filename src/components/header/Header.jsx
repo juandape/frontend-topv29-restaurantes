@@ -4,6 +4,8 @@ import './header.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+  const toggle = () => setDropdown(!dropdown);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -26,10 +28,25 @@ function Header() {
           <div>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          <div>
-            <NavLink to='/'> LOGIN </NavLink>
+        <div className='header-container__items__login'>
+          <div className='header-container__items__login--title'>
+            <div
+              onClick={toggle}
+              className='header-container__items__login--item'
+              >
+              LOGIN
+            </div>
+            {dropdown && (
+              <div>
+                <div className='header-container__items__login--item'>Admin</div>
+                <div className='header-container__items__login--item'>User</div>
+              </div>
+            )}
           </div>
         </div>
+            </div>
+
+
         <div
           className={`header-container--toggle ${isOpen && 'open'}`}
           onClick={handleClick}
@@ -39,7 +56,7 @@ function Header() {
           <span></span>
         </div>
       </nav>
-      <img src='images/food.jpg' alt='' />
+      
     </>
   );
 }
