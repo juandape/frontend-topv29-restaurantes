@@ -11,7 +11,6 @@ function HomePage() {
     <>
       <img src='images/food.jpg' alt='' />
       <RestaurantFilter />
-      <div><NavLink to='/feedback'><button>Feedback</button></NavLink></div>
 
       <div className='container__home'>
         <FoodTypeFilter />
