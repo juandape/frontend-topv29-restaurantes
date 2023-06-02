@@ -124,12 +124,9 @@ a:hover {
     transform: rotate(45deg) translate(0px, 0px);
   }
 
-  .header-container--toggle.open > span:nth-child(2) {
-    display: none;
-  }
-  .header-container--toggle.open > span:nth-child(2) {
-    display: none;
-  }
+    .header-container--toggle.open > span:nth-child(2) {
+      display: none;
+    }
 
   .header-container--toggle.open > span:nth-child(3) {
     transform: rotate(-45deg) translate(-5px, 1px);
