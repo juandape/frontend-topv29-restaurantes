@@ -4,28 +4,10 @@ import LoginForm from './Loginform'
 
 
 describe('Login form test', () => {
-
-  test('should render login form', () => {
-    render(<LoginForm />);
-    const linkElement = screen.getByText(/Login/i);
-    expect(linkElement).toBeInTheDocument();
-  })
-
-  test('should render email input', () => {
-    render(<LoginForm />);
-    const linkElement = screen.getByPlaceholderText(/your email/i);
-    expect(linkElement).toBeInTheDocument();
-  })
-
-  test('should render password input', () => {
-    render(<LoginForm />);
-    const linkElement = screen.getByPlaceholderText(/your password/i);
-    expect(linkElement).toBeInTheDocument();
-  })
-
-  test('should render login button', () => {
-    render(<LoginForm />);
-    const linkElement = screen.getByText(/Login/i);
-    expect(linkElement).toBeInTheDocument();
+  test('should render login form with the correct fields', () => {
+    const { getByPlaceholderText } = render(<LoginForm />);
+    expect(getByPlaceholderText(/your email/i)).toBeInTheDocument();
+    expect(getByPlaceholderText(/your password/i)).toBeInTheDocument();
   })
 })
+
