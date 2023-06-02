@@ -1,4 +1,3 @@
-import { faHomeLgAlt, faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import { render, screen } from '@testing-library/react'
 import {describe, test, expect} from 'vitest'
 import LoginForm from './Loginform'
