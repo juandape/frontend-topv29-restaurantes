@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "local-api": "json-server --watch db.json --port 8080 --routes routes.json",
     "dev:api": "concurrently \"npm run dev\" \"npm run local-api\"",
-    "test": "vitest --watch",
+    "test": "vitest",
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
