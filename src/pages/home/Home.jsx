@@ -11,6 +11,7 @@ function HomePage() {
     <>
       <img src='images/food.jpg' alt='' />
       <RestaurantFilter />
+
       <div className='container__home'>
         <FoodTypeFilter />
         <div className='container__home--promoimg'>
