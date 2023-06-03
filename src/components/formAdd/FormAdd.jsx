@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './FormularioAdd.css'
+import './FormAdd.css'
 
 
-function FormularioAdd() {
+function FormAdd() {
   const [Restaurant, setRestaurant] = useState({});
 
     const handleChange = (event) => {
@@ -132,4 +132,4 @@ function FormularioAdd() {
   );
 };
 
-export default FormularioAdd;
+export default FormAdd;
