@@ -34,9 +34,11 @@ function FoodTypeFilter() {
       <div>
         <ul>
           {foods.map((food) => (
-            <li key={food.id}>
-              {food.foodtype === 'Lunch' ? alert(food.name) : null}
-            </li>
+            <>
+              <li key={food.id}>
+                {food.foodtype === 'Lunch' ? alert(food.name) : null}
+              </li>
+            </>
           ))}
         </ul>
       </div>
@@ -71,51 +73,80 @@ function FoodTypeFilter() {
     );
   }
 
+  function handleClickVegan() {
+    return (
+      <div>
+        <ul>
+          {foods.map((food) => (
+            <li key={food.id}>
+              {food.foodtype === 'Vegan' ? alert(food.name) : null}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
   return (
-    <div className='container__food'>
-      <button
-        className='container__food--button'
-        onClick={handleClickBreakfast}
-      >
-        <label className='container__food--label' htmlFor=''>
-          Breakfast
-        </label>
-        <img
-          className='container__food--img'
-          src='/images/breakfast.jpg'
-          alt='breakfast'
-        />
-      </button>
-      <button className='container__food--button' onClick={handleClickLunch}>
-        <label className='container__food--label' htmlFor=''>
-          Lunch
-        </label>
-        <img
-          className='container__food--img'
-          src='/images/lunch.jpg'
-          alt='lunch'
-        />
-      </button>
-      <button className='container__food--button' onClick={handleClickDinner}>
-        <label className='container__food--label' htmlFor=''>
-          Dinner
-        </label>
-        <img
-          className='container__food--img'
-          src='/images/dinner.jpg'
-          alt='dinner'
-        />
-      </button>
-      <button className='container__food--button' onClick={handleClickFastFood}>
-        <label className='container__food--label' htmlFor=''>
-          Fast Food
-        </label>
-        <img
-          className='container__food--img'
-          src='/images/fastfood.jpg'
-          alt='fast food'
-        />
-      </button>
+    <div className='test'>
+      <div className='container__food'>
+        <button
+          className='container__food--button'
+          onClick={handleClickBreakfast}
+        >
+          <label className='container__food--label' htmlFor=''>
+            Breakfast
+          </label>
+          <img
+            className='container__food--img'
+            src='/images/breakfast.jpg'
+            alt='breakfast'
+          />
+        </button>
+        <button className='container__food--button' onClick={handleClickLunch}>
+          <label className='container__food--label' htmlFor=''>
+            Lunch
+          </label>
+          <img
+            className='container__food--img'
+            src='/images/lunch.jpg'
+            alt='lunch'
+          />
+        </button>
+        <button className='container__food--button' onClick={handleClickDinner}>
+          <label className='container__food--label' htmlFor=''>
+            Dinner
+          </label>
+          <img
+            className='container__food--img'
+            src='/images/dinner.jpg'
+            alt='dinner'
+          />
+        </button>
+        <button
+          className='container__food--button'
+          onClick={handleClickFastFood}
+        >
+          <label className='container__food--label' htmlFor=''>
+            Fast Food
+          </label>
+          <img
+            className='container__food--img'
+            src='/images/fastfood.jpg'
+            alt='fast food'
+          />
+        </button>
+        <button className='container__food--button' onClick={handleClickVegan}>
+          <label className='container__food--label' htmlFor=''>
+            Vegan
+          </label>
+          <img
+            className='container__food--img'
+            src='/images/vegan.jpg'
+            alt='vegan'
+          />
+        </button>
+      </div>
     </div>
   );
 }

@@ -40,7 +40,7 @@
 }
 
 .container__register--button {
-  background-color: orange;
+  background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
   border-radius: 5px;
@@ -52,7 +52,7 @@
 }
 
 .container__register--button:hover {
-  background-color: rgba(255, 166, 0, 0.699);
+  background-color: orange;
   color: white;
   border: 1px solid orange;
 }

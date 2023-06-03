@@ -32,7 +32,6 @@ function HomePage() {
           </NavLink>
           <Star />
         </div>
-        {/*<Addfood/>*/}
         <Footer />
       </div>
     </>
