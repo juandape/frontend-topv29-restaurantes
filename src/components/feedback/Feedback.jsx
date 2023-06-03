@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import './feedback.css';
+import Star from '../Star/Star';
 
 const Feedback = () => {
-  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [content, setContent] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     // Validar los datos del comentario antes de agregarlo
-    if (name.trim() === '' || content.trim() === '') {
-      alert('Please, insert your name and comment.');
+    if (email.trim() === '' || content.trim() === '') {
+      alert('Please, insert your email and comment.');
       return;
     }
 
@@ -23,25 +24,27 @@ const Feedback = () => {
     console.log(newFeedback);
 
     // Limpiar los campos del formulario
-    setName('');
+    setEmail('');
     setContent('');
   };
 
   return (
+    <>
     <div className='container__comments'>
+      <Star />
       <h2 className='container__comments--title'>Give Us A Feedback</h2>
       <form onSubmit={handleSubmit}>
         <div className='container__comments--form'>
           <label htmlFor='name' className='container__comments--label'>
-            Name:
+            Email:
           </label>
           <input
-            type='text'
+            type='email'
             id='name'
             className='container__comments--input'
-            placeholder='Your name'
-            value={name}
-            onChange={(event) => setNombre(event.target.value)}
+            placeholder='Your email'
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
           />
           <label htmlFor='content' className='container__comments--label'>
             Feedback:
@@ -58,7 +61,8 @@ const Feedback = () => {
           Send
         </button>
       </form>
-    </div>
+      </div>
+      </>
   );
 };
 
