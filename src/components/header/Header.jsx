@@ -41,12 +41,12 @@ function Header() {
               {dropdown && (
                 <div>
                   <NavLink to='/loginadmin'>
-                    <div className='header-container__items__login--text'>
+                    <div className='header-container__items__login--text' role='button' onClick={toggleLogin}>
                       Admin
                     </div>
                   </NavLink>
                   <NavLink to='/loginuser'>
-                    <div className='header-container__items__login--text'>
+                    <div className='header-container__items__login--text' role='button' onClick={toggleLogin}>
                       User
                     </div>
                   </NavLink>
@@ -66,12 +66,12 @@ function Header() {
               {dropdown1 && (
                 <div>
                   <NavLink to='/regadmin'>
-                    <div className='header-container__items__register--text'>
+                    <div className='header-container__items__register--text' role='button' onClick={toggleRegister}>
                       Admin
                     </div>
                   </NavLink>
                   <NavLink to='/reguser'>
-                    <div className='header-container__items__register--text'>
+                    <div className='header-container__items__register--text' role='button' onClick={toggleRegister}>
                       User
                     </div>
                   </NavLink>

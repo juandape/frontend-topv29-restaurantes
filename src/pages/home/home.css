@@ -1,6 +1,7 @@
 .container__home {
   max-width: 350px;
   margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container__home--promoimg {

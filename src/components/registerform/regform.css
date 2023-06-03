@@ -33,6 +33,9 @@
   color: rgb(190, 136, 34);
 }
 
+*{
+  font-family: 'Roboto', sans-serif;
+}
 .container__register--input {
   border-radius: 5px;
   border-color: orange;

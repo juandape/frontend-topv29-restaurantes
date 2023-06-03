@@ -5,17 +5,19 @@ img {
 .header-container {
   background: orange;
   padding-top: 15px;
+  padding-bottom: 5px;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header-container__items {
   display: flex;
   position: relative;
-  padding: 200px;
+  padding-left: 200px;
   gap: 50px;
   margin-top: 15px;
   margin-left: -170px;
@@ -88,6 +90,7 @@ a:hover {
     position: absolute;
     background: orange;
     padding-top: 40px;
+    padding-bottom: 200px;
     top: 60px;
     display: flex;
     flex-direction: column;
@@ -133,44 +136,12 @@ a:hover {
   }
 }
 
-.header-container {
-  background: orange;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.header-container__items {
-  display: flex;
-  position: relative;
-  padding: 200px;
-  gap: 50px;
-  text-align: left;
-}
-
-.header-container__logo {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 15px;
-  color: white;
-}
-a {
-  font-weight: 500;
-  color: white;
-  text-decoration: inherit;
-}
-
-.header-container--toggle {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .header-container__items {
     position: absolute;
     background: orange;
     padding-top: 40px;
+    padding-bottom: 200px;
     top: 60px;
     display: flex;
     flex-direction: column;
