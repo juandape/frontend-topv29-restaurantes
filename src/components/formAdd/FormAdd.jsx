@@ -43,81 +43,81 @@ function FormAdd() {
   };
 
   return (
-    <form className="main__contact-form" onSubmit={handleSubmit}>
-        <h1 className="Form__ADD">ADD Restaurant</h1>
-        <div className="contact-form__column">
-          <label className="contact-form__label">Name Restaurant:  </label>
+    <form className='main__contact-form' onSubmit={handleSubmit}>
+        <h1 className='Form__ADD'>ADD Restaurant</h1>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>Name Restaurant:  </label>
           <input
-            type="text"
-            name="name"
-            placeholder="Ingresa el nombre del Restaurante"
-            className="contact-form__input"
+            type='text'
+            name='name'
+            placeholder='Enter the name of the Restaurant'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className="contact-form__column">
-          <label className="contact-form__label">Schedules:   </label>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>Schedules:   </label>
           <input
-            type="text"
-            name="schedules"
-            placeholder="Ingresa el horario del restaurante"
-            className="contact-form__input"
+            type='text'
+            name='schedules'
+            placeholder='Enter restaurant hours'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className="contact-form__column">
-          <label className="contact-form__label">Category:   </label>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>Category:   </label>
           <input
-            type="text"
-            name="category"
-            placeholder="Ingresa la Categoria del restaurante"
-            className="contact-form__input"
+            type='text'
+            name='category'
+            placeholder='Enter the category of the restaurant'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className="contact-form__column">
-          <label className="contact-form__label">foodtype:   </label>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>foodtype:   </label>
           <input
-            type="text"
-            name="foodtype"
-            placeholder="Ingresa el tipo de Alimento(desayuno almuerzo cena) restaurante"
-            className="contact-form__input"
+            type='text'
+            name='foodtype'
+            placeholder='Enter the type of food (breakfast lunch dinner) restaurant'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className="contact-form__column">
-          <label className="contact-form__label">address:   </label>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>address:   </label>
           <input
-            type="text"
-            name="address"
-            placeholder="Ingresa la Dirección del restaurante"
-            className="contact-form__input"
+            type='text'
+            name='address'
+            placeholder='Enter the address of the restaurant'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className="contact-form__column">
-          <label className="contact-form__label">logo:   </label>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>logo:   </label>
           <input
-            type="text"
-            name="logo"
-            placeholder="https://picsum.photos/200"
-            className="contact-form__input"
+            type='text'
+            name='logo'
+            placeholder='https://picsum.photos/200'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className="contact-form__column">
-          <label className="contact-form__label">foods:  </label>
+        <div className='contact-form__column'>
+          <label className='contact-form__label'>foods:  </label>
           <input
-            type="text"
-            name="foods"
-            placeholder="Ingresa el horario del restaurante"
-            className="contact-form__input"
+            type='text'
+            name='foods'
+            placeholder='Ingresa el horario del restaurante'
+            className='contact-form__input'
             onChange={handleChange}
             required
             />
@@ -125,7 +125,7 @@ function FormAdd() {
 
 
 
-        <button type="submit" className="container__filter--button">
+        <button type='submit' className='container__filter--button'>
           Agregar
         </button>
       </form>

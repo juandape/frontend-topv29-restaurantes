@@ -20,6 +20,7 @@ function Root() {
       {/* <Delete /> */}
       {/* <Formularioedit /> */}
       {/* <Star /> */}
+      <Footer />
     </>
   );
 }
