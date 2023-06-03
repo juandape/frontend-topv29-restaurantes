@@ -5,7 +5,7 @@ import './header.css';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const[dropdown1, setDropdown1] = useState(false);
+  const [dropdown1, setDropdown1] = useState(false);
   const toggleLogin = () => setDropdown(!dropdown);
   const toggleRegister = () => setDropdown1(!dropdown1);
 
@@ -18,16 +18,16 @@ function Header() {
       <nav className='header-container'>
         <div className='header-container__logo'>@</div>
         <div className={`header-container__items ${isOpen && 'open'}`}>
-          <div>
-            <NavLink to='/'> HOME </NavLink>
+          <div className='header-container__items--title'>
+            <NavLink to='/' > HOME </NavLink>
           </div>
-          <div>
+          <div className='header-container__items--title'>
             <NavLink to='/'> RESTAURANT </NavLink>
           </div>
-          <div>
+          <div className='header-container__items--title'>
             <NavLink to='/'> PAGES </NavLink>
           </div>
-          <div>
+          <div className='header-container__items--title'>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
           <div className='header-container__items__login'>
@@ -55,9 +55,6 @@ function Header() {
             </div>
           </div>
 
-
-
-
           <div className='header-container__items__register'>
             <div className='header-container__items__register--title'>
               <div
@@ -82,12 +79,6 @@ function Header() {
               )}
             </div>
           </div>
-
-
-
-
-
-
         </div>
         <div
           className={`header-container--toggle ${isOpen && 'open'}`}

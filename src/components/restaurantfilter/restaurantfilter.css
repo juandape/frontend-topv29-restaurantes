@@ -6,7 +6,6 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: white;
 }
 
 ::placeholder {
@@ -18,7 +17,6 @@
 .container__filter--input {
   border-radius: 5px;
   border: 2px solid orange;
-  color: rgb(143, 96, 10);
   padding: 5px;
 }
 
@@ -29,6 +27,7 @@
   color: white;
   font-weight: bold;
   border-color: orange;
+  margin-left: -80px;
 }
 
 .container__filter--button:hover {
@@ -38,9 +37,9 @@
 
 @media (min-width: 376px) {
   .containter__filter {
-    flex-direction: row;
     margin-top: -100px;
     margin-bottom: 100px;
+    width: 90%;
   }
 
   ::placeholder {
@@ -55,12 +54,13 @@
   .container__filter--button {
     padding: 10px;
     font-size: 14px;
+    margin-right: -380px;
+    position: absolute;
   }
 }
 
 @media (min-width: 760px) {
   .containter__filter {
-    flex-direction: row;
     margin-top: -100px;
     margin-left: 15px;
   }
