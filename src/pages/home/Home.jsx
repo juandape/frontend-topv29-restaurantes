@@ -3,7 +3,6 @@ import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
 import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
 import './home.css';
 import { NavLink } from 'react-router-dom';
-import Footer from '../../components/footer/Footer';
 import Star from '../../components/Star/Star';
 
 function HomePage() {
