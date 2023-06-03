@@ -5,11 +5,6 @@ import AboutPage from '../pages/about/About';
 import Home from '../pages/home/Home';
 // import ProductCard, { loaderProduct } from "../components/ProductCard";
 import NotFound from '../pages/notfound/NotFound';
-import LoginFormAdmin from '../components/loginform/Loginformadmin';
-import LoginFormUser from '../components/loginform/Loginformuser';
-import RegFormAdmin from '../components/registerform/Regformadmin';
-import RegFormUser from '../components/registerform/Regformuser';
-import Feedback from '../components/feedback/Feedback';
 
 const router = createBrowserRouter([
   {
@@ -26,28 +21,6 @@ const router = createBrowserRouter([
         path: 'about',
         element: <AboutPage />,
       },
-      {
-        path: 'loginadmin',
-        element: <LoginFormAdmin />,
-      },
-      {
-        path: 'loginuser',
-        element: <LoginFormUser />,
-      },
-      {
-        path: 'regadmin',
-        element: <RegFormAdmin />,
-      },
-      {
-        path: 'reguser',
-        element: <RegFormUser />,
-      },
-      {
-        path: 'feedback',
-        element: <Feedback />,
-      },
-
-
       // {
       //   path: "product-card/:id",
       //   element: <ProductCard />,

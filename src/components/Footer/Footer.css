@@ -1,15 +1,9 @@
-footer{
-    margin-top:50px;
-    width: 820px;
-}
-
 .container_fot{
     background-color: #3b302a;
     display: flex;
     padding: 2em 3em;
     justify-content: space-between;
     align-items:first baseline;
-    width: 100%;
 }
 
 .fot{
@@ -30,7 +24,6 @@ footer{
     color: aliceblue;
     padding: 2em 3em;
     align-items:first baseline;
-    width: 100%;
 }
 
 .contenedorRedes{
@@ -49,7 +42,6 @@ footer{
         padding: 2em 3em;
         justify-content: space-between;
         align-items:first baseline;
-        width: fit-content;
     }
 
 

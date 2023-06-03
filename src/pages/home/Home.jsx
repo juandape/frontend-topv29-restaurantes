@@ -1,39 +1,28 @@
+
 import React from 'react';
 import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
 import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
 import './home.css';
-import { NavLink } from 'react-router-dom';
-import Footer from '../../components/Footer/Footer';
-import Star from '../../components/Star/Star';
+import LoginFormAdmin from '../../components/loginform/Loginformadmin';
+import RegFormAdmin from '../../components/registerform/Regformadmin';
+import LoginFormUser from '../../components/loginform/Loginformuser';
+import RegFormUser from '../../components/registerform/Regformuser';
+import Feedback from '../../components/feedback/Feedback';
+
 
 function HomePage() {
   return (
     <>
-      <img src='images/food.jpg' alt='' />
       <RestaurantFilter />
-
       <div className='container__home'>
         <FoodTypeFilter />
-        <div className='container__home--promoimg'>
-          <img
-            src='https://s3-ap-southeast-1.amazonaws.com/s3.loopme.ph/img/newos/posts/2x/24968_UR50vlNLHJGinYlC_.jpg'
-            alt=''
-            className='container__home--promoimg--img'
-          />
-          <img
-            src='https://s3-ap-southeast-1.amazonaws.com/s3.loopme.ph/img/newos/posts/2x/25303_O1hS8u4EzCU9u1L6_.jpg'
-            alt=''
-            className='container__home--promoimg--img'
-          />
-        </div>
-        <div>
-          <NavLink to='/feedback'>
-            <button>Feedback</button>
-          </NavLink>
-          <Star />
-        </div>
-        <Footer />
-      </div>
+        <RegFormAdmin />
+        <RegFormUser />
+        <LoginFormAdmin />
+        <LoginFormUser />
+        {/*<Addfood/>*/}
+        <Feedback />
+    </div>
     </>
   );
 }
