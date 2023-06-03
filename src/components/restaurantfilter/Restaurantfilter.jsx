@@ -57,7 +57,7 @@ function RestaurantFilter() {
       >
         <FontAwesomeIcon icon={faSearch} />
       </button>
-      </div>
+    </div>
   );
 }
 
