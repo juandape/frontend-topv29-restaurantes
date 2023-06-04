@@ -28,19 +28,6 @@ function RegisterForm() {
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
-          {/* <label htmlFor='' className='container__register--label'>
-            Apellido
-          </label>
-          <input
-            type='text'
-            name='apellido'
-            id='apellido'
-            className='container__register--input'
-            placeholder='Escribe tu apellido'
-            value={formValues.apellido}
-            onChange={(e) => setFormValues(e.target.value)}
-            required
-          /> */}
           <label htmlFor='' className='container__register--label'>
             Email
           </label>

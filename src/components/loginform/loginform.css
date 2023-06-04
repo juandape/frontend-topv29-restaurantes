@@ -1,3 +1,7 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 .container__login{
   text-align: center;
   border: 3px solid orange;
@@ -40,7 +44,7 @@
 }
 
 .container__login--button{
-  background-color: orange;
+  background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
   border-radius: 5px;
@@ -52,7 +56,7 @@
 }
 
 .container__login--button:hover{
-  background-color: rgba(255, 166, 0, 0.699);
+  background-color: orange;
   color: white;
   border: 1px solid orange;
 }

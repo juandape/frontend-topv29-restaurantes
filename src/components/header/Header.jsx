@@ -5,7 +5,7 @@ import './header.css';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const[dropdown1, setDropdown1] = useState(false);
+  const [dropdown1, setDropdown1] = useState(false);
   const toggleLogin = () => setDropdown(!dropdown);
   const toggleRegister = () => setDropdown1(!dropdown1);
 
@@ -18,16 +18,16 @@ function Header() {
       <nav className='header-container'>
         <div className='header-container__logo'>@</div>
         <div className={`header-container__items ${isOpen && 'open'}`}>
-          <div>
-            <NavLink to='/'> HOME </NavLink>
+          <div className='header-container__items--title'>
+            <NavLink to='/' > HOME </NavLink>
           </div>
-          <div>
+          <div className='header-container__items--title'>
             <NavLink to='/'> RESTAURANT </NavLink>
           </div>
-          <div>
+          <div className='header-container__items--title'>
             <NavLink to='/'> PAGES </NavLink>
           </div>
-          <div>
+          <div className='header-container__items--title'>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
           <div className='header-container__items__login'>
@@ -41,12 +41,12 @@ function Header() {
               {dropdown && (
                 <div>
                   <NavLink to='/loginadmin'>
-                    <div className='header-container__items__login--text'>
+                    <div className='header-container__items__login--text' role='button' onClick={toggleLogin}>
                       Admin
                     </div>
                   </NavLink>
                   <NavLink to='/loginuser'>
-                    <div className='header-container__items__login--text'>
+                    <div className='header-container__items__login--text' role='button' onClick={toggleLogin}>
                       User
                     </div>
                   </NavLink>
@@ -54,9 +54,6 @@ function Header() {
               )}
             </div>
           </div>
-
-
-
 
           <div className='header-container__items__register'>
             <div className='header-container__items__register--title'>
@@ -69,12 +66,12 @@ function Header() {
               {dropdown1 && (
                 <div>
                   <NavLink to='/regadmin'>
-                    <div className='header-container__items__register--text'>
+                    <div className='header-container__items__register--text' role='button' onClick={toggleRegister}>
                       Admin
                     </div>
                   </NavLink>
                   <NavLink to='/reguser'>
-                    <div className='header-container__items__register--text'>
+                    <div className='header-container__items__register--text' role='button' onClick={toggleRegister}>
                       User
                     </div>
                   </NavLink>
@@ -82,12 +79,6 @@ function Header() {
               )}
             </div>
           </div>
-
-
-
-
-
-
         </div>
         <div
           className={`header-container--toggle ${isOpen && 'open'}`}
