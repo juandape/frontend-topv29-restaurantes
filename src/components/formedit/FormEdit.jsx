@@ -47,7 +47,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                 type="text"
                                 name="name"
-                                placeholder={Restaurant.name}
+                                //placeholder={Restaurant.name}
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -60,7 +60,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                  type="text"
                                 name="city"
-                                placeholder={Restaurant.schedules}
+                                //placeholder={Restaurant.schedules}
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -73,7 +73,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                  type="text"
                                 name="phone"
-                                placeholder={Restaurant.category}
+                               // placeholder={Restaurant.category}
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -86,7 +86,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                  type="text"
                                 name="phone"
-                                placeholder={Restaurant.adress}
+                                //placeholder={Restaurant.adress}
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -99,7 +99,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                 type="url"
                                 name="photo"
-                                placeholder={Restaurant.logo}
+                                //placeholder={Restaurant.logo}
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -107,7 +107,7 @@ export const FormEdit = ({ Restaurant }) => {
                         </div>
                     </div>
                         <button type="submit" className="contact__formUp--button">
-                            Submit
+                            Edit
                         </button>
             </form>
         </>
