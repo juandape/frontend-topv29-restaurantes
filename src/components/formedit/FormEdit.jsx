@@ -106,7 +106,7 @@ export const FormEdit = ({ Restaurant }) => {
                                 />
                         </div>
                     </div>
-                        <button type="submit" className="contact__formUp--button">
+                        <button type="submit" data-testid='buttonEdit' className="contact__formUp--button">
                             Edit
                         </button>
             </form>

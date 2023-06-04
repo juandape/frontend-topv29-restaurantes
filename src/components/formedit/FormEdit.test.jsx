@@ -15,7 +15,7 @@ describe('test tets',()=>{
     test('should render the input',()=>{
         expect(screen.findAllByAltText("Name/i")).toBeDefined();
         expect(screen.getByText('Schedules')).toBeInTheDocument();
-
     });
+
 
 });
