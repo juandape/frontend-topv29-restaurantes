@@ -13,9 +13,8 @@
  }
 
   .Delete--btn:hover{
-    background-color: rgb(21, 214, 228);
-    border: 5px blue solid ;
-    color: white;
+    background-color: rgb(190, 136, 34);
+    color: rgb(196, 131, 11) ;
     font-size: 20px;
     cursor: pointer;
   }
