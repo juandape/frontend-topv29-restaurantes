@@ -1,11 +1,10 @@
 .containter__filter {
   display: flex;
   gap: 5px;
-  margin-top: -100px;
-  margin-bottom: 60px;
-  width: 100%;
+  margin-top: -80px;
+  margin-left: 75px;
+  width: 200px;
   align-items: center;
-  justify-content: center;
 }
 
 ::placeholder {
@@ -17,6 +16,7 @@
 .container__filter--input {
   border-radius: 5px;
   border: 2px solid orange;
+  color: rgb(143, 96, 10);
   padding: 5px;
 }
 
@@ -27,7 +27,6 @@
   color: white;
   font-weight: bold;
   border-color: orange;
-  margin-left: -80px;
 }
 
 .container__filter--button:hover {
@@ -37,14 +36,21 @@
 
 @media (min-width: 376px) {
   .containter__filter {
+    flex-direction: row;
     margin-top: -100px;
     margin-bottom: 100px;
-    width: 90%;
+    margin-left: 15px;
+    width: 400px;
   }
 
   ::placeholder {
     font-size: 16px;
   }
+
+  /* .container__filter--label {
+    font-size: 25px;
+    padding: 7px;
+  } */
 
   .container__filter--input {
     padding: 7px;
@@ -54,14 +60,14 @@
   .container__filter--button {
     padding: 10px;
     font-size: 14px;
-    margin-right: -380px;
-    position: absolute;
   }
 }
 
 @media (min-width: 760px) {
   .containter__filter {
+    flex-direction: row;
     margin-top: -100px;
     margin-left: 15px;
+    width: 500px;
   }
 }
