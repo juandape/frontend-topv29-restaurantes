@@ -28,10 +28,10 @@ function Footer() {
               target='_blank'
               rel='noreferrer'
             >
-              Ver mi casa en Google Maps
+             <img src='images/mapa.jpg' alt='mapa' />
             </a>
           </div>
-          <p>MAPA</p>
+
         </div>
         <div className='fot'>
           <p className='fot_title'>Useful Links</p>
