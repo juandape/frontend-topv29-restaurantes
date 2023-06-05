@@ -1,0 +1,68 @@
+.cardrest {
+  background-color: #fff;
+  border-radius: 8%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid darkorange;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.cardrest__img {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  border: 1px solid darkorange;
+  margin-bottom: 10px;
+}
+
+.cardrest__info--name {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.cardrest__info--category {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkorange;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cardrest__info--schedules {
+  font-size: 18px;
+  text-align: center;
+  background-color: darkorange;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cardrest__info--adress {
+  text-align: center;
+  font-size: 15px;
+  background-color: lightyellow;
+  margin-bottom: 10px;
+}
+
+.cardrest__button {
+  position: relative;
+  float: right;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

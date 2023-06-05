@@ -1,5 +1,39 @@
-.container__home{
+.container__home {
   max-width: 350px;
   margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+}
 
+.container__home--promoimg {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__home--promoimg--img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 376px) {
+  .container__home {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .container__home--promoimg {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .container__home--promoimg--img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .container__home--promoimg--img:hover {
+    filter: opacity(.5);
+    cursor: pointer;
+  }
 }
