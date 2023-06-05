@@ -30,8 +30,8 @@ function HomePage() {
             <button>Feedback</button>
           </NavLink>
         </div>
-        <Footer />
       </div>
+        <Footer />
     </>
   );
 }
