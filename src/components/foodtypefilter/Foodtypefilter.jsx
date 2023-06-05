@@ -6,11 +6,11 @@ const url = `${BASE_URL}/api/restaurants`;
 
 function FoodTypeFilter() {
   const [foods, setFoods] = useState([]);
-  const [isLoadingFoods, setLoadingFoods] = useState(true);
+  // const [isLoadingFoods, setLoadingFoods] = useState(true);
   useEffect(() => {
     const getFood = async () => {
       const { data, status } = await axios.get(url);
-      setLoadingFoods(false);
+      // setLoadingFoods(false);
       if (status === 200) setFoods(data);
     };
     getFood();

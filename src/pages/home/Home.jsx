@@ -30,8 +30,7 @@ function HomePage() {
             <button>Feedback</button>
           </NavLink>
         </div>
-        {/*<Addfood/>*/}
-
+        <Footer />
       </div>
     </>
   );
