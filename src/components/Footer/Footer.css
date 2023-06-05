@@ -1,57 +1,55 @@
-footer{
-    margin-top:3em;
-    width: 90%;
+footer {
+  margin-top: 3em;
+  width: 100%;
 }
 
-.container_fot{
+.container_fot {
+  background-color: #3b302a;
+  display: flex;
+  padding: 2em 3em;
+  justify-content: space-between;
+  align-items: first baseline;
+  width: 100%;
+}
+
+.fot {
+  width: 33.33%;
+  font-size: 1em;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fot_title {
+  font-size: 2em;
+}
+.contene {
+  background-color: #3b302a;
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  padding: 2em 3em;
+  align-items: first baseline;
+  width: 100%;
+}
+
+.contenedorRedes {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .container_fot {
     background-color: #3b302a;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     padding: 2em 3em;
     justify-content: space-between;
-    align-items:first baseline;
-    width: 100%;
-}
-
-.fot{
-    width: 33.33%;
-    font-size: 1em;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.fot_title{
-    font-size: 2em;
-
-
-}
-.contene{
-    background-color: #3b302a;
-    display: flex;
-    justify-content: space-between;
-    color: aliceblue;
-    padding: 2em 3em;
-    align-items:first baseline;
-    width: 100%;
-}
-
-.contenedorRedes{
-    display: flex;
-    width: 20%;
-    justify-content: space-around;
-    color: aliceblue;
-}
-
-@media (max-width: 768px){
-    .container_fot{
-        background-color: #3b302a;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding: 2em 3em;
-        justify-content: space-between;
-        align-items:first baseline;
-        width: fit-content;
-    }
-
-
-
+    align-items: first baseline;
+    width: fit-content;
+  }
 }
