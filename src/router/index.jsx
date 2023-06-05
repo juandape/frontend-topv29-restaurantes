@@ -10,6 +10,7 @@ import LoginFormUser from '../components/loginform/Loginformuser';
 import RegFormAdmin from '../components/registerform/Regformadmin';
 import RegFormUser from '../components/registerform/Regformuser';
 import Feedback from '../components/feedback/Feedback';
+import Cardlist from '../components/cardlist/Cardlist';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: 'feedback',
         element: <Feedback />,
+      },
+      {
+        path: 'restaurant',
+        element: <Cardlist />,
       },
 
 
