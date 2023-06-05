@@ -10,7 +10,8 @@ import LoginFormUser from '../components/loginform/Loginformuser';
 import RegFormAdmin from '../components/registerform/Regformadmin';
 import RegFormUser from '../components/registerform/Regformuser';
 import Feedback from '../components/feedback/Feedback';
-import Cardlist from '../components/cardlist/Cardlist';
+// import Cardlist from '../components/cardlist/Cardlist';
+import Commingsoon from '../pages/commingsoon/Commingsoon';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'restaurant',
-        element: <Cardlist />,
+        element: <Commingsoon />,
       },
 
 

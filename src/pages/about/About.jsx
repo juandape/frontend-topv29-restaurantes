@@ -7,7 +7,7 @@ function AboutPage() {
       <h1 className='about--title'>About Us</h1>
       <div className='about-container'>
         <div className='about-container__info'>
-          <img src='public\images\food-lion-logo-black-and-white-2.png' alt='autor' className='about-container--img' />
+          <img src='https://logowik.com/content/uploads/images/414_restaurant.jpg' alt='autor' className='about-container--img' />
           <div className='about-container--description'>
             <h2 className='about-container--description--name'>
               <ul>
@@ -22,7 +22,7 @@ function AboutPage() {
           </div>
         </div>
         <div className='about-container__skills'>
-          <h2 className='about-container__skills--title'>What I learn</h2>
+          <h2 className='about-container__skills--title'>What We learn</h2>
           <ul className='about-container__skills--list'>
             <li>Create and manage remote and local repos with Git</li>
             <li>Use of the React library for the creation of web pages</li>
