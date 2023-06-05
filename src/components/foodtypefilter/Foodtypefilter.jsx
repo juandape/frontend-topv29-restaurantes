@@ -20,7 +20,7 @@ function FoodTypeFilter() {
   function handleFoodClick(foodType) {
     const food = foods.find((food) => food.foodtype === foodType);
     if (food) {
-      window.alert(food.name);
+      alert(food.name);
     }
   }
 
