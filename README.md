@@ -8,7 +8,7 @@ Restaurant Project
 
 ## Vercel page
 
-Production: https://frontend-topv29-restaurantes.vercel.app/
+https://frontend-topv29-restaurantes.vercel.app/
 
 ## Screenshot
 

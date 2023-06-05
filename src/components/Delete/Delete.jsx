@@ -18,7 +18,7 @@ function Delete() {
   };
   return (
 
-    <button onClick={handleDelete} className='Delete--btn'>Delete</button>
+    <button onClick={handleDelete} className="Delete--btn">Delete</button>
 
   )
 }
