@@ -24,9 +24,9 @@ function FoodTypeFilter() {
 
   return (
     <div>
-      {isLoadingFoods ? (
+      {/* {isLoadingFoods ? (
         <span className='loader'>Loading...</span>
-      ) : (
+      ) : ( */}
         <div className='container__food'>
           <button
             className='container__food--button'
@@ -94,7 +94,7 @@ function FoodTypeFilter() {
             />
           </button>
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 }
