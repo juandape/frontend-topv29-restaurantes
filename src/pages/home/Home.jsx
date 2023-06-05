@@ -3,12 +3,12 @@ import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
 import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
 import './home.css';
 import { NavLink } from 'react-router-dom';
-import Star from '../../components/Star/Star';
+import Footer from '../../components/Footer/Footer';
 
 function HomePage() {
   return (
     <>
-      <img src='images/food.jpg' alt='' />
+      <img src='images/food.jpg' alt='food' />
       <RestaurantFilter />
 
       <div className='container__home'>
@@ -29,7 +29,6 @@ function HomePage() {
           <NavLink to='/feedback'>
             <button>Feedback</button>
           </NavLink>
-          <Star />
         </div>
         {/*<Addfood/>*/}
 

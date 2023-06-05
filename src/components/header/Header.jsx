@@ -22,7 +22,7 @@ function Header() {
             <NavLink to='/' > HOME </NavLink>
           </div>
           <div className='header-container__items--title'>
-            <NavLink to='/'> RESTAURANT </NavLink>
+            <NavLink to='/restaurant'> RESTAURANT </NavLink>
           </div>
           <div className='header-container__items--title'>
             <NavLink to='/'> PAGES </NavLink>
