@@ -15,7 +15,7 @@ function Star() {
       {[...Array(5)].map((star, item)=>{
         const ratingValue = item + 1;
         return (
-          <label>
+          <label key={item}>
             <input
               type="radio"
               name="rating"
