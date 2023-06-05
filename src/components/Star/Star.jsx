@@ -19,6 +19,7 @@ function Star() {
             <input
               type="radio"
               name="rating"
+              placeholder='prueba'
               className="Input_Star"
               value={ratingValue}
               onClick={handleclick}
