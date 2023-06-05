@@ -30,43 +30,40 @@ const Feedback = () => {
 
   return (
     <>
+      <div className='container__comments'>
+        <Star />
 
-    <div className='container__comments'>
-
-      <h2 className='container__comments--title'>Give Us A Feedback</h2>
-      <form onSubmit={handleSubmit}>
-        <div className='container__comments--form'>
-          <label htmlFor='name' className='container__comments--label'>
-            Email:
-          </label>
-          <input
-            type='email'
-            id='name'
-            className='container__comments--input'
-            placeholder='Your email'
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-          <label htmlFor='content' className='container__comments--label'>
-            Feedback:
-          </label>
-          <textarea
-            id='content'
-            className='container__comments--textarea'
-            placeholder='Your feedback'
-            value={content}
-            onChange={(event) => setContent(event.target.value)}
-          ></textarea>
-        </div>
-        <button type='submit' className='container__comments--button'>
-          Send
-        </button>
-      </form>
-      <Star />
+        <h2 className='container__comments--title'>Give Us A Feedback</h2>
+        <form onSubmit={handleSubmit}>
+          <div className='container__comments--form'>
+            <label htmlFor='name' className='container__comments--label'>
+              Email:
+            </label>
+            <input
+              type='email'
+              id='name'
+              className='container__comments--input'
+              placeholder='Your email'
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+            <label htmlFor='content' className='container__comments--label'>
+              Feedback:
+            </label>
+            <textarea
+              id='content'
+              className='container__comments--textarea'
+              placeholder='Your feedback'
+              value={content}
+              onChange={(event) => setContent(event.target.value)}
+            ></textarea>
+          </div>
+            <button type='submit' className='container__comments--button'>
+              Send
+            </button>
+        </form>
       </div>
-
-
-      </>
+    </>
   );
 };
 

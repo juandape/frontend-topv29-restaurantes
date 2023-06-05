@@ -33,7 +33,7 @@
 
 .container__login--label{
   font-size: 15px;
-  left: 0;
+  margin-left: 0;
   color: rgb(190, 136, 34);
 }
 

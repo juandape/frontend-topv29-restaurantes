@@ -23,7 +23,7 @@ const Cardrest = (props) => {
           <p> Find us in {adress}</p>
         </div>
         <div className='cardest__info--link'>
-          <button>
+          <button className='cardrest__button'>
             <p>See us!</p>
           </button>
         </div>
