@@ -57,7 +57,7 @@
   margin-bottom: 10px;
 }
 
-button {
+.cardrest__button {
   position: relative;
   float: right;
   background-color: black;
