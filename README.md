@@ -9,7 +9,6 @@ Restaurant Project
 ## Vercel page
 
 Production: https://frontend-topv29-restaurantes.vercel.app/
-Develop: https://frontend-topv29-restaurantes-git-develop-juandape.vercel.app
 
 ## Screenshot
 
