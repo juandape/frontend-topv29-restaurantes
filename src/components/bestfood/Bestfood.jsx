@@ -11,8 +11,7 @@ const Bestfood = () => {
         <div className='container__bestfood__text--description'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
           recusandae officiis quasi magnam voluptates libero quibusdam aliquid!
-          Iure architecto ipsa, culpa totam incidunt aliquam dolores, delectus
-          recusandae minus, iste nemo!
+          Iure architecto ipsa.
         </div>
         <div className='container__bestfood__text__download'>
           <div className='container__bestfood__text__download--title'>

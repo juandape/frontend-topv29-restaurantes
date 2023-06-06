@@ -3,48 +3,68 @@
   display: flex;
   align-items: center;
   margin-top: 40px;
-  margin-bottom: -52px;
+  margin-bottom: -32px;
+  text-align: center;
 }
 
-.container__bestfood__text{
-margin-left: 20px;
-margin-right: 10px;
+.container__bestfood__text {
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
-.container__bestfood__text--title{
+.container__bestfood__text--title {
   margin-bottom: 15px;
 }
 
-.container__bestfood__text--description{
+.container__bestfood__text--description {
   margin-bottom: 30px;
   color: gray;
 }
 
-.container__bestfood__text__download--title{
+.container__bestfood__text__download--title {
   margin-bottom: 15px;
 }
 
-.container__bestfood__text__download--icons{
+.container__bestfood__text__download--icons {
   display: flex;
   align-content: flex-start;
 }
 
-.container__bestfood__text__download--apple{
+.container__bestfood__text__download--apple {
   color: red;
   padding: 5px;
-  margin-left: -5px;
 }
 
-.container__bestfood__download--android{
+.container__bestfood__download--android {
   color: red;
   padding: 5px;
-  margin-left: -250px;
 }
 
-.container__bestfood__text__download--apple:hover, .container__bestfood__download--android:hover{
+.container__bestfood__text__download--apple:hover,
+.container__bestfood__download--android:hover {
   background-color: red;
   color: white;
 }
 
+.container__bestfood__img {
+  display: none;
+}
 
+@media (min-width: 376px) {
+  .container__bestfood {
+    margin-bottom: -52px;
+    text-align: left;
+  }
 
+  .container__bestfood__img {
+    display: block;
+  }
+
+  .container__bestfood__text__download--android {
+    margin-left: -250px;
+  }
+
+  .container__bestfood__text__download--apple {
+    margin-left: -5px;
+  }
+}
