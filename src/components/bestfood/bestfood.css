@@ -1,0 +1,50 @@
+.container__bestfood {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: -52px;
+}
+
+.container__bestfood__text{
+margin-left: 20px;
+margin-right: 10px;
+}
+
+.container__bestfood__text--title{
+  margin-bottom: 15px;
+}
+
+.container__bestfood__text--description{
+  margin-bottom: 30px;
+  color: gray;
+}
+
+.container__bestfood__text__download--title{
+  margin-bottom: 15px;
+}
+
+.container__bestfood__text__download--icons{
+  display: flex;
+  align-content: flex-start;
+}
+
+.container__bestfood__text__download--apple{
+  color: red;
+  padding: 5px;
+  margin-left: -5px;
+}
+
+.container__bestfood__download--android{
+  color: red;
+  padding: 5px;
+  margin-left: -250px;
+}
+
+.container__bestfood__text__download--apple:hover, .container__bestfood__download--android:hover{
+  background-color: red;
+  color: white;
+}
+
+
+
