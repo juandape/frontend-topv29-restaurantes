@@ -5,6 +5,7 @@
   padding-top: 70px;
   padding-bottom: 70px;
   margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
 }
 .container__easybook--title {
   font-size: 25px;
@@ -41,6 +42,7 @@
   justify-content: center;
   color: gray;
   box-shadow: 3px 3px 15px gray;
+  font-size: 15px;
 }
 
 .container__easybook__steps--line1,
@@ -67,6 +69,7 @@
     padding-left: 100px;
     padding-right: 100px;
   }
+
   .container__easybook__steps--step1,
   .container__easybook__steps--step2,
   .container__easybook__steps--step3,
@@ -75,6 +78,13 @@
     position: relative;
     padding: 10px;
   }
+
+  .container__easybook__steps--step2,
+  .container__easybook__steps--step4{
+    margin-top: 30px;
+  }
+
+
   .container__easybook__steps--line1,
   .container__easybook__steps--line2,
   .container__easybook__steps--line3 {
@@ -98,5 +108,7 @@
     border-radius: 10px;
     color:black;
     margin-bottom: 40px;
+    width: 390px;
+    padding: 20px;
   }
 }

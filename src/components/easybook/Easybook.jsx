@@ -10,7 +10,7 @@ const Easybook = () => {
       <div className='container__easybook--title'>Super Easy Booking</div>
       <div className='container__easybook--text'>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        cumque optio reiciendis
+        cumque optio reiciendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
       </div>
       <div className='container__easybook__steps'>
         <div className='container__easybook__steps--step1'>
