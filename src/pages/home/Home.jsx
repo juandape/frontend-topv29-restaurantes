@@ -4,6 +4,7 @@ import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter
 import './home.css';
 import { NavLink } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
+import Easybook from '../../components/easybook/Easybook';
 
 function HomePage() {
   return (
@@ -31,6 +32,7 @@ function HomePage() {
           </NavLink>
         </div>
       </div>
+        <Easybook />
         <Footer />
     </>
   );
