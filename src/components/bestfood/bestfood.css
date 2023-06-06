@@ -1,7 +1,5 @@
 .container__bestfood {
   width: 100%;
-  display: flex;
-  align-items: center;
   margin-top: 40px;
   margin-bottom: -32px;
   text-align: center;
@@ -27,17 +25,23 @@
 
 .container__bestfood__text__download--icons {
   display: flex;
-  align-content: flex-start;
+  margin-left: -30px;
 }
 
 .container__bestfood__text__download--apple {
   color: red;
-  padding: 5px;
+  padding: 10px;
+  width: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .container__bestfood__download--android {
   color: red;
   padding: 5px;
+  width: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .container__bestfood__text__download--apple:hover,
@@ -54,17 +58,39 @@
   .container__bestfood {
     margin-bottom: -52px;
     text-align: left;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .container__bestfood__text--title {
+    font-size: 25px;
+  }
+
+  .container__bestfood__text--description {
+    font-size: 20px;
   }
 
   .container__bestfood__img {
     display: block;
+    width: 100%;
   }
 
-  .container__bestfood__text__download--android {
-    margin-left: -250px;
+  .container__bestfood__text__download--title {
+    font-size: 20px;
   }
 
-  .container__bestfood__text__download--apple {
-    margin-left: -5px;
+  .container__bestfood__text__download--icons {
+    font-size: 18px;
+    padding-bottom: 30px;
   }
+
+  .container__bestfood__text__download--apple{
+    margin-left: 30px;
+  }
+
+  .container__bestfood__download--android{
+    margin-left: -30px;
+  }
+
 }

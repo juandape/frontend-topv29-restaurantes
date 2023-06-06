@@ -19,11 +19,11 @@ const Bestfood = () => {
           </div>
           <div className='container__bestfood__text__download--icons'>
           <div className='container__bestfood__text__download--apple'>
-            <AiFillApple />
+              <AiFillApple style={{fontSize: '22px'}} />
             Apple Store
           </div>
           <div className='container__bestfood__download--android'>
-            <AiFillAndroid />
+            <AiFillAndroid style={{fontSize: '22px'}}/>
             Google Play
             </div>
             </div>
@@ -31,8 +31,9 @@ const Bestfood = () => {
       </div>
       <div className='container__bestfood__img'>
         <img
-          src='https://blog.tubikstudio.com/wp-content/uploads/2018/04/burger-app-food-delivery-ui-case-study-tubik-1-1.jpg'
+          src='https://foodappordering.com/introsite/images/banner-slide3.png'
           alt='food app'
+          className='container__bestfood__img--size'
         />
       </div>
     </div>
