@@ -12,6 +12,7 @@ import RegFormUser from '../components/registerform/Regformuser';
 import Feedback from '../components/feedback/Feedback';
 // import Cardlist from '../components/cardlist/Cardlist';
 import Commingsoon from '../pages/commingsoon/Commingsoon';
+import Access from '../components/access/Access';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,10 @@ const router = createBrowserRouter([
         path: 'restaurant',
         element: <Commingsoon />,
       },
-
+      {
+        path: 'access',
+        element: <Access />,
+      },
 
       // {
       //   path: "product-card/:id",

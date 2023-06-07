@@ -4,65 +4,25 @@ img {
 
 .header-container {
   background: orange;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
 }
 
 .header-container__items {
   display: flex;
   position: relative;
-  padding-left: 200px;
   gap: 50px;
-  margin-top: 15px;
-  margin-left: -170px;
+  margin: 0 auto;
 }
 
-.header-container__items__login {
-  color: white;
-  height: 55px;
-  background-color: orange;
-  margin-top: -5px;
-}
-
-.header-container__items__login--title {
-  margin-right: 30px;
-  background-color: orange;
-}
-
-.header-container__items__login--text {
-  list-style: none;
-  padding: 5px;
-  background-color: orange;
-}
-
-.header-container__items__login--text:hover {
-  color: #212355;
-  cursor: pointer;
-}
-
-.header-container__items__register {
-  color: white;
-  height: 55px;
-  background-color: orange;
-  margin-left: -25px;
-  margin-top: -5px;
-}
-
-.header-container__items__register--title:hover {
-  color: #212355;
-  cursor: pointer;
-}
-
-.header-container__items__register--text {
-  list-style: none;
-  padding: 5px;
-  background-color: orange;
+.header-container__items--access{
+margin-left: 200px;
+width: 20px;
+font-size: 18px;
 }
 
 .header-container__logo {
@@ -70,7 +30,6 @@ img {
   font-size: 20px;
   margin: 15px;
   color: white;
-  padding-bottom: 18px;
 }
 a {
   font-weight: 500;
@@ -90,7 +49,6 @@ a:hover {
     position: absolute;
     background: orange;
     padding-top: 40px;
-    padding-bottom: 200px;
     top: 60px;
     display: flex;
     flex-direction: column;
@@ -101,6 +59,10 @@ a:hover {
     position: relative;
   }
   .header-container__items--title {
+    margin-left: 140px;
+  }
+
+  .header-container__items--access{
     margin-left: 140px;
   }
 
@@ -141,7 +103,6 @@ a:hover {
     position: absolute;
     background: orange;
     padding-top: 40px;
-    padding-bottom: 200px;
     top: 60px;
     display: flex;
     flex-direction: column;
