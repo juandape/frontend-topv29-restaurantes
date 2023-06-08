@@ -1,0 +1,14 @@
+.container__restdetail__nav{
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* .container__restdetail__nav--item{
+
+} */
+
+.container__restdetail__nav--item:hover{
+  cursor: pointer;
+  color: orange;
+}
