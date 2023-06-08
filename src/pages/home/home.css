@@ -14,7 +14,7 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .container__home {
     margin-top: 50px;
     text-align: center;
