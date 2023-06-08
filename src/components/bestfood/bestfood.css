@@ -54,7 +54,7 @@
   display: none;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .container__bestfood {
     margin-bottom: -52px;
     text-align: left;
