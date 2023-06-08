@@ -34,9 +34,9 @@ function HomePage() {
           </NavLink>
         </div>
       </div>
-    
-      <Bestfood />
+
       <Easybook />
+      <Bestfood />
       <Footer />
     </>
   );
