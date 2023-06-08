@@ -60,7 +60,7 @@
   color: white;
 }
 
-@media(min-width:376px){
+@media(min-width:576px){
   .container__access {
     gap: 0;
     width: 500px;
