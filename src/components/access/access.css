@@ -6,6 +6,12 @@
   margin-top: 40px;
   width: 100%;
 }
+
+.container__access__login--icon,
+.container__access__register--icon {
+  font-size: 25px;
+}
+
 .container__access__login--title,
 .container__access__register--title {
   font-weight: bold;
@@ -14,7 +20,7 @@
 .container__access__login,
 .container__access__register {
   color: white;
-  background-color: rgb(190, 136, 34);;
+  background-color: rgb(190, 136, 34);
   width: 200px;
   height: 55px;
   text-align: center;
@@ -29,7 +35,6 @@
   background-color: orange;
 }
 
-.container__access__login--textad,
 .container__access__register--textad {
   list-style: none;
   background-color: orange;
@@ -40,7 +45,6 @@
   border-style: outset;
 }
 
-.container__access__login--textus,
 .container__access__register--textus {
   list-style: none;
   background-color: orange;
@@ -51,8 +55,6 @@
   border-style: outset;
 }
 
-.container__access__login--textus:hover,
-.container__access__login--textad:hover,
 .container__access__register--textad:hover,
 .container__access__register--textus:hover {
   background-color: rgb(190, 136, 34);
@@ -60,11 +62,11 @@
   color: white;
 }
 
-@media(min-width:376px){
+@media (min-width: 376px) {
   .container__access {
     gap: 0;
     width: 500px;
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 40px;
   }
 }
