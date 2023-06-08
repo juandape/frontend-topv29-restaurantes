@@ -23,6 +23,7 @@ footer {
 }
 .fot_title {
   font-size: 2em;
+  cursor: pointer;
 }
 .contene {
   background-color: #3b302a;
@@ -52,4 +53,68 @@ footer {
     align-items: first baseline;
     width: fit-content;
   }
+
+  .fot_title_open.false{
+   display:none;
+
+  }
+
+  .fot_title_open.open{
+      font-size: .7em;
+
+  }
+  .fot_title_open1.false{
+   display:none;
+
+  }
+
+  .fot_title_open1.open{
+      font-size: .7em;
+
+  }
+  .fot_title_open2.false{
+    display:none;
+
+   }
+
+   .fot_title_open2.open{
+       font-size: .7em;
+
+   }
+
+   .fot_title_open3.false{
+    display:none;
+
+   }
+
+   .fot_title_open3.open{
+       font-size: .7em;
+
+   }
+
+
+   .fot_title_open4.false{
+    display:none;
+
+   }
+
+   .fot_title_open4.open{
+       font-size: .7em;
+
+   }
+
+   .fot_title_open5.false{
+    display:none;
+
+   }
+
+   .fot_title_open5.open{
+       font-size: .7em;
+
+   }
+
+
+
+
+
 }
