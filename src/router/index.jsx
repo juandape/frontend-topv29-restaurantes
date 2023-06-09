@@ -2,16 +2,15 @@ import { createBrowserRouter } from 'react-router-dom';
 import React from 'react';
 import Root from '../layout/root';
 import AboutPage from '../pages/about/About';
-import Home from '../pages/home/Home';
-// import ProductCard, { loaderProduct } from "../components/ProductCard";
+import Home, { loaderRestaurants } from '../pages/home/Home';
 import NotFound from '../pages/notfound/NotFound';
 import RegFormAdmin from '../components/registerform/Regformadmin';
 import RegFormUser from '../components/registerform/Regformuser';
 import Feedback from '../components/feedback/Feedback';
-// import Cardlist from '../components/cardlist/Cardlist';
-import Commingsoon from '../pages/commingsoon/Commingsoon';
+import Restaurants from '../pages/restaurants/restaurants';
 import Access from '../components/access/Access';
 import LoginForm from '../components/loginform/Loginform';
+import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +21,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        // loader: loaderProducts,
+        loader: loaderRestaurants,
       },
       {
         path: 'about',
@@ -46,18 +45,18 @@ const router = createBrowserRouter([
       },
       {
         path: 'restaurant',
-        element: <Commingsoon />,
+        element: <Restaurants />,
       },
       {
         path: 'access',
         element: <Access />,
       },
 
-      // {
-      //   path: "product-card/:id",
-      //   element: <ProductCard />,
-      //   loader: loaderProduct,
-      // },
+      {
+        path: "restaurant-card/:id",
+        element: <CardRest />,
+        loader: loaderRestaurant,
+      },
     ],
   },
 ]);
