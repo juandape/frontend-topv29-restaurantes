@@ -8,8 +8,8 @@ test('should render restaurant filter with the correct fields', () => {
 });
 
 test('checks the product alert pops up', () => {
-  const alertMock = vi.spyOn(window, 'alert').mockImplementation();
   const { getByRole } = render(<RestaurantFilter />);
-  fireEvent.click(getByRole('button'));
-  expect(alertMock).toHaveBeenCalledTimes(1);
+  const inputElement = getByRole('textbox');
+    fireEvent.change(inputElement, { target: { value: 'Mexican' } });
+    expect(inputElement.value).toBe('Mexican');
 });

@@ -57,7 +57,7 @@
   border: 1px solid orange;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .container__register {
     padding: 20px;
     width: 500px;

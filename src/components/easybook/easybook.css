@@ -1,0 +1,114 @@
+.container__easybook {
+  width: 100%;
+  background-image: url('https://seasonsretirement.com/assets/media/2022/08/foods-to-avoid-during-shingles-attack-1.png');
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+.container__easybook--title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container__easybook--text {
+  width: 340px;
+  margin-bottom: 20px;
+}
+
+.container__easybook__steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.container__easybook__steps--step1,
+.container__easybook__steps--step2,
+.container__easybook__steps--step3,
+.container__easybook__steps--step4 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 340px;
+  height: 100px;
+  text-align: center;
+  border-radius: 10px;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  color: gray;
+  box-shadow: 3px 3px 15px gray;
+  font-size: 15px;
+}
+
+.container__easybook__steps--line1,
+.container__easybook__steps--line2,
+.container__easybook__steps--line3 {
+  width: 50px;
+  margin-top: 40px;
+  border-top: 3px dashed gray;
+}
+
+.container__easybook__steps--line1,
+.container__easybook__steps--line3 {
+  transform: matrix(0.7, 0.81, 0, 0.91, 2, -20);
+}
+
+.container__easybook__steps--line2 {
+  transform: matrix(0.7, -0.81, 0, 0.91, 2, -20);
+}
+
+@media (min-width: 576px) {
+  .container__easybook__steps {
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .container__easybook__steps--step1,
+  .container__easybook__steps--step2,
+  .container__easybook__steps--step3,
+  .container__easybook__steps--step4 {
+    width: 300px;
+    position: relative;
+    padding: 10px;
+  }
+
+  .container__easybook__steps--step2,
+  .container__easybook__steps--step4{
+    margin-top: 30px;
+  }
+
+
+  .container__easybook__steps--line1,
+  .container__easybook__steps--line2,
+  .container__easybook__steps--line3 {
+    margin-left: 0;
+    margin-right: 0;
+    width: 200px;
+    border-color: black;
+  }
+
+  .container__easybook__steps--line1,
+  .container__easybook__steps--line3 {
+    transform: matrix(1, 0.31, 0, 0.91, 2, -20);
+  }
+
+  .container__easybook__steps--line2 {
+    transform: matrix(1, -0.31, 0, 0.91, 2, -20);
+  }
+
+  .container__easybook--text {
+    background-color: rgba(255, 255, 255, 0.318);
+    border-radius: 10px;
+    color:black;
+    margin-bottom: 40px;
+    width: 390px;
+    padding: 20px;
+  }
+}

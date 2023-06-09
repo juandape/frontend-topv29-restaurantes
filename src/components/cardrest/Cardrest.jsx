@@ -59,6 +59,7 @@ const Cardrest = () => {
 
 
 
+
 Cardrest.propTypes = {
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,

@@ -12,11 +12,9 @@ describe('Food type filter test', () => {
   });
 
   test('checks the product alert pops up', () => {
-    ('alerts on submit click', async () => {
-      const alertMock = vi.spyOn(window, 'alert').mockImplementation();
-      const { getByRole } = render(<FoodTypeFilter />);
-      fireEvent.click(getByRole('button'));
-      expect(alertMock).toHaveBeenCalledTimes(1);
-    })
+    const { getByText } = render(<FoodTypeFilter />);
+    fireEvent.click(getByText('Breakfast'));
+    expect(getByText('Breakfast')).toBeInTheDocument();
   })
-})
+});
+
