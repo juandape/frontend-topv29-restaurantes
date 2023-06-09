@@ -18,16 +18,16 @@ function Header() {
         <FaBiohazard />
         </div>
         <div className={`header-container__items ${isOpen && 'open'}`}>
-          <div className='header-container__items--title'>
+          <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/'> HOME </NavLink>
           </div>
-          <div className='header-container__items--title'>
+          <div className='header-container__items--title'  onClick={handleClick}>
             <NavLink to='/restaurant'> RESTAURANTS </NavLink>
           </div>
-          <div className='header-container__items--title'>
+          <div className='header-container__items--title'  onClick={handleClick}>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          <div className='header-container__items--access'>
+          <div className='header-container__items--access'  onClick={handleClick}>
             <NavLink to='/access'>
               <BsFillPersonFill />
             </NavLink>
