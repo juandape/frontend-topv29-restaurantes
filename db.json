@@ -2,7 +2,7 @@
   "restaurants": [
     {
       "name": "Mexican Sabor",
-      "schedules": "10:00 - 22:00",
+      "schedules": "10:00 - 22:30",
       "category": "Mexican",
       "foodtype": "Lunch",
       "address": "Cra. 34b #134-75",

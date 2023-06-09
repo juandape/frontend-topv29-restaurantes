@@ -1,14 +1,14 @@
 import React from 'react';
 import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
 import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
-import './home.css';
-import { NavLink } from 'react-router-dom';
+import { Link, useLoaderData, NavLink } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import Bestfood from '../../components/bestfood/Bestfood';
 import Easybook from '../../components/easybook/Easybook';
-
+import './home.css';
 
 function HomePage() {
+  const { restaurants = [] } = useLoaderData();
   return (
     <>
       <img src='images/food.jpg' alt='food' />
@@ -36,6 +36,25 @@ function HomePage() {
       </div>
 
       <Easybook />
+      <div className='container__home__cardrests'>
+        {restaurants.map((item, index) => (
+          <div key={item.id}>
+            <Link to={`/restaurant-card/${item.id}`}>
+              <div className='container__home__cardrests--rest'>
+                <div className='container__home__cardrests--item'>
+                  {item.name}
+                </div>
+                <div className='container__home__cardrests--item'>
+                  {item.schedule}
+                </div>
+                <div className='container__home__cardrests--item'>
+                  {item.category}
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
       <Bestfood />
       <Footer />
     </>
@@ -44,11 +63,12 @@ function HomePage() {
 
 export default HomePage;
 
-// // eslint-disable-next-line react-refresh/only-export-components
-// export const loaderProducts = async () => {
-//   const response = await fetch("https://fakestoreapi.com/products");
+const BASE_URL = import.meta.env.VITE_API_URL;
 
-//   const data = await response.json();
+export const loaderRestaurants = async () => {
+  const response = await fetch(`${BASE_URL}/api/restaurants`);
 
-//   return { products: data };
-// };
+  const data = await response.json();
+
+  return { restaurants: data };
+};

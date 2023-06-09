@@ -1,0 +1,23 @@
+.container__restdetail--rest {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid gray;
+  margin: 40px auto 40px;
+}
+
+.container__restdetail--rest--info {
+  color: black;
+  width: 250px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.container__restdetail--rest:hover {
+background-color: orange
+}
+
+.container__restdetail--rest--info:hover {
+  color: white;
+}
