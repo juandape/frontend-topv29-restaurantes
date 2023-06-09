@@ -1,19 +1,19 @@
 import { describe,test, expect} from 'vitest';
 import {fireEvent, render,screen} from '@testing-library/react'
-import FormAdd from './FormAdd.jsx'
+import Addfood from '../formaddfood/Addfood';
 
-describe('test tets',()=>{
+describe('test',()=>{
     beforeEach(()=>{
-        render(<FormAdd />)
+        render(<Addfood />)
     })
 
     test('rendering test',()=>{
-       expect(screen.findAllByAltText(/Adress/i)).toBeDefined();
-       expect(screen.findAllByAltText('Name/i')).toBeDefined();
+       expect(screen.findAllByAltText(/price/i)).toBeDefined();
+       expect(screen.findAllByAltText('name/i')).toBeDefined();
         });
     test('should render the input',()=>{
-        expect(screen.findAllByAltText('Name/i')).toBeDefined();
-        expect(screen.getAllByPlaceholderText('Enter the address of the restaurant')).toBeDefined();
+        expect(screen.findAllByAltText('name/i')).toBeDefined();
+        expect(screen.getAllByPlaceholderText('Enter food price')).toBeDefined();
 
         });
 

@@ -14,6 +14,29 @@
   margin-bottom: 30px;
 }
 
+.container__home__cardrests {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  gap: 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container__home__cardrests--rest{
+border: 1px solid gray;
+padding: 10px;
+}
+
+.container__home__cardrests--rest:hover{
+  background-color: orange;
+  color: white;
+  }
+
+.container__home__cardrests--item {
+  color: black;
+}
+
 @media (min-width: 576px) {
   .container__home {
     margin-top: 50px;
@@ -33,7 +56,7 @@
   }
 
   .container__home--promoimg--img:hover {
-    filter: opacity(.5);
+    filter: opacity(0.5);
     cursor: pointer;
   }
 }
