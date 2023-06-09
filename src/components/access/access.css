@@ -1,7 +1,5 @@
 .container__access {
-  display: flex;
   align-items: center;
-  gap: 10px;
   margin-right: 20px;
   margin-top: 40px;
   width: 100%;
@@ -27,6 +25,7 @@
   padding-top: 22.5px;
   border-radius: 10px;
   border-style: outset;
+  margin-bottom: 15px;
 }
 
 .container__access__login:hover,
@@ -40,7 +39,7 @@
   background-color: orange;
   height: 55px;
   padding-top: 22.5px;
-  margin-top: 40px;
+  margin-top: 15px;
   border-radius: 10px;
   border-style: outset;
 }
@@ -64,6 +63,7 @@
 
 @media(min-width:576px){
   .container__access {
+    display: flex;
     gap: 0;
     width: 500px;
     margin: 0 auto;
