@@ -49,13 +49,13 @@ const Cardrest = () => {
   );
 };
 
-Cardrest.propTypes = {
-  name: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  schedules: PropTypes.object.isRequired,
-  adress: PropTypes.object.isRequired,
-  logo: PropTypes.string.isRequired,
-};
+// Cardrest.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   category: PropTypes.string.isRequired,
+//   schedules: PropTypes.object.isRequired,
+//   adress: PropTypes.object.isRequired,
+//   logo: PropTypes.string.isRequired,
+// };
 
 export default Cardrest;
 
