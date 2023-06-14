@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './foodtypefilter.css';
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/restaurants`;
 
 function FoodTypeFilter() {
   const [foods, setFoods] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const getFood = async () => {
       const { data, status } = await axios.get(url);
@@ -19,7 +20,7 @@ function FoodTypeFilter() {
   function handleFoodClick(foodType) {
     const food = foods.find((food) => food.foodtype === foodType);
     if (food) {
-      alert(food.name);
+      navigate(`/restaurant-card/${food.id}`);
     }
   }
 
