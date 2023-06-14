@@ -33,13 +33,13 @@ const Cardrest = () => {
               </div>
             </div>
             <div className='cardrest__info--category'>
-              <p>- {restaurant.category}</p>
+              <p>Category - {restaurant.category}</p>
             </div>
             <div className='cardrest__info--schedules'>
-              <p>- Since {restaurant.schedules}</p>
+              <p> Schedule - {restaurant.schedules}</p>
             </div>
             <div className='cardrest__info--adress'>
-              <p>- Find us in {restaurant.address}</p>
+              <p> Address - {restaurant.address}</p>
             </div>
           </div>
         </div>
