@@ -29,7 +29,7 @@ const Cardrest = () => {
                 <h2>{restaurant.name}</h2>
               </div>
               <div className='cardrest__info--calification'>
-                <h2>4,5 ★</h2>
+                <h2>{restaurant.rating} ★</h2>
               </div>
             </div>
             <div className='cardrest__info--category'>

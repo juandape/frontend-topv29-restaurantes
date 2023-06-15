@@ -6,6 +6,7 @@
       "category": "Mexican",
       "foodtype": "Lunch",
       "address": "Cra. 34b #134-75",
+      "rating": "4.5",
       "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fmexican-food-restaurant-with-various-delicious-traditional-cuisine-flat-illustration_33726646.htm&psig=AOvVaw1kEvliuxCtDcoWxH_vfyjT&ust=1684289178189000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIj2maXg-P4CFQAAAAAdAAAAABAE",
       "foods": [
         {
@@ -35,6 +36,7 @@
       "category": "Fast Food",
       "foodtype": "Fast Food",
       "address": "Calle 21 #56-42",
+      "rating": "4.8",
       "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsp.depositphotos.com%2Fvector-images%2Fcreative-big-burger-logo.html&psig=AOvVaw0h-etmdsrwA53_3JmTURTj&ust=1684289775912000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDr_8Hi-P4CFQAAAAAdAAAAABAJ",
       "foods": [
         {
@@ -64,6 +66,7 @@
       "category": "Asian",
       "foodtype": "Lunch",
       "address": "Cra. 43 #32-21",
+      "rating": "4.5",
       "logo": "",
       "foods": [
         {
@@ -95,6 +98,7 @@
       "category": "Bakeries",
       "foodtype": "Breakfast",
       "address": "Cra. 1 #12-35",
+      "rating": "4.5",
       "logo": "",
       "foods": [
         {
@@ -126,6 +130,7 @@
       "category": "Italian",
       "foodtype": "Dinner",
       "address": "Calle 53b #14-23",
+      "rating": "4.5",
       "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fitalian-restaurant-logo&psig=AOvVaw2UPb4unsCBfRiH9tCYznTQ&ust=1684291093246000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLj4obXn-P4CFQAAAAAdAAAAABAE",
       "foods": [
         {
@@ -155,6 +160,7 @@
       "category": "German",
       "foodtype": "Dinner",
       "address": "Calle 2 #2b-64",
+      "rating": "4.5",
       "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreebiesupply.com%2Flogos%2Fmichael-schumacher-logo%2F&psig=AOvVaw1Y_wb7i1jibeHU3H65TETe&ust=1684291609631000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJi1tqzp-P4CFQAAAAAdAAAAABAE",
       "foods": [
         {
@@ -177,6 +183,36 @@
         }
       ],
       "id": 6
+    },
+    {
+      "name": "Mi buñuelo",
+      "schedules": "6:00 - 19:00",
+      "category": "Bakeries",
+      "foodtype": "Breakfast",
+      "address": "Calle 1 #10-22",
+      "rating": "4.1",
+      "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreebiesupply.com%2Flogos%2Fmichael-schumacher-logo%2F&psig=AOvVaw1Y_wb7i1jibeHU3H65TETe&ust=1684291609631000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJi1tqzp-P4CFQAAAAAdAAAAABAE",
+      "foods": [
+        {
+          "name": "cacerola de huevo",
+          "price": "1500",
+          "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fastelus.com%2Fcomida-tipica-de-alemania-salchichas%2F&psig=AOvVaw1DjbPQLuLp_96GAkU4rZNW&ust=1684292079475000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKiq9Y3r-P4CFQAAAAAdAAAAABAE",
+          "rate": "5.0"
+        },
+        {
+          "name": "buñuelos y empanadas",
+          "price": "1000",
+          "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.edunclub.ru%2Frecipe%2F146166-german-dessert-of-berries-the-company-grutze%2F&psig=AOvVaw0hsIV_-9TT6sD3mKZL1MsG&ust=1684292222117000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLDfy9Hr-P4CFQAAAAAdAAAAABAJ",
+          "rate": "4.9"
+        },
+        {
+          "name": "Arepa de huevo",
+          "price": "12000",
+          "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCurrywurst&psig=AOvVaw15MCN7jc_bxqqPgUyMjvlJ&ust=1684292414114000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIDx3azs-P4CFQAAAAAdAAAAABAE",
+          "rate": "4.5"
+        }
+      ],
+      "id": 7
     }
   ]
 }

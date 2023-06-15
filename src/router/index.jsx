@@ -11,6 +11,8 @@ import Restaurants from '../pages/restaurants/restaurants';
 import Access from '../components/access/Access';
 import LoginForm from '../components/loginform/Loginform';
 import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
+import FoodTypeFilter from '../components/foodtypefilter/Foodtypefilter';
+import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
 
 const router = createBrowserRouter([
   {
@@ -53,8 +55,13 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "restaurant-card/:id",
+        path: 'restaurant-card/:id',
         element: <CardRest />,
+        loader: loaderRestaurant,
+      },
+      {
+        path: 'restaurant-by-type/:foodtype',
+        element: <RestFoodTypeFilter />,
         loader: loaderRestaurant,
       },
     ],
