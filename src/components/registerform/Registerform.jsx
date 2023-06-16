@@ -1,14 +1,21 @@
 import './regform.css';
 import React, { useState } from 'react';
 
-const defaultFormValues = { fullname: '', email: '', password: '', cpassword: '' };
+const defaultFormValues = {
+  fullname: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
 function RegisterForm() {
   const [formValues, setFormValues] = useState(defaultFormValues);
 
+  //verificacion de contraseñas
+
   function handleSubmit(event) {
     event.preventDefault();
-    setFormValues(defaultFormValues);
-    console.log('Form submitted!');
+    setFormValues(formValues)
+
   }
 
   return (
@@ -63,15 +70,12 @@ function RegisterForm() {
             id='cpass'
             className='container__register--input'
             placeholder='confirm your password'
-            value={formValues.cpassword}
+            value={formValues.confirmPassword}
             onChange={(e) => setFormValues(e.target.value)}
             required
           />
         </div>
-        <button
-          type='submit'
-          className='container__register--button'
-        >
+        <button type='submit' className='container__register--button'>
           Register
         </button>
       </form>

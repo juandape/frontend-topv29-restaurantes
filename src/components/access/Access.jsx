@@ -5,8 +5,6 @@ import { GiArchiveRegister } from 'react-icons/gi';
 import './access.css';
 
 const Access = () => {
-  const [dropdown1, setDropdown1] = useState(false);
-  const toggleRegister = () => setDropdown1(!dropdown1);
   return (
     <>
       <div className='container__access'>
@@ -17,32 +15,12 @@ const Access = () => {
           </div>
         </NavLink>
 
-        <div className='container__access__register' onClick={toggleRegister}>
-          <div className='container__access__register--title'>REGISTER</div>
-          <GiArchiveRegister className='container__access__register--icon' />
-          {dropdown1 && (
-            <div>
-              <NavLink to='/regadmin'>
-                <div
-                  className='container__access__register--textad'
-                  role='button'
-                  onClick={toggleRegister}
-                >
-                  Admin
-                </div>
-              </NavLink>
-              <NavLink to='/reguser'>
-                <div
-                  className='container__access__register--textus'
-                  role='button'
-                  onClick={toggleRegister}
-                >
-                  User
-                </div>
-              </NavLink>
-            </div>
-          )}
-        </div>
+        <NavLink to='/register'>
+          <div className='container__access__register'>
+            <div className='container__access__register--title'>REGISTER</div>
+            <GiArchiveRegister className='container__access__register--icon' />
+          </div>
+        </NavLink>
       </div>
     </>
   );
