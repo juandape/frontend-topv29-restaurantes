@@ -18,10 +18,20 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.fot_title {
-  font-size: 2em;
+.activate{
   cursor: pointer;
+  width: 100%;
+  height: 40vh;
+  opacity: 7%;
+
 }
+
+.activate:checked ~ .fot_title_open {
+  display:none;
+}
+
+
+
 .contene {
   background-color: #3b302a;
   display: flex;
@@ -57,72 +67,18 @@
     margin-bottom: 2em;
   }
 
-  .fot_title_open.false{
-   display:none;
+  .fot_title_open{
+
+   font-size: .7em;
+      margin-bottom: 3em;
+      background-color: aqua;
 
   }
 
   .fot_title_open.open{
-      font-size: .7em;
-      margin-bottom: 3em;
+    display:none;
 
   }
-  .fot_title_open1.false{
-   display:none;
-
-  }
-
-  .fot_title_open1.open{
-      font-size: .7em;
-      margin-bottom: 3em;
-  }
-  .fot_title_open2.false{
-    display:none;
-
-   }
-
-   .fot_title_open2.open{
-       font-size: .7em;
-       margin-bottom: 3em;
-
-   }
-
-   .fot_title_open3.false{
-    display:none;
-
-   }
-
-   .fot_title_open3.open{
-       font-size: .7em;
-       margin-bottom: 3em;
-
-   }
-
-
-   .fot_title_open4.false{
-    display:none;
-
-   }
-
-   .fot_title_open4.open{
-       font-size: .7em;
-       margin-bottom: 3em;
-
-   }
-
-   .fot_title_open5.false{
-    display:none;
-
-   }
-
-   .fot_title_open5.open{
-       font-size: .7em;
-       margin-bottom: 3em;
-
-   }
-
-
-
 
 
 }

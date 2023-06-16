@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import Bestfood from '../../components/bestfood/Bestfood';
 import Easybook from '../../components/easybook/Easybook';
+import Modal from '../../components/modal/Modal';
 
 
 function HomePage() {
@@ -34,10 +35,12 @@ function HomePage() {
           </NavLink>
         </div>
       </div>
-    
+
       <Bestfood />
       <Easybook />
       <Footer />
+      <Modal />
+
     </>
   );
 }

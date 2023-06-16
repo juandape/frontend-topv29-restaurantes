@@ -4,39 +4,23 @@ import Modal from '../modal/Modal';
 import './Footer.css';
 
 function Footer() {
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
-  const [isOpen4, setIsOpen4] = useState(false);
-  const [isOpen5, setIsOpen5] = useState(false);
-  const [isOpen6, setIsOpen6] = useState(false);
+  const [isOpen, setIsOpen] = useState('');
 
-  const handleClick1 = () => {
-    setIsOpen1(!isOpen1);
+
+  const handleClick = () => {
+    const value='open'
+    setIsOpen(value);
+
   };
-  const handleClick2 = () => {
-    setIsOpen2(!isOpen2);
-  };
-  const handleClick3 = () => {
-    setIsOpen3(!isOpen3);
-  };
-  const handleClick4 = () => {
-    setIsOpen4(!isOpen4);
-  };
-  const handleClick5 = () => {
-    setIsOpen5(!isOpen5);
-  };
-  const handleClick6 = () => {
-    setIsOpen6(!isOpen6);
-  };
+
 
   return (
     <footer>
 
       <div className='container_fot'>
-        <div className='fot' onClick={handleClick1}>
+        <div className='fot' onClick={handleClick}>
           <p className='fot_title'>RICA</p>
-         <div className={`fot_title_open ${isOpen1 && 'open'}`} >
+         <div className={`fot_title_open ${isOpen}`} >
           <p>Proyecto en Parejas</p>
           <p>Mayo-2023</p>
           </div>
@@ -45,8 +29,8 @@ function Footer() {
 
         </div>
         <div className='fot'>
-          <p className='fot_title' onClick={handleClick2}>About</p>
-          <div className={`fot_title_open1 ${isOpen2 && 'open'}`}>
+          <p className='fot_title' onClick={handleClick}>About</p>
+          <div className={`fot_title_open1 ${isOpen}`}>
           <p>About Us</p>
           <p>FAQ</p>
           <p>Login</p>
@@ -59,8 +43,8 @@ function Footer() {
 
 
         <div className='fot'>
-          <p className='fot_title' onClick={handleClick3}>Our Location</p>
-          <div className={`fot_title_open2 ${isOpen3 && 'open'}`}>
+          <p className='fot_title' onClick={handleClick}>Our Location</p>
+          <div className={`fot_title_open2 ${isOpen}`}>
           <div className='fot_mapa'>
             <a
               href='https://goo.gl/maps/kwahxaWk8zWvwk7p7'
@@ -75,8 +59,8 @@ function Footer() {
 
 
         <div className='fot'>
-          <p className='fot_title' onClick={handleClick4} >Useful Links</p>
-          <div className={`fot_title_open3 ${isOpen4 && 'open'}`}>
+          <p className='fot_title' onClick={handleClick} >Useful Links</p>
+          <div className={`fot_title_open3 ${isOpen}`}>
           <p>Home</p>
           <p>Our Vehical</p>
           <p>Lastest Video</p>
@@ -89,15 +73,15 @@ function Footer() {
 
 
         <div className='fot'>
-          <p className='fot_title' onClick={handleClick5} >New Topics</p>
-          <div className={`fot_title_open4 ${isOpen5 && 'open'}`}>
+          <p className='fot_title' onClick={handleClick} >New Topics</p>
+          <div className={`fot_title_open4 ${isOpen}`}>
           <p>Abril-2023</p>
         </div>
         </div>
 
         <div className='fot'>
-          <p className='fot_title' onClick={handleClick6} >Diseñado por:</p>
-          <div className={`fot_title_open5 ${isOpen6 && 'open'}`}>
+          <p className='fot_title' onClick={handleClick} >Diseñado por:</p>
+          <div className={`fot_title_open5 ${isOpen}`}>
           <p>Guillermo Herrera</p>
           <p>Miguel Chaparro</p>
           <p>Juan David Peña</p>
