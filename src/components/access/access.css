@@ -1,0 +1,72 @@
+.container__access {
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.container__access__login--icon,
+.container__access__register--icon {
+  font-size: 25px;
+}
+
+.container__access__login--title,
+.container__access__register--title {
+  font-weight: bold;
+}
+
+.container__access__login,
+.container__access__register {
+  color: white;
+  background-color: rgb(190, 136, 34);
+  width: 200px;
+  height: 55px;
+  text-align: center;
+  padding-top: 22.5px;
+  border-radius: 10px;
+  border-style: outset;
+  margin-bottom: 15px;
+}
+
+.container__access__login:hover,
+.container__access__register:hover {
+  cursor: pointer;
+  background-color: orange;
+}
+
+.container__access__register--textad {
+  list-style: none;
+  background-color: orange;
+  height: 55px;
+  padding-top: 22.5px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border-style: outset;
+}
+
+.container__access__register--textus {
+  list-style: none;
+  background-color: orange;
+  height: 35px;
+  padding: 22.5px;
+  border-radius: 10px;
+  margin-top: 5px;
+  border-style: outset;
+}
+
+.container__access__register--textad:hover,
+.container__access__register--textus:hover {
+  background-color: rgb(190, 136, 34);
+  cursor: pointer;
+  color: white;
+}
+
+@media(min-width:576px){
+  .container__access {
+    display: flex;
+    gap: 0;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}

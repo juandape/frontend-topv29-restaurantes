@@ -69,7 +69,7 @@
   border: 1px solid orange;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .container__comments {
     padding: 20px;
     width: 400px;
