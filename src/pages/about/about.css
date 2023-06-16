@@ -72,7 +72,7 @@ a:hover {
   color: rgb(190, 136, 34);
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .about-container {
     width: 100%;
   }

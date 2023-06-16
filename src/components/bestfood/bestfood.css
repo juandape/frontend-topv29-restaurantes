@@ -29,7 +29,7 @@
 }
 
 .container__bestfood__text__download--apple {
-  color: red;
+  color: orange;
   padding: 10px;
   width: 120px;
   display: flex;
@@ -37,7 +37,7 @@
 }
 
 .container__bestfood__download--android {
-  color: red;
+  color: orange;
   padding: 5px;
   width: 120px;
   display: flex;
@@ -46,7 +46,7 @@
 
 .container__bestfood__text__download--apple:hover,
 .container__bestfood__download--android:hover {
-  background-color: red;
+  background-color: orange;
   color: white;
 }
 
@@ -54,7 +54,7 @@
   display: none;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .container__bestfood {
     margin-bottom: -52px;
     text-align: left;

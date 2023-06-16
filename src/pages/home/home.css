@@ -14,7 +14,35 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 376px) {
+.container__home__cardrests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black;
+  gap: 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container__home__cardrests--rest {
+  border: 1px solid gray;
+  padding: 10px;
+  color: black;
+  width: 150px;
+  margin: 0 5px 5px 5px;
+}
+.container__home__cardrests--title{
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.container__home__cardrests--rest:hover {
+  background-color: orange;
+  color: white;
+}
+
+@media (min-width: 576px) {
   .container__home {
     margin-top: 50px;
     text-align: center;
@@ -33,7 +61,23 @@
   }
 
   .container__home--promoimg--img:hover {
-    filter: opacity(.5);
+    filter: opacity(0.5);
     cursor: pointer;
+  }
+
+  .container__home__cardrests--rest {
+    padding: 15px;
+    width: 180px;
+    font-size: 18px;
+    margin: 0 10px 10px 10px;
+
+  }
+  .container__home__cardrests {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    gap: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }

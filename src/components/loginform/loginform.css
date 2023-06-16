@@ -3,11 +3,12 @@
 }
 
 .container__login{
+  width: 400px;
   text-align: center;
   border: 3px solid orange;
   border-radius: 5px;
   box-shadow: 5px 5px 8px gray;
-  margin: 0 auto;
+  margin: 50px auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -26,8 +27,8 @@
   text-align: left;
   justify-content: center;
   align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 20px;
 }
 
@@ -51,7 +52,7 @@
   padding: 7px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
@@ -61,10 +62,20 @@
   border: 1px solid orange;
 }
 
-@media (min-width: 376px) {
+.container__login--forgot{
+  font-size: 14px;
+  color: rgb(190, 136, 34);
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: right;
+  margin-right: 20px;
+  font-style: italic;
+}
+
+@media (min-width: 576px) {
   .container__login {
     padding: 20px;
-    width: 500px;
+    margin-top: 50px;
   }
 
   .container__login--title {

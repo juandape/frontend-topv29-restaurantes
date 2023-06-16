@@ -42,7 +42,6 @@ function RestaurantFilter() {
 
   return (
     <div className='containter__filter'>
-      {/* <label className='container__filter--label'>Busca tu restaurante  </label> */}
       <input
         className='container__filter--input'
         type='text'

@@ -62,7 +62,7 @@
   transform: matrix(0.7, -0.81, 0, 0.91, 2, -20);
 }
 
-@media (min-width: 376px) {
+@media (min-width: 576px) {
   .container__easybook__steps {
     display: flex;
     flex-direction: row;
