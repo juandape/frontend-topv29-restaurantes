@@ -1,0 +1,40 @@
+.container__filterbytype {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 30px;
+}
+
+.container__filterbytype--title {
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-top: 40px;
+  font-size: 26px;
+}
+
+.container__filterbytype__list {
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  width: 150px;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+}
+
+.container__filterbytype__list:hover {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .container__filterbytype__list {
+    width: 180px;
+    font-size: 17px;
+  }
+  .container__filterbytype--title {
+    font-size: 30px;
+  }
+}
