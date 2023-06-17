@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 import './Cardrest.css';
 import { BiSearchAlt2 } from 'react-icons/bi';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
@@ -32,8 +33,14 @@ const Cardrest = () => {
           <div className='cardrest__nav--title'>OVERVIEW</div>
           <div className='cardrest__nav--title'>GALLERY</div>
           <div className='cardrest__nav--title'>LOCATION</div>
-          <div className='cardrest__nav--title'>BOOK A TABLE</div>
+          <NavLink to='/booking' >
+            <div className='cardrest__nav--title'>BOOK A TABLE</div>
+          </NavLink>
+          <div>
+          <NavLink to='/feedback'>
           <div className='cardrest__nav--title'>REVIEWS</div>
+          </NavLink>
+        </div>
         </nav>
       </div>
       <div className="cardrest__overview">
