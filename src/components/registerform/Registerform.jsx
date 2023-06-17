@@ -108,7 +108,7 @@ function RegisterForm() {
               id='cpass'
               className='container__register--input'
               placeholder='confirm your password'
-              required
+              re
               value={formData.confirmPassword}
               onChange={handleChange}
               onBlur={validateForm}
