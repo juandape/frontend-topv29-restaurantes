@@ -1,6 +1,7 @@
 * {
   margin: 0 auto;
 }
+
 .container__food {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -43,7 +44,6 @@
     margin-bottom: 20px;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
   }
   .container__food--label {
     font-size: 18px;
