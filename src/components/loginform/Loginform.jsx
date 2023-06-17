@@ -45,7 +45,7 @@ function LoginForm({handleSubmit}) {
           Login
         </button>
       </form>
-      <div className='container__login--forgot'>Forgot your password?</div>
+      <div className='container__login--forgot'>¿Forgot password?</div>
     </div>
   );
 }

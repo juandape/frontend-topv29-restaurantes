@@ -4,14 +4,12 @@ import Root from '../layout/root';
 import AboutPage from '../pages/about/About';
 import Home, { loaderRestaurants } from '../pages/home/Home';
 import NotFound from '../pages/notfound/NotFound';
-import RegFormAdmin from '../components/registerform/Regformadmin';
-import RegFormUser from '../components/registerform/Regformuser';
+import Registerform from '../components/registerform/Registerform';
 import Feedback from '../components/feedback/Feedback';
 import Restaurants from '../pages/restaurants/restaurants';
 import Access from '../components/access/Access';
 import LoginForm from '../components/loginform/Loginform';
 import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
-import FoodTypeFilter from '../components/foodtypefilter/Foodtypefilter';
 import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
 
 const router = createBrowserRouter([
@@ -34,12 +32,8 @@ const router = createBrowserRouter([
         element: <LoginForm />,
       },
       {
-        path: 'regadmin',
-        element: <RegFormAdmin />,
-      },
-      {
-        path: 'reguser',
-        element: <RegFormUser />,
+        path: 'register',
+        element: <Registerform />,
       },
       {
         path: 'feedback',
