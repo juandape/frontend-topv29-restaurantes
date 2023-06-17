@@ -6,8 +6,8 @@ function LoginForm({handleSubmit}) {
   const [formValues, setFormValues] = useState(defaultFormValues);
   function handleSubmit(event) {
     event.preventDefault();
+    alert('login submitted!');
     setFormValues(defaultFormValues);
-    console.log('login submitted!');
   }
 
   return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import RestFoodTypeFilter from '../restfoodtypefilter/Restfoodtypefilter';
 import './foodtypefilter.css';
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/restaurants`;
@@ -20,8 +19,6 @@ function FoodTypeFilter() {
   function handleFoodClick(foodtype) {
     navigate(`/restaurant-by-type/${foodtype}`);
   }
-
-  console.log(foods);
 
   return (
     <div>

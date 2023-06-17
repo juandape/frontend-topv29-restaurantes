@@ -11,6 +11,7 @@ import Access from '../components/access/Access';
 import LoginForm from '../components/loginform/Loginform';
 import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
 import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
+import Booking from '../components/booking/Booking';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
         path: 'restaurant-by-type/:foodtype',
         element: <RestFoodTypeFilter />,
         loader: loaderRestaurant,
+      },
+      {
+        path: 'booking',
+        element: <Booking />,
       },
     ],
   },

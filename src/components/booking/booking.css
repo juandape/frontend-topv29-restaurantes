@@ -1,0 +1,77 @@
+.booking {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.booking__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px auto;
+  color: orange;
+}
+
+.booking__text {
+  font-size: 16px;
+  margin: 10px auto;
+  font-style: italic;
+}
+
+.booking__form {
+  margin: 30px auto;
+  gap: 10px;
+}
+
+.booking__form > div {
+  margin-bottom: 15px;
+}
+
+.booking__form--label {
+  margin: 20px;
+}
+
+.booking__form--input {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(196, 131, 11);
+  padding: 2px;
+  font-size: 14px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.booking__form--input--guests {
+  width: 205px;
+  height: 27px;
+  border-radius: 5px;
+  border: 1px solid rgb(196, 131, 11);
+  padding: 2px;
+  font-size: 14px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.booking__form--button{
+  background-color: rgb(196, 131, 11);
+  color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 80px;
+}
+
+@media(min-width: 576px){
+  .booking__title {
+    font-size: 25px;
+
+  }
+
+  .booking__text {
+    font-size: 18px;
+  }
+
+}
