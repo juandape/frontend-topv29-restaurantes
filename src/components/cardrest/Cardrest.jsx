@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import './Cardrest.css';
+import { BiSearchAlt2 } from 'react-icons/bi';
 import PropTypes from 'prop-types';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
@@ -39,8 +40,10 @@ const Cardrest = () => {
       <div>
         <div className='cardrest__lateralnav'>
           <div>
-            <input type='text' placeholder='search dishes' />
-            <button>Search</button>
+              <input type='text' placeholder='search dishes' />
+              <button>
+                <BiSearchAlt2 />
+              </button>
           </div>
           <div>
 
