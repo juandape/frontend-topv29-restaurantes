@@ -4,7 +4,7 @@
   padding: 2em 3em;
   justify-content: space-between;
   align-items: first baseline;
-  width: 90%;
+  width: 92.1%;
 }
 
 .fot {
@@ -37,7 +37,7 @@
   color: aliceblue;
   padding: 2em 3em;
   align-items: first baseline;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .contenedorRedes {
@@ -56,8 +56,12 @@
     width: 85%;
   }
 .contene{
-  width: 85%;
+  width: 74.5%;
 
+}
+
+.container_fot {
+  width: 74.5%;
 }
 
   .fot{
