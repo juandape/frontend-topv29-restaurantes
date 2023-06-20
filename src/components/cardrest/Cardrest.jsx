@@ -100,7 +100,6 @@ const Cardrest = () => {
             </div>
           </div>
         </div>
-
         <div className='cardrest__payment'>
           <div>Your Order</div>
 
@@ -109,16 +108,6 @@ const Cardrest = () => {
           <div>item 3 price $xxx</div>
           <div>total $xxx</div>
         </div>
-      </div>
-
-      <div className='cardrest__payment'>
-        <div>Your Order</div>
-
-          <div>item 1 price $xxx</div>
-          <div>item 2 price $xxx</div>
-          <div>item 3 price $xxx</div>
-          <div>total $xxx</div>
-
       </div>
       </div>
     </>
