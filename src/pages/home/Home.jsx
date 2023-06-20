@@ -28,15 +28,10 @@ function HomePage() {
             className='container__home--promoimg--img'
           />
         </div>
-        <div>
-          <NavLink to='/feedback'>
-            <button>Feedback</button>
-          </NavLink>
-        </div>
       </div>
 
       <Easybook />
-        <h2 className='container__home__cardrests--title'>Best Restaurants</h2>
+      <h2 className='container__home__cardrests--title'>Best Restaurants</h2>
       <div className='container__home__cardrests'>
         {restaurants.map((item, index) => (
           <div key={item.id}>
