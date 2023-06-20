@@ -6,6 +6,10 @@ import './header.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+  const [dropdown1, setDropdown1] = useState(false);
+  const toggleLogin = () => setDropdown(!dropdown);
+  const toggleRegister = () => setDropdown1(!dropdown1);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
