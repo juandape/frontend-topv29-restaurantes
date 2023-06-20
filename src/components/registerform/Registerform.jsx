@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './regform.css';
 
 const defaultFormData = {
-  fullname: '',
+  name: '',
+  lastname: '',
   email: '',
   password: '',
   confirmPassword: '',
@@ -24,8 +25,8 @@ function RegisterForm() {
   const validateForm = () => {
     const { password, confirmPassword } = formData;
     const error = {};
-    if (password.length < 6) {
-      error.password = 'Password should be at least 6 characters long';
+    if (password.length < 5) {
+      error.password = 'Password should be at least 5 characters long';
     }
     if (password !== confirmPassword) {
       error.confirmPassword = 'Passwords do not match';
@@ -42,7 +43,7 @@ function RegisterForm() {
     alert('Form submitted successfully');
     setFormData(defaultFormData);
   } else {
-    alert('Password does not match');
+    alert('Passwords not match');
   }
 
   }
@@ -53,15 +54,30 @@ function RegisterForm() {
         <div className='container__register__form'>
           <div>
             <label htmlFor='' className='container__register--label'>
-              Full Name
+              Name
             </label>
             <input
               type='text'
-              name='fullname'
-              id='fullname'
+              name='name'
+              id='name'
               className='container__register--input'
-              placeholder='your fullname'
-              value={formData.fullname}
+              placeholder='your name'
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor='' className='container__register--label'>
+              Last Name
+            </label>
+            <input
+              type='text'
+              name='lastname'
+              id='lastname'
+              className='container__register--input'
+              placeholder='your last name'
+              value={formData.lastname}
               onChange={handleChange}
               required
             />
