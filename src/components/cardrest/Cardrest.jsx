@@ -100,6 +100,7 @@ const Cardrest = () => {
             </div>
           </div>
         </div>
+
       <div className='cardrest__payment'>
         <div>Your Order</div>
 
