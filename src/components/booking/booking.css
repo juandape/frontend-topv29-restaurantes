@@ -64,6 +64,7 @@
   width: 250px;
   margin-left: -10px;
   padding: 5px;
+  border: 2px solid orange;
 }
 
 .booking__form--button{
