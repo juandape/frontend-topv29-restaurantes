@@ -1,4 +1,4 @@
-import './International.css';
+import './international.css';
 
 function International() {
   return (
