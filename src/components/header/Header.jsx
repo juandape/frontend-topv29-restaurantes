@@ -3,13 +3,10 @@ import React, { useState } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
+import International from '../international/International';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-  const [dropdown1, setDropdown1] = useState(false);
-  const toggleLogin = () => setDropdown(!dropdown);
-  const toggleRegister = () => setDropdown1(!dropdown1);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -35,6 +32,9 @@ function Header() {
             <NavLink to='/access'>
               <BsFillPersonFill />
             </NavLink>
+          </div>
+          <div className='header-container__items--international' >
+            <International />
           </div>
         </div>
 
