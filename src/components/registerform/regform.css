@@ -14,6 +14,13 @@
   box-shadow: 7px 7px 10px gray;
 }
 
+.container__register--title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px auto;
+  color: orange;
+}
+
 .container__register__form {
   display: grid;
   grid-template-columns: 1fr 1fr;

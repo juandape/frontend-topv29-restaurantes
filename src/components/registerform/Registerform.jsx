@@ -46,6 +46,7 @@ function RegisterForm() {
 
   return (
     <div className='container__register'>
+      <h1 className='container__register--title'>Register</h1>
       <form action='' onSubmit={handleSubmit}>
         <div className='container__register__form'>
           <div>
