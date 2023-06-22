@@ -7,10 +7,6 @@ import International from '../international/International';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-  const [dropdown1, setDropdown1] = useState(false);
-  const toggleLogin = () => setDropdown(!dropdown);
-  const toggleRegister = () => setDropdown1(!dropdown1);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -37,7 +33,7 @@ function Header() {
               <BsFillPersonFill />
             </NavLink>
           </div>
-          <div className='header-container__items--international'>
+          <div className='header-container__items--international' >
             <International />
           </div>
         </div>
