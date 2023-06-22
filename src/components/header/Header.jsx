@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
+import International from '../international/International';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,9 @@ function Header() {
             <NavLink to='/access'>
               <BsFillPersonFill />
             </NavLink>
+          </div>
+          <div className='header-container__items--international'>
+            <International />
           </div>
         </div>
 

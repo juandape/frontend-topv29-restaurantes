@@ -1,0 +1,17 @@
+/* .container__international{
+} */
+
+.container__international--option {
+  border: orange;
+  background-color: aliceblue;
+  color: rgb(190, 136, 34);
+  margin-left: 5px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.container__international--option:hover {
+  background-color: rgb(190, 136, 34);
+  color: white;
+  cursor: pointer;
+}

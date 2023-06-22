@@ -25,8 +25,14 @@ img {
 
 .header-container__items--access{
 margin-left: 200px;
-width: 20px;
+width: 30px;
+text-align: center;
 font-size: 18px;
+}
+
+.header-container__items--international{
+  display: block;
+  margin-left: -20px
 }
 
 .header-container__logo {
@@ -69,6 +75,10 @@ a:hover {
 
   .header-container__items--access{
     margin-left: 140px;
+  }
+
+  .header-container__items--international{
+    display: none;
   }
 
   .header-container__items.open {
