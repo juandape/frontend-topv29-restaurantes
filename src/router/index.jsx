@@ -6,7 +6,7 @@ import Home, { loaderRestaurants } from '../pages/home/Home';
 import NotFound from '../pages/notfound/NotFound';
 import Registerform from '../components/registerform/Registerform';
 import Feedback from '../components/feedback/Feedback';
-import Restaurants from '../pages/restaurants/restaurants';
+import Restaurants from '../pages/restaurants/Restaurants';
 import Access from '../components/access/Access';
 import LoginForm from '../components/loginform/Loginform';
 import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
