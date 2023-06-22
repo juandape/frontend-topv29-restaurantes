@@ -44,8 +44,8 @@ function LoginForm({handleSubmit}) {
         <button type='submit' className='container__login--button'>
           Login
         </button>
-      </form>
       <div className='container__login--forgot'>¿Forgot password?</div>
+      </form>
     </div>
   );
 }
