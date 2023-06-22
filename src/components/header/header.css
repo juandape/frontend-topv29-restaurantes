@@ -78,7 +78,9 @@ a:hover {
   }
 
   .header-container__items--international{
-    display: none;
+    position: absolute;
+    top:-34px;
+    left: 80px;
   }
 
   .header-container__items.open {
