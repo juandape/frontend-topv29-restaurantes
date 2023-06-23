@@ -22,7 +22,10 @@ const Restaurantdetail = () => {
   return (
     <>
       <div className='container__restdetail'>
-        <div>
+        <div className='container__restdetail--title'>
+          <h2>Restaurants</h2>
+        </div>
+        <div className='container__restdetail--box'>
           {restaurants.map((item, index) => (
             <div key={index} className='container__restdetail--rest'>
               <Link to={`/restaurant-card/${item.id}`}>
@@ -32,7 +35,7 @@ const Restaurantdetail = () => {
                   </div>
                   <div>{item.category}</div>
                   <div>Schedules: {item.schedules}</div>
-                  <div>{item.foodtype}</div>
+                  <div>{item.address}</div>
                 </div>
               </Link>
             </div>
