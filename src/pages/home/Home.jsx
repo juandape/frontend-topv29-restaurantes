@@ -4,7 +4,7 @@ import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter
 import Footer from '../../components/Footer/Footer';
 import Bestfood from '../../components/bestfood/Bestfood';
 import Easybook from '../../components/easybook/Easybook';
-import BestRestaurants from '../../components/bestrestaurants/BestRestaurants';
+import BestRestaurants from '../../components/toprestaurants/TopRestaurants';
 import './home.css';
 
 function HomePage() {

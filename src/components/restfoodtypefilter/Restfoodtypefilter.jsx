@@ -28,7 +28,7 @@ function RestFoodTypeFilter() {
           filterRestaurants.map((restaurant) => (
               <Link to={`/restaurant-card/${restaurant.id}`}>
             <li key={restaurant.id} className='container__filterbytype__list'>
-              <h2>{restaurant.name}</h2>
+              <h3>{restaurant.name}</h3>
               <p>{restaurant.rating} ★</p>
               <p>{restaurant.description}</p>
               <p>{restaurant.foodtype}</p>

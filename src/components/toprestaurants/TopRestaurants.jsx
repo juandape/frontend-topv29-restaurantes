@@ -1,14 +1,16 @@
-import './bestrestaurants.css'
+import './toprestaurants.css';
 import { Link, useLoaderData, NavLink } from 'react-router-dom';
 
-const BestRestaurants = () => {
+const TopRestaurants = () => {
   const { restaurants = [] } = useLoaderData();
 
-  const sortRestaurants = restaurants.sort((a, b) => b.rating - a.rating).slice(0, 3);
-  const topRestaurants = sortRestaurants.filter((restaurant) => restaurant.rating >= 4.5)
+  const topRestaurants = restaurants
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 3)
+    .filter((restaurant) => restaurant.rating >= 4.5);
   return (
     <>
-     <h2 className='container__home__cardrests--title'>Top Restaurants</h2>
+      <h2 className='container__home__cardrests--title'>Top Restaurants</h2>
       <div className='container__home__cardrests'>
         {topRestaurants.map((restaurant) => (
           <div key={restaurant.id}>
@@ -22,10 +24,8 @@ const BestRestaurants = () => {
           </div>
         ))}
       </div>
-
     </>
-  )
+  );
+};
 
-}
-
-export default BestRestaurants;
+export default TopRestaurants;
