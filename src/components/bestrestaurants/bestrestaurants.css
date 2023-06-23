@@ -1,0 +1,50 @@
+.container__home__cardrests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black;
+  gap: 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container__home__cardrests--rest {
+  border: 1px solid orange;
+  box-shadow: 5px 5px 8px gray;
+  border-radius: 50px;
+  padding: 10px;
+  color: black;
+  width: 150px;
+  margin: 0 5px 5px 5px;
+  text-align: center;
+}
+
+.container__home__cardrests--title{
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.container__home__cardrests--rest:hover {
+  color: orange;
+  cursor: pointer;
+  box-shadow: 7px 7px 10px gray;
+}
+
+@media (min-width: 576px){
+  .container__home__cardrests--rest {
+    padding: 15px;
+    width: 180px;
+    font-size: 18px;
+    margin: 0 10px 10px 10px;
+
+  }
+  .container__home__cardrests {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    gap: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
