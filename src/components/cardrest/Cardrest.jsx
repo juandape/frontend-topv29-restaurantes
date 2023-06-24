@@ -3,6 +3,8 @@ import './Cardrest.css';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import NavBarCardRest from '../navbarcardrest/Navbarcardrest';
+import MenuRest from '../menurest/Menurest';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -27,22 +29,7 @@ const Cardrest = () => {
           className='cardrest__img'
         />
       </div>
-      <div>
-        <nav className='cardrest__nav'>
-          <div className='cardrest__nav--title'>ORDER ONLINE</div>
-          <div className='cardrest__nav--title'>OVERVIEW</div>
-          <div className='cardrest__nav--title'>GALLERY</div>
-            <div className='cardrest__nav--title'>LOCATION</div>
-          <NavLink to='/booking'>
-            <div className='cardrest__nav--title'>BOOK A TABLE</div>
-          </NavLink>
-          <div>
-            <NavLink to='/feedback'>
-              <div className='cardrest__nav--title'>REVIEWS</div>
-            </NavLink>
-          </div>
-        </nav>
-      </div>
+      <NavBarCardRest />
       <div className='cardrest__overview'>
         <div>
           <div className='cardrest__lateralnav'>
@@ -80,23 +67,7 @@ const Cardrest = () => {
               <p>Food Type - {restaurant.foodtype}</p>
             </div>
             <div>
-              <div>
-                <h2 className='cardrest__info--menu--name'>Menu</h2>
-                {restaurant.foods.map((food) => (
-                  <div key={food.id} className='cardrest__info--menu'>
-                    <div className='cardrest__info--menu--items'>
-                      <strong>{food.name}</strong>
-                    </div>
-                    <div>${food.price}</div>
-                    <div>rate: {food.rate}</div>
-                    <div>
-                      <button className='cardrest__info--menu--button'>
-                        order
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {/* <MenuRest /> */}
             </div>
           </div>
         </div>
