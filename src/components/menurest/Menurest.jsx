@@ -18,7 +18,7 @@ function MenuRest() {
 
   return (
     <div>
-      <h2 className='cardrest__info--menu--name'>Menu</h2>
+      <h2 className='cardrest__info--menu--name'>MENU</h2>
       {restaurant.foods.map((food) => (
         <div key={food.id} className='cardrest__info--menu'>
           <div className='cardrest__info--menu--items'>

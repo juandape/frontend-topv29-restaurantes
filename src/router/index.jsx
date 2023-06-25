@@ -37,10 +37,6 @@ const router = createBrowserRouter([
         element: <Registerform />,
       },
       {
-        path: 'feedback',
-        element: <Feedback />,
-      },
-      {
         path: 'restaurant',
         element: <Restaurants />,
       },
@@ -58,10 +54,6 @@ const router = createBrowserRouter([
         path: 'restaurant-by-type/:foodtype',
         element: <RestFoodTypeFilter />,
         loader: loaderRestaurant,
-      },
-      {
-        path: 'booking',
-        element: <Booking />,
       },
     ],
   },

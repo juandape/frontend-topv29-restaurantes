@@ -4,6 +4,8 @@ import { Box, Tab, Tabs } from '@mui/material';
 import './navbarcardrest.css';
 import MenuRest from '../menurest/Menurest';
 import Booking from '../booking/Booking';
+import Feedback from '../feedback/Feedback';
+import RestOverview from '../restoverview/Restoverview';
 
 function NavBarCardRest() {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -16,15 +18,15 @@ function NavBarCardRest() {
     <React.Fragment>
       <div>
         <Box>
-        <Tabs value={currentTabIndex} onChange={handleTabChange} centered>
-          <Tab label='ORDER ONLINE' />
-          <Tab label='OVERVIEW' />
-          <Tab label='GALLERY' />
-          <Tab label='LOCATION' />
-          <Tab label='BOOK A TABLE' />
-          <Tab label='REVIEWS' />
+          <Tabs value={currentTabIndex} onChange={handleTabChange} centered>
+            <Tab label='OUR MENU' />
+            <Tab label='OVERVIEW' />
+            <Tab label='GALLERY' />
+            <Tab label='LOCATION' />
+            <Tab label='BOOK A TABLE' />
+            <Tab label='REVIEWS' />
           </Tabs>
-          </Box>
+        </Box>
       </div>
       {currentTabIndex === 0 && (
         <Box sx={{ p: 3 }}>
@@ -33,22 +35,28 @@ function NavBarCardRest() {
       )}
       {currentTabIndex === 1 && (
         <Box sx={{ p: 3 }}>
-
+          <RestOverview />
         </Box>
       )}
-      {currentTabIndex === 2 && (
-        <Box sx={{ p: 3 }}>
-
-        </Box>
-      )}
+      {currentTabIndex === 2 && <Box sx={{ p: 3 }}></Box>}
       {currentTabIndex === 3 && (
         <Box sx={{ p: 3 }}>
-
-        </Box>
-      )}
+          <div className='cardrest__logo'>
+        <img
+          src='../public/images/mapa.jpg'
+          alt='img'
+          className='cardrest__img'
+            />
+            </div>
+        </Box>)}
       {currentTabIndex === 4 && (
         <Box sx={{ p: 3 }}>
           <Booking />
+        </Box>
+      )}
+      {currentTabIndex === 5 && (
+        <Box sx={{ p: 3 }}>
+          <Feedback />
         </Box>
       )}
     </React.Fragment>

@@ -1,14 +1,8 @@
 .container__comments{
   text-align: center;
-  border: 3px solid orange;
-  border-radius: 50px;
-  box-shadow: 5px 5px 8px gray;
   width: 330px;
-  margin-top: 40px;
-  background-color: aliceblue;
-}
-.container__comments:hover{
-  box-shadow: 7px 7px 10px gray;
+  margin-top: -20px;
+  border-bottom: 1px solid rgb(190, 136, 34);
 }
 
 .container__comments--title{
@@ -17,6 +11,9 @@
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
+}
+.container__comments__overview{
+ text-align: center;
 }
 
 .container__comments--form{
@@ -79,7 +76,7 @@
 @media (min-width: 576px) {
   .container__comments {
     padding: 20px;
-    width: 350px;
+    width: 500px;
   }
 
   .container__comments--title {
