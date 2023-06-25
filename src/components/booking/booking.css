@@ -3,10 +3,7 @@
   flex-direction: column;
   margin-top: -40px;
   margin-left: -10px;
-  /* border: 3px solid orange; */
   border-radius: 50px;
-  /* box-shadow: 5px 5px 8px gray; */
-  /* background-color: aliceblue; */
   width: 340px;
 }
 
@@ -14,7 +11,7 @@
   font-size: 20px;
   font-weight: bold;
   margin: 20px auto;
-  color: orange;
+  color: rgb(190, 136, 34);
 }
 
 .booking__text {
