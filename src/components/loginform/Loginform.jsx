@@ -12,6 +12,7 @@ function LoginForm({handleSubmit}) {
 
   return (
     <div className='container__login'>
+      <h1 className='container__login--title'>Login</h1>
       <form action='' onSubmit={handleSubmit}>
         <div className='container__login--form'>
           <label htmlFor='' className='container__login--label'>
@@ -44,8 +45,8 @@ function LoginForm({handleSubmit}) {
         <button type='submit' className='container__login--button'>
           Login
         </button>
-      </form>
       <div className='container__login--forgot'>¿Forgot password?</div>
+      </form>
     </div>
   );
 }

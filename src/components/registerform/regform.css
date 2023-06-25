@@ -4,9 +4,21 @@
 .container__register {
   text-align: center;
   border: 3px solid orange;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: 5px 5px 8px gray;
   margin: 40px 15px 15px;
+  background-color: aliceblue;
+}
+
+.container__register:hover{
+  box-shadow: 7px 7px 10px gray;
+}
+
+.container__register--title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px auto;
+  color: orange;
 }
 
 .container__register__form {
@@ -16,24 +28,42 @@
   margin-top: 20px;
 }
 
-.container__register--label {
-  font-size: 15px;
+.container__register--label,
+.container__register--label-s,
+.container__register--label-l {
   color: rgb(190, 136, 34);
-  font-size: 14px;
+  font-size: 12px;
+  background-color: aliceblue;
+  position: relative;
+  left: -30px;
+  top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.container__register--label-s {
+  margin-left: -22px;
+  top: 7px;
+}
+
+.container__register--label-l {
+  margin-left: 40px;
+  top: 7px;
 }
 
 .container__register--input {
-  border-radius: 5px;
+  border-radius: 15px;
   border-color: orange;
   padding: 3px;
   width: 140px;
+  background-color: aliceblue;
+  padding-left: 5px;
 }
 
 .container__register--button {
   background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 7px;
   font-size: 16px;
   cursor: pointer;
@@ -56,9 +86,18 @@
 
   .container__register--label {
     display: flex;
-    font-size: 20px;
-    margin-bottom: 5px;
+    left: -50px;
+    width: 60px;
+  }
 
+  .container__register--label-s {
+    left: -67px;
+    margin-left: 0;
+    top: 7px;
+  }
+
+  .container__register--label-l{
+    margin-left: -15px;
   }
 
   .container__register--input {

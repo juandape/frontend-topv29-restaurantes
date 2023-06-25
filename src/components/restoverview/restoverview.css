@@ -1,0 +1,30 @@
+.overview{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+}
+
+.overview__info > p{
+  font-size: 15px;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.overview__facilities{
+  font-size: 15px;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+@media(min-width: 576px){
+  .overview{
+    margin: 0 auto;
+    width: 500px;
+  }
+  .overview__info > p{
+    font-size: 18px;
+  }
+  .overview__facilities{
+    font-size: 18px;
+  }
+}

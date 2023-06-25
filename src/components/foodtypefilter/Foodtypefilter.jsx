@@ -20,6 +20,11 @@ function FoodTypeFilter() {
     navigate(`/restaurant-by-type/${foodtype}`);
   }
 
+  function handleFoodLength(foodtype) {
+    const foodLength = foods.filter((food) => food.foodtype === foodtype);
+    return foodLength.length;
+  }
+
   return (
     <div>
       <div className='container__food'>
@@ -35,6 +40,7 @@ function FoodTypeFilter() {
             src='/images/breakfast.jpg'
             alt='breakfast'
           />
+          <span>{handleFoodLength('Breakfast')} Restaurants</span>
         </button>
         <button
           className='container__food--button'
@@ -48,6 +54,7 @@ function FoodTypeFilter() {
             src='/images/lunch.jpg'
             alt='lunch'
           />
+          <span>{handleFoodLength('Lunch')} Restaurants</span>
         </button>
         <button
           className='container__food--button'
@@ -61,6 +68,7 @@ function FoodTypeFilter() {
             src='/images/dinner.jpg'
             alt='dinner'
           />
+          <span>{handleFoodLength('Dinner')} Restaurants</span>
         </button>
         <button
           className='container__food--button'
@@ -74,6 +82,7 @@ function FoodTypeFilter() {
             src='/images/fastfood.jpg'
             alt='fast food'
           />
+          <span>{handleFoodLength('Fast Food')} Restaurants</span>
         </button>
         <button
           className='container__food--button'
@@ -87,6 +96,7 @@ function FoodTypeFilter() {
             src='/images/vegan.jpg'
             alt='vegan'
           />
+          <span>{handleFoodLength('Vegan')} Restaurants</span>
         </button>
       </div>
     </div>

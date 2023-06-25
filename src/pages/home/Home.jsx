@@ -1,14 +1,13 @@
 import React from 'react';
 import FoodTypeFilter from '../../components/foodtypefilter/Foodtypefilter';
 import RestaurantFilter from '../../components/restaurantfilter/Restaurantfilter';
-import { Link, useLoaderData, NavLink } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import Bestfood from '../../components/bestfood/Bestfood';
 import Easybook from '../../components/easybook/Easybook';
+import BestRestaurants from '../../components/toprestaurants/TopRestaurants';
 import './home.css';
 
 function HomePage() {
-  const { restaurants = [] } = useLoaderData();
   return (
     <>
       <img src='images/food.jpg' alt='food' />
@@ -31,21 +30,7 @@ function HomePage() {
       </div>
 
       <Easybook />
-      <h2 className='container__home__cardrests--title'>Best Restaurants</h2>
-      <div className='container__home__cardrests'>
-        {restaurants.map((item, index) => (
-          <div key={item.id}>
-            <Link to={`/restaurant-card/${item.id}`}>
-              <div className='container__home__cardrests--rest'>
-                <p>{item.name}</p>
-                <p>{item.rating} ★</p>
-                <p>{item.schedule}</p>
-                <p>{item.category}</p>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <BestRestaurants />
       <Bestfood />
       <Footer />
     </>

@@ -1,30 +1,29 @@
-*{
+* {
   font-family: 'Roboto', sans-serif;
 }
 
-.container__login{
+.container__login {
   width: 300px;
   text-align: center;
   border: 3px solid orange;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: 5px 5px 8px gray;
   margin: 50px auto;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+}
+.container__login:hover {
+  box-shadow: 7px 7px 10px gray;
 }
 
-.container__login--title{
-  font-size: 20px;
-  color: rgb(190, 136, 34);
-  padding-top: 40px;
-  margin: 0 auto;
-  text-align: center;
+.container__login--title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px auto;
+  color: orange;
 }
 
-.container__login--form{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7px;
-  text-align: left;
+.container__login--form {
   justify-content: center;
   align-items: center;
   margin-left: 20px;
@@ -32,23 +31,37 @@
   margin-top: 20px;
 }
 
-.container__login--label{
-  font-size: 15px;
-  margin-left: 0;
+.container__login--label {
   color: rgb(190, 136, 34);
+  font-size: 12px;
+  background-color: aliceblue;
+  position: relative;
+  left: -70px;
+  top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.container__login--input{
-  border-radius: 5px;
+.container__login--label:first-child {
+  width: 30px;
+  left: -80px;
+}
+
+.container__login--input {
+  border-radius: 15px;
   border-color: orange;
   padding: 3px;
+  width: 230px;
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  padding-left: 15px;
 }
 
-.container__login--button{
+.container__login--button {
   background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 7px;
   font-size: 16px;
   cursor: pointer;
@@ -56,13 +69,13 @@
   margin-bottom: 20px;
 }
 
-.container__login--button:hover{
+.container__login--button:hover {
   background-color: orange;
   color: white;
   border: 1px solid orange;
 }
 
-.container__login--forgot{
+.container__login--forgot {
   font-size: 14px;
   color: rgb(190, 136, 34);
   margin-top: 15px;
@@ -79,22 +92,19 @@
     margin-top: 50px;
   }
 
-  .container__login--title {
-    font-size: 25px;
-    margin-bottom: 15px;
-    width: 500px;
-  }
-
-  .container__login__form {
-    gap: 10px;
-  }
-
   .container__login--label {
-    font-size: 20px;
+    font-size: 12px;
+    display: flex;
+    width: 55px;
+  }
+
+  .container__login--label:first-child {
+    width: 30px;
   }
 
   .container__login--input {
     font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .container__login--button {
@@ -105,4 +115,3 @@
     margin-bottom: 10px;
   }
 }
-
