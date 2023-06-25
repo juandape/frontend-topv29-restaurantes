@@ -43,7 +43,7 @@ function NavBarCardRest() {
         <Box sx={{ p: 3 }}>
           <div className='cardrest__logo'>
         <img
-          src='../public/images/mapa.jpg'
+          src='/images/mapa.jpg'
           alt='img'
           className='cardrest__img'
             />
