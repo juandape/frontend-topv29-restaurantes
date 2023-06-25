@@ -20,7 +20,7 @@ const Cardrest = () => {
     <>
       <div className='cardrest__logo'>
         <img
-          src='../public/images/food.jpg'
+          src='/images/food.jpg'
           alt='img'
           className='cardrest__img'
         />

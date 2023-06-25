@@ -12,7 +12,6 @@ function Star() {
 
   return (
     <div>
-      <p>holi: {rating}</p>
       {[...Array(5)].map((star, item)=>{
         const ratingValue = item + 1;
         return (
