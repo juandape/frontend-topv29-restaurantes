@@ -1,23 +1,17 @@
 .booking {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  border: 3px solid orange;
+  margin-top: -40px;
+  margin-left: -10px;
   border-radius: 50px;
-  box-shadow: 5px 5px 8px gray;
-  background-color: aliceblue;
   width: 340px;
-}
-
-.booking:hover {
-  box-shadow: 7px 7px 10px gray;
 }
 
 .booking__title {
   font-size: 20px;
   font-weight: bold;
   margin: 20px auto;
-  color: orange;
+  color: rgb(190, 136, 34);
 }
 
 .booking__text {
@@ -80,6 +74,9 @@
 }
 
 @media(min-width: 576px){
+  .booking {
+    margin: -20px auto;
+  }
   .booking__title {
     font-size: 25px;
 

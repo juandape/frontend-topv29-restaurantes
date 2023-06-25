@@ -1,0 +1,36 @@
+.MuiTabs-root {
+  margin-top: -20px auto;
+}
+.MuiTabs-scroller {
+  padding: 20px;
+}
+.MuiTabs-indicator {
+  display: none;
+}
+
+.MuiTouchRipple-root {
+  padding: 20px;
+}
+
+.MuiTabs-flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  background-color: white;
+  font-size: 14px;
+  width: 100%;
+  color: orange
+}
+
+@media(min-width: 576px) {
+  .MuiTabs-flexContainer {
+   gap: 40px
+  }
+
+  .MuiTabs-indicator{
+    display: block;
+    margin-left: -5px;
+  }
+
+
+}
