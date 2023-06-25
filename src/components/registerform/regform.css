@@ -6,11 +6,12 @@
   border: 3px solid orange;
   border-radius: 50px;
   box-shadow: 5px 5px 8px gray;
-  margin: 40px 15px 15px;
+  margin: 40px auto 15px;
   background-color: aliceblue;
+  width: 330px;
 }
 
-.container__register:hover{
+.container__register:hover {
   box-shadow: 7px 7px 10px gray;
 }
 
@@ -22,9 +23,9 @@
 }
 
 .container__register__form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+
   margin-top: 20px;
 }
 
@@ -35,28 +36,35 @@
   font-size: 12px;
   background-color: aliceblue;
   position: relative;
-  left: -30px;
+  left: 80px;
   top: 7px;
   padding-left: 5px;
   padding-right: 5px;
+  margin-left: 0;
 }
 .container__register--label-s {
-  margin-left: -22px;
+  /* margin-left: -22px; */
   top: 7px;
 }
 
 .container__register--label-l {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   top: 7px;
 }
 
 .container__register--input {
   border-radius: 15px;
   border-color: orange;
-  padding: 3px;
-  width: 140px;
+  padding: 5px;
+  width: 220px;
   background-color: aliceblue;
-  padding-left: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.container__register--box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .container__register--button {
@@ -80,32 +88,28 @@
 @media (min-width: 376px) {
   .container__register {
     padding: 20px;
-    width: 500px;
+    width: 400px;
     margin: 40px auto;
   }
 
   .container__register--label {
-    display: flex;
-    left: -50px;
-    width: 60px;
+    left: 100px;
+    text-align: left;
+  }
+  .container__register--label-s{
+    left: 100px;
   }
 
-  .container__register--label-s {
-    left: -67px;
-    margin-left: 0;
-    top: 7px;
-  }
-
-  .container__register--label-l{
-    margin-left: -15px;
+  .container__register--label-l {
+    left: 100px;
   }
 
   .container__register--input {
     font-size: 20px;
     margin-bottom: 15px;
-    width: 200px;
+    width: 260px;
     font-size: 15px;
-    padding: 5px;
+    padding: 8px;
   }
 
   .container__register--button {

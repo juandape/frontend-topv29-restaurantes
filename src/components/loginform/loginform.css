@@ -105,6 +105,8 @@
   .container__login--input {
     font-size: 20px;
     margin-bottom: 20px;
+    padding: 6px;
+    text-align: center;
   }
 
   .container__login--button {
