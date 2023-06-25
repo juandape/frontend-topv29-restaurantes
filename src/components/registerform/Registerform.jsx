@@ -49,7 +49,7 @@ function RegisterForm() {
       <h1 className='container__register--title'>Register</h1>
       <form action='' onSubmit={handleSubmit}>
         <div className='container__register__form'>
-          <div>
+          <div className='container__register--box'>
             <label htmlFor='' className='container__register--label-s'>
               Name
             </label>
@@ -64,7 +64,7 @@ function RegisterForm() {
               required
             />
           </div>
-          <div>
+          <div className='container__register--box'>
             <label htmlFor='' className='container__register--label'>
               Last Name
             </label>
@@ -79,7 +79,7 @@ function RegisterForm() {
               required
             />
           </div>
-          <div>
+          <div className='container__register--box'>
             <label htmlFor='' className='container__register--label-s'>
               Email
             </label>
@@ -94,7 +94,7 @@ function RegisterForm() {
               required
             />
           </div>
-          <div>
+          <div className='container__register--box'>
             <label htmlFor='' className='container__register--label'>
               Password
             </label>
@@ -112,7 +112,7 @@ function RegisterForm() {
             />
             {error.password && <span>{error.password}</span>}
           </div>
-          <div>
+          <div className='container__register--box'>
             <label htmlFor='' className='container__register--label-l'>
               Confirm password
             </label>
