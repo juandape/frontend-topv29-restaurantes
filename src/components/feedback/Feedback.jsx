@@ -6,6 +6,7 @@ const Feedback = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
+  const [formData, setFormData] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,6 +22,8 @@ const Feedback = () => {
       date: new Date().toString(),
     };
     console.log(newFeedback);
+
+    setFormData([...formData, newFeedback]);
 
     // Limpiar los campos del formulario
     setEmail('');
@@ -78,16 +81,22 @@ const Feedback = () => {
       </div>
       <div className='container__comments__overview'>
         <h2 className='container__comments--title'>Comments</h2>
-
         <div className='container__comments--comment'>
-          <p>4.5★ best Food Ever, and love you can bring your pet</p>
-          <p>by: jose</p>
+          <p>best Food Ever, and love you can bring your pet</p>
+          <p>By: jose</p>
           <p>-------------------------------------------------</p>
-          <p>4.8★ enjoy everything. Full recommended</p>
-          <p>by: maria</p>
+          <p>enjoy everything. Full recommended</p>
+          <p>By: maria</p>
           <p>-------------------------------------------------</p>
-          <p>{content}</p>
-          <p>{name}</p>
+          <div>
+            {formData.map((feedback) => (
+              <div key={feedback.date}>
+                <p>{feedback.content}</p>
+                <p>By: {feedback.name}</p>
+                <p>-------------------------------------------------</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
