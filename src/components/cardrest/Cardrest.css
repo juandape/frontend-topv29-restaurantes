@@ -73,11 +73,11 @@ font-size: 25px;
   }
 }
 
-/* @media (max-width: 639px) {
+@media (min-width: 768px) {
 
   .cardrest__info--title {
-    margin-top: 150px;
-    margin-bottom: -30px;
+    margin-top: 120px;
+    margin-bottom: 0px;
   }
 
-} */
+}
