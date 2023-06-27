@@ -1,13 +1,20 @@
+import { from } from 'rxjs';
 import Cardrest from '../cardrest/Cardrest';
+import {useSelector} from '../../store';
 
-const Cardlist = ({ data }) => {
+const Cardlist = () => {
+  const state = useSelector();
   return (
     <div className='cardlist'>
-      {data.map((rest, index) => {
-        <Cardrest key={index} {...rest} />;
+      {state.foods.map((rest) => {
+        <Cardrest key={rest.id} rest={rest} />;
       })}
     </div>
   );
 };
+
+// Cardlist.defaultProps = {
+//   cart: [],
+// };
 
 export default Cardlist;

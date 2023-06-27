@@ -4,6 +4,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
 import International from '../international/International';
+import Badge from '../badge/Badge';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,9 @@ function Header() {
           </div>
           <div className='header-container__items--international' >
             <International />
+          </div>
+          <div>
+            <Badge />
           </div>
         </div>
 
