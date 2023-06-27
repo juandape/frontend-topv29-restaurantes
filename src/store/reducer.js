@@ -11,8 +11,9 @@ function reducer(state, action) {
     }
     case ADD_TO_CART: {
       const newFood = action.payload;
+      console.log("🚀 ~ file: reducer.js:14 ~ reducer ~ newFood:", newFood)
       const newCart = [...state.cart, newFood];
-      const total = newCart.reduce((acc, curr) => acc + curr.price, 0);
+      const total = newCart.reduce((acc, curr) => acc + Number(curr.price), 0);
       console.log("🚀 ~ file: reducer.js:16 ~ reducer ~ total:", total)
 
       return { ...state, cart: newCart, total };

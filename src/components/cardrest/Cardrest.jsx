@@ -1,6 +1,5 @@
 import { useLoaderData } from 'react-router-dom';
 import './Cardrest.css';
-import PropTypes from 'prop-types';
 import NavBarCardRest from '../navbarcardrest/Navbarcardrest';
 import { LuSoup } from 'react-icons/lu'
 
@@ -41,13 +40,5 @@ const Cardrest = () => {
     </>
   );
 };
-
-// Cardrest.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   category: PropTypes.string.isRequired,
-//   schedules: PropTypes.object.isRequired,
-//   adress: PropTypes.object.isRequired,
-//   logo: PropTypes.string.isRequired,
-// };
 
 export default Cardrest;

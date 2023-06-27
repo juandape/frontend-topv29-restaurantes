@@ -19,7 +19,7 @@ function MenuRest() {
   const dispatch = useDispatch();
 
   function addToCart(food) {
-    // console.log(restaurant.foods);
+    console.log(food);
     dispatch(addFoodToCart(food));
   }
 

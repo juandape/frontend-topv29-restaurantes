@@ -13,7 +13,7 @@ function ShoppingCart() {
         <Badge />
       </div>
       <div className='shoppingcart__content'>
-        <Cardlist cart={state.foods} />
+        <Cardlist products={state.cart} />
         <Totalbuy />
         <div>-----</div>
         <Badge />
