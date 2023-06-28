@@ -32,8 +32,6 @@ export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const store = { state, dispatch };
 
-  const store = {state, dispatch}
-
   return (
     <AppContext.Provider value={store}>
       {children}
