@@ -4,7 +4,7 @@
 }
 
 .checkoutbtn--button{
-  background-color: #1976d2;
+  background-color: rgb(190, 136, 34);
   color: white;
   border: 1px solid orange;
   border-radius: 5px;
@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 }
 .checkoutbtn--button:hover{
-background-color: rgb(196, 131, 11);
+background-color: orange;
   color: white;
   border: 1px solid orange;
 }

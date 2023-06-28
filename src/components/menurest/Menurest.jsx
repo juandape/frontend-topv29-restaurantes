@@ -1,8 +1,11 @@
 import { useLoaderData, NavLink } from 'react-router-dom';
-import { useDispatch } from '../../store';
-import { addFoodToCart } from '../../store/actions';
+import { useDispatch, useSelector } from '../../store';
+import { addFoodToCart, removeFoodFromCart } from '../../store/actions';
+import { BsTrash } from 'react-icons/bs';
+import { GrFormAdd } from 'react-icons/gr';
 import './menurest.css';
 import Totalbuy from '../totalbuy/Totalbuy';
+import Badge from '../badge/Badge';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -18,37 +21,66 @@ export const loaderRestaurant = async ({ params }) => {
 function MenuRest() {
   const { restaurant = [] } = useLoaderData();
   const dispatch = useDispatch();
+  const state = useSelector();
+  const cartLength = Object.values(state.cart);
 
-  function addToCart(food) {
+  function handleAdd(food) {
+    console.log(food);
     dispatch(addFoodToCart(food));
   }
 
+  // function handleRemove() {
+  //   if (item.quantity === 0) return alert('cart empty');
+  //   return dispatch(removeFoodFromCart());
+  // }
+
   return (
     <>
-      <h2 className='cardrest__info--menu--name'>MENU</h2>
+      <h2 className='menurest__info--menu--name'>MENU</h2>
       <div>
         {restaurant.foods.map((food) => (
-          <div key={food.id} className='cardrest__info--menu'>
-            <div className='cardrest__info--menu--items'>
+          <div key={food.id} className='menurest__info--menu'>
+            <div className='menurest__info--menu--items'>
               <strong>{food.name}</strong>
             </div>
             <div>$ {Intl.NumberFormat('en-US').format(food.price)}</div>
             <div>rate: {food.rate}</div>
-            <div>
-              <button
-                className='cardrest__info--menu--button'
-                onClick={() => addToCart(food)}
+            <div className='menurest__items--show'>
+              {/* <button
+                onClick={() => handleRemove(food)}
+                className='cardlist__items--button'
               >
-                order
+                <BsTrash />
+              </button> */}
+              {/* <div className='cardlist__items--quantity'>
+                {cartLength.map((item) => (
+                  <div key={item.id}>
+                    {item.quantity}
+                  </div>
+                ))}
+              </div> */}
+              <button
+                className='menurest__items--button'
+                onClick={() => handleAdd(food)}
+              >
+                <GrFormAdd />
               </button>
             </div>
           </div>
         ))}
-        <div><Totalbuy /></div>
+        <div className='menurest__bottom'>
+          <div className='menurest__bottom--total'>
+            <Totalbuy />
+          </div>
+
+          <div className='menurest__bottom--badge'>
+            <Badge />
+          </div>
+        </div>
       </div>
-      <div className='cardrest__gotocart'>
+      <div className='menurest__gotocart'>
         <NavLink to='/cart'>
-          <button className='cardrest__gotocart--button'>Go to Cart </button>
+          <button className='menurest__gotocart--button'>Go to Cart</button>
         </NavLink>
       </div>
     </>

@@ -1,7 +1,7 @@
 .cardlist__items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 320px;
   padding-bottom: 10px;
   padding-top: 10px;
   border: 1px solid rgb(190, 136, 34);
@@ -9,7 +9,33 @@
   align-items: center;
 }
 .cardlist__items--name {
-  margin-left: -20px;
+  margin-left: 20px;
+  width: 100px;
+  text-align: left;
+}
+
+.cardlist__items--price{
+  text-align: left;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.cardlist__items--show{
+display: flex;
+gap:1px;
+width: 80px;
+margin-left: 10px;
+}
+
+.cardlist__items--button{
+border: 0.5px solid rgb(190, 136, 34);
+
+}
+
+.cardlist__items--quantity{
+  border: 0.5px solid rgb(190, 136, 34);
+  width: 50px;
+
 }
 
 
@@ -19,8 +45,12 @@
     width: 500px;
   }
 
+  .cardlist__items--name{
+    width: 200px;
+  }
+
   .cardlist__items--price {
-    margin-right: 50px;
+    margin-right: 60px;
   }
 }
 

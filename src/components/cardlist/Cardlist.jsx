@@ -1,27 +1,49 @@
-import { faHouseFloodWater } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from '../../store';
-import { removeFoodFromCart } from '../../store/actions';
-import './cardlist.css'
+import { removeFoodFromCart, addFoodToCart } from '../../store/actions';
+import { BsTrash } from 'react-icons/bs';
+import { GrFormAdd } from 'react-icons/gr';
+import './cardlist.css';
 
 const Cardlist = ({ products = [] }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const handleRemove = (items) => {
-    console.log(items)
-    dispatch(removeFoodFromCart(items))
-  }
+  const handleRemove = (product) => {
+    dispatch(removeFoodFromCart(product));
+  };
 
-
+  const handleAdd = (product) => {
+    dispatch(addFoodToCart(product));
+  };
 
   return (
     <div className='cardlist'>
-      {products.map((items) => {
+      {Object.values(products).map((item) => {
         return (
-          <ul className='cardlist__items'>
-            <li key={items.id} className='cardlist__items--name'>{items.name}</li>
-            <li className='cardlist__items--price'>$ {Intl.NumberFormat('en-US').format(items.price)}</li>
-            <button onClick={()=>handleRemove(items)}>X</button>
-          </ul>
+          <>
+            <div className='cardlist__items'>
+              <div key={item.product.id} className='cardlist__items--name'>
+                {item.product.name}
+              </div>
+              <div className='cardlist__items--price'>
+                $ {Intl.NumberFormat('en-US').format(item.product.price)}
+              </div>
+              <div className='cardlist__items--show'>
+                <button
+                  onClick={() => handleRemove(item.product)}
+                  className='cardlist__items--button'
+                >
+                  <BsTrash />
+                </button>
+                <div className='cardlist__items--quantity'>{item.quantity}</div>
+                <button
+                  className='cardlist__items--button'
+                  onClick={() => handleAdd(item.product)}
+                >
+                  <GrFormAdd />
+                </button>
+              </div>
+            </div>
+          </>
         );
       })}
     </div>

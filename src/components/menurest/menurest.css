@@ -1,13 +1,14 @@
-.cardrest__info--menu {
+.menurest__info--menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   margin-left: -10px;
   align-items: center;
+  border: 0.5px solid rgb(190, 136, 34);
 }
 
-.cardrest__info--menu--name {
+.menurest__info--menu--name {
   font-size: 22px;
   text-align: center;
   color: rgb(190, 136, 34);
@@ -17,7 +18,7 @@
   padding-bottom: 20px;
 }
 
-.cardrest__info--menu--items {
+.menurest__info--menu--items {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
@@ -34,7 +35,7 @@
   color: white;
 }
 
-.cardrest__info--menu--button {
+.menurest__info--menu--button {
   background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
@@ -46,14 +47,14 @@
   margin-bottom: 20px;
 }
 
-.cardrest__info--menu--button:hover {
+.menurest__info--menu--button:hover {
   background-color: orange;
   color: white;
   border: 1px solid orange;
 }
 
-.cardrest__gotocart--button{
-  background-color: #1976d2;
+.menurest__gotocart--button{
+  background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
   border-radius: 5px;
@@ -64,29 +65,55 @@
   margin-bottom: 20px;
 }
 
-.cardrest__gotocart--button:hover{
-  background-color: rgb(196, 131, 11);
+.menurest__gotocart--button:hover{
+  background-color: orange;
   color: white;
   border: 1px solid orange;
 }
 
-.cardrest__gotocart{
+.menurest__gotocart{
   margin-top: 20px;
   text-align: center;
 }
 
-.cardrest__gotocart--badge{
+.menurest__gotocart--badge{
   color: black
+}
+
+.menurest__bottom{
+display: flex;
+border: 1px solid rgb(190, 136, 34);
+height: 50px;
+align-items: center;
+width: 250px;
+text-align: center;
+margin-top: 35px;
+}
+
+.menurest__bottom--total{
+  margin-top: 20px;
+  margin-left: -10px;
+}
+
+.menurest__items--button{
+  border: 0.5px solid rgb(190, 136, 34);
+ padding: 5px;
+ border-radius: 5px;
+}
+
+.menurest__items--button:hover{
+  background-color: orange;
+  cursor: pointer;
 }
 
 
 @media (min-width: 576px) {
-  .cardrest__info--menu {
-    margin: 0 auto;
+  .menurest__info--menu {
+    margin: 0 auto 10px;
     width: 500px;
   }
 
-  .cardrest__info--menu--name {
+  .menurest__info--menu--name {
     width: 500px;
   }
 }
