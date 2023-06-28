@@ -5,9 +5,23 @@ import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
 import International from '../international/International';
 import Badge from '../badge/Badge';
+import { useSelector ,useDispatch } from '../../store';
+import { session } from '../../store/actions';
 
 function Header() {
+  const state = useSelector();
+  const dispatch = useDispatch()
+
+  const nick= state.login.profile.fullName;
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () =>{
+    alert("ingrese")
+    dispatch( session(null));
+
+  };
+
+
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -26,14 +40,34 @@ function Header() {
           <div className='header-container__items--title'  onClick={handleClick}>
             <NavLink to='/restaurant'> RESTAURANTS </NavLink>
           </div>
+
           <div className='header-container__items--title'  onClick={handleClick}>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          <div className='header-container__items--access'  onClick={handleClick}>
-            <NavLink to='/access'>
-              <BsFillPersonFill />
-            </NavLink>
+
+
+          {  nick !== null ?
+          (<>
+            <div className='header-container__items--title'  onClick={handleClick}>
+            <NavLink to='/'> {nick} </NavLink>
+            </div>
+
+            <div className='header-container__items--title'  onClick={handleClose}>
+            <NavLink to='#'> Sign off </NavLink>
           </div>
+          </>
+          ):(
+
+          <div className='header-container__items--access'  onClick={handleClick}>
+          <NavLink to='/access'>
+            <BsFillPersonFill />
+          </NavLink>
+          </div>)
+
+          }
+
+
+
           <div className='header-container__items--international' >
             <International />
           </div>
