@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import './loginform.css';
+import { useSelector } from '../../store';
 
 export const defaultFormValues = { email: '', password: '' };
 function LoginForm({handleSubmit}) {
+
+  const state = useSelector();
+
+  console.log(state.login)
+
+
   const [formValues, setFormValues] = useState(defaultFormValues);
   function handleSubmit(event) {
     event.preventDefault();

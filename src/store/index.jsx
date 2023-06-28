@@ -1,5 +1,6 @@
 import { createContext, useReducer, useContext } from 'react';
 import reducer from './reducer';
+import { MdPassword } from 'react-icons/md';
 
 const AppContext = createContext();
 
@@ -8,13 +9,18 @@ const initialState = {
   cart: [],
   total: 0,
   isLoading: false,
+  //null
+  //'guialexander@g.com'
+  login:{ email: null, password: '1234'},
+
 };
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const store = { state, dispatch };
 
   return (
-    <AppContext.Provider value={[state, dispatch]}>
+    <AppContext.Provider value={store}>
       {children}
     </AppContext.Provider>
   );
