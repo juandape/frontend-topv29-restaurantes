@@ -1,0 +1,20 @@
+.checkoutbtn{
+  display: flex;
+  margin: 0 auto;
+}
+
+.checkoutbtn--button{
+  background-color: #1976d2;
+  color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.checkoutbtn--button:hover{
+background-color: rgb(196, 131, 11);
+  color: white;
+  border: 1px solid orange;
+}

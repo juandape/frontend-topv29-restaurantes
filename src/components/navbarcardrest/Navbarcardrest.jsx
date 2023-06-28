@@ -32,7 +32,6 @@ function NavBarCardRest() {
       {currentTabIndex === 0 && (
         <Box sx={{ p: 3 }}>
           <MenuRest />
-          <ShoppingCart />
         </Box>
       )}
       {currentTabIndex === 1 && (

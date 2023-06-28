@@ -37,9 +37,11 @@ function Header() {
           <div className='header-container__items--international' >
             <International />
           </div>
-          <div>
+          <NavLink to='/cart'><div>
             <Badge />
           </div>
+          </NavLink>
+
         </div>
 
         <div

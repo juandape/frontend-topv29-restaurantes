@@ -1,7 +1,8 @@
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, NavLink } from 'react-router-dom';
 import { useDispatch } from '../../store';
 import { addFoodToCart } from '../../store/actions';
 import './menurest.css';
+import Totalbuy from '../totalbuy/Totalbuy';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -19,7 +20,6 @@ function MenuRest() {
   const dispatch = useDispatch();
 
   function addToCart(food) {
-    console.log(food);
     dispatch(addFoodToCart(food));
   }
 
@@ -32,7 +32,7 @@ function MenuRest() {
             <div className='cardrest__info--menu--items'>
               <strong>{food.name}</strong>
             </div>
-            <div>${food.price}</div>
+            <div>$ {Intl.NumberFormat('en-US').format(food.price)}</div>
             <div>rate: {food.rate}</div>
             <div>
               <button
@@ -44,6 +44,12 @@ function MenuRest() {
             </div>
           </div>
         ))}
+        <div><Totalbuy /></div>
+      </div>
+      <div className='cardrest__gotocart'>
+        <NavLink to='/cart'>
+          <button className='cardrest__gotocart--button'>Go to Cart </button>
+        </NavLink>
       </div>
     </>
   );
