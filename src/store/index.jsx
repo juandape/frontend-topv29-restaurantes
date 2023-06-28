@@ -11,7 +11,7 @@ const initialState = {
   isLoading: false,
   //null
   //'guialexander@g.com'
-  login:{ email: null, password: '1234'},
+  login:{ email: 'guialexander@g.com', password: '1234'},
 
 };
 
