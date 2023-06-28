@@ -11,7 +11,7 @@ function Header() {
   const state = useSelector();
   const dispatch = useDispatch()
 
-  const nick= state.login.email;
+  const nick= state.login.profile.fullName;
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () =>{

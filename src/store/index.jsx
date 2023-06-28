@@ -11,7 +11,20 @@ const initialState = {
   isLoading: false,
   //null
   //'guialexander@g.com'
-  login:{ email: 'guialexander@g.com', password: '1234'},
+  login:{
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsajBqdTJqaTAwMDJucDU4dWdxcjFxOHEiLCJlbWFpbCI6Imp1YW4ucGVAZ21haWwuY29tIiwiaWF0IjoxNjg3OTY2MzY4fQ.VOd8gN_g0Kfu1ZlHphMxUFbHIoGxugTdf4pCtoQttzA",
+    profile: {
+        fullName: "Juan Peña",
+        avatar: null,
+        email: "juan.pe@gmail.com",
+        roles: [
+            {
+                id: "clj0jvzke0000npd8j9z3b5yc",
+                name: "ADMIN"
+            }
+              ]
+             }
+      },
 
 };
 

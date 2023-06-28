@@ -1,21 +1,40 @@
 import React, { useState } from 'react';
 import './loginform.css';
-import { useSelector } from '../../store';
+import { useDispatch, useSelector } from '../../store';
+import { session } from '../../store/actions';
 
-export const defaultFormValues = { email: '', password: '' };
-function LoginForm({handleSubmit}) {
+
+function LoginForm() {
 
   const state = useSelector();
+  const dispatch = useDispatch();
 
-  console.log(state.login)
+  const [ user, setUser] = useState({});
 
+  const handleChange=(event)=>{
 
-  const [formValues, setFormValues] = useState(defaultFormValues);
-  function handleSubmit(event) {
+    const {name,value}=event.target;
+    setUser(
+      {
+        ...user,
+        [name]: value ,
+
+      })
+  };
+
+  const handleSubmit = (event) => {
+
     event.preventDefault();
-    alert('login submitted!');
-    setFormValues(defaultFormValues);
-  }
+    dispatch( session(user.emaill));
+    console.log(user.emaill)
+  };
+
+
+
+
+  console.log(state.login.profile.fullName)
+
+
 
   return (
     <div className='container__login'>
@@ -28,11 +47,9 @@ function LoginForm({handleSubmit}) {
           <input
             type='email'
             name='emaill'
-            id='emaill'
             className='container__login--input'
             placeholder='your email'
-            value={formValues.email}
-            onChange={(e) => setFormValues(e.target.value)}
+            onChange={handleChange}
             required
           />
           <label htmlFor='' className='container__login--label'>
@@ -41,11 +58,9 @@ function LoginForm({handleSubmit}) {
           <input
             type='password'
             name='passl'
-            id='passl'
             className='container__login--input'
             placeholder='your password'
-            value={formValues.password}
-            onChange={(e) => setFormValues(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>

@@ -31,7 +31,7 @@ function reducer(state, action) {
 
     case SIGN_SESSION: {
       const signsession = action.payload;
-      return { ...state, state: state.login.email = signsession };
+      return { ...state, state: state.login.profile.fullName = signsession };
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
