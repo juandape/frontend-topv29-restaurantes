@@ -32,12 +32,11 @@ function LoginForm() {
 
 
   useEffect(()=>{
-    //console.log("use effect  one")
     const UserLocal = JSON.parse(localStorage.getItem('dataUser'));
     dispatch( login(UserLocal));
    },[]);
 
-    // local Storage carga cuando cambio el user
+
   useEffect(()=>{
     localStorage.setItem("dataUser",JSON.stringify(state.login));
    },[state.login]);
@@ -45,7 +44,6 @@ function LoginForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("peticion post")
 
     try {
       const options = {
