@@ -3,14 +3,20 @@ import './loginform.css';
 import { useDispatch, useSelector } from '../../store';
 
 import { login } from '../../store/actions';
+import { useEffect } from 'react';
 
 
 function LoginForm() {
 
+  const initialState = {
+    email: '',
+    password: '',
+  };
+
   const state = useSelector();
   const dispatch = useDispatch();
 
-  const [ user, setUser] = useState({});
+  const [ user, setUser] = useState(initialState);
 
   const handleChange=(event)=>{
 
@@ -24,11 +30,22 @@ function LoginForm() {
 
   };
 
+
+  useEffect(()=>{
+    //console.log("use effect  one")
+    const UserLocal = JSON.parse(localStorage.getItem('dataUser'));
+    dispatch( login(UserLocal));
+   },[]);
+
+    // local Storage carga cuando cambio el user
+  useEffect(()=>{
+    localStorage.setItem("dataUser",JSON.stringify(state.login));
+   },[state.login]);
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(user)
-
-
+    console.log("peticion post")
 
     try {
       const options = {
@@ -42,13 +59,12 @@ function LoginForm() {
 
       const response = await fetch(url, options)
       const data = await response.json()
-      console.log(data)
       dispatch( login(data));
     } catch (error) {
       console.log(error)
     }
 
-    //dispatch( session(data));
+    setUser(initialState);
 
 
   };
@@ -75,6 +91,8 @@ function LoginForm() {
             className='container__login--input'
             placeholder='your email'
             onChange={handleChange}
+            value={user.email}
+
             required
           />
           <label htmlFor='' className='container__login--label'>
@@ -87,6 +105,8 @@ function LoginForm() {
             className='container__login--input'
             placeholder='your password'
             onChange={handleChange}
+            value={user.password}
+
             required
           />
         </div>

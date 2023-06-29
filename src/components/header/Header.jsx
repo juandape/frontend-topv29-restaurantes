@@ -61,8 +61,8 @@ function Header() {
 
           <div className='header-container__items--access'  onClick={handleClick}>
           <NavLink to='/access'>
-            <BsFillPersonFill />
-          </NavLink>
+            <BsFillPersonFill  size={23}/>
+           </NavLink>
           </div>)
 
           }
