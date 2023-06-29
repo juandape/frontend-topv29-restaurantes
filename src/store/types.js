@@ -4,3 +4,4 @@ export const REMOVE_FROM_CART = '@myApp/REMOVE_FROM_CART';
 export const SET_FOOD = '@myApp/SET_FOOD';
 export const SIGN_SESSION = 'SIGN_SESSION';
 export const SET_LOGIN = 'SET_LOGIN';
+

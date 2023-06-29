@@ -30,6 +30,7 @@ function reducer(state, action) {
       return { ...state, cart: newCart, total };
     }
 
+
     case SET_LOGIN: {
       const dataUser = action.payload;
       return { ...state, login : dataUser };
@@ -38,6 +39,7 @@ function reducer(state, action) {
     case SIGN_SESSION: {
       const singsesion = action.payload;
       return { ...state, state: state.login.profile.fullName = singsesion };
+
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);

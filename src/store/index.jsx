@@ -12,11 +12,13 @@ const initialState = {
   //null
   //'guialexander@g.com'
   login:{
+
     token: null,
     profile: {
         fullName: null,
         avatar: null,
         email: null,
+
         roles: [
             {
                 id: "clj0jvzke0000npd8j9z3b5yc",

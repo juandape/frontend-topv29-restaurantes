@@ -15,7 +15,9 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () =>{
+
     //alert("ingrese") prueba botón
+
     dispatch( session(null));
 
   };

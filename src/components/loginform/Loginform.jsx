@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './loginform.css';
 import { useDispatch, useSelector } from '../../store';
+
 import { login } from '../../store/actions';
 
 
@@ -70,6 +71,7 @@ function LoginForm() {
           <input
             type='email'
             name='email'
+
             className='container__login--input'
             placeholder='your email'
             onChange={handleChange}
@@ -81,6 +83,7 @@ function LoginForm() {
           <input
             type='password'
             name='password'
+
             className='container__login--input'
             placeholder='your password'
             onChange={handleChange}
