@@ -38,7 +38,7 @@ function LoginForm() {
 
 
   useEffect(()=>{
-    localStorage.setItem("dataUser",JSON.stringify(state.login));
+    localStorage.setItem('dataUser',JSON.stringify(state.login));
    },[state.login]);
 
 
