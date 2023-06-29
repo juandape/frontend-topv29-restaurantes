@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './loginform.css';
 import { useDispatch, useSelector } from '../../store';
-import { session } from '../../store/actions';
+import { login } from '../../store/actions';
 
 
 function LoginForm() {
@@ -20,19 +20,42 @@ function LoginForm() {
         [name]: value ,
 
       })
+
   };
 
-  const handleSubmit = (event) => {
-
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    dispatch( session(user.emaill));
-    console.log(user.emaill)
+    console.log(user)
+
+
+
+    try {
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      }
+      const url = `https://api-restaurants-lpjo.onrender.com/auth/local/login`
+
+      const response = await fetch(url, options)
+      const data = await response.json()
+      console.log(data)
+      dispatch( login(data));
+    } catch (error) {
+      console.log(error)
+    }
+
+    //dispatch( session(data));
+
+
   };
 
 
 
 
-  console.log(state.login.profile.fullName)
+
 
 
 
@@ -46,7 +69,7 @@ function LoginForm() {
           </label>
           <input
             type='email'
-            name='emaill'
+            name='email'
             className='container__login--input'
             placeholder='your email'
             onChange={handleChange}
@@ -57,7 +80,7 @@ function LoginForm() {
           </label>
           <input
             type='password'
-            name='passl'
+            name='password'
             className='container__login--input'
             placeholder='your password'
             onChange={handleChange}
