@@ -32,8 +32,8 @@ function LoginForm() {
 
 
   useEffect(()=>{
-    const UserLocal = JSON.parse(localStorage.getItem('dataUser'));
-    dispatch( login(UserLocal));
+    const userLocal = JSON.parse(localStorage.getItem('dataUser'));
+    dispatch( login(userLocal));
    },[]);
 
 
