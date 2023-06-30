@@ -3,6 +3,7 @@ import { useSelector } from '../../store';
 import { useNavigate } from 'react-router-dom';
 import CheckoutForm from '../checkoutform/Checkoutform';
 import Totalbuy from '../totalbuy/Totalbuy';
+import './payment.css';
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -11,12 +12,12 @@ const Payment = () => {
   const products = Object.values(cart).map((item) => {
     return (
       <>
-        <div className='cardlist__items'>
-          <div key={item.product.id} className='cardlist__items--name'>
+        <div className='payment__items'>
+          <div key={item.product.id} className='payment__items--name'>
             {item.product.name}
           </div>
-          <div className='cardlist__items--show'>
-            <div>{item.quantity}</div>
+          <div className='payment__items--quantity'>
+            <div>{item.quantity} Product</div>
           </div>
         </div>
       </>
@@ -25,11 +26,9 @@ const Payment = () => {
 
   return (
     <>
-    <h1>Item list</h1>
-      <div>
-        {products}
-        <Totalbuy />
-      </div>
+      <h1 className='payment--title'>Review</h1>
+      {products}
+      <Totalbuy />
       <CheckoutForm />
       <div className='shoppingcart__back'>
         <button

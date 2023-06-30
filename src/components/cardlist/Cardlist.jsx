@@ -23,7 +23,7 @@ const Cardlist = ({ products = [] }) => {
           <>
 
             <div className='cardlist__items'>
-              <img src={item.product.image} alt="food_img" />
+              <img src={item.product.image} alt="food_img"  className='cardlist__items--img'/>
               <div key={item.product.id} className='cardlist__items--name'>
                 {item.product.name}
               </div>

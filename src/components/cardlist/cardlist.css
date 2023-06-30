@@ -1,7 +1,7 @@
 .cardlist__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 320px;
+  width: 340px;
   padding: 10px;
   border: 1px solid rgb(190, 136, 34);
   margin-bottom: 2px;
@@ -9,11 +9,17 @@
 
 }
 .cardlist__items--name {
-  margin-left: 20px;
+  margin-left: 10px;
   width: 100px;
   text-align: left;
   color: rgb(190, 136, 34);
   font-weight: bold;
+}
+
+.cardlist__items--img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .cardlist__items--price{
@@ -50,10 +56,12 @@ border: 0.5px solid rgb(190, 136, 34);
 
   .cardlist__items--name{
     width: 200px;
+    margin-left: 20px;
   }
 
-  .cardlist__items--price {
-    margin-right: 60px;
+  .cardlist__items--img{
+    width: 80px;
+    height: 8ch;
   }
 }
 

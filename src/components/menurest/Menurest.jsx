@@ -32,12 +32,12 @@ function MenuRest() {
       <div>
         {restaurant.foods.map((item) => (
           <div key={item.id} className='menurest__info--menu'>
-            <img src={item.image} alt="" />
+            <img src={item.image} alt="" className='menurest__info--img'/>
             <div className='menurest__info--menu--items'>
               <strong>{item.name}</strong>
             </div>
-            <div>$ {Intl.NumberFormat('en-US').format(item.price)}</div>
-            <div>rate: {item.rate}</div>
+            <div className='menurest__info--menu--items--price'>$ {Intl.NumberFormat('en-US').format(item.price)}</div>
+            <div className='menurest__info--menu--items--rating'>{item.rate} </div>
             <div className='menurest__items--show'>
               <button
                 className='menurest__items--button'
