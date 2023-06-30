@@ -9,8 +9,7 @@ const initialState = {
   cart: [],
   total: 0,
   isLoading: false,
-  //null
-  //'guialexander@g.com'
+  
   login:{
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsajBqdTJqaTAwMDJucDU4dWdxcjFxOHEiLCJlbWFpbCI6Imp1YW4ucGVAZ21haWwuY29tIiwiaWF0IjoxNjg3OTY2MzY4fQ.VOd8gN_g0Kfu1ZlHphMxUFbHIoGxugTdf4pCtoQttzA",
     profile: {

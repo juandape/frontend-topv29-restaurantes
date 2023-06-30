@@ -1,4 +1,3 @@
-import { faRoad } from '@fortawesome/free-solid-svg-icons';
 import {
   SET_LOADING,
   ADD_TO_CART,
