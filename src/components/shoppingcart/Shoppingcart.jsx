@@ -4,6 +4,7 @@ import Cardlist from '../cardlist/Cardlist';
 import { useNavigate } from 'react-router-dom';
 import './shoppingcart.css';
 import CheckoutBtn from '../checkout/Checkoutbtn';
+import Payment from '../payment/Payment';
 
 function ShoppingCart() {
   const state = useSelector();
@@ -33,6 +34,7 @@ function ShoppingCart() {
           {'<-'} Back to menu
         </button>
       </div>
+      <Payment />
     </>
   );
 }

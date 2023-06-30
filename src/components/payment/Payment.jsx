@@ -1,20 +1,21 @@
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
+/* eslint-disable */
 import { useSelector } from '../../store';
-
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(
-  'pk_test_51NNg21IgZKkg1b8zBdxd93m7bCg24EjScnlqVyl5vSjCHqjV3igRtvPDRaccofY5Auxj3MNps3CWdAiYsr4I3Eay00P3stSlkg'
-);
+import Cardlist from '../cardlist/Cardlist';
+import CheckoutForm from '../checkoutform/Checkoutform';
+import Totalbuy from '../totalbuy/Totalbuy';
 
 const Payment = () => {
   const state = useSelector();
-  
+
   return (
-    <Elements stripe={stripePromise} options={options}>
+    <>
+      <div>
+        <h1>Item list</h1>
+        <Cardlist products={state.cart} />
+        <Totalbuy />
+      </div>
       <CheckoutForm />
-    </Elements>
+    </>
   );
 };
 
