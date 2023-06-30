@@ -18,31 +18,34 @@ body {
 }
 .cardrest__info--title {
   display: flex;
-  margin-top: 120px;
+  flex-direction: column;
+  margin-top: 220px;
+  width: 300px;
+  margin-bottom: -100px;
+  text-align: center;
 }
 
 .cardrest__info--name {
-  font-size: 18px;
-  margin-right: 8px;
-  margin-top: -80px;
+  font-size: 16px;
   height: 40px;
-  background-color: white;
-  color: orange;
+  color: black;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 4px;
 }
 .cardrest__info--calification {
-  color: white;
-  background-color: orange;
+  color: black;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 4px;
-  width: 80px;
-  font-size: 18px;
-  text-align: center;
+  font-size: 16px;
   height: 40px;
-  margin-top: -80px;
+  margin-top: -15px;
+}
+
+.cardrest__info--icon{
+margin-top: -215px;
+font-size: 25px;
 }
 
 @media (min-width: 576px) {
@@ -50,13 +53,31 @@ body {
     margin: 20px auto;
     width: 450px;
   }
+  .cardrest__info--title {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
 
   .cardrest__info--name {
     font-size: 22px;
-    margin-top: -200px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   .cardrest__info--calification {
-    margin-top: -200px;
+    font-size: 22px;
   }
+
+  .cardrest__info--icon{
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .cardrest__info--title {
+    margin-top: 120px;
+    margin-bottom: 0px;
+  }
+
 }
