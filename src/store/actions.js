@@ -1,4 +1,3 @@
-
 import {
    ADD_TO_CART,
    SET_LOADING,
@@ -6,7 +5,6 @@ import {
    SET_LOGIN,
    SIGN_SESSION
   } from './types';
-
 
 /**
  * Creates an action to set loading state

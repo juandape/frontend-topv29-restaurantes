@@ -9,8 +9,7 @@ const initialState = {
   cart: [],
   total: 0,
   isLoading: false,
-  //null
-  //'guialexander@g.com'
+  
   login:{
 
     token: null,

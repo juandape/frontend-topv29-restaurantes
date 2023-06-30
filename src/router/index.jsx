@@ -11,7 +11,7 @@ import Access from '../components/access/Access';
 import LoginForm from '../components/loginform/Loginform';
 import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
 import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
-import Booking from '../components/booking/Booking';
+import ShoppingCart from '../components/shoppingcart/Shoppingcart';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: 'access',
         element: <Access />,
+      },
+      {
+        path: 'cart',
+        element: <ShoppingCart />,
       },
 
       {

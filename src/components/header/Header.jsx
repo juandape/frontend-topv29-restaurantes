@@ -4,6 +4,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
 import International from '../international/International';
+import Badge from '../badge/Badge';
 import { useSelector ,useDispatch } from '../../store';
 import { session } from '../../store/actions';
 
@@ -72,6 +73,11 @@ function Header() {
           <div className='header-container__items--international' >
             <International />
           </div>
+          <NavLink to='/cart'><div>
+            <Badge />
+          </div>
+          </NavLink>
+
         </div>
 
         <div
