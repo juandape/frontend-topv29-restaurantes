@@ -11,11 +11,13 @@ const initialState = {
   isLoading: false,
   
   login:{
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsajBqdTJqaTAwMDJucDU4dWdxcjFxOHEiLCJlbWFpbCI6Imp1YW4ucGVAZ21haWwuY29tIiwiaWF0IjoxNjg3OTY2MzY4fQ.VOd8gN_g0Kfu1ZlHphMxUFbHIoGxugTdf4pCtoQttzA",
+
+    token: null,
     profile: {
-        fullName: "Juan Peña",
+        fullName: null,
         avatar: null,
-        email: "juan.pe@gmail.com",
+        email: null,
+
         roles: [
             {
                 id: "clj0jvzke0000npd8j9z3b5yc",

@@ -16,7 +16,9 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () =>{
-    alert("ingrese")
+
+    //alert("ingrese") prueba botón
+
     dispatch( session(null));
 
   };
@@ -60,8 +62,8 @@ function Header() {
 
           <div className='header-container__items--access'  onClick={handleClick}>
           <NavLink to='/access'>
-            <BsFillPersonFill />
-          </NavLink>
+            <BsFillPersonFill  size={23}/>
+           </NavLink>
           </div>)
 
           }

@@ -1,4 +1,10 @@
-import { ADD_TO_CART, SET_LOADING, REMOVE_FROM_CART, DELETE_FROM_CART, SIGN_SESSION} from './types';
+import {
+   ADD_TO_CART,
+   SET_LOADING,
+   REMOVE_FROM_CART,
+   SET_LOGIN,
+   SIGN_SESSION
+  } from './types';
 
 /**
  * Creates an action to set loading state
@@ -25,7 +31,15 @@ export const removeFoodFromCart = (food) => ({
   payload: food,
 });
 
-export const session = (signsession) => ({
+
+
+export const login = (dataUser) => ({
+  type: SET_LOGIN,
+  payload: dataUser,
+});
+
+export const session = (singsesion) => ({
   type: SIGN_SESSION,
-  payload: signsession,
+  payload: singsesion,
+
 });
