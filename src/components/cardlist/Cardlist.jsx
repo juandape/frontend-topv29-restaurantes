@@ -1,6 +1,6 @@
 import { useDispatch } from '../../store';
 import { removeFoodFromCart, addFoodToCart } from '../../store/actions';
-// import { BsTrash } from 'react-icons/bs';
+import { BsTrash } from 'react-icons/bs';
 import { GrFormAdd, GrFormSubtract } from 'react-icons/gr';
 import './cardlist.css';
 
@@ -23,7 +23,7 @@ const Cardlist = ({ products = [] }) => {
           <>
 
             <div className='cardlist__items'>
-              <img src={item.product.image} alt="food_img" />
+              <img src={item.product.image} alt="food_img"  className='cardlist__items--img'/>
               <div key={item.product.id} className='cardlist__items--name'>
                 {item.product.name}
               </div>
@@ -35,7 +35,8 @@ const Cardlist = ({ products = [] }) => {
                   onClick={() => handleRemove(item.product)}
                   className='cardlist__items--button'
                 >
-                  <GrFormSubtract />
+                  {(item.quantity > 1) ? <GrFormSubtract /> : <BsTrash />}
+
                 </button>
                 <div className='cardlist__items--quantity'>{item.quantity}</div>
                 <button

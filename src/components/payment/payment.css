@@ -1,0 +1,32 @@
+.payment__items{
+  display: flex;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid rgb(190, 136, 34);
+  margin-bottom: 2px;
+  align-items: center;
+}
+
+.payment__items--name{
+  margin-left: 20px;
+  width: 100px;
+  text-align: left;
+  color: rgb(190, 136, 34);
+  font-weight: bold;
+}
+
+.payment__items--quantity{
+  display: flex;
+  gap:1px;
+  width: 80px;
+  margin-left: 10px;
+  color: rgb(190, 136, 34);
+}
+
+.payment--title{
+  color: rgb(190, 136, 34);
+  text-align: center;
+  margin: 40px auto 40px;
+  border-bottom: 1px solid rgb(190, 136, 34);
+  width: 350px;
+}

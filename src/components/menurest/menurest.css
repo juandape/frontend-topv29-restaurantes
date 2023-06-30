@@ -3,10 +3,16 @@
   grid-template-columns: repeat(5, 1fr);
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: -10px;
   align-items: center;
   border: 0.5px solid rgb(190, 136, 34);
-  color: rgb(190, 136, 34)
+  color: rgb(190, 136, 34);
+  padding: 5px;
+}
+
+.menurest__info--img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .menurest__info--menu--name {
@@ -20,23 +26,43 @@
 }
 
 .menurest__info--menu--items {
-  margin-left: 20px;
-  margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 80px;
+  width: 70px;
   height: 30px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(196, 131, 11);
-  ;
 }
 
-.menurest__info--menu--button {
+.menurest__info--menu--items--price {
+  font-size: 14px;
+}
+
+.menurest__info--menu--items--rating {
+  font-size: 14px;
+}
+
+.menurest__items--button {
+  color: rgb(196, 131, 11);
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.menurest__items--button:hover {
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+}
+
+.menurest__gotocart--button {
   background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
@@ -48,65 +74,46 @@
   margin-bottom: 20px;
 }
 
-.menurest__info--menu--button:hover {
+.menurest__gotocart--button:hover {
   background-color: orange;
   color: white;
   border: 1px solid orange;
 }
 
-.menurest__gotocart--button{
-  background-color: rgb(196, 131, 11);
-  color: white;
-  border: 1px solid orange;
-  border-radius: 5px;
-  padding: 7px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-.menurest__gotocart--button:hover{
-  background-color: orange;
-  color: white;
-  border: 1px solid orange;
-}
-
-.menurest__gotocart{
+.menurest__gotocart {
   margin-top: 20px;
   text-align: center;
 }
 
-.menurest__gotocart--badge{
-  color: black
+.menurest__gotocart--badge {
+  color: black;
 }
 
-.menurest__bottom{
-display: flex;
-border: 1px solid rgb(190, 136, 34);
-height: 50px;
-align-items: center;
-width: 250px;
-text-align: center;
-margin-top: 35px;
+.menurest__bottom {
+  display: flex;
+  border: 1px solid rgb(190, 136, 34);
+  height: 50px;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+  margin-top: 35px;
 }
 
-.menurest__bottom--total{
+.menurest__bottom--total {
   margin-top: 20px;
   margin-left: -10px;
 }
 
-.menurest__items--button{
+.menurest__items--button {
   border: 0.5px solid rgb(190, 136, 34);
- padding: 5px;
- border-radius: 5px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.menurest__items--button:hover{
+.menurest__items--button:hover {
   background-color: orange;
   cursor: pointer;
 }
-
 
 @media (min-width: 576px) {
   .menurest__info--menu {
@@ -116,5 +123,17 @@ margin-top: 35px;
 
   .menurest__info--menu--name {
     width: 500px;
+  }
+
+  .menurest__info--menu--items {
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 80px;
+    font-size: 16px;
+  }
+
+  .menurest__info--img {
+    width: 80px;
+    height: 80px;
   }
 }
