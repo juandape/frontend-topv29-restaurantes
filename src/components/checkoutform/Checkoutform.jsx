@@ -1,4 +1,5 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import './checkoutform.css';
 
 function CheckoutForm() {
   const stripe = useStripe();
@@ -24,19 +25,20 @@ function CheckoutForm() {
       }),
     }
 
-    const response = await fetch('/api/payments', payload);
+    const BASE_URL = import.meta.env.VITE_API_URL;
+    const response = await fetch(`${BASE_URL}/api/payments/`, payload);
     const data = await response.json();
     console.log(data);
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <h1>Checkout Form</h1>
-        </div>
-          <CardElement />
-        <button type='submit'>PAY</button>
+      <form onSubmit={handleSubmit} className='checkoutform'>
+
+        <h3 className='checkoutform--title'>Payment Method</h3>
+        <div className='checkoutform--element'><CardElement /></div>
+<div><button type='submit' className='checkoutform--button'>PAY</button></div>
+
       </form>
     </>
   );

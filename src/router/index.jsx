@@ -12,6 +12,7 @@ import LoginForm from '../components/loginform/Loginform';
 import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
 import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
 import ShoppingCart from '../components/shoppingcart/Shoppingcart';
+import Payment from '../components/payment/Payment';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'cart',
         element: <ShoppingCart />,
+      },
+      {
+        path: 'payment',
+        element: <Payment />,
       },
 
       {

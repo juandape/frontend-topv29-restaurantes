@@ -1,10 +1,9 @@
 import { useSelector } from '../../store';
 import Totalbuy from '../totalbuy/Totalbuy';
 import Cardlist from '../cardlist/Cardlist';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './shoppingcart.css';
 import CheckoutBtn from '../checkout/Checkoutbtn';
-import Payment from '../payment/Payment';
 
 function ShoppingCart() {
   const state = useSelector();
@@ -21,10 +20,11 @@ function ShoppingCart() {
       <div className='shoppingcart__total'>
         <Totalbuy />
       </div>
-
-      <div className='shoppingcart__checkout'>
-        <CheckoutBtn />
-      </div>
+      <NavLink to='/payment'>
+        <div className='shoppingcart__checkout'>
+          <CheckoutBtn />
+        </div>
+      </NavLink>
 
       <div className='shoppingcart__back'>
         <button
@@ -34,7 +34,6 @@ function ShoppingCart() {
           {'<-'} Back to menu
         </button>
       </div>
-      <Payment />
     </>
   );
 }
