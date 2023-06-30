@@ -213,14 +213,14 @@
       "foods": [
         {
           "id": 1,
-          "name": "cacerola de huevo",
+          "name": "Cacerola de huevo",
           "price": "1500",
           "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/7.1_rzwxzz.jpg",
           "rate": "5.0"
         },
         {
           "id": 2,
-          "name": "buñuelos y empanadas",
+          "name": "Buñuelos y empanadas",
           "price": "1000",
           "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/7.2_mgtlhm.jpg",
           "rate": "4.9"

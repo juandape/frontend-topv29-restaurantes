@@ -2,22 +2,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 320px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px;
   border: 1px solid rgb(190, 136, 34);
   margin-bottom: 2px;
   align-items: center;
+
 }
 .cardlist__items--name {
   margin-left: 20px;
   width: 100px;
   text-align: left;
+  color: rgb(190, 136, 34);
+  font-weight: bold;
 }
 
 .cardlist__items--price{
   text-align: left;
   width: 80px;
   margin-left: 10px;
+  color: rgb(190, 136, 34);
 }
 
 .cardlist__items--show{
@@ -35,7 +38,7 @@ border: 0.5px solid rgb(190, 136, 34);
 .cardlist__items--quantity{
   border: 0.5px solid rgb(190, 136, 34);
   width: 50px;
-
+  color: rgb(190, 136, 34)
 }
 
 

@@ -32,6 +32,7 @@ function MenuRest() {
       <div>
         {restaurant.foods.map((item) => (
           <div key={item.id} className='menurest__info--menu'>
+            <img src={item.image} alt="" />
             <div className='menurest__info--menu--items'>
               <strong>{item.name}</strong>
             </div>
