@@ -4,8 +4,8 @@ import {
   ADD_TO_CART,
   SET_FOOD,
   REMOVE_FROM_CART,
-  SIGN_SESSION
- } from './types';
+  SIGN_SESSION,
+} from './types';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -63,7 +63,7 @@ function reducer(state, action) {
 
     case SIGN_SESSION: {
       const signsession = action.payload;
-      return { ...state, state: state.login.profile.fullName = signsession };
+      return { ...state, state: (state.login.profile.fullName = signsession) };
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);

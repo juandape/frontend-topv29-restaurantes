@@ -1,7 +1,7 @@
 import { useDispatch } from '../../store';
 import { removeFoodFromCart, addFoodToCart } from '../../store/actions';
-import { BsTrash } from 'react-icons/bs';
-import { GrFormAdd } from 'react-icons/gr';
+// import { BsTrash } from 'react-icons/bs';
+import { GrFormAdd, GrFormSubtract } from 'react-icons/gr';
 import './cardlist.css';
 
 const Cardlist = ({ products = [] }) => {
@@ -15,11 +15,13 @@ const Cardlist = ({ products = [] }) => {
     dispatch(addFoodToCart(product));
   };
 
+
   return (
     <div className='cardlist'>
       {Object.values(products).map((item) => {
         return (
           <>
+
             <div className='cardlist__items'>
               <div key={item.product.id} className='cardlist__items--name'>
                 {item.product.name}
@@ -32,7 +34,7 @@ const Cardlist = ({ products = [] }) => {
                   onClick={() => handleRemove(item.product)}
                   className='cardlist__items--button'
                 >
-                  <BsTrash />
+                  <GrFormSubtract />
                 </button>
                 <div className='cardlist__items--quantity'>{item.quantity}</div>
                 <button
@@ -41,6 +43,7 @@ const Cardlist = ({ products = [] }) => {
                 >
                   <GrFormAdd />
                 </button>
+
               </div>
             </div>
           </>
