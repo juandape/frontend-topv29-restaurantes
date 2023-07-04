@@ -8,7 +8,7 @@
       "address": "Cra. 34b #134-75",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/Mexican_sabor_logo_snjt7e.png",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "Enchiladas",
@@ -41,7 +41,7 @@
       "address": "Calle 21 #56-42",
       "rating": "4.8",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/gratini_burguer_b5svdp.webp",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "Big Burguer",
@@ -74,7 +74,7 @@
       "address": "Cra. 43 #32-21",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/naruto_logo_swgkbo.png",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "Naruto Sushi Rolls",
@@ -109,7 +109,7 @@
       "address": "Cra. 1 #12-35",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137425/clod_restaurants/dumpling_logo_vzpkcb.png",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "Eggs and Bacon",
@@ -144,7 +144,7 @@
       "address": "Calle 53b #14-23",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137302/clod_restaurants/pizza_logo_dqneft.png",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "Monza Pizza",
@@ -177,7 +177,7 @@
       "address": "Calle 2 #2b-64",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/schu_logo_ajotaz.png",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "schnelle Würstchen",
@@ -210,7 +210,7 @@
       "address": "Calle 1 #10-22",
       "rating": "4.1",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086357/clod_restaurants/bu%C3%B1_logo_t1kbzy.jpg",
-      "foods": [
+      "food": [
         {
           "id": 1,
           "name": "Cacerola de huevo",

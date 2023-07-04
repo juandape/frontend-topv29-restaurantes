@@ -12,9 +12,11 @@ function CheckoutForm() {
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
       card,
-
     });
-    console.log("🚀 ~ file: Checkoutform.jsx:12 ~ handleSubmit ~ paymentMethod:", paymentMethod)
+    console.log(
+      '🚀 ~ file: Checkoutform.jsx:12 ~ handleSubmit ~ paymentMethod:',
+      paymentMethod
+    );
 
     const payload = {
       method: 'POST',
@@ -23,22 +25,32 @@ function CheckoutForm() {
         amount: 1000,
         paymentMethod,
       }),
-    }
+    };
 
     const BASE_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(`${BASE_URL}/api/payments`, payload);
     const data = await response.json();
     console.log(data);
+
+
+  };
+
+  const handleClick = () => {
+    alert('Payment successful');
   }
 
   return (
     <>
       <form onSubmit={handleSubmit} className='checkoutform'>
-
         <h3 className='checkoutform--title'>Payment Method</h3>
-        <div className='checkoutform--element'><CardElement /></div>
-<div><button type='submit' className='checkoutform--button'>PAY</button></div>
-
+        <div className='checkoutform--element'>
+          <CardElement />
+        </div>
+        <div>
+          <button type='submit' className='checkoutform--button' onClick={handleClick}>
+            PAY
+          </button>
+        </div>
       </form>
     </>
   );

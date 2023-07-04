@@ -1,9 +1,10 @@
 import { useLoaderData, NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from '../../store';
+import { useDispatch } from '../../store';
 import { addFoodToCart } from '../../store/actions';
 import './menurest.css';
 import Totalbuy from '../totalbuy/Totalbuy';
 import Badge from '../badge/Badge';
+// import axios from 'axios';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -16,21 +17,24 @@ export const loaderRestaurant = async ({ params }) => {
   return { restaurant: data };
 };
 
+
+
+
 function MenuRest() {
   const { restaurant = [] } = useLoaderData();
   const dispatch = useDispatch();
-  const state = useSelector();
+  // const state = useSelector();
 
   function handleAdd(item) {
     console.log(item);
     dispatch(addFoodToCart(item));
   }
-
+console.log(restaurant)
   return (
     <>
       <h2 className='menurest__info--menu--name'>MENU</h2>
       <div>
-        {restaurant.foods.map((item) => (
+        {restaurant.food.map((item) => (
           <div key={item.id} className='menurest__info--menu'>
             <img src={item.image} alt="" className='menurest__info--img'/>
             <div className='menurest__info--menu--items'>
