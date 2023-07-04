@@ -30,7 +30,7 @@ function MenuRest() {
     <>
       <h2 className='menurest__info--menu--name'>MENU</h2>
       <div>
-        {restaurant.foods.map((item) => (
+        {restaurant.food.map((item) => (
           <div key={item.id} className='menurest__info--menu'>
             <img src={item.image} alt="" className='menurest__info--img'/>
             <div className='menurest__info--menu--items'>
