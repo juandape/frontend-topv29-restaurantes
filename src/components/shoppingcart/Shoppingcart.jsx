@@ -3,7 +3,7 @@ import Totalbuy from '../totalbuy/Totalbuy';
 import Cardlist from '../cardlist/Cardlist';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './shoppingcart.css';
-import CheckoutBtn from '../checkout/Checkoutbtn';
+import CheckoutBtn from '../checkoutbtn/Checkoutbtn';
 
 function ShoppingCart() {
   const state = useSelector();

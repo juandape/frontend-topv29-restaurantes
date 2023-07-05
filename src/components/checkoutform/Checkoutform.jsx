@@ -2,9 +2,6 @@ import {
   CardElement,
   useStripe,
   useElements,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCvcElement,
 } from '@stripe/react-stripe-js';
 import { useSelector } from '../../store';
 import './checkoutform.css';
@@ -51,9 +48,9 @@ function CheckoutForm() {
 
   const handleClick = () => {
     Swal.fire({
-      icon: 'success',
       text: 'Payment successful',
     });
+    
   };
 
   return (
