@@ -1,0 +1,28 @@
+.checkoutform{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 0.5px solid #e6e6e6;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.checkoutform--title{
+  margin-bottom: 10px;
+}
+.checkoutform--element{
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+.checkoutform--button{
+  background-color: rgb(190, 136, 34);
+  color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 12px;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 10px;
+}
