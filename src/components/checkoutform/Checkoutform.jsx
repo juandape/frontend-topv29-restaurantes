@@ -1,7 +1,17 @@
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import {
+  CardElement,
+  useStripe,
+  useElements,
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
+} from '@stripe/react-stripe-js';
+import { useSelector } from '../../store';
 import './checkoutform.css';
+import Swal from 'sweetalert2';
 
 function CheckoutForm() {
+  const state = useSelector();
   const stripe = useStripe();
   const elements = useElements();
 
@@ -22,22 +32,29 @@ function CheckoutForm() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        amount: 1000,
+        amount: state.total * 100,
         paymentMethod,
       }),
     };
+    console.log(
+      '🚀 ~ file: Checkoutform.jsx:37 ~ handleSubmit ~ payload:',
+      payload
+    );
 
     const BASE_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(`${BASE_URL}/api/payments`, payload);
     const data = await response.json();
     console.log(data);
 
-
+    elements.getElement(CardElement).clear();
   };
 
   const handleClick = () => {
-    alert('Payment successful');
-  }
+    Swal.fire({
+      icon: 'success',
+      text: 'Payment successful',
+    });
+  };
 
   return (
     <>
@@ -47,7 +64,11 @@ function CheckoutForm() {
           <CardElement />
         </div>
         <div>
-          <button type='submit' className='checkoutform--button' onClick={handleClick}>
+          <button
+            type='submit'
+            className='checkoutform--button'
+            onClick={handleClick}
+          >
             PAY
           </button>
         </div>
