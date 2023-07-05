@@ -17,8 +17,6 @@ const Restaurantdetail = () => {
     getRestaurant();
   }, []);
 
-  console.log(restaurants);
-
   return (
     <>
       <div className='container__restdetail'>
@@ -31,7 +29,7 @@ const Restaurantdetail = () => {
               <Link to={`/restaurant-card/${item.id}`}>
                 <img
                   src={item.logo}
-                  alt=''
+                  alt='rest logo'
                   className='container__restdetail--rest--img'
                 />
                 <div className='container__restdetail--rest--info'>
