@@ -16,7 +16,7 @@ const TopRestaurants = () => {
           <div key={restaurant.id}>
             <Link to={`/restaurant-card/${restaurant.id}`}>
               <div className='container__home__cardrests--rest'>
-                <img src={restaurant.logo} alt='rest logo'/>
+                <img src={restaurant.logo} alt='rest logo' className='container__home__cardrest--img'/>
                 <p>{restaurant.name}</p>
                 <p>{restaurant.rating} ★</p>
                 <p>{restaurant.category}</p>
