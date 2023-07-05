@@ -6,7 +6,6 @@ import {
   SIGN_SESSION,
   CLEAR_CART,
 } from './types';
-
 /**
  * Creates an action to set loading state
  * @param {boolean} isLoading
