@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './regform.css';
+import Swal from 'sweetalert2';
 
 const defaultFormData = {
   name: '',
@@ -37,10 +38,13 @@ function RegisterForm() {
     const isValid = validateForm();
 
     if (isValid) {
-      alert('Form submitted successfully');
+      Swal.fire('Form submitted successfully');
       setFormData(defaultFormData);
     } else {
-      alert('Passwords not match');
+      Swal.fire({
+        text: 'Passwords not match'
+      }
+      );
     }
   }
 

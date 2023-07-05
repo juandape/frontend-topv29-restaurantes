@@ -22,9 +22,9 @@ const Cardlist = ({ products = [] }) => {
         return (
           <>
 
-            <div className='cardlist__items'>
+            <div className='cardlist__items' key={item.id}>
               <img src={item.product.image} alt="food_img"  className='cardlist__items--img'/>
-              <div key={item.product.id} className='cardlist__items--name'>
+              <div className='cardlist__items--name'>
                 {item.product.name}
               </div>
               <div className='cardlist__items--price'>

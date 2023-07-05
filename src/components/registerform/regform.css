@@ -59,7 +59,6 @@
   width: 220px;
   background-color: aliceblue;
   margin-bottom: 15px;
-  text-align: center;
 }
 .container__register--box {
   display: flex;
@@ -108,7 +107,7 @@
     font-size: 20px;
     margin-bottom: 15px;
     width: 260px;
-    font-size: 15px;
+    font-size: 13px;
     padding: 8px;
   }
 
