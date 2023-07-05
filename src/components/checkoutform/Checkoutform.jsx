@@ -1,14 +1,12 @@
-import {
-  CardElement,
-  useStripe,
-  useElements,
-} from '@stripe/react-stripe-js';
-import { useSelector } from '../../store';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useSelector, useDispatch } from '../../store';
 import './checkoutform.css';
 import Swal from 'sweetalert2';
+import { CLEAR_CART } from '../../store/types';
 
 function CheckoutForm() {
   const state = useSelector();
+  const dispatch = useDispatch();
   const stripe = useStripe();
   const elements = useElements();
 
@@ -20,38 +18,42 @@ function CheckoutForm() {
       type: 'card',
       card,
     });
-    console.log(
-      '🚀 ~ file: Checkoutform.jsx:12 ~ handleSubmit ~ paymentMethod:',
-      paymentMethod
-    );
 
     const payload = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        amount: state.total * 100,
+        amount: state.total,
         paymentMethod,
       }),
     };
-    console.log(
-      '🚀 ~ file: Checkoutform.jsx:37 ~ handleSubmit ~ payload:',
-      payload
-    );
+    // console.log(
+    //   '🚀 ~ file: Checkoutform.jsx:37 ~ handleSubmit ~ payload:',
+    //   payload
+    // );
 
     const BASE_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(`${BASE_URL}/api/payments`, payload);
     const data = await response.json();
-    console.log(data);
+    console.log('🚀 ~ file: Checkoutform.jsx:46 ~ handleSubmit ~ data:', data);
 
     elements.getElement(CardElement).clear();
+    if (response.status === 200) {
+      Swal.fire({
+        icon: 'info',
+        html:
+        '<h2>Payment Successful ! Get Ready for delicious food</h2>' +
+        '<div>------------</div>' +
+        `<h5>Your order number is ${data.payment.id}</h5>`,
+      });
+      dispatch({ type: CLEAR_CART });
+    }
+    if (error === 'card_declined') {
+      return Swal.fire('payment failed', 'Please check your card details');
+    }
   };
 
-  const handleClick = () => {
-    Swal.fire({
-      text: 'Payment successful',
-    });
-    
-  };
+
 
   return (
     <>
@@ -64,7 +66,6 @@ function CheckoutForm() {
           <button
             type='submit'
             className='checkoutform--button'
-            onClick={handleClick}
           >
             PAY
           </button>

@@ -4,7 +4,8 @@ import {
   SET_FOOD,
   REMOVE_FROM_CART,
   SET_LOGIN,
-  SIGN_SESSION
+  SIGN_SESSION,
+  CLEAR_CART,
  } from './types';
 
 function reducer(state, action) {
@@ -72,6 +73,11 @@ function reducer(state, action) {
       return { ...state, state: state.login.profile.fullName = singsesion };
 
     }
+
+    case CLEAR_CART: {
+      return { ...state, cart: {}, total: 0 };
+    }
+      
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
