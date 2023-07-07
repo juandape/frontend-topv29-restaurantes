@@ -1,5 +1,5 @@
 import Delete from '../delete/Delete'; //delete restaurant
-import FormAdd from '../formadd/FormAdd'; //add restaurant
+import FormAdd from '../formAdd/FormAdd'; //add restaurant
 import FormEdit from '../formedit/FormEdit'; //edit restaurant
 import Addfood from '../formaddfood/Addfood'; //add food
 import Formularioedit from '../formularioedit/Formularioedit'; //edit food
