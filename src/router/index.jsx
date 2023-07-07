@@ -13,6 +13,7 @@ import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
 import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
 import ShoppingCart from '../components/shoppingcart/Shoppingcart';
 import Payment from '../components/payment/Payment';
+import AdminTools from '../components/admintools/Admintools';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: 'payment',
         element: <Payment />,
+      },
+      {
+        path: 'admin-tools',
+        element: <AdminTools />,
       },
 
       {
