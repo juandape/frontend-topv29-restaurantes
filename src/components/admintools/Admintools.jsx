@@ -1,4 +1,4 @@
-import FormAdd from '../formAdd/FormAdd'; //add restaurant
+import FormAdd from '../formAdd/FormAdd'; //add restaurants
 import FormEdit from '../formedit/FormEdit'; //edit restaurant
 import Addfood from '../formaddfood/Addfood'; //add food
 import Formularioedit from '../formularioedit/Formularioedit'; //edit food
