@@ -9,7 +9,7 @@ const initialState = {
   cart: [],
   total: 0,
   isLoading: false,
-  
+
   login:{
 
     token: null,
@@ -20,8 +20,8 @@ const initialState = {
 
         roles: [
             {
-                id: "clj0jvzke0000npd8j9z3b5yc",
-                name: "ADMIN"
+                id: null,
+                name: null
             }
               ]
              }

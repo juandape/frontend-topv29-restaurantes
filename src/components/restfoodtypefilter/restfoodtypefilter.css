@@ -19,6 +19,12 @@
   color: black;
 }
 
+.container__filterbytype__list--img{
+  width: 90px;
+  height: 80px;
+  border-radius: 50%;
+}
+
 .container__filterbytype__list:hover {
   cursor: pointer;
   box-shadow: 7px 7px 10px gray;

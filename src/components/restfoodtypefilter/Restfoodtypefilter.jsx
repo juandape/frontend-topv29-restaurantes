@@ -18,24 +18,36 @@ function RestFoodTypeFilter() {
     fetchRestaurants();
   }, []);
 
-  const filterRestaurants = restaurants.filter((restaurant) => restaurant.foodtype === foodtype);
+  const filterRestaurants = restaurants.filter(
+    (restaurant) => restaurant.foodtype === foodtype
+  );
 
   return (
     <div className='container__filterbytype'>
-      <h1 className='container__filterbytype--title'>Restaurants by Type of Food</h1>
+      <h1 className='container__filterbytype--title'>
+        Restaurants by Type of Food
+      </h1>
       <ul>
-        {filterRestaurants.length === 0 ? <span>'No restaurants found'</span> :
+        {filterRestaurants.length === 0 ? (
+          <span>'No restaurants found'</span>
+        ) : (
           filterRestaurants.map((restaurant) => (
-              <Link to={`/restaurant-card/${restaurant.id}`}>
-            <li key={restaurant.id} className='container__filterbytype__list'>
-              <h3>{restaurant.name}</h3>
-              <p>{restaurant.rating} ★</p>
-              <p>{restaurant.description}</p>
-              <p>{restaurant.foodtype}</p>
+            <Link to={`/restaurant-card/${restaurant.id}`}>
+              <li key={restaurant.id} className='container__filterbytype__list'>
+                <img
+                  src={restaurant.logo}
+                  alt='rest logo'
+                  className='container__filterbytype__list--img'
+                />
+                <h3>{restaurant.name}</h3>
+                <p>{restaurant.rating} ★</p>
+                <p>{restaurant.description}</p>
+                <p>{restaurant.foodtype}</p>
                 <p>{restaurant.address}</p>
-            </li>
-                </Link>
-          ))}
+              </li>
+            </Link>
+          ))
+        )}
       </ul>
     </div>
   );

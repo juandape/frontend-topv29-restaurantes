@@ -18,6 +18,11 @@
   text-align: center;
 }
 
+.container__home__cardrest--img{
+width: 90px;
+height: 80px;
+border-radius: 50%;
+}
 .container__home__cardrests--title{
   font-size: 22px;
   margin-bottom: 10px;
