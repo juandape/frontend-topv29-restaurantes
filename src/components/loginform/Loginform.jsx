@@ -28,14 +28,17 @@ function LoginForm() {
     });
   };
 
+
   useEffect(() => {
     const userLocal = JSON.parse(localStorage.getItem('dataUser'));
+    if(!userLocal) return;
     dispatch(login(userLocal));
   }, []);
 
   useEffect(() => {
     localStorage.setItem('dataUser', JSON.stringify(state.login));
   }, [state.login]);
+  console.log(state.login);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
