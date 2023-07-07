@@ -1,4 +1,3 @@
-import Delete from '../delete/Delete'; //delete restaurant
 import FormAdd from '../formAdd/FormAdd'; //add restaurant
 import FormEdit from '../formedit/FormEdit'; //edit restaurant
 import Addfood from '../formaddfood/Addfood'; //add food
@@ -24,7 +23,6 @@ function AdminTools() {
             <Tabs value={currentTabIndex} onChange={handleTabChange} centered>
               <Tab label='ADD RESTAURANT' />
               <Tab label='EDIT RESTAURANT' />
-              <Tab label='DELETE RESTAURANT' />
               <Tab label='ADD FOOD' />
               <Tab label='EDIT FOOD' />
             </Tabs>
