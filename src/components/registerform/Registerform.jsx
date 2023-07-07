@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './regform.css';
 import Swal from 'sweetalert2';
-import { navigate } from 'react-router-dom';
+
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/users`;
 
@@ -78,7 +78,7 @@ function RegisterForm() {
             text: 'Enjoy all services that we have for you, start now!',
           });
 
-          navigate("/");
+
 
 
       } catch (error) {
