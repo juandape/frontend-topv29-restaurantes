@@ -62,7 +62,7 @@ function Header() {
                 className='header-container__items--title'
                 onClick={handleClick}
               >
-                <NavLink to='/'> {nick} </NavLink>
+                <NavLink to='/user-account'> {nick} </NavLink>
               </div>
 
               <div

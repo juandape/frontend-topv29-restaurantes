@@ -14,6 +14,7 @@ import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefil
 import ShoppingCart from '../components/shoppingcart/Shoppingcart';
 import Payment from '../components/payment/Payment';
 import AdminTools from '../components/admintools/Admintools';
+import UserAccount from '../components/useraccount/Useraccount';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: 'access',
         element: <Access />,
+      },
+      {
+        path: 'user-account',
+        element: <UserAccount />,
       },
       {
         path: 'cart',
