@@ -5,25 +5,23 @@ import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
 import International from '../international/International';
 import Badge from '../badge/Badge';
-import { useSelector ,useDispatch } from '../../store';
+import { useSelector, useDispatch } from '../../store';
 import { session } from '../../store/actions';
+import { TbLogout } from 'react-icons/tb';
 
 function Header() {
   const state = useSelector();
-  const dispatch = useDispatch()
-
-  const nick= state.login.profile.fullName;
+  const dispatch = useDispatch();
+  // const [isLogged, setIsLogged] = useState(false);
+  const nick = state.login.profile.fullName;
+  const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClose = () =>{
-
-    //alert("ingrese") prueba botón
-
-    dispatch( session(null));
-
-  };
-
-
+  const handleClose = () => {
+    dispatch(session(null));
+    localStorage.clear('dataUser', JSON.stringify(state.login));
+    location.reload();
+    };
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -33,51 +31,68 @@ function Header() {
     <>
       <nav className='header-container'>
         <div className='header-container__logo'>
-        <FaBiohazard />
+          <FaBiohazard />
         </div>
         <div className={`header-container__items ${isOpen && 'open'}`}>
           <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/'> HOME </NavLink>
           </div>
-          <div className='header-container__items--title'  onClick={handleClick}>
+          <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/restaurant'> RESTAURANTS </NavLink>
           </div>
 
-          <div className='header-container__items--title'  onClick={handleClick}>
+          <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-
-
-          {  nick !== null ?
-          (<>
-            <div className='header-container__items--title'  onClick={handleClick}>
-            <NavLink to='/'> {nick} </NavLink>
+          {admin.includes('ADMIN') === true  ? (
+            <div
+              className='header-container__items--title'
+              onClick={handleClick}
+            >
+              <NavLink to='/admin-tools'> ADMIN TOOLS </NavLink>
             </div>
-
-            <div className='header-container__items--title'  onClick={handleClose}>
-            <NavLink to='#'> Sign off </NavLink>
-          </div>
-          </>
-          ):(
-
-          <div className='header-container__items--access'  onClick={handleClick}>
-          <NavLink to='/access'>
-            <BsFillPersonFill  size={23}/>
-           </NavLink>
-          </div>)
-
+          ) : (
+            <div></div>
+            )
           }
 
+          {nick !== null ? (
+            <>
+              <div
+                className='header-container__items--title'
+                onClick={handleClick}
+              >
+                <NavLink to='/'> {nick} </NavLink>
+              </div>
 
-
-          <div className='header-container__items--international' >
+              <div
+                className='header-container__items--title'
+                onClick={handleClose}
+              >
+                <NavLink to='/'>
+                  {' '}
+                  <TbLogout size={20} />{' '}
+                </NavLink>
+              </div>
+            </>
+          ) : (
+            <div
+              className='header-container__items--access'
+              onClick={handleClick}
+            >
+              <NavLink to='/access'>
+                <BsFillPersonFill size={23} />
+              </NavLink>
+            </div>
+          )}
+          <div className='header-container__items--international'>
             <International />
           </div>
-          <NavLink to='/cart'><div>
-            <Badge />
-          </div>
+          <NavLink to='/cart'>
+            <div>
+              <Badge />
+            </div>
           </NavLink>
-
         </div>
 
         <div

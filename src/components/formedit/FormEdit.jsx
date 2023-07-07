@@ -1,6 +1,6 @@
 import './FormEdit'
 import React from "react";
-const { useState } = require("react");
+import { useState } from "react";
 
 export const FormEdit = ({ Restaurant }) => {
 

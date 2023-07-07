@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from '../../store';
 import { login } from '../../store/actions';
 import { useEffect } from 'react';
 
+const BASE_URL = import.meta.env.VITE_API_URL;
+const url = `${BASE_URL}/auth/local/login`;
 
 function LoginForm() {
-
   const initialState = {
     email: '',
     password: '',
@@ -15,31 +16,24 @@ function LoginForm() {
   const state = useSelector();
   const dispatch = useDispatch();
 
-  const [ user, setUser] = useState(initialState);
+  const [user, setUser] = useState(initialState);
 
-  const handleChange=(event)=>{
-
-    const {name,value}=event.target;
-    setUser(
-      {
-        ...user,
-        [name]: value ,
-
-      })
-
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
   };
 
-
-  useEffect(()=>{
+  useEffect(() => {
     const userLocal = JSON.parse(localStorage.getItem('dataUser'));
-    dispatch( login(userLocal));
-   },[]);
+    dispatch(login(userLocal));
+  }, []);
 
-
-  useEffect(()=>{
-    localStorage.setItem('dataUser',JSON.stringify(state.login));
-   },[state.login]);
-
+  useEffect(() => {
+    localStorage.setItem('dataUser', JSON.stringify(state.login));
+  }, [state.login]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -51,27 +45,17 @@ function LoginForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(user),
-      }
-      const url = `https://api-restaurants-lpjo.onrender.com/auth/local/login`
+      };
 
-      const response = await fetch(url, options)
-      const data = await response.json()
-      dispatch( login(data));
+      const response = await fetch(url, options);
+      const data = await response.json();
+      dispatch(login(data));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
 
     setUser(initialState);
-
-
   };
-
-
-
-
-
-
-
 
   return (
     <div className='container__login'>
@@ -84,12 +68,10 @@ function LoginForm() {
           <input
             type='email'
             name='email'
-
             className='container__login--input'
             placeholder='your email'
             onChange={handleChange}
             value={user.email}
-
             required
           />
           <label htmlFor='' className='container__login--label'>
@@ -98,19 +80,21 @@ function LoginForm() {
           <input
             type='password'
             name='password'
-
             className='container__login--input'
             placeholder='your password'
             onChange={handleChange}
             value={user.password}
-
             required
           />
         </div>
         <button type='submit' className='container__login--button'>
           Login
         </button>
-      <div className='container__login--forgot'>¿Forgot password?</div>
+        <div className='container__login--forgot'>
+          <a href='' className='container__login--a'>
+            ¿Forgot password?
+          </a>
+        </div>
       </form>
     </div>
   );
