@@ -3,6 +3,7 @@ import './loginform.css';
 import { useDispatch, useSelector } from '../../store';
 import { login } from '../../store/actions';
 import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/auth/local/login`;
@@ -12,6 +13,7 @@ function LoginForm() {
     email: '',
     password: '',
   };
+  const navigate = useNavigate();
 
   const state = useSelector();
   const dispatch = useDispatch();
@@ -56,6 +58,7 @@ function LoginForm() {
     }
 
     setUser(initialState);
+    navigate("/");
   };
 
   return (
