@@ -2,7 +2,7 @@ import{useParams } from 'react-router-dom';
 
 import Swal from 'sweetalert2';
 
-import './Verifyaccount.css';
+import './verifyaccount.css';
 
 function  VerifyAccount  () {
 
