@@ -1,0 +1,34 @@
+.container__filterbyname__list{
+  display: flex;
+  border: 3px solid orange;
+  box-shadow: 5px 5px 8px gray;
+  border-radius: 50px;
+  padding: 10px;
+  width: 250px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container__filterbyname__list:hover{
+  cursor: pointer;
+  box-shadow: 7px 7px 10px gray;
+}
+
+.container__filterbyname__list--img{
+width: 100px;
+border-radius: 50%;
+}
+
+.container__filterbyname--title{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px auto;
+  color: orange;
+  text-align: center;
+}
+
+.container__filterbyname__list--info{
+  color: black;
+  width: 250px;
+  margin-bottom: 10px;
+}
