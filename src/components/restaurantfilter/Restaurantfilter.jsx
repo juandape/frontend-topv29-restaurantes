@@ -3,13 +3,14 @@ import './restaurantfilter.css';
 import axios from 'axios';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 const BASE_URL = import.meta.env.VITE_API_URL
 const url = `${BASE_URL}/api/restaurants`;
 
 function RestaurantFilter() {
   const [restaurants, setRestaurants] = useState([]);
   const [search, setSearch] = useState('');
+  const navigate = useNavigate();
   useEffect(() => {
     const getRestaurants = async () => {
       const { data, status } = await axios.get(url);
@@ -18,27 +19,13 @@ function RestaurantFilter() {
     getRestaurants();
   }, []);
 
-  console.log(restaurants);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
-    filteredRestaurants(event.target.value);
   };
 
-  const filteredRestaurants = (searching) => {
-    const resultado = restaurants.filter((rest) => {
-      if (
-        rest.name.toString().toLowerCase().includes(searching.toLowerCase())
-      ) {
-        return rest;
-      }
-    });
-    setRestaurants(resultado);
-  };
-
-  const handleClick = (event) => {
-    event.preventDefault();
-    Swal.fire(`${restaurants.map((rest) => rest.name)}`);
+  const handleClick = () => {
+    navigate (`restaurant-by-name/${search}`)
   };
 
   return (
