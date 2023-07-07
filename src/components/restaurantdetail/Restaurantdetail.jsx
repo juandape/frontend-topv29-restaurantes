@@ -17,8 +17,6 @@ const Restaurantdetail = () => {
     getRestaurant();
   }, []);
 
-  console.log(restaurants);
-
   return (
     <>
       <div className='container__restdetail'>
@@ -29,6 +27,11 @@ const Restaurantdetail = () => {
           {restaurants.map((item, index) => (
             <div key={index} className='container__restdetail--rest'>
               <Link to={`/restaurant-card/${item.id}`}>
+                <img
+                  src={item.logo}
+                  alt='rest logo'
+                  className='container__restdetail--rest--img'
+                />
                 <div className='container__restdetail--rest--info'>
                   <div>
                     <strong>{item.name}</strong>

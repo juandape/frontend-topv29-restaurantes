@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Box, Tab, Tabs } from '@mui/material';
 import './navbarcardrest.css';
@@ -6,7 +5,6 @@ import MenuRest from '../menurest/Menurest';
 import Booking from '../booking/Booking';
 import Feedback from '../feedback/Feedback';
 import RestOverview from '../restoverview/Restoverview';
-import ShoppingCart from '../shoppingcart/Shoppingcart';
 
 function NavBarCardRest() {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -62,22 +60,3 @@ function NavBarCardRest() {
 }
 
 export default NavBarCardRest;
-
-{
-  /* <div>
-        <nav className='cardrest__nav'>
-          <div className='cardrest__nav--title'>ORDER ONLINE</div>
-          <div className='cardrest__nav--title'>OVERVIEW</div>
-          <div className='cardrest__nav--title'>GALLERY</div>
-            <div className='cardrest__nav--title'>LOCATION</div>
-          <NavLink to='/booking'>
-            <div className='cardrest__nav--title'>BOOK A TABLE</div>
-          </NavLink>
-          <div>
-            <NavLink to='/feedback'>
-              <div className='cardrest__nav--title'>REVIEWS</div>
-            </NavLink>
-          </div>
-        </nav>
-      </div> */
-}

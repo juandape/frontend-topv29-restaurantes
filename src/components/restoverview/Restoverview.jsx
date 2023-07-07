@@ -19,13 +19,11 @@ function RestOverview() {
       <div className='overview'>
         <div className='overview__info'>
           <strong>Cuisine</strong>
-          <p>{restaurant.category}</p>
+          <p>{restaurant.foodtype}</p>
          <strong>Opening Hours</strong>
           <p>{restaurant.schedules}</p>
           <strong>Address</strong>
           <p>{restaurant.address}</p>
-          <strong>Food Type</strong>
-          <p>{restaurant.foodtype}</p>
         </div>
         <div className='overview__facilities'>
           <ul>

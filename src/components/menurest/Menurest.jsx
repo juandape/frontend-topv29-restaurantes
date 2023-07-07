@@ -1,36 +1,36 @@
 import { useLoaderData, NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from '../../store';
+import { useDispatch } from '../../store';
 import { addFoodToCart } from '../../store/actions';
 import './menurest.css';
 import Totalbuy from '../totalbuy/Totalbuy';
 import Badge from '../badge/Badge';
 
+
 const BASE_URL = import.meta.env.VITE_API_URL;
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const loaderRestaurant = async ({ params }) => {
+export const loaderRestaurant = async ({params}) => {
   const { id } = params;
-  const response = await fetch(`${BASE_URL}/api/food/${id}`);
+  const response = await fetch(`${BASE_URL}/api/foods/${id}`);
   const data = await response.json();
 
   return { restaurant: data };
 };
 
+
+
 function MenuRest() {
   const { restaurant = [] } = useLoaderData();
   const dispatch = useDispatch();
-  const state = useSelector();
+
 
   function handleAdd(item) {
-    console.log(item);
     dispatch(addFoodToCart(item));
   }
-
   return (
     <>
       <h2 className='menurest__info--menu--name'>MENU</h2>
       <div>
-        {restaurant.foods.map((item) => (
+        {restaurant.food.map((item) => (
           <div key={item.id} className='menurest__info--menu'>
             <img src={item.image} alt="" className='menurest__info--img'/>
             <div className='menurest__info--menu--items'>

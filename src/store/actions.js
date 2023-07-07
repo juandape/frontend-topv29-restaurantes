@@ -1,11 +1,11 @@
 import {
-   ADD_TO_CART,
-   SET_LOADING,
-   REMOVE_FROM_CART,
-   SET_LOGIN,
-   SIGN_SESSION
-  } from './types';
-
+  ADD_TO_CART,
+  SET_LOADING,
+  REMOVE_FROM_CART,
+  SET_LOGIN,
+  SIGN_SESSION,
+  CLEAR_CART,
+} from './types';
 /**
  * Creates an action to set loading state
  * @param {boolean} isLoading
@@ -31,8 +31,6 @@ export const removeFoodFromCart = (food) => ({
   payload: food,
 });
 
-
-
 export const login = (dataUser) => ({
   type: SET_LOGIN,
   payload: dataUser,
@@ -41,5 +39,8 @@ export const login = (dataUser) => ({
 export const session = (singsesion) => ({
   type: SIGN_SESSION,
   payload: singsesion,
+});
 
+export const clearCart = () => ({
+  type: CLEAR_CART,
 });
