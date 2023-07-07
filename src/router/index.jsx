@@ -14,6 +14,8 @@ import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefil
 import ShoppingCart from '../components/shoppingcart/Shoppingcart';
 import Payment from '../components/payment/Payment';
 import RestByName from '../components/restbyname/Restbyname';
+import VerifyAccount from '../pages/sign/VerifyAccount';
+import AdminTools from '../components/admintools/Admintools';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
         path: 'payment',
         element: <Payment />,
       },
+      {
+        path: 'admin-tools',
+        element: <AdminTools />,
+      },
 
       {
         path: 'restaurant-card/:id',
@@ -69,6 +75,10 @@ const router = createBrowserRouter([
         path: 'restaurant-by-name/:name',
         element: <RestByName />,
         loader: loaderRestaurant,
+      },
+      {
+        path: 'Verify-account/:token',
+        element: <VerifyAccount />,
       },
     ],
   },
