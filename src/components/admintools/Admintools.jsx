@@ -1,7 +1,7 @@
 import FormAdd from '../formAdd/FormAdd'; //add restaurants
 import FormEdit from '../formedit/FormEdit'; //edit restaurant
 import Addfood from '../formaddfood/Addfood'; //add food
-// import Formularioedit from '../formularioedit/Formularioedit'; //edit food
+import Formularioedit from '../formularioedit/Formularioedit'; //edit food
 import { Box, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import './admintools.css';
@@ -43,11 +43,11 @@ function AdminTools() {
             <Addfood />
           </Box>
         )}
-        {/* {currentTabIndex === 3 && (
+        {currentTabIndex === 3 && (
           <Box sx={{ p: 3 }}>
             <Formularioedit />
           </Box>
-        )} */}
+        )}
       </React.Fragment>
     </>
   );
