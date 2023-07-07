@@ -17,7 +17,7 @@ function  VerifyAccount  () {
 
       const response = await activate(token);
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
 
 
       if(response.status === 200){
@@ -29,14 +29,15 @@ function  VerifyAccount  () {
             title: 'Registration successful',
             text: 'Enjoy all services that we have for you, start now!',
           });
-
-
-
-
-
-
-
           navigate("/");
+
+      } else{
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed',
+          text: 'Please try again.',
+        });
 
       }
 

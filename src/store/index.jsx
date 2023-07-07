@@ -14,6 +14,7 @@ const initialState = {
 
     token: null,
     profile: {
+        id:null,
         fullName: null,
         avatar: null,
         email: null,
