@@ -78,9 +78,6 @@ function RegisterForm() {
             text: 'Enjoy all services that we have for you, start now!',
           });
 
-
-
-
       } catch (error) {
         console.log(error)
       }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './loginform.css';
 import { useDispatch, useSelector } from '../../store';
 import { login } from '../../store/actions';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import './loginform.css';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/auth/local/login`;
@@ -15,6 +16,7 @@ function LoginForm() {
 
   const state = useSelector();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState(initialState);
 
@@ -26,14 +28,17 @@ function LoginForm() {
     });
   };
 
+
   useEffect(() => {
     const userLocal = JSON.parse(localStorage.getItem('dataUser'));
+    if(!userLocal) return;
     dispatch(login(userLocal));
   }, []);
 
   useEffect(() => {
     localStorage.setItem('dataUser', JSON.stringify(state.login));
   }, [state.login]);
+  console.log(state.login);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -54,6 +59,7 @@ function LoginForm() {
       console.log(error);
     }
 
+    navigate('/');
     setUser(initialState);
   };
 

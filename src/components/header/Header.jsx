@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import React, { useState } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
@@ -12,7 +13,7 @@ import { TbLogout } from 'react-icons/tb';
 function Header() {
   const state = useSelector();
   const dispatch = useDispatch();
-  // const [isLogged, setIsLogged] = useState(false);
+  const navigate = useNavigate();
   const nick = state.login.profile.fullName;
   const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,9 @@ function Header() {
   const handleClose = () => {
     dispatch(session(null));
     localStorage.clear('dataUser', JSON.stringify(state.login));
+    navigate('/');
     location.reload();
-    };
+  };
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -44,7 +46,7 @@ function Header() {
           <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          {admin.includes('ADMIN') === true  ? (
+          {admin.includes('ADMIN') === true ? (
             <div
               className='header-container__items--title'
               onClick={handleClick}
@@ -53,8 +55,7 @@ function Header() {
             </div>
           ) : (
             <div></div>
-            )
-          }
+          )}
 
           {nick !== null ? (
             <>
@@ -62,17 +63,14 @@ function Header() {
                 className='header-container__items--title'
                 onClick={handleClick}
               >
-                <NavLink to='/'> {nick} </NavLink>
+                <NavLink to='/user-account'> {nick} </NavLink>
               </div>
 
               <div
                 className='header-container__items--title'
                 onClick={handleClose}
               >
-                <NavLink to='/'>
-                  {' '}
-                  <TbLogout size={20} />{' '}
-                </NavLink>
+                <TbLogout size={20} />{' '}
               </div>
             </>
           ) : (

@@ -1,0 +1,74 @@
+.userpanel{
+  display: flex;
+  margin: 40px auto;
+}
+.userpanel__container__form--form{
+display: flex;
+flex-direction: column;
+}
+
+.userpanel__container__title{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.userpanel__container__form--form__input--input{
+  display: flex;
+  border-radius: 15px;
+  border-color: orange;
+  padding: 5px;
+  width: 220px;
+  background-color: aliceblue;
+  margin-bottom: 25px;
+  margin-left: -10px;
+}
+.userpanel__container__form--form__input--avatar{
+  display: flex;
+  border-radius: 15px;
+  border-color: orange;
+  padding: 5px;
+  width: 220px;
+  background-color: aliceblue;
+  margin-bottom: 25px;
+  margin-left: -10px;
+  margin-top: 10px;
+}
+
+input.userpanel__container__form--form__input--avatar{
+ color:orange;
+
+}
+
+
+.userpanel__container__form--form__input--label{
+  color: rgb(190, 136, 34);
+  font-size: 12px;
+  background-color: aliceblue;
+  position: relative;
+  left: 20px;
+  top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 0;
+}
+
+.userpanel__container__button--button{
+  background-color: rgb(196, 131, 11);
+  color: white;
+  border: 1px solid orange;
+  border-radius: 15px;
+  padding: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.userpanel__container__button--button:hover{
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+}

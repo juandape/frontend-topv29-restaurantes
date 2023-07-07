@@ -10,34 +10,29 @@ const initialState = {
   total: 0,
   isLoading: false,
 
-  login:{
-
+  login: {
     token: null,
     profile: {
-        fullName: null,
-        avatar: null,
-        email: null,
+      id: null,
+      fullName: null,
+      avatar: null,
+      email: null,
 
-        roles: [
-            {
-                id: null,
-                name: null
-            }
-              ]
-             }
-      },
-
+      roles: [
+        {
+          id: null,
+          name: null,
+        },
+      ],
+    },
+  },
 };
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const store = { state, dispatch };
 
-  return (
-    <AppContext.Provider value={store}>
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContext.Provider value={store}>{children}</AppContext.Provider>;
 };
 
 export const useSelector = () => {

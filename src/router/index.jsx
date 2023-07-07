@@ -16,6 +16,7 @@ import Payment from '../components/payment/Payment';
 import RestByName from '../components/restbyname/Restbyname';
 import VerifyAccount from '../pages/sign/VerifyAccount';
 import AdminTools from '../components/admintools/Admintools';
+import UserAccount from '../components/useraccount/Useraccount';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'access',
         element: <Access />,
+      },
+      {
+        path: 'user-account',
+        element: <UserAccount />,
       },
       {
         path: 'cart',
