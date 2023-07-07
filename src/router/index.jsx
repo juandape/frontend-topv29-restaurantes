@@ -13,6 +13,7 @@ import CardRest, { loaderRestaurant } from '../components/cardrest/Cardrest';
 import RestFoodTypeFilter from '../components/restfoodtypefilter/Restfoodtypefilter';
 import ShoppingCart from '../components/shoppingcart/Shoppingcart';
 import Payment from '../components/payment/Payment';
+import RestByName from '../components/restbyname/Restbyname';
 import VerifyAccount from '../pages/sign/VerifyAccount';
 import AdminTools from '../components/admintools/Admintools';
 import UserAccount from '../components/useraccount/Useraccount';
@@ -73,6 +74,11 @@ const router = createBrowserRouter([
       {
         path: 'restaurant-by-type/:foodtype',
         element: <RestFoodTypeFilter />,
+        loader: loaderRestaurant,
+      },
+      {
+        path: 'restaurant-by-name/:name',
+        element: <RestByName />,
         loader: loaderRestaurant,
       },
       {
