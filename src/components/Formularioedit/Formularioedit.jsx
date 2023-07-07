@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './Formularioedit.css';
 
+const BASE_URL = import.meta.env.VITE_API_URL;
+const url = `${BASE_URL}/api/restaurants/${resta}`;
+
+
 function Formularioedit() {
   const [Restaurant, setRestaurant] = useState({});
   const handleChange = (event) => {
@@ -15,7 +19,6 @@ function Formularioedit() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const url = `https://api-restaurants.onrender.com/api/restaurants/${resta}`;
     const config = {
       method: 'PATCH',
       headers: {

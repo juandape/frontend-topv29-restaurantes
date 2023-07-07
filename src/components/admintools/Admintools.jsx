@@ -40,15 +40,10 @@ function AdminTools() {
         )}
         {currentTabIndex === 2 && (
           <Box sx={{ p: 3 }}>
-            <Delete />
-          </Box>
-        )}
-        {currentTabIndex === 3 && (
-          <Box sx={{ p: 3 }}>
             <Addfood />
           </Box>
         )}
-        {currentTabIndex === 4 && (
+        {currentTabIndex === 3 && (
           <Box sx={{ p: 3 }}>
             <Formularioedit />
           </Box>
