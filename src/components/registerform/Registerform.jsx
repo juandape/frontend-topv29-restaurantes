@@ -73,7 +73,7 @@ function RegisterForm() {
         const data = await response.json()
         console.log(data)
         Swal.fire({
-            icon: 'success',
+            icon: 'info',
             title: 'created your account',
             text: 'Enjoy all services that we have for you, start now!',
           });
