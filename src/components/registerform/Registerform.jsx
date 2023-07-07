@@ -1,48 +1,115 @@
 import React, { useState } from 'react';
 import './regform.css';
+import Swal from 'sweetalert2';
+import { navigate } from 'react-router-dom';
 
-const defaultFormData = {
-  name: '',
-  lastname: '',
-  email: '',
-  password: '',
-  confirmPassword: '',
-};
+const BASE_URL = import.meta.env.VITE_API_URL;
+const url = `${BASE_URL}/api/users`;
+
 
 function RegisterForm() {
-  const [formData, setFormData] = useState(defaultFormData);
+
+  const initialState = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+
+  };
+  const initialconfirm = {
+    passConfirme: '',
+
+    };
+
+  const [ user, setUser] = useState(initialState);
+  const [ confirmPasword, setConfirmPasword] = useState(initialconfirm);
+
   const [error, setError] = useState({});
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-    validateForm(event);
-  }
+  const handleChangepassword=(event)=>{
+
+    const {name,value}=event.target;
+    setConfirmPasword(
+      {
+        ...confirmPasword,
+        [name]: value ,
+
+      })
+
+
+      validateForm(event);
+
+  };
+
+
+  const handleChange=(event)=>{
+
+    const {name,value}=event.target;
+    setUser(
+      {
+        ...user,
+        [name]: value ,
+
+      })
+      validateForm(event);
+
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const isValid = validateForm();
+    console.log(isValid)
+    if (isValid) {
+
+      try {
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(user),
+        }
+
+        const response = await fetch(url, options)
+        const data = await response.json()
+        console.log(data)
+        Swal.fire({
+            icon: 'success',
+            title: 'created your account',
+            text: 'Enjoy all services that we have for you, start now!',
+          });
+
+          navigate("/");
+
+
+      } catch (error) {
+        console.log(error)
+      }
+
+      setUser(initialState);
+      setConfirmPasword(initialconfirm);
+
+     } else {
+      alert('Passwords not match');
+    }
+
+
+
+  };
+
 
   const validateForm = () => {
-    const { password, confirmPassword } = formData;
+    const { password} = user;
+    const { passConfirme} =confirmPasword;
     const error = {};
-    if (password !== confirmPassword) {
-      error.confirmPassword = 'Passwords do not match';
+    if (password !== passConfirme) {
+      error.passConfirme = 'Passwords do not match';
     }
     setError(error);
     return Object.keys(error).length === 0;
   };
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const isValid = validateForm();
 
-    if (isValid) {
-      alert('Form submitted successfully');
-      setFormData(defaultFormData);
-    } else {
-      alert('Passwords not match');
-    }
-  }
 
   return (
     <div className='container__register'>
@@ -51,15 +118,15 @@ function RegisterForm() {
         <div className='container__register__form'>
           <div className='container__register--box'>
             <label htmlFor='' className='container__register--label-s'>
-              Name
+            FirstName
             </label>
             <input
               type='text'
-              name='name'
-              id='name'
+              name='firstName'
+              id='firstName'
               className='container__register--input'
-              placeholder='your name'
-              value={formData.name}
+              placeholder='firstName'
+              value={user.firstName}
               onChange={handleChange}
               required
             />
@@ -70,11 +137,11 @@ function RegisterForm() {
             </label>
             <input
               type='text'
-              name='lastname'
-              id='lastname'
+              name='lastName'
+              id='lastName'
               className='container__register--input'
               placeholder='your last name'
-              value={formData.lastname}
+              value={user.lastName}
               onChange={handleChange}
               required
             />
@@ -89,7 +156,7 @@ function RegisterForm() {
               id='email'
               className='container__register--input'
               placeholder='email@dot.com'
-              value={formData.email}
+              value={user.email}
               onChange={handleChange}
               required
             />
@@ -106,7 +173,7 @@ function RegisterForm() {
               placeholder='your password'
               required
               minLength={5}
-              value={formData.password}
+              value={user.password}
               onChange={handleChange}
               onBlur={validateForm}
             />
@@ -118,13 +185,14 @@ function RegisterForm() {
             </label>
             <input
               type='password'
-              name='confirmPassword'
+              name='passConfirme'
               id='cpass'
               className='container__register--input'
               placeholder='confirm your password'
               required
-              value={formData.confirmPassword}
-              onChange={handleChange}
+              minLength={5}
+              value={confirmPasword.passConfirme}
+              onChange={handleChangepassword}
               onBlur={validateForm}
             />
             {/* {error.confirmPassword && <span>{error.confirmPassword}</span>} */}

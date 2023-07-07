@@ -53,7 +53,7 @@ function LoginForm() {
         },
         body: JSON.stringify(user),
       }
-      const url = `https://api-restaurants-lpjo.onrender.com/auth/local/login`
+      const url = `https://service-restaurants.onrender.com/auth/local/login`
 
       const response = await fetch(url, options)
       const data = await response.json()
