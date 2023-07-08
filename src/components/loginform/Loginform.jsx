@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from '../../store';
 import { login } from '../../store/actions';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import './loginform.css';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/auth/local/login`;
@@ -14,11 +13,13 @@ function LoginForm() {
     password: '',
   };
 
+
   const state = useSelector();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [user, setUser] = useState(initialState);
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -54,6 +55,7 @@ function LoginForm() {
 
       const response = await fetch(url, options);
       const data = await response.json();
+
       dispatch(login(data));
     } catch (error) {
       console.log(error);
@@ -61,6 +63,7 @@ function LoginForm() {
 
     navigate('/');
     setUser(initialState);
+    navigate("/");
   };
 
   return (

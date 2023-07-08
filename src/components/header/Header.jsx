@@ -12,25 +12,28 @@ import { TbLogout } from 'react-icons/tb';
 
 function Header() {
   const state = useSelector();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const nick = state.login.profile.fullName;
+  const dispatch = useDispatch()
+
+  const nick= state.login.profile.fullName;
+
   const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClose = () => {
-    dispatch(session(null));
-    localStorage.clear('dataUser', JSON.stringify(state.login));
-    navigate('/');
-    location.reload();
+  const handleClose = () =>{
+   localStorage.clear('dataUser', JSON.stringify({}));
+   location.reload();
+   dispatch( session(null));
+
   };
+
+
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <>
+     <>
       <nav className='header-container'>
         <div className='header-container__logo'>
           <FaBiohazard />

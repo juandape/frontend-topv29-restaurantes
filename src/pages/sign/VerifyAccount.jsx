@@ -1,4 +1,8 @@
 import{useParams } from 'react-router-dom';
+import {activate } from '../../services/index';
+import { useNavigate } from "react-router-dom";
+
+
 
 import Swal from 'sweetalert2';
 
@@ -6,16 +10,42 @@ import './verifyaccount.css';
 
 function  VerifyAccount  () {
 
-    function handleClick (){
+  const { token } = useParams();
+  const navigate = useNavigate();
+
+    async function handleClick (){
+
+      const response = await activate(token);
+      const data = await response.json();
+      //console.log(data);
+
+
+      if(response.status === 200){
         alert("activaste la cuenta!!")
+
+
         Swal.fire({
             icon: 'success',
             title: 'Registration successful',
             text: 'Enjoy all services that we have for you, start now!',
           });
+          navigate("/");
+
+      } else{
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed',
+          text: 'Please try again.',
+        });
+
+      }
+
+
+
     }
 
-    const {token}= useParams();
+
   return (
 
     <div className="container-verify-account">

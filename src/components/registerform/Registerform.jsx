@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './regform.css';
 import Swal from 'sweetalert2';
-
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/users`;
 
@@ -18,7 +17,6 @@ function RegisterForm() {
 
   const [user, setUser] = useState(initialState);
   const [confirmPasword, setConfirmPasword] = useState(initialconfirm);
-
   const [error, setError] = useState({});
 
   const handleChangepassword = (event) => {
