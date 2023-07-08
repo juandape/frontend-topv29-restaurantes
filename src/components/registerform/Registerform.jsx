@@ -4,61 +4,45 @@ import Swal from 'sweetalert2';
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/users`;
 
-
 function RegisterForm() {
-
   const initialState = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  password: '',
-
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
   };
   const initialconfirm = {
     passConfirme: '',
-
-    };
-
-  const [ user, setUser] = useState(initialState);
-  const [ confirmPasword, setConfirmPasword] = useState(initialconfirm);
-
-  const [error, setError] = useState({});
-
-  const handleChangepassword=(event)=>{
-
-    const {name,value}=event.target;
-    setConfirmPasword(
-      {
-        ...confirmPasword,
-        [name]: value ,
-
-      })
-
-
-      validateForm(event);
-
   };
 
+  const [user, setUser] = useState(initialState);
+  const [confirmPasword, setConfirmPasword] = useState(initialconfirm);
+  const [error, setError] = useState({});
 
-  const handleChange=(event)=>{
+  const handleChangepassword = (event) => {
+    const { name, value } = event.target;
+    setConfirmPasword({
+      ...confirmPasword,
+      [name]: value,
+    });
 
-    const {name,value}=event.target;
-    setUser(
-      {
-        ...user,
-        [name]: value ,
+    validateForm(event);
+  };
 
-      })
-      validateForm(event);
-
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+    validateForm(event);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const isValid = validateForm();
-    console.log(isValid)
+    console.log(isValid);
     if (isValid) {
-
       try {
         const options = {
           method: 'POST',
@@ -66,39 +50,30 @@ function RegisterForm() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(user),
-        }
+        };
 
-        const response = await fetch(url, options)
-        const data = await response.json()
-        console.log(data)
+        const response = await fetch(url, options);
+        const data = await response.json();
+        console.log(data);
         Swal.fire({
-            icon: 'success',
-            title: 'created your account',
-            text: 'Enjoy all services that we have for you, start now!',
-          });
-
-
-
-
+          icon: 'info',
+          title: 'created your account',
+          text: 'Enjoy all services that we have for you, start now!',
+        });
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
 
       setUser(initialState);
       setConfirmPasword(initialconfirm);
-
-     } else {
-      alert('Passwords not match');
+    } else {
+      Swal.fire('Passwords not match');
     }
-
-
-
   };
 
-
   const validateForm = () => {
-    const { password} = user;
-    const { passConfirme} =confirmPasword;
+    const { password } = user;
+    const { passConfirme } = confirmPasword;
     const error = {};
     if (password !== passConfirme) {
       error.passConfirme = 'Passwords do not match';
@@ -107,8 +82,6 @@ function RegisterForm() {
     return Object.keys(error).length === 0;
   };
 
-
-
   return (
     <div className='container__register'>
       <h1 className='container__register--title'>Register</h1>
@@ -116,7 +89,7 @@ function RegisterForm() {
         <div className='container__register__form'>
           <div className='container__register--box'>
             <label htmlFor='' className='container__register--label-s'>
-            FirstName
+              FirstName
             </label>
             <input
               type='text'

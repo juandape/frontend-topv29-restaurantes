@@ -69,15 +69,15 @@ function reducer(state, action) {
     }
 
     case SIGN_SESSION: {
-      const singsesion = action.payload;
-      return { ...state, state: state.login.profile.fullName = singsesion };
+      const signsesion = action.payload;
+      return { ...state, state: state.login.profile.fullName = signsesion };
 
     }
 
     case CLEAR_CART: {
       return { ...state, cart: {}, total: 0 };
     }
-      
+
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }

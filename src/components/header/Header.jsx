@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import React, { useState } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
@@ -48,7 +49,7 @@ function Header() {
           <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          {admin.includes('ADMIN') === true  ? (
+          {admin.includes('ADMIN') === true ? (
             <div
               className='header-container__items--title'
               onClick={handleClick}
@@ -57,8 +58,7 @@ function Header() {
             </div>
           ) : (
             <div></div>
-            )
-          }
+          )}
 
           {nick !== null ? (
             <>
@@ -66,17 +66,14 @@ function Header() {
                 className='header-container__items--title'
                 onClick={handleClick}
               >
-                <NavLink to='/'> {nick} </NavLink>
+                <NavLink to='/user-account'> {nick} </NavLink>
               </div>
 
               <div
                 className='header-container__items--title'
                 onClick={handleClose}
               >
-                <NavLink to='/'>
-                  {' '}
-                  <TbLogout size={20} />{' '}
-                </NavLink>
+                <TbLogout size={20} />{' '}
               </div>
             </>
           ) : (
