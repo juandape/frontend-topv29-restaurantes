@@ -18,9 +18,9 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => {
-    dispatch(session(null));
-    localStorage.clear('dataUser', JSON.stringify(state.login));
-    location.reload();
+   dispatch(session(null));
+   localStorage.clear('dataUser', JSON.stringify(state.login));
+   location.reload();
     };
 
   const handleClick = () => {

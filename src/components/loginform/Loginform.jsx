@@ -20,6 +20,7 @@ function LoginForm() {
 
   const [user, setUser] = useState(initialState);
 
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setUser({
@@ -51,7 +52,7 @@ function LoginForm() {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data);
+
       dispatch(login(data));
     } catch (error) {
       console.log(error);
