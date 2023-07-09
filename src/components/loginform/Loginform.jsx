@@ -3,23 +3,21 @@ import { useDispatch, useSelector } from '../../store';
 import { login } from '../../store/actions';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import './loginform.css';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/auth/local/login`;
+const initialState = {
+  email: '',
+  password: '',
+};
 
 function LoginForm() {
-  const initialState = {
-    email: '',
-    password: '',
-  };
-
-
   const state = useSelector();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [user, setUser] = useState(initialState);
-
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -29,17 +27,17 @@ function LoginForm() {
     });
   };
 
-
   useEffect(() => {
     const userLocal = JSON.parse(localStorage.getItem('dataUser'));
-    if(!userLocal) return;
+    if (!userLocal) return;
     dispatch(login(userLocal));
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('dataUser', JSON.stringify(state.login));
-  }, [state.login]);
-  console.log(state.login);
+  // useEffect( () => {
+  //   if (state.login.token !== null) {
+  //   localStorage.setItem('dataUser', JSON.stringify(state.login));
+  //   }
+  // }, [state.login]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -55,6 +53,8 @@ function LoginForm() {
 
       const response = await fetch(url, options);
       const data = await response.json();
+      console.log(data);
+      localStorage.setItem('dataUser', JSON.stringify(data.profile));
 
       dispatch(login(data));
     } catch (error) {
@@ -63,8 +63,10 @@ function LoginForm() {
 
     navigate('/');
     setUser(initialState);
-    navigate("/");
   };
+
+    console.log(state.login);
+
 
   return (
     <div className='container__login'>

@@ -36,9 +36,9 @@ export const login = (dataUser) => ({
   payload: dataUser,
 });
 
-export const session = (singsesion) => ({
+export const session = (signsesion) => ({
   type: SIGN_SESSION,
-  payload: singsesion,
+  payload: signsesion,
 });
 
 export const clearCart = () => ({
