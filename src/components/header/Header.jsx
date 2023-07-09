@@ -22,7 +22,6 @@ function Header() {
 
   useEffect(() => {
     const userLocal = JSON.parse(localStorage.getItem('dataUser'));
-    console.log({ userLocal })
     if (!userLocal) return;
     dispatch(login(userLocal));
   }, []);
