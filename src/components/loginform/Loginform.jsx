@@ -27,18 +27,6 @@ function LoginForm() {
     });
   };
 
-  useEffect(() => {
-    const userLocal = JSON.parse(localStorage.getItem('dataUser'));
-    if (!userLocal) return;
-    dispatch(login(userLocal));
-  }, []);
-
-  // useEffect( () => {
-  //   if (state.login.token !== null) {
-  //   localStorage.setItem('dataUser', JSON.stringify(state.login));
-  //   }
-  // }, [state.login]);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -53,8 +41,7 @@ function LoginForm() {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data);
-      localStorage.setItem('dataUser', JSON.stringify(data.profile));
+      localStorage.setItem('dataUser', JSON.stringify(data));
 
       dispatch(login(data));
     } catch (error) {

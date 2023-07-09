@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
@@ -9,6 +9,7 @@ import Badge from '../badge/Badge';
 import { useSelector, useDispatch } from '../../store';
 import { session } from '../../store/actions';
 import { TbLogout } from 'react-icons/tb';
+import { login } from '../../store/actions';
 
 function Header() {
   const state = useSelector();
@@ -19,10 +20,16 @@ function Header() {
   const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const userLocal = JSON.parse(localStorage.getItem('dataUser'));
+    console.log({ userLocal })
+    if (!userLocal) return;
+    dispatch(login(userLocal));
+  }, []);
+
   const handleClose = () =>{
-    localStorage.clear('dataUser', JSON.stringify({}));
+    localStorage.clear('dataUser', JSON.stringify('dataUser'));
     location.reload();
-    dispatch(session(null));
 
   };
 
