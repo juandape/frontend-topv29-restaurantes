@@ -5,6 +5,7 @@ import MenuRest from '../menurest/Menurest';
 import Booking from '../booking/Booking';
 import Feedback from '../feedback/Feedback';
 import RestOverview from '../restoverview/Restoverview';
+import Restgallery from '../restgallery/Restgallery';
 
 function NavBarCardRest() {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -37,7 +38,14 @@ function NavBarCardRest() {
           <RestOverview />
         </Box>
       )}
-      {currentTabIndex === 2 && <Box sx={{ p: 3 }}></Box>}
+      {currentTabIndex === 2 && (
+        <Box sx={{ p: 3 }}>
+          <Restgallery />
+        </Box>
+      )}
+
+
+
       {currentTabIndex === 3 && (
         <Box sx={{ p: 3 }}>
           <div className='cardrest__logo'>
