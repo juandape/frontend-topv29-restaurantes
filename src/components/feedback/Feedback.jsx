@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import './feedback.css';
 import Star from '../Star/Star';
 import { FaStar } from 'react-icons/fa';
+import { useSelector } from '../../store';
 
 const Feedback = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
   const [formData, setFormData] = useState([]);
+  const state = useSelector();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,16 +40,16 @@ const Feedback = () => {
         <h2 className='container__comments--title'>Comments</h2>
         <div className='container__comments--comment'>
           <div>best Food Ever, and love you can bring your pet</div>
-          <div className='container__comments--comment--name'><FaStar /> Jose</div>
+          <div className='container__comments--comment--name'>4 <FaStar /> Jose</div>
           <div className='gradient'></div>
           <div>enjoy everything. Full recommended</div>
-          <div className='container__comments--comment--name'><FaStar /> Maria</div>
+          <div className='container__comments--comment--name'>5 <FaStar /> Maria</div>
           <div className='gradient'></div>
           <div>
             {formData.map((feedback) => (
               <div key={feedback.date}>
                 <div>{feedback.content}</div>
-                <div className='container__comments--comment--name'><FaStar />{feedback.name}</div>
+                <div className='container__comments--comment--name'>{state.rating} <FaStar /> {feedback.name}</div>
                 <div className='gradient'></div>
               </div>
             ))}

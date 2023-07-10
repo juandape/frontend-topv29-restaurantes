@@ -9,7 +9,7 @@ const initialState = {
   cart: [],
   total: 0,
   isLoading: false,
-
+  rating: [],
   login: {
     token: null,
     profile: {
@@ -17,7 +17,6 @@ const initialState = {
       fullName: null,
       avatar: null,
       email: null,
-
       roles: [
         {
           id: null,

@@ -15,7 +15,7 @@ export const loaderRestaurant = async ({ params }) => {
 
 function Restgallery() {
   const { restaurant = [] } = useLoaderData();
-
+console.log(restaurant)
 
   return (
     <>
@@ -25,10 +25,10 @@ function Restgallery() {
           drag='x'
           dragConstraints={{ right: 0, left: -1024 }}
         >
-          {restaurant.gallery.map((img) => (
+          {(restaurant.gallery).map((img) => (
             <motion.div className='restgallery__container__img'>
               <img
-                src={img}
+                src={img.name}
                 alt='rest img'
                 className='restgallery__container__img--img'
               />
