@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import './booking.css';
 
 const defaultForm = {
@@ -19,7 +20,10 @@ function Booking() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert('Your booking has been confirmed!');
+    Swal.fire({
+      icon: 'info',
+      text: 'Your booking has been confirmed!',
+    });
     setForm(defaultForm);
   }
 

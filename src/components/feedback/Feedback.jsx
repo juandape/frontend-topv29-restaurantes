@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './feedback.css';
 import Star from '../Star/Star';
+import { FaStar } from 'react-icons/fa';
 
 const Feedback = () => {
   const [email, setEmail] = useState('');
@@ -33,8 +34,28 @@ const Feedback = () => {
 
   return (
     <>
+      <div className='container__comments__overview'>
+        <h2 className='container__comments--title'>Comments</h2>
+        <div className='container__comments--comment'>
+          <div>best Food Ever, and love you can bring your pet</div>
+          <div className='container__comments--comment--name'><FaStar /> Jose</div>
+          <div className='gradient'></div>
+          <div>enjoy everything. Full recommended</div>
+          <div className='container__comments--comment--name'><FaStar /> Maria</div>
+          <div className='gradient'></div>
+          <div>
+            {formData.map((feedback) => (
+              <div key={feedback.date}>
+                <div>{feedback.content}</div>
+                <div className='container__comments--comment--name'><FaStar />{feedback.name}</div>
+                <div className='gradient'></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className='container__comments'>
-        <h2 className='container__comments--title'>Give Us A Feedback</h2>
+        <h2 className='container__comments--title--feed'>Give Us A Feedback</h2>
         <Star />
         <form onSubmit={handleSubmit}>
           <div className='container__comments--form'>
@@ -78,26 +99,6 @@ const Feedback = () => {
             Send
           </button>
         </form>
-      </div>
-      <div className='container__comments__overview'>
-        <h2 className='container__comments--title'>Comments</h2>
-        <div className='container__comments--comment'>
-          <p>best Food Ever, and love you can bring your pet</p>
-          <p>By: jose</p>
-          <p>-------------------------------------------------</p>
-          <p>enjoy everything. Full recommended</p>
-          <p>By: maria</p>
-          <p>-------------------------------------------------</p>
-          <div>
-            {formData.map((feedback) => (
-              <div key={feedback.date}>
-                <p>{feedback.content}</p>
-                <p>By: {feedback.name}</p>
-                <p>-------------------------------------------------</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </>
   );
