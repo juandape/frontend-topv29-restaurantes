@@ -8,7 +8,7 @@
       "address": "Cra. 34b #134-75",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/Mexican_sabor_logo_snjt7e.png",
-      "overview": [
+      "gallery": [
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/w4qpmfrpaidzetyboidm.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/ms9hinbbg0if9u4p8811.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/pxz8l0edkidsaklhcynv.jpg",
@@ -53,7 +53,7 @@
       "address": "Calle 21 #56-42",
       "rating": "4.8",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/gratini_burguer_b5svdp.webp",
-      "overview":[
+      "gallery":[
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/muy3e9ooszuqg4vdaost.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/p7omxpmxfczr0nx0wwvy.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/raha6yxyrvsxkybglwms.jpg",
@@ -98,7 +98,7 @@
       "address": "Cra. 43 #32-21",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/naruto_logo_swgkbo.png",
-      "overview":[
+      "gallery":[
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704550/vqw3v0cvop1kvwzqayps.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704525/gdhtyqlkjltkemri25w4.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704525/mzlmjz0blimrh31htmap.jpg",
@@ -145,7 +145,7 @@
       "address": "Cra. 1 #12-35",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137425/clod_restaurants/dumpling_logo_vzpkcb.png",
-      "overview":[
+      "gallery":[
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/go5z80hkadbwmnkjfdhj.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/fp7mcoug3psp2qsx7o5o.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/mpfyixg4yf8eux3wyiyd.jpg",
@@ -192,7 +192,7 @@
       "address": "Calle 53b #14-23",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137302/clod_restaurants/pizza_logo_dqneft.png",
-      "overview":[
+      "gallery":[
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705972/xqbt2imkeyajiug3eiud.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/pwnfmukedg278iiuomx5.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/bg7zvkphcx9bkxtgr3kb.jpg",
@@ -237,7 +237,7 @@
       "address": "Calle 2 #2b-64",
       "rating": "4.5",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/schu_logo_ajotaz.png",
-      "overview":[
+      "gallery":[
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/c3yziwlmh70dyjwkh1of.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/tavcx4llwu34yni8pqjk.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/tesohlmg1mtsbnc6x7ba.jpg",
@@ -282,7 +282,7 @@
       "address": "Calle 1 #10-22",
       "rating": "4.1",
       "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086357/clod_restaurants/bu%C3%B1_logo_t1kbzy.jpg",
-      "overview":[
+      "gallery":[
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707333/cltvzkzcocogkhuxclmi.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707331/z4eqclifrin70rctji3k.jpg",
         "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707446/wcearm0cjaft1e01ytav.jpg",
