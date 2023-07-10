@@ -1,8 +1,9 @@
-import './FormEdit'
+
 import React from "react";
 import { useState } from "react";
+import './FormEdit.css'
 
-export const FormEdit = ({ Restaurant }) => {
+export const FormEditRest = ({ Restaurant }) => {
 
     const [RestList, SetRestList] = useState ({});
     const handleChange = (e) => {
@@ -16,7 +17,7 @@ export const FormEdit = ({ Restaurant }) => {
     const handleSubmit = async (e) => {
 
         e.preventDefault()
-        const url = `${import.meta.env.VITE_BASE_URL}/api/restaurants${Restaurant.id}`
+        const url = `https://service-restaurants.onrender.com/api/restaurants/${Restaurants.id}`
         const config = {
             method: 'PATCH',
             headers: {
@@ -37,7 +38,7 @@ export const FormEdit = ({ Restaurant }) => {
     return(
         <>
              <form className="main__contact--formUp" onSubmit={handleSubmit}>
-                <h1 className="edit--hotel">Edit Restaurant</h1>
+                <h1 className="edit--hotel">Edit Restaurants</h1>
 
                     <div>
                         <div className="contact__formUp--column">
@@ -47,7 +48,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                 type="text"
                                 name="name"
-                                //placeholder={Restaurant.name}
+                                placeholder='Edit name'
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -60,7 +61,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                  type="text"
                                 name="city"
-                                //placeholder={Restaurant.schedules}
+                                placeholder='Edit schedules'
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -73,7 +74,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                  type="text"
                                 name="phone"
-                               // placeholder={Restaurant.category}
+                                placeholder='Edit category'
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -86,7 +87,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                  type="text"
                                 name="phone"
-                                //placeholder={Restaurant.adress}
+                                placeholder='Edit address'
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -99,7 +100,7 @@ export const FormEdit = ({ Restaurant }) => {
                             <input
                                 type="url"
                                 name="photo"
-                                //placeholder={Restaurant.logo}
+                                placeholder='Edit logo'
                                 className="contact__formUp--input"
                                 onChange={handleChange}
                                 required
@@ -114,4 +115,4 @@ export const FormEdit = ({ Restaurant }) => {
     );
 };
 
-    export default FormEdit;
+    export default FormEditRest;

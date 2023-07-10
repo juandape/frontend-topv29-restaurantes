@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './FormAdd.css'
+import './FormAddRest.css'
 
 
-function FormAdd() {
+function FormAddRestaurant() {
   const [Restaurant, setRestaurant] = useState({});
 
     const handleChange = (event) => {
@@ -33,7 +33,7 @@ function FormAdd() {
         },
         body: JSON.stringify(newRestaurant),
       };
-      const url = 'https://api-restaurants.onrender.com/api/restaurants'
+      const url = 'https://service-restaurants.onrender.com/api/restaurants'
       const response = await fetch(url, options);
       const data = await response.json();
       console.log(data);
@@ -50,7 +50,7 @@ function FormAdd() {
           <input
             type='text'
             name='name'
-            placeholder='Enter the name of the Restaurant'
+            placeholder='Restaurant´s name'
             className='contact-form__input'
             onChange={handleChange}
             required
@@ -72,7 +72,7 @@ function FormAdd() {
           <input
             type='text'
             name='category'
-            placeholder='Enter the category of the restaurant'
+            placeholder='restaurant´s category'
             className='contact-form__input'
             onChange={handleChange}
             required
@@ -83,7 +83,7 @@ function FormAdd() {
           <input
             type='text'
             name='foodtype'
-            placeholder='Enter the type of food (breakfast lunch dinner) restaurant'
+            placeholder='breakfast - lunch - dinner'
             className='contact-form__input'
             onChange={handleChange}
             required
@@ -94,7 +94,7 @@ function FormAdd() {
           <input
             type='text'
             name='address'
-            placeholder='Enter the address of the restaurant'
+            placeholder='restaurant´s address'
             className='contact-form__input'
             onChange={handleChange}
             required
@@ -111,20 +111,6 @@ function FormAdd() {
             required
             />
         </div>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>foods:  </label>
-          <input
-            type='text'
-            name='foods'
-            placeholder='Ingresa el horario del restaurante'
-            className='contact-form__input'
-            onChange={handleChange}
-            required
-            />
-        </div>
-
-
-
         <button type='submit' className='container__filter--button'>
           Agregar
         </button>
@@ -132,4 +118,4 @@ function FormAdd() {
   );
 };
 
-export default FormAdd;
+export default FormAddRestaurant;

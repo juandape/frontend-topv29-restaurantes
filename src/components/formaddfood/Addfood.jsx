@@ -27,8 +27,8 @@ function Addfood () {
           },
           body: JSON.stringify.apply(newFood),
         };
-        const URL = 'https://api-restaurants.onrender.com/api/restaurants/id/foods';
-        const response = await fetch (URLS, options);
+        const URL = 'https://service-restaurants.onrender.com/api/restaurants/id/food';
+        const response = await fetch (URL, options);
         const data = await response.json();
       } catch (error){
         console.log(error)
@@ -43,7 +43,7 @@ function Addfood () {
           <input
             type="text"
             name="name"
-            placeholder="Ingresa el nombre"
+            placeholder="Food name"
             className="contact-form__input"
             onChange={handleChange}
             required
@@ -54,7 +54,7 @@ function Addfood () {
           <input
             type="text"
             name="schedules"
-            placeholder="Ingresa el precio"
+            placeholder="Food price"
             className="contact-form__input"
             onChange={handleChange}
             required
@@ -76,7 +76,7 @@ function Addfood () {
           <input
             type="text"
             name="foods"
-            placeholder="Ingrese calificación"
+            placeholder="1.0 - 5.0"
             className="contact-form__input"
             onChange={handleChange}
             required
