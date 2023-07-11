@@ -58,7 +58,7 @@ function RegisterForm() {
         Swal.fire({
           icon: 'info',
           title: 'created your account',
-          text: 'Enjoy all services that we have for you, start now!',
+          text: 'Please Verify your email to enjoy all services that we have for you, start now!',
         });
       } catch (error) {
         console.log(error);
