@@ -32,7 +32,7 @@
           "id": 2,
           "name": "Tacos",
           "price": "15000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/1.2_kcjaak.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/1.2_kcjaak.jpg",
           "rate": "4.7"
         },
         {
@@ -254,7 +254,7 @@
           "id": 1,
           "name": "schnelle Würstchen",
           "price": "7500",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/6.1_kllrpz.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_510,w_890/v1689185638/clod_restaurants/6.1_kllrpz.jpg",
           "rate": "5.0"
         },
         {
@@ -313,7 +313,7 @@
           "id": 3,
           "name": "Arepa de huevo",
           "price": "12000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086357/clod_restaurants/7.3_xzkglp.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_900,w_1000/v1689185234/clod_restaurants/7.3_xzkglp.jpg",
           "rate": "4.5"
         }
       ],
