@@ -38,6 +38,11 @@
   background-color: aliceblue;
 }
 
+.options{
+  width: 230px;
+  border: 2px solid orange;
+}
+
 .container__filteradd--button {
   background-color: rgb(196, 131, 11);
   color: white;

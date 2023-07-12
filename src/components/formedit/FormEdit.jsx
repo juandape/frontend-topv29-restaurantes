@@ -73,16 +73,18 @@ export const FormEditRest = ({ Restaurant }) => {
             />
           </div>
           <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Food Type </label>
-          <input
-            type='text'
-            name='foodtype'
-            placeholder='breakfast - lunch - dinner - fast food - vegan'
-            className='addrest-form__input'
-            onChange={handleChange}
-            required
-            />
-        </div>
+        <label className='addrest-form__label'>Food Type </label>
+        <select name='foodtype' className='addrest-form__input options' required>
+          <option value='' disable selected hidden >
+            Select Food Type
+          </option>
+          <option value='breakfast'>Breakfast</option>
+          <option value='lunch'>Lunch</option>
+          <option value='dinner'>Dinner</option>
+          <option value='fast food'>Fast Food</option>
+          <option value='vegan'>Vegan</option>
+        </select>
+      </div>
           <div className='editrest__formUp--column'>
             <label className='editrest__formUp--label'>Address</label>
             <input
