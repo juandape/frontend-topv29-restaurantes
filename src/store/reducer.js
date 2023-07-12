@@ -6,6 +6,7 @@ import {
   SET_LOGIN,
   SIGN_SESSION,
   CLEAR_CART,
+  SET_RATING,
  } from './types';
 
 function reducer(state, action) {
@@ -76,6 +77,11 @@ function reducer(state, action) {
 
     case CLEAR_CART: {
       return { ...state, cart: {}, total: 0 };
+    }
+
+    case SET_RATING: {
+      const rating = action.payload;
+      return { ...state, rating: rating };
     }
 
     default: {

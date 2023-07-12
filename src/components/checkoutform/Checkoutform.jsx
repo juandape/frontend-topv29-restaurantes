@@ -27,10 +27,6 @@ function CheckoutForm() {
         paymentMethod,
       }),
     };
-    // console.log(
-    //   '🚀 ~ file: Checkoutform.jsx:37 ~ handleSubmit ~ payload:',
-    //   payload
-    // );
 
     const BASE_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(`${BASE_URL}/api/payments`, payload);
