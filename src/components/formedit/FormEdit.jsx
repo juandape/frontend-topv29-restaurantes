@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Delete from '../delete/Delete';
+// import Delete from '../delete/Delete';
 import './FormEdit.css';
 
 export const FormEditRest = ({ Restaurant }) => {
@@ -102,7 +102,7 @@ export const FormEditRest = ({ Restaurant }) => {
         >
           Submit Changes
               </button>
-              <Delete />
+              {/* <Delete /> */}
       </form>
     </>
   );
