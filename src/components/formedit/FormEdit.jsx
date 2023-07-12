@@ -78,11 +78,11 @@ export const FormEditRest = ({ Restaurant }) => {
           <option value='' disable selected hidden >
             Select Food Type
           </option>
-          <option value='breakfast'>Breakfast</option>
-          <option value='lunch'>Lunch</option>
-          <option value='dinner'>Dinner</option>
-          <option value='fast food'>Fast Food</option>
-          <option value='vegan'>Vegan</option>
+          <option value='Breakfast'>Breakfast</option>
+          <option value='Lunch'>Lunch</option>
+          <option value='Dinner'>Dinner</option>
+          <option value='Fast Food'>Fast Food</option>
+          <option value='Vegan'>Vegan</option>
         </select>
       </div>
           <div className='editrest__formUp--column'>
