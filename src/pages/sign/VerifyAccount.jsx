@@ -1,6 +1,9 @@
 import{useParams } from 'react-router-dom';
 import {activate } from '../../services/index';
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from '../../store';
+import { login } from '../../store/actions';
+
 
 
 
@@ -10,6 +13,7 @@ import './verifyaccount.css';
 
 function  VerifyAccount  () {
 
+  const dispatch = useDispatch();
   const { token } = useParams();
   const navigate = useNavigate();
 
@@ -17,19 +21,21 @@ function  VerifyAccount  () {
 
       const response = await activate(token);
       const data = await response.json();
-      //console.log(data);
+      console.log(data);
 
 
       if(response.status === 200){
-        alert("activaste la cuenta!!")
 
 
         Swal.fire({
             icon: 'success',
             title: 'Registration successful',
-            text: 'Enjoy all services that we have for you, start now!',
+            text: 'email is sent for account activation !',
           });
+
+          dispatch(login(data));
           navigate("/");
+
 
       } else{
 
