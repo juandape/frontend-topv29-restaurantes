@@ -48,9 +48,9 @@ function NavBarCardRest() {
 
       {currentTabIndex === 3 && (
         <Box sx={{ p: 3 }}>
-          <div className='cardrest__logo'>
-            <img src='/images/mapa.jpg' alt='img' className='cardrest__img' />
-          </div>
+
+            <img src='/images/mapa.jpg' alt='img' className='location__img' />
+
         </Box>
       )}
       {currentTabIndex === 4 && (

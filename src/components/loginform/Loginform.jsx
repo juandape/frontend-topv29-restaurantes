@@ -46,7 +46,7 @@ function LoginForm() {
       if(response.status === 200){
       localStorage.setItem('dataUser', JSON.stringify(data));
       Swal.fire({
-        icon: 'success',
+        icon: 'info',
         title: 'Registration successful',
         text: 'Enjoy all services that we have for you, start now!',
       });
@@ -56,7 +56,7 @@ function LoginForm() {
       setUser(initialState);
     } else{
       Swal.fire({
-        icon: 'error',
+        icon: 'info',
         title: 'Failed',
         text: 'Please try again.',
       });
