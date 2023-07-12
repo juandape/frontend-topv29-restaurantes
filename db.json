@@ -7,39 +7,39 @@
       "foodtype": "Lunch",
       "address": "Cra. 34b #134-75",
       "rating": "4.5",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/Mexican_sabor_logo_snjt7e.png",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/Mexican_sabor_logo_snjt7e.png",
       "gallery": [
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/w4qpmfrpaidzetyboidm.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/ms9hinbbg0if9u4p8811.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/pxz8l0edkidsaklhcynv.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/zlcsqobbxbwljzo0hnl6.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/kxuit3ij6h9yau4zytxu.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/o0ozw5ywghy5s8rfotbw.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/povok0y4mpjouwx1xdua.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702436/wfvd9dn6mn0effh1jr4f.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702435/doxqu8ssbprmeohxax9n.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688702435/n41oq0u1frdfocvlvnmr.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/w4qpmfrpaidzetyboidm.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/ms9hinbbg0if9u4p8811.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/pxz8l0edkidsaklhcynv.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/zlcsqobbxbwljzo0hnl6.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/kxuit3ij6h9yau4zytxu.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/o0ozw5ywghy5s8rfotbw.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/povok0y4mpjouwx1xdua.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702436/wfvd9dn6mn0effh1jr4f.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702435/doxqu8ssbprmeohxax9n.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688702435/n41oq0u1frdfocvlvnmr.jpg"
       ],
       "food": [
         {
           "id": 1,
           "name": "Enchiladas",
           "price": "17000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/1.1_wy8fyy.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/1.1_wy8fyy.jpg",
           "rate": "4.0"
         },
         {
           "id": 2,
           "name": "Tacos",
           "price": "15000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/1.2_kcjaak.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/1.2_kcjaak.jpg",
           "rate": "4.7"
         },
         {
           "id": 3,
           "name": "Elotes",
           "price": "7500",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086361/clod_restaurants/1.3_segpuw.png",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086361/clod_restaurants/1.3_segpuw.png",
           "rate": "4.8"
         }
       ],
@@ -52,39 +52,39 @@
       "foodtype": "Fast Food",
       "address": "Calle 21 #56-42",
       "rating": "4.8",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/gratini_burguer_b5svdp.webp",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086358/clod_restaurants/gratini_burguer_b5svdp.webp",
       "gallery":[
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/muy3e9ooszuqg4vdaost.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/p7omxpmxfczr0nx0wwvy.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/raha6yxyrvsxkybglwms.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703905/wgkt2edjuwqa2w2g5bgf.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703904/ogyqhy64uadoojuhl1yu.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703904/axk90hny4gwt7q6nsvrl.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703904/ixo1tbaqxtsezxvt5yyd.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703904/dfkeqoqjd4aucxxbqeh2.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703904/gprdyt5z1qsjx1d32x81.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688703904/uba4m1fy6qntsbkmuu3o.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703905/muy3e9ooszuqg4vdaost.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703905/p7omxpmxfczr0nx0wwvy.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703905/raha6yxyrvsxkybglwms.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703905/wgkt2edjuwqa2w2g5bgf.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703904/ogyqhy64uadoojuhl1yu.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703904/axk90hny4gwt7q6nsvrl.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703904/ixo1tbaqxtsezxvt5yyd.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703904/dfkeqoqjd4aucxxbqeh2.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703904/gprdyt5z1qsjx1d32x81.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688703904/uba4m1fy6qntsbkmuu3o.jpg"
       ],
       "food": [
         {
           "id": 1,
           "name": "Big Burguer",
           "price": "22000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137238/clod_restaurants/2.1_uc4c9e.png",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688137238/clod_restaurants/2.1_uc4c9e.png",
           "rate": "4.5"
         },
         {
           "id": 2,
           "name": "Royal Burguer",
           "price": "32000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086360/clod_restaurants/2.2_cz4sqz.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086360/clod_restaurants/2.2_cz4sqz.jpg",
           "rate": "4.7"
         },
         {
           "id": 3,
           "name": "Darker Burguer",
           "price": "35000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086360/clod_restaurants/2.3_hasntx.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086360/clod_restaurants/2.3_hasntx.jpg",
           "rate": "5.0"
         }
       ],
@@ -97,18 +97,18 @@
       "foodtype": "Lunch",
       "address": "Cra. 43 #32-21",
       "rating": "4.5",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/naruto_logo_swgkbo.png",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/naruto_logo_swgkbo.png",
       "gallery":[
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704550/vqw3v0cvop1kvwzqayps.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704525/gdhtyqlkjltkemri25w4.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704525/mzlmjz0blimrh31htmap.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704525/xakjbqg77djiliq0vgnf.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704524/qrk9ceiij90gfg5ooz3x.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704524/wh0hxbbtriop0vtu4hwd.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704524/gbcijp4eqji3m5du8qdh.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704524/fw0d0qaoyjr8jbubzktw.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704524/gbn3pw4gey7trc2qbg7b.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688704524/icombkhy9wnaoj5nemvg.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704550/vqw3v0cvop1kvwzqayps.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704525/gdhtyqlkjltkemri25w4.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704525/mzlmjz0blimrh31htmap.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704525/xakjbqg77djiliq0vgnf.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704524/qrk9ceiij90gfg5ooz3x.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704524/wh0hxbbtriop0vtu4hwd.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704524/gbcijp4eqji3m5du8qdh.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704524/fw0d0qaoyjr8jbubzktw.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704524/gbn3pw4gey7trc2qbg7b.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688704524/icombkhy9wnaoj5nemvg.jpg"
       ],
       "food": [
         {
@@ -116,7 +116,7 @@
           "name": "Naruto Sushi Rolls",
           "price": "22000",
           "amount": "12",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137137/clod_restaurants/3.1_kgcrb3.png",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688137137/clod_restaurants/3.1_kgcrb3.png",
           "rate": "4.2"
         },
         {
@@ -124,14 +124,14 @@
           "name": "Naruti Sushi Lounge",
           "price": "32000",
           "amount": "15",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086360/clod_restaurants/3.2_arnbxz.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086360/clod_restaurants/3.2_arnbxz.jpg",
           "rate": "5.0"
         },
         {
           "id": 3,
           "name": "Sasuke Ramen",
           "price": "25000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086360/clod_restaurants/3.3_wwjqjw.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086360/clod_restaurants/3.3_wwjqjw.jpg",
           "rate": "4.7"
         }
       ],
@@ -144,18 +144,18 @@
       "foodtype": "Breakfast",
       "address": "Cra. 1 #12-35",
       "rating": "4.5",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137425/clod_restaurants/dumpling_logo_vzpkcb.png",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688137425/clod_restaurants/dumpling_logo_vzpkcb.png",
       "gallery":[
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/go5z80hkadbwmnkjfdhj.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/fp7mcoug3psp2qsx7o5o.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/mpfyixg4yf8eux3wyiyd.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705336/mzugx1drmpjzikfkpct3.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705335/gocyuvy7e1zuzi34cafn.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705335/jvwodoc1ipgnew52fcx5.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705335/h6chkiomx8rfxwllxtxn.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705335/zdl9xuaigrqkzxaanrwl.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705335/ducrzw64bqfdoheulusw.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705335/k2znenncs7zdzp1kgzpj.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705336/go5z80hkadbwmnkjfdhj.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705336/fp7mcoug3psp2qsx7o5o.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705336/mpfyixg4yf8eux3wyiyd.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705336/mzugx1drmpjzikfkpct3.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705335/gocyuvy7e1zuzi34cafn.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705335/jvwodoc1ipgnew52fcx5.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705335/h6chkiomx8rfxwllxtxn.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705335/zdl9xuaigrqkzxaanrwl.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705335/ducrzw64bqfdoheulusw.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705335/k2znenncs7zdzp1kgzpj.jpg"
       ],
       "food": [
         {
@@ -163,7 +163,7 @@
           "name": "Eggs and Bacon",
           "price": "15000",
           "amount": "15",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086360/clod_restaurants/4.1_d6jkrh.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086360/clod_restaurants/4.1_d6jkrh.jpg",
           "rate": "4.4"
         },
         {
@@ -171,14 +171,14 @@
           "name": "Continental Breakfast",
           "price": "20000",
           "amount": "15",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086357/clod_restaurants/4.2_lpzspr.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086357/clod_restaurants/4.2_lpzspr.jpg",
           "rate": "4.2"
         },
         {
           "id": 3,
           "name": "Coffee and Toast",
           "price": "15000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/4.3_uxliiv.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086358/clod_restaurants/4.3_uxliiv.jpg",
           "rate": "4.5"
         }
       ],
@@ -191,39 +191,39 @@
       "foodtype": "Dinner",
       "address": "Calle 53b #14-23",
       "rating": "4.5",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137302/clod_restaurants/pizza_logo_dqneft.png",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688137302/clod_restaurants/pizza_logo_dqneft.png",
       "gallery":[
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705972/xqbt2imkeyajiug3eiud.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/pwnfmukedg278iiuomx5.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/bg7zvkphcx9bkxtgr3kb.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/mjqavcanc9zhr2liuuve.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/nggdvu7ruplzhzeadhox.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/elbia1bxkyderrbn8nwu.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/h8d4vo5givctokpmmm6j.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/rso9wjkjpyb5btbrxz0w.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/gvoj93kq1wud8leqcp2g.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688705971/g413mqa7aeayokjo0hvp.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705972/xqbt2imkeyajiug3eiud.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/pwnfmukedg278iiuomx5.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/bg7zvkphcx9bkxtgr3kb.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/mjqavcanc9zhr2liuuve.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/nggdvu7ruplzhzeadhox.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/elbia1bxkyderrbn8nwu.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/h8d4vo5givctokpmmm6j.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/rso9wjkjpyb5btbrxz0w.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/gvoj93kq1wud8leqcp2g.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688705971/g413mqa7aeayokjo0hvp.jpg"
       ],
       "food": [
         {
           "id": 1,
           "name": "Monza Pizza",
           "price": "25500",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/5.1_anltqb.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086358/clod_restaurants/5.1_anltqb.jpg",
           "rate": "3.8"
         },
         {
           "id": 2,
           "name": "Ferrari Pasta",
           "price": "45000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688137375/clod_restaurants/5.2_skglt7.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688137375/clod_restaurants/5.2_skglt7.jpg",
           "rate": "4.0"
         },
         {
           "id": 3,
           "name": "Enzo Automovile lasagna",
           "price": "45000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/5.3_msxslw.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086358/clod_restaurants/5.3_msxslw.jpg",
           "rate": "4.8"
         }
       ],
@@ -236,39 +236,39 @@
       "foodtype": "Dinner",
       "address": "Calle 2 #2b-64",
       "rating": "4.5",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/schu_logo_ajotaz.png",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/schu_logo_ajotaz.png",
       "gallery":[
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/c3yziwlmh70dyjwkh1of.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/tavcx4llwu34yni8pqjk.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/tesohlmg1mtsbnc6x7ba.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/rdngheconsvbcu37vryq.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/btussuqdr0kieskg0nys.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/vmvsnd6r1muzcenuiszh.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/qhguj2wl14tnojolhtt7.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/exzw6cl86qihwetoxxyw.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/noo7qafden2xvgz9ymjh.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688706570/s6g1pquooklg1x7sotyl.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/c3yziwlmh70dyjwkh1of.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/tavcx4llwu34yni8pqjk.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/tesohlmg1mtsbnc6x7ba.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/rdngheconsvbcu37vryq.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/btussuqdr0kieskg0nys.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/vmvsnd6r1muzcenuiszh.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/qhguj2wl14tnojolhtt7.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/exzw6cl86qihwetoxxyw.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/noo7qafden2xvgz9ymjh.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688706570/s6g1pquooklg1x7sotyl.jpg"
       ],
       "food": [
         {
           "id": 1,
           "name": "schnelle Würstchen",
           "price": "7500",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/6.1_kllrpz.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/6.1_kllrpz.jpg",
           "rate": "5.0"
         },
         {
           "id": 2,
           "name": "Red ferrari Grutze",
           "price": "37000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/6.2_oxhcyp.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/6.2_oxhcyp.jpg",
           "rate": "4.9"
         },
         {
           "id": 3,
           "name": "Currywurst",
           "price": "18000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086359/clod_restaurants/6.3_zh117v.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086359/clod_restaurants/6.3_zh117v.jpg",
           "rate": "4.2"
         }
       ],
@@ -281,39 +281,39 @@
       "foodtype": "Breakfast",
       "address": "Calle 1 #10-22",
       "rating": "4.1",
-      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086357/clod_restaurants/bu%C3%B1_logo_t1kbzy.jpg",
+      "logo": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086357/clod_restaurants/bu%C3%B1_logo_t1kbzy.jpg",
       "gallery":[
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707333/cltvzkzcocogkhuxclmi.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707331/z4eqclifrin70rctji3k.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707446/wcearm0cjaft1e01ytav.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707307/ktmgqwlqw7wolphk0w0n.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707307/stv0sciqwlwudobp213p.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707307/vixcl0og42okqzevu6tg.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707307/kswcmeaytox5tzvfbpy5.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707307/kbh7zzkoisauckl2g7qv.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707306/uab3uam709aulfgwm6sw.jpg",
-        "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688707306/ywlwyxcaohy5uurcutrn.jpg"
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707333/cltvzkzcocogkhuxclmi.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707331/z4eqclifrin70rctji3k.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707446/wcearm0cjaft1e01ytav.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707307/ktmgqwlqw7wolphk0w0n.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707307/stv0sciqwlwudobp213p.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707307/vixcl0og42okqzevu6tg.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707307/kswcmeaytox5tzvfbpy5.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707307/kbh7zzkoisauckl2g7qv.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707306/uab3uam709aulfgwm6sw.jpg",
+        "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688707306/ywlwyxcaohy5uurcutrn.jpg"
       ],
       "food": [
         {
           "id": 1,
           "name": "Cacerola de huevo",
           "price": "1500",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/7.1_rzwxzz.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086358/clod_restaurants/7.1_rzwxzz.jpg",
           "rate": "5.0"
         },
         {
           "id": 2,
           "name": "Buñuelos y empanadas",
           "price": "1000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086358/clod_restaurants/7.2_mgtlhm.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086358/clod_restaurants/7.2_mgtlhm.jpg",
           "rate": "4.9"
         },
         {
           "id": 3,
           "name": "Arepa de huevo",
           "price": "12000",
-          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/v1688086357/clod_restaurants/7.3_xzkglp.jpg",
+          "image": "https://res.cloudinary.com/dqrtsgiru/image/upload/c_scale,h_810,w_1080/v1688086357/clod_restaurants/7.3_xzkglp.jpg",
           "rate": "4.5"
         }
       ],
