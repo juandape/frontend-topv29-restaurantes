@@ -3,16 +3,48 @@
   flex-direction: column;
   width: 300px;
   border: 0.5px solid #e6e6e6;
+  box-shadow: 1px 1px 3px 1px gray;
   margin-bottom: 40px;
   padding: 10px;
 }
 
 .checkoutform--title{
   margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(190, 136, 34);
 }
 .checkoutform--element{
   margin-bottom: 10px;
   width: 250px;
+}
+
+.checkoutform--label{
+  color: rgb(190, 136, 34);
+  font-size: 12px;
+  background-color: aliceblue;
+  position: relative;
+  left: 20px;
+  top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 0;
+}
+.card{
+  top: -5px;
+}
+
+.checkoutform--input{
+  border-radius: 15px;
+  border-color: orange;
+  padding: 5px;
+  width: 220px;
+  background-color: aliceblue;
+  margin-bottom: 10px;
+}
+
+.checkoutform--card{
+  margin-top: 10px;
 }
 
 .checkoutform--button{
@@ -25,4 +57,10 @@
   width: 100px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.checkoutform--button:hover{
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
 }

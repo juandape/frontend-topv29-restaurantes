@@ -38,9 +38,9 @@ function CheckoutForm() {
       Swal.fire({
         icon: 'info',
         html:
-        '<h2>Payment Successful ! Get Ready for delicious food</h2>' +
-        '<div>------------</div>' +
-        `<h5>Your order number is ${data.payment.id}</h5>`,
+          '<h2>Payment Successful ! Get Ready for delicious food</h2>' +
+          '<div>------------</div>' +
+          `<h5>Your order number is ${data.payment.id}</h5>`,
       });
       dispatch({ type: CLEAR_CART });
     }
@@ -49,20 +49,26 @@ function CheckoutForm() {
     }
   };
 
-
-
   return (
     <>
       <form onSubmit={handleSubmit} className='checkoutform'>
         <h3 className='checkoutform--title'>Payment Method</h3>
         <div className='checkoutform--element'>
-          <CardElement />
+          <div>
+            <label className='checkoutform--label'>Delivery Direction</label>
+            <input type='text' className='checkoutform--input' required />
+          </div>
+          <div>
+            <label className='checkoutform--label'>Mobile Number</label>
+            <input type='number' className='checkoutform--input' required />
+          </div>
+          <div className='checkoutform--card'>
+            <label className='checkoutform--label card'>Card Details</label>
+            <CardElement />
+          </div>
         </div>
         <div>
-          <button
-            type='submit'
-            className='checkoutform--button'
-          >
+          <button type='submit' className='checkoutform--button'>
             PAY
           </button>
         </div>
