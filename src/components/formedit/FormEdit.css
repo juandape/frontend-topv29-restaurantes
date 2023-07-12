@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 400px;
 }
 
 .editrest--title {
   font-size: 25px;
   font-weight: bold;
-  margin: 10px auto;
   color: orange;
 }
 
