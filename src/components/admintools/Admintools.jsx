@@ -1,4 +1,4 @@
-import FormAdd from '../formAdd/FormAdd'; //add restaurants
+import FormAddRest from '../formAddRest/FormAddRest';
 import FormEdit from '../formedit/FormEdit'; //edit restaurant
 import Addfood from '../formaddfood/Addfood'; //add food
 // import Formularioedit from '../formularioedit/Formularioedit'; //edit food
@@ -30,7 +30,7 @@ function AdminTools() {
         </div>
         {currentTabIndex === 0 && (
           <Box sx={{ p: 3 }}>
-            <FormAdd />
+            <FormAddRest/>
           </Box>
         )}
         {currentTabIndex === 1 && (

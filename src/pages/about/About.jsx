@@ -1,6 +1,7 @@
 import './about.css';
 import React from 'react';
 import { useEffect,useState } from 'react';
+import FormEditRest from '../../components/formedit/FormEdit';
 
 function AboutPage() {
 
@@ -69,6 +70,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
+      <FormEditRest/>
     </>
   );
 }
