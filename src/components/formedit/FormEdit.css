@@ -1,4 +1,4 @@
-.main__contact--formUp {
+.main__editrest--formUp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,41 +6,53 @@
   max-width: 400px;
 }
 
-.edit--hotel {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
+.editrest--title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px auto;
+  color: orange;
 }
 
-.contact__formUp--column {
+.editrest__formUp--column {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.contact__formUp--label {
-  font-weight: bold;
-  margin-bottom: 5px;
+.editrest__formUp--label {
+  color: rgb(190, 136, 34);
+  font-size: 12px;
+  background-color: aliceblue;
+  position: relative;
+  left: 20px;
+  top: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 0;
 }
 
-.contact__formUp--input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+.editrest__formUp--input {
+  border-radius: 15px;
+  border-color: orange;
+  padding: 5px;
+  width: 220px;
+  background-color: aliceblue;
 }
 
-.contact__formUp--button {
-  padding: 10px 20px;
-  background-color: rgb(233, 158, 18);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+.editrest__form--button {
+  background-color: rgb(196, 131, 11);
+  color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 7px;
   font-size: 16px;
   cursor: pointer;
-  text-align: left;
+  margin-top: 20px;
+
 }
 
-.contact__formUp--button:hover {
-  background-color: rgb(190, 136, 34);
+.editrest__form--button:hover {
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
 }

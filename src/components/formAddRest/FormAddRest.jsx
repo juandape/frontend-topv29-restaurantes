@@ -43,76 +43,76 @@ function FormAddRestaurant() {
   };
 
   return (
-    <form className='main__contact-form' onSubmit={handleSubmit}>
-        <h1 className='Form__ADD'>ADD Restaurant</h1>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>Name Restaurant:  </label>
+    <form className='main__addrest-form' onSubmit={handleSubmit}>
+        <h1 className='Form__title'>Add New Restaurant</h1>
+        <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Restaurant Name:  </label>
           <input
             type='text'
             name='name'
             placeholder='Restaurant´s name'
-            className='contact-form__input'
+            className='addrest-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>Schedules:   </label>
+        <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Schedules:   </label>
           <input
             type='text'
             name='schedules'
             placeholder='Enter restaurant hours'
-            className='contact-form__input'
+            className='addrest-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>Category:   </label>
+        <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Category:   </label>
           <input
             type='text'
             name='category'
             placeholder='restaurant´s category'
-            className='contact-form__input'
+            className='addrest-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>foodtype:   </label>
+        <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Food Type:   </label>
           <input
             type='text'
             name='foodtype'
-            placeholder='breakfast - lunch - dinner'
-            className='contact-form__input'
+            placeholder='breakfast - lunch - dinner - fast food - vegan'
+            className='addrest-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>address:   </label>
+        <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Address:   </label>
           <input
             type='text'
             name='address'
             placeholder='restaurant´s address'
-            className='contact-form__input'
+            className='addrest-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <div className='contact-form__column'>
-          <label className='contact-form__label'>logo:   </label>
+        <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Logo:   </label>
           <input
             type='text'
             name='logo'
             placeholder='https://picsum.photos/200'
-            className='contact-form__input'
+            className='addrest-form__input'
             onChange={handleChange}
             required
             />
         </div>
-        <button type='submit' className='container__filter--button'>
-          Agregar
+        <button type='submit' className='container__filteradd--button'>
+          Add
         </button>
       </form>
   );

@@ -1,6 +1,6 @@
 import { describe,test, expect} from 'vitest';
 import {fireEvent, render,screen} from '@testing-library/react'
-import Formularioedit from './Formularioedit';
+import Formularioedit from './Editfood';
 
 describe('test',()=>{
     beforeEach(()=>{

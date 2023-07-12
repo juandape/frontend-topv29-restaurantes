@@ -1,36 +1,35 @@
 import React, { useState } from 'react';
-import './Addfood.css';
+import './editfood.css';
 
-function Addfood() {
-  const [food, setFood] = useState({});
+const BASE_URL = import.meta.env.VITE_API_URL;
+const url = `${BASE_URL}/api/foods`;
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    // eslint-disable-next-line no-undef
-    setFood({
-      ...food,
+
+function EditFood() {
+  const [Restaurant, setRestaurant] = useState({});
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setRestaurant({
+      ...Restaurant,
       [name]: value,
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const newFood = {
-      ...food,
-      id: Date.now(),
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const config = {
+      method: 'PATCH',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify(Restaurant),
     };
+
     try {
-      const options = {
-        method: 'POST',
-        headers: {
-          'content-Type': 'application/json',
-        },
-        body: JSON.stringify.apply(newFood),
-      };
-      const URL =
-        'https://service-restaurants.onrender.com/api/restaurants/id/food';
-      const response = await fetch(URL, options);
+      const response = await fetch(url, config);
       const data = await response.json();
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -38,7 +37,7 @@ function Addfood() {
 
   return (
     <form className='main__addfood-form' onSubmit={handleSubmit}>
-      <h1 className='Form__title'>Add New Food</h1>
+      <h1 className='Form__title'>Edit Food</h1>
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Food Name: </label>
         <input
@@ -84,11 +83,11 @@ function Addfood() {
         />
       </div>
 
-      <button type='submit' className='container__filteradd--button'>
-        Add Food
+      <button type='submit' className='container__filter--button'>
+        Submit Changes
       </button>
     </form>
   );
 }
 
-export default Addfood;
+export default EditFood;
