@@ -46,7 +46,7 @@ function FormAddRestaurant() {
     <form className='main__addrest-form' onSubmit={handleSubmit}>
         <h1 className='Form__title'>Add New Restaurant</h1>
         <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Restaurant Name:  </label>
+          <label className='addrest-form__label'>Restaurant Name </label>
           <input
             type='text'
             name='name'
@@ -57,7 +57,7 @@ function FormAddRestaurant() {
             />
         </div>
         <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Schedules:   </label>
+          <label className='addrest-form__label'>Schedules </label>
           <input
             type='text'
             name='schedules'
@@ -68,7 +68,7 @@ function FormAddRestaurant() {
             />
         </div>
         <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Category:   </label>
+          <label className='addrest-form__label'>Category  </label>
           <input
             type='text'
             name='category'
@@ -79,7 +79,7 @@ function FormAddRestaurant() {
             />
         </div>
         <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Food Type:   </label>
+          <label className='addrest-form__label'>Food Type </label>
           <input
             type='text'
             name='foodtype'
@@ -90,7 +90,7 @@ function FormAddRestaurant() {
             />
         </div>
         <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Address:   </label>
+          <label className='addrest-form__label'>Address  </label>
           <input
             type='text'
             name='address'
@@ -101,7 +101,7 @@ function FormAddRestaurant() {
             />
         </div>
         <div className='addrest-form__column'>
-          <label className='addrest-form__label'>Logo:   </label>
+          <label className='addrest-form__label'>Logo </label>
           <input
             type='text'
             name='logo'

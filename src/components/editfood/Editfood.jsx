@@ -83,7 +83,7 @@ function EditFood() {
         />
       </div>
 
-      <button type='submit' className='container__filter--button'>
+      <button type='submit' className='container__filteredit--button'>
         Submit Changes
       </button>
     </form>

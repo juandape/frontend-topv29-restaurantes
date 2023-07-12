@@ -40,7 +40,7 @@ function Addfood() {
     <form className='main__addfood-form' onSubmit={handleSubmit}>
       <h1 className='Form__title'>Add New Food</h1>
       <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Food Name: </label>
+        <label className='addfood-form__label'>Food Name </label>
         <input
           type='text'
           name='name'
@@ -51,7 +51,7 @@ function Addfood() {
         />
       </div>
       <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Price: </label>
+        <label className='addfood-form__label'>Price </label>
         <input
           type='text'
           name='schedules'
@@ -62,7 +62,7 @@ function Addfood() {
         />
       </div>
       <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Reference photo: </label>
+        <label className='addfood-form__label'>Reference photo </label>
         <input
           type='text'
           name='logo'

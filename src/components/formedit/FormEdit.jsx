@@ -40,7 +40,7 @@ export const FormEditRest = ({ Restaurant }) => {
 
         <div>
           <div className='editrest__formUp--column'>
-            <label className='editrest__formUp--label'>Name</label>
+            <label className='editrest__formUp--label'>Restaurant Name</label>
             <input
               type='text'
               name='name'
@@ -72,8 +72,19 @@ export const FormEditRest = ({ Restaurant }) => {
               required
             />
           </div>
+          <div className='addrest-form__column'>
+          <label className='addrest-form__label'>Food Type </label>
+          <input
+            type='text'
+            name='foodtype'
+            placeholder='breakfast - lunch - dinner - fast food - vegan'
+            className='addrest-form__input'
+            onChange={handleChange}
+            required
+            />
+        </div>
           <div className='editrest__formUp--column'>
-            <label className='editrest__formUp--label'>Adress</label>
+            <label className='editrest__formUp--label'>Address</label>
             <input
               type='text'
               name='phone'

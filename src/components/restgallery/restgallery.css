@@ -10,12 +10,12 @@
 
 .restgallery__container__img{
   height: 230px;
-  width: 200px;
-  padding: 2rem;
+  width: 230px;
+  padding: 1rem;
 }
 
 .restgallery__container__img--img{
-  height: 230px;
+  height: 200px;
   width: 230px;
   pointer-events: none;
 }
