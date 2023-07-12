@@ -15,3 +15,19 @@ export async function activate(token) {
 
     return response;
   };
+
+  export async function getRestaurants() {
+    const url = `${BASE_URL}/api/restaurants`;
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+    };
+
+    const response = await fetch(url, options);
+
+    return response;
+  };
+
