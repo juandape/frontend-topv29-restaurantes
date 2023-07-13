@@ -87,7 +87,7 @@ function Addfood() {
           onChange={handleChange}
           required
         >
-          <option value='' disable selected hidden>Select Restaurant</option>
+          <option value='defaultValue' hidden>Select Restaurant</option>
           {restaurants.map((restaurant) => (
             <option key={restaurant.id} value={restaurant.id}>
               {restaurant.name}
