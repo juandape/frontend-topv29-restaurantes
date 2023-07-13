@@ -49,4 +49,3 @@ export async function activate(token) {
 
     return response;
   };
-

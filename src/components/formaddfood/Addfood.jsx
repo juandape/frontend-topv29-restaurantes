@@ -16,7 +16,6 @@ function Addfood() {
   };
   const [food, setFood] = useState(initialState);
   const [restaurants, setRestaurants] = useState([]);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     // eslint-disable-next-line no-undef
@@ -70,6 +69,22 @@ function Addfood() {
         console.log('Error al obtener los restaurantes:', error);
       }
     };
+    try {
+      const options = {
+        method: 'POST',
+        headers: {
+          'content-Type': 'application/json',
+        },
+        body: JSON.stringify.apply(newFood),
+      };
+      const URL =
+        'https://service-restaurants.onrender.com/api/restaurants/id/food';
+      const response = await fetch(URL, options);
+      const data = await response.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
     fetchData();
   }, []);
