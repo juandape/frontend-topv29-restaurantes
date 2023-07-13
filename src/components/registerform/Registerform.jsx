@@ -63,7 +63,6 @@ function RegisterForm() {
           text: 'Please Verify your email to enjoy all services that we have for you, start now!',
         });
         navigate('/');
-
       } catch (error) {
         console.log(error);
       }
