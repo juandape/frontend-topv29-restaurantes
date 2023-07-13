@@ -1,5 +1,5 @@
 import FormAddRest from '../formAddRest/FormAddRest';
-import FormEdit from '../formedit/FormEdit'; //edit restaurant
+import EditFormRestaurant from '../editformrestaurant/Editformrestaurant'; //edit restaurant
 import Addfood from '../formaddfood/Addfood'; //add food
 import EditFood from '../editfood/Editfood'; //edit food
 import { Box, Tab, Tabs } from '@mui/material';
@@ -35,7 +35,7 @@ function AdminTools() {
         )}
         {currentTabIndex === 1 && (
           <Box sx={{ p: 3 }}>
-            <FormEdit />
+            <EditFormRestaurant />
           </Box>
         )}
         {currentTabIndex === 2 && (
