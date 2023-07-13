@@ -43,7 +43,14 @@ export const EditFormRestaurant = () => {
     event.preventDefault();
 
     console.log(restaurant);
-
+    if (restaurant.id === '') {
+      Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'Please select a restaurant',
+      });
+      return;
+    }
     try {
       axios
         .patch(`${BASE_URL}/api/restaurants/${restaurant.id}`, restaurant)
