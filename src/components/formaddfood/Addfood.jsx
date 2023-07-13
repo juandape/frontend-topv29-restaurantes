@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Addfood.css';
+import Swal from 'sweetalert2';
+import { getRestaurants } from '../../services';
 
 function Addfood() {
-  const [food, setFood] = useState({});
+  const BASE_URL = import.meta.env.VITE_API_URL;
+  const url = `${BASE_URL}/api/food`;
 
+  const initialState = {
+    name: '',
+    price: '',
+    image: '',
+    rate: '',
+    restaurantsId: '',
+  };
+  const [food, setFood] = useState(initialState);
+  const [restaurants, setRestaurants] = useState([]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     // eslint-disable-next-line no-undef
@@ -15,9 +27,47 @@ function Addfood() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newFood = {
-      ...food,
-      id: Date.now(),
+
+    try {
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(food),
+      };
+
+      const response = await fetch(url, options);
+      const data = await response.json();
+
+      if (response.status === 200) {
+        Swal.fire({
+          icon: 'info',
+          title: 'Registration successful',
+          text: 'Successfully created food !',
+        });
+        setFood(initialState);
+      } else {
+        Swal.fire({
+          icon: 'info',
+          title: 'Failed',
+          text: 'Please try again.',
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getRestaurants();
+        const data = await response.json();
+        setRestaurants(data);
+      } catch (error) {
+        console.log('Error al obtener los restaurantes:', error);
+      }
     };
     try {
       const options = {
@@ -27,60 +77,89 @@ function Addfood() {
         },
         body: JSON.stringify.apply(newFood),
       };
-      const URL =
-        'https://service-restaurants.onrender.com/api/restaurants/id/food';
-      const response = await fetch(URL, options);
-      const data = await response.json();
+      const URL = `${BASE_URL}/api/restaurants/id/food`;
+      const response = fetch(URL, options);
+      const data = response.json();
     } catch (error) {
       console.log(error);
     }
-  };
+
+    fetchData();
+  }, []);
 
   return (
     <form className='main__addfood-form' onSubmit={handleSubmit}>
       <h1 className='Form__title'>Add New Food</h1>
+
+      <div className='addfood-form__column'>
+        <label className='addfood-form__label'>Select Restaurant </label>
+        <select
+          name='restaurantsId'
+          className='container__login--input'
+          value={food.restaurantsId}
+          onChange={handleChange}
+          required
+        >
+          <option value='' disable selected hidden>
+            Select Restaurant
+          </option>
+          {restaurants.map((restaurant) => (
+            <option key={restaurant.id} value={restaurant.id}>
+              {restaurant.name}
+            </option>
+          ))}
+        </select>
+        {console.log(food)}
+      </div>
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Food Name </label>
         <input
           type='text'
           name='name'
-          placeholder='Food name'
-          className='addfood-form__input'
+          className='container__login--input'
+          placeholder='Enter Food Name'
           onChange={handleChange}
+          value={food.name}
           required
         />
       </div>
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Price </label>
         <input
-          type='text'
-          name='schedules'
-          placeholder='Food price'
-          className='addfood-form__input'
+          type='number'
+          name='price'
+          className='container__login--input'
+          placeholder='Enter Price'
           onChange={handleChange}
+          value={food.price}
           required
         />
       </div>
-      <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Reference photo </label>
-        <input
-          type='text'
-          name='logo'
-          placeholder='LINK photo'
-          className='addfood-form__input'
-          onChange={handleChange}
-          required
-        />
-      </div>
+
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Rate </label>
         <input
-          type='text'
-          name='foods'
-          placeholder='1.0 - 5.0'
-          className='addfood-form__input'
+          type='number'
+          name='rate'
+          max='5'
+          min='1'
+          className='container__login--input'
+          placeholder='Initial Rating'
           onChange={handleChange}
+          value={food.rate}
           required
+        />
+      </div>
+
+      <div className='addfood-form__column'>
+        <label className='addfood-form__label'>Reference photo </label>
+        <input
+          type='file'
+          name='image'
+          className='container__login--input'
+          placeholder='photo'
+          onChange={handleChange}
+          value={food.image}
         />
       </div>
 
