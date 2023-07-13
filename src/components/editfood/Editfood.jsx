@@ -124,7 +124,7 @@ function EditFood() {
             onChange={handleChange}
             required
           >
-            <option value='' disabled selected hidden>Select restaurant</option>
+            <option value='defaultValue' hidden>Select restaurant</option>
             {restaurants.map((restaurant) => (
               <option key={restaurant.id} value={restaurant.id}>
                 {restaurant.name}
@@ -142,7 +142,7 @@ function EditFood() {
             onChange={handleChange}
             required
           >
-            <option value='' disabled selected hidden>
+            <option value='defaultValue' hidden>
               Select Food
             </option>
             {dataFood.map((food) => (
@@ -204,7 +204,7 @@ function EditFood() {
           />
         </div>
 
-        <button type='submit' className='container__filteredit--button'>
+        <button type='submit' className='editfood__form--button'>
           Submit Changes
         </button>
       </form>
@@ -212,7 +212,7 @@ function EditFood() {
       <button
         type='button'
         data-testid='buttonEdit'
-        className='editrest__form--button--delete'
+        className='editfood__form--button--delete'
         onClick={handleDelete}
       >
         Delete Restaurant

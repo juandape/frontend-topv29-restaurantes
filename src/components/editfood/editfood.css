@@ -55,8 +55,8 @@
   border: 1px solid orange;
 }
 
-.editrest__form--button,
-.editrest__form--button--delete {
+.editfood__form--button,
+.editfood__form--button--delete {
   background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
@@ -67,14 +67,14 @@
   margin-top: 20px;
 }
 
-.editrest__form--button--delete{
+.editfood__form--button--delete{
   display: flex;
-  margin:0 auto;
+  margin: 0px auto;
   background-color: red;
 }
 
-.editrest__form--button:hover,
-.editrest__form--button--delete:hover {
+.editfood__form--button:hover,
+.editfood__form--button--delete:hover {
   background-color: orange;
   color: white;
   border: 1px solid orange;
