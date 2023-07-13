@@ -4,6 +4,7 @@ const url = `${BASE_URL}/api/restaurants`;
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './FormAddRest.css';
+import UploadImage from '../uploaderForm/uploader';
 
 const initialState = {
   name: '',
@@ -133,14 +134,12 @@ function FormAddRestaurant() {
       </div>
       <div className='addrest-form__column'>
         <label className='addrest-form__label'>Logo </label>
-        <input
-          type='text'
-          name='logo'
-          placeholder='https://picsum.photos/200'
-          className='addrest-form__input'
-          value={restaurant.logo}
-          onChange={handleChange}
-        />
+        <UploadImage
+              setData={setRestaurant}
+              dataObj={restaurant}
+              name={"logo"}
+              required
+            />
       </div>
       <button type='submit' className='container__filteradd--button'>
         Add

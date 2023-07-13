@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import { getRestaurants, getFoods } from '../../services';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import UploadImage from '../uploaderForm/uploader';
 
 function EditFood() {
   const BASE_URL = import.meta.env.VITE_API_URL;
@@ -194,14 +195,12 @@ function EditFood() {
 
         <div className='addfood-form__column'>
           <label className='addfood-form__label--photo'>Reference photo </label>
-          <input
-            type='file'
-            name='image'
-            className='addfood-form__input'
-            placeholder='photo'
-            onChange={handleChange}
-            value={food.image}
-          />
+          <UploadImage
+              setData={setFood}
+              dataObj={food}
+              name={"image"}
+              required
+            />
         </div>
 
         <button type='submit' className='editfood__form--button'>
