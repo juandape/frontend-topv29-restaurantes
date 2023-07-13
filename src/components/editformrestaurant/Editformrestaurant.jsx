@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './editformrestaurant.css';
 import axios from 'axios';
@@ -15,8 +16,8 @@ const initialState = {
 
 export const EditFormRestaurant = () => {
   const [restaurant, setRestaurant] = useState(initialState);
-
   const [restList, setRestList] = useState([]);
+  const navigate = useNavigate();
 
   const BASE_URL = import.meta.env.VITE_API_URL;
   const url = `${BASE_URL}/api/restaurants/`;
@@ -63,6 +64,7 @@ export const EditFormRestaurant = () => {
         showConfirmButton: false,
         timer: 1500,
       });
+      navigate('/restaurant');
     } catch (error) {
       console.log(error);
     }
@@ -77,19 +79,19 @@ export const EditFormRestaurant = () => {
         title: 'Oops...',
         text: 'Please select a restaurant',
       });
-      return;
     }
     axios
-      .delete(`${BASE_URL}/api/restaurants/${restaurant.id}`)
-      .then((response) => {
-        console.log(response.data);
-      });
+    .delete(`${BASE_URL}/api/restaurants/${restaurant.id}`)
+    .then((response) => {
+      console.log(response.data);
+    });
     Swal.fire({
       icon: 'info',
       title: 'restaurant deleted successfully',
       showConfirmButton: false,
       timer: 1500,
     });
+    navigate('/');
   };
 
   return (
@@ -146,7 +148,7 @@ export const EditFormRestaurant = () => {
           <div className='editrest__formUp--column'>
             <label className='editrest__formUp--label'>Rating</label>
             <input
-              type='text'
+              type='number'
               name='rating'
               placeholder='Edit rating'
               className='editrest__formUp--input'

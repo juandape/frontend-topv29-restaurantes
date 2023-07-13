@@ -89,8 +89,10 @@ function FormAddRestaurant() {
       <div className='addrest-form__column'>
         <label className='addrest-form__label'>Rating </label>
         <input
-          type='text'
+          type='number'
           name='rating'
+          min='1'
+          max='5'
           placeholder='Restaurant´s initial rating'
           className='addrest-form__input'
           value={restaurant.rating}
