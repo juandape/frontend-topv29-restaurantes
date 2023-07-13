@@ -77,14 +77,12 @@ function Addfood() {
         },
         body: JSON.stringify.apply(newFood),
       };
-      const URL =
-        'https://service-restaurants.onrender.com/api/restaurants/id/food';
-      const response = await fetch(URL, options);
-      const data = await response.json();
+      const URL = `${BASE_URL}/api/restaurants/id/food`;
+      const response = fetch(URL, options);
+      const data = response.json();
     } catch (error) {
       console.log(error);
     }
-  };
 
     fetchData();
   }, []);
@@ -102,7 +100,9 @@ function Addfood() {
           onChange={handleChange}
           required
         >
-          <option value='' disable selected hidden>Select Restaurant</option>
+          <option value='' disable selected hidden>
+            Select Restaurant
+          </option>
           {restaurants.map((restaurant) => (
             <option key={restaurant.id} value={restaurant.id}>
               {restaurant.name}
