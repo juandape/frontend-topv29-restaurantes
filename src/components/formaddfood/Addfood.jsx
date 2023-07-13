@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Addfood.css';
 import Swal from 'sweetalert2';
 import { getRestaurants } from '../../services'; // comentairoodxj
+import UploadImage from '../uploaderForm/uploader';
 
 function Addfood() {
   const BASE_URL = import.meta.env.VITE_API_URL;
@@ -138,14 +139,12 @@ function Addfood() {
 
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Reference photo </label>
-        <input
-          type='file'
-          name='image'
-          className='container__login--input'
-          placeholder='photo'
-          onChange={handleChange}
-          value={food.image}
-        />
+            <UploadImage
+              setData={setFood}
+              dataObj={food}
+              name={"image"}
+              required
+            />
       </div>
 
       <button type='submit' className='container__filteradd--button'>
