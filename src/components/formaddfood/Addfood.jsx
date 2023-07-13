@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Addfood.css';
 import Swal from 'sweetalert2';
-import { getRestaurants } from '../../services'; //comentario
+import { getRestaurants } from '../../services'; // comentairoodxj
 
 function Addfood() {
   const BASE_URL = import.meta.env.VITE_API_URL;
@@ -16,6 +16,7 @@ function Addfood() {
   };
   const [food, setFood] = useState(initialState);
   const [restaurants, setRestaurants] = useState([]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     // eslint-disable-next-line no-undef
@@ -69,20 +70,6 @@ function Addfood() {
         console.log('Error al obtener los restaurantes:', error);
       }
     };
-    try {
-      const options = {
-        method: 'POST',
-        headers: {
-          'content-Type': 'application/json',
-        },
-        body: JSON.stringify.apply(newFood),
-      };
-      const URL = `${BASE_URL}/api/restaurants/id/food`;
-      const response = fetch(URL, options);
-      const data = response.json();
-    } catch (error) {
-      console.log(error);
-    }
 
     fetchData();
   }, []);
@@ -100,9 +87,7 @@ function Addfood() {
           onChange={handleChange}
           required
         >
-          <option value='' disable selected hidden>
-            Select Restaurant
-          </option>
+          <option value='' disable selected hidden>Select Restaurant</option>
           {restaurants.map((restaurant) => (
             <option key={restaurant.id} value={restaurant.id}>
               {restaurant.name}
