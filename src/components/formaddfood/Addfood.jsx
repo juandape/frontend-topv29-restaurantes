@@ -15,6 +15,7 @@ const initialState = {
   price: '',
   image:'',
   rate:'',
+  restaurantsId:'clj4jup0zbunelonpdooelxf3kn',
 };
   const [food, setFood] = useState(initialState);
   const [restaurants, setRestaurants] = useState([]);
@@ -41,9 +42,10 @@ const initialState = {
         },
         body: JSON.stringify(food),
       };
+
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data);
+
 
       if(response.status === 200){
       Swal.fire({
@@ -127,7 +129,7 @@ const initialState = {
             type='rate'
             name='rate'
             className='container__login--input'
-            placeholder='rate'
+            placeholder='placeholder=1.0 - 5.0'
             onChange={handleChange}
             value={food.rate}
             required
@@ -136,12 +138,19 @@ const initialState = {
 
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Restaurant </label>
-        <select name="" id="">
-        <option value="">Selecciona una opción</option>
+        <select
+        name="restaurantsId"
+        className='container__login--input'
+        value={food.restaurantsId}
+        onChange={handleChange}
+        required
+        >
+        <option value="">Select restaurant</option>
         {restaurants.map(restaurant => (
           <option key={restaurant.id} value={restaurant.id}>{restaurant.name}</option>
         ))}
         </select>
+        {console.log(food)}
       </div>
 
 
