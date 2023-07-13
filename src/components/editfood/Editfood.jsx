@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './editfood.css';
 import Swal from 'sweetalert2';
 import { getRestaurants, getFoods } from '../../services';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function EditFood() {
   const BASE_URL = import.meta.env.VITE_API_URL;
@@ -17,6 +19,7 @@ function EditFood() {
   const [restaurants, setRestaurants] = useState([]);
   const [dataFood, setDataFood] = useState([]);
   const url = `${BASE_URL}/api/food/${food.id}`;
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,6 +63,28 @@ function EditFood() {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleDelete = () => {
+    if (food.id === undefined) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'Please select a Food',
+      });
+    }
+    axios
+    .delete(`${BASE_URL}/api/food/${food.id}`)
+    .then((response) => {
+      console.log(response.data);
+    });
+    Swal.fire({
+      icon: 'info',
+      title: 'Food deleted successfully',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    navigate('/');
   };
 
   useEffect(() => {
@@ -183,7 +208,17 @@ function EditFood() {
           Submit Changes
         </button>
       </form>
+
+      <button
+        type='button'
+        data-testid='buttonEdit'
+        className='editrest__form--button--delete'
+        onClick={handleDelete}
+      >
+        Delete Restaurant
+      </button>
     </>
+
   );
 }
 
