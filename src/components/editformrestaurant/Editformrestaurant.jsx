@@ -43,7 +43,7 @@ export const EditFormRestaurant = () => {
     event.preventDefault();
 
     console.log(restaurant);
-    if (restaurant.id === '') {
+    if (restaurant.id === undefined) {
       Swal.fire({
         icon: 'info',
         title: 'Oops...',
@@ -71,6 +71,14 @@ export const EditFormRestaurant = () => {
   };
 
   const handleDelete = () => {
+    if (restaurant.id === undefined) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'Please select a restaurant',
+      });
+      return;
+    }
     axios
       .delete(`${BASE_URL}/api/restaurants/${restaurant.id}`)
       .then((response) => {
