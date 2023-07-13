@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './editformrestaurant.css';
 import axios from 'axios';
+import UploadImage from '../uploaderForm/uploader';
 
 const initialState = {
   name: '',
@@ -192,13 +193,11 @@ export const EditFormRestaurant = () => {
           </div>
           <div className='editrest__formUp--column'>
             <label className='editrest__formUp--label'>Logo</label>
-            <input
-              type='url'
-              name='logo'
-              placeholder='Edit logo'
-              className='editrest__formUp--input'
-              value={restaurant.logo}
-              onChange={handleChange}
+            <UploadImage
+              setData={setRestaurant}
+              dataObj={restaurant}
+              name={"logo"}
+              required
             />
           </div>
         </div>
