@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-// import Delete from '../delete/Delete';
 import './editformrestaurant.css';
 import axios from 'axios';
 
@@ -46,7 +45,6 @@ export const EditFormRestaurant = () => {
     console.log(restaurant);
 
     try {
-
       axios
         .patch(`${BASE_URL}/api/restaurants/${restaurant.id}`, restaurant)
         .then((response) => {
@@ -63,6 +61,20 @@ export const EditFormRestaurant = () => {
     }
     console.log(restaurant);
     setRestaurant(initialState);
+  };
+
+  const handleDelete = () => {
+    axios
+      .delete(`${BASE_URL}/api/restaurants/${restaurant.id}`)
+      .then((response) => {
+        console.log(response.data);
+      });
+    Swal.fire({
+      icon: 'info',
+      title: 'restaurant deleted successfully',
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
@@ -125,8 +137,8 @@ export const EditFormRestaurant = () => {
               className='editrest__formUp--input'
               value={restaurant.rating}
               onChange={handleChange}
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               required
             />
           </div>
@@ -180,8 +192,15 @@ export const EditFormRestaurant = () => {
         >
           Update Changes
         </button>
-        {/* <Delete /> */}
       </form>
+      <button
+        type='button'
+        data-testid='buttonEdit'
+        className='editrest__form--button--delete'
+        onClick={handleDelete}
+      >
+        Delete Restaurant
+      </button>
     </>
   );
 };
