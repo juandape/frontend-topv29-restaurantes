@@ -96,7 +96,7 @@ function Header() {
             <International />
           </div>
           <NavLink to='/cart'>
-            <div>
+            <div className='badge'>
               <Badge />
             </div>
           </NavLink>
