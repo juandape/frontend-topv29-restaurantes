@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './Addfood.css';
 import Swal from 'sweetalert2';
-import {getRestaurants} from '../../services';
-
+import { getRestaurants } from '../../services';
 
 function Addfood() {
+  const BASE_URL = import.meta.env.VITE_API_URL;
+  const url = `${BASE_URL}/api/food`;
 
-const BASE_URL = import.meta.env.VITE_API_URL;
-const url = `${BASE_URL}/api/food`;
-
-
-const initialState = {
-  name: '',
-  price: '',
-  image:'',
-  rate:'',
-  restaurantsId:'clj4jup0zbunelonpdooelxf3kn',
-};
+  const initialState = {
+    name: '',
+    price: '',
+    image: '',
+    rate: '',
+    restaurantsId: '',
+  };
   const [food, setFood] = useState(initialState);
   const [restaurants, setRestaurants] = useState([]);
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +30,6 @@ const initialState = {
     e.preventDefault();
 
     try {
-
       const options = {
         method: 'POST',
         headers: {
@@ -46,24 +41,20 @@ const initialState = {
       const response = await fetch(url, options);
       const data = await response.json();
 
-
-      if(response.status === 200){
-      Swal.fire({
-        icon: 'info',
-        title: 'Registration successful',
-        text: 'Successfully created food !',
-      });
-      setFood(initialState);
-
-    } else{
-      Swal.fire({
-        icon: 'info',
-        title: 'Failed',
-        text: 'Please try again.',
-      });
-
-    }
-
+      if (response.status === 200) {
+        Swal.fire({
+          icon: 'info',
+          title: 'Registration successful',
+          text: 'Successfully created food !',
+        });
+        setFood(initialState);
+      } else {
+        Swal.fire({
+          icon: 'info',
+          title: 'Failed',
+          text: 'Please try again.',
+        });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -76,7 +67,7 @@ const initialState = {
         const data = await response.json();
         setRestaurants(data);
       } catch (error) {
-        console.log("Error al obtener los restaurantes:", error);
+        console.log('Error al obtener los restaurantes:', error);
       }
     };
 
@@ -86,74 +77,76 @@ const initialState = {
   return (
     <form className='main__addfood-form' onSubmit={handleSubmit}>
       <h1 className='Form__title'>Add New Food</h1>
+
+      <div className='addfood-form__column'>
+        <label className='addfood-form__label'>Select Restaurant </label>
+        <select
+          name='restaurantsId'
+          className='container__login--input'
+          value={food.restaurantsId}
+          onChange={handleChange}
+          required
+        >
+          <option value='' disable selected hidden>Select Restaurant</option>
+          {restaurants.map((restaurant) => (
+            <option key={restaurant.id} value={restaurant.id}>
+              {restaurant.name}
+            </option>
+          ))}
+        </select>
+        {console.log(food)}
+      </div>
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Food Name </label>
         <input
-            type='name'
-            name='name'
-            className='container__login--input'
-            placeholder='name food'
-            onChange={handleChange}
-            value={food.name}
-            required
-          />
+          type='text'
+          name='name'
+          className='container__login--input'
+          placeholder='Enter Food Name'
+          onChange={handleChange}
+          value={food.name}
+          required
+        />
       </div>
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Price </label>
         <input
-            type='price'
-            name='price'
-            className='container__login--input'
-            placeholder='price'
-            onChange={handleChange}
-            value={food.price}
-            required
-          />
-      </div>
-      <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Reference photo </label>
-        <input
-            type='file'
-            name='image'
-            className='container__login--input'
-            placeholder='photo'
-            onChange={handleChange}
-            value={food.image}
-
-          />
+          type='number'
+          name='price'
+          className='container__login--input'
+          placeholder='Enter Price'
+          onChange={handleChange}
+          value={food.price}
+          required
+        />
       </div>
 
       <div className='addfood-form__column'>
         <label className='addfood-form__label'>Rate </label>
         <input
-            type='rate'
-            name='rate'
-            className='container__login--input'
-            placeholder='placeholder=1.0 - 5.0'
-            onChange={handleChange}
-            value={food.rate}
-            required
-          />
+          type='number'
+          name='rate'
+          max='5'
+          min='1'
+          className='container__login--input'
+          placeholder='Initial Rating'
+          onChange={handleChange}
+          value={food.rate}
+          required
+        />
       </div>
 
       <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Restaurant </label>
-        <select
-        name="restaurantsId"
-        className='container__login--input'
-        value={food.restaurantsId}
-        onChange={handleChange}
-        required
-        >
-        <option value="">Select restaurant</option>
-        {restaurants.map(restaurant => (
-          <option key={restaurant.id} value={restaurant.id}>{restaurant.name}</option>
-        ))}
-        </select>
-        {console.log(food)}
+        <label className='addfood-form__label'>Reference photo </label>
+        <input
+          type='file'
+          name='image'
+          className='container__login--input'
+          placeholder='photo'
+          onChange={handleChange}
+          value={food.image}
+        />
       </div>
-
-
 
       <button type='submit' className='container__filteradd--button'>
         Add Food

@@ -9,7 +9,6 @@
 .addfood-form__column {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .addfood-form__label {
