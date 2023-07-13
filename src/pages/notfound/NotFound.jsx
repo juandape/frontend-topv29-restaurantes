@@ -15,12 +15,12 @@ function NotFound() {
       />
       <h1 className='container__notfound--title'>404</h1>
       <div className='container__notfound--text'>
-        <p>Ups! sorry, something went wrong...</p>
-        <p>
+        <div className='container__notfound--text--head'>¡Sorry! Something Went Wrong...</div>
+        <div className='container__notfound--text--msg'>
           {' '}
           {error.statusText || error.message}
           {' '}
-        </p>
+        </div>
       </div>
     </div>
   );
