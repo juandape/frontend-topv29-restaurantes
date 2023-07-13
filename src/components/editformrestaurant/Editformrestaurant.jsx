@@ -110,7 +110,7 @@ export const EditFormRestaurant = () => {
               onChange={handleChange}
             >
               {console.log(restaurant.id)}
-              <option value='' disabled selected hidden>
+              <option value='default' hidden>
                 Select Restaurant
               </option>
               {Object.values(restList).map((restaurant) => (
@@ -168,7 +168,7 @@ export const EditFormRestaurant = () => {
               value={restaurant.foodtype}
               onChange={handleChange}
             >
-              <option value='' disable selected hidden>
+              <option value='default' hidden>
                 Select Food Type
               </option>
               <option value='Breakfast'>Breakfast</option>

@@ -109,7 +109,7 @@ function FormAddRestaurant() {
           value={restaurant.foodtype}
           required
         >
-          <option value='' disable selected hidden>
+          <option value='defaultValue' hidden>
             Select Food Type
           </option>
           <option value='Breakfast'>Breakfast</option>
