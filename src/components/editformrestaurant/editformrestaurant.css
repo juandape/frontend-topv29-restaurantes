@@ -1,4 +1,4 @@
-.main__addfood-form {
+.main__editrest--formUp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,13 +6,19 @@
   max-width: 400px;
 }
 
-.addfood-form__column {
+.editrest--title {
+  font-size: 25px;
+  font-weight: bold;
+  color: orange;
+}
+
+.editrest__formUp--column {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.addfood-form__label {
+.editrest__formUp--label {
   color: rgb(190, 136, 34);
   font-size: 12px;
   background-color: aliceblue;
@@ -24,7 +30,7 @@
   margin-left: 0;
 }
 
-.addfood-form__input {
+.editrest__formUp--input {
   border-radius: 15px;
   border-color: orange;
   padding: 5px;
@@ -32,7 +38,8 @@
   background-color: aliceblue;
 }
 
-.container__filteradd--button {
+.editrest__form--button,
+.editrest__form--button--delete {
   background-color: rgb(196, 131, 11);
   color: white;
   border: 1px solid orange;
@@ -40,15 +47,18 @@
   padding: 7px;
   font-size: 16px;
   cursor: pointer;
-  margin: 20px auto;
+  margin-top: 20px;
 }
 
-.container__filteradd--button:hover {
+.editrest__form--button--delete{
+  display: flex;
+  margin:0 auto;
+  background-color: red;
+}
+
+.editrest__form--button:hover,
+.editrest__form--button--delete:hover {
   background-color: orange;
   color: white;
   border: 1px solid orange;
 }
-
-
-
-

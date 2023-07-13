@@ -1,32 +1,8 @@
 import './about.css';
 import React from 'react';
-import { useEffect,useState } from 'react';
 
 function AboutPage() {
 
-  const[restaurants,Setrestaurants]=useState({})
-
-
-
-    const fetchrestaurants=async()=>{
-      const url=`https://service-restaurants.onrender.com/api/food`
-
-      try {
-        const response = await fetch(url)
-        const data = await response.json()
-        Setrestaurants(data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    useEffect(()=>{
-    fetchrestaurants()
-  },[])
-
-
-
-  console.log(restaurants)
-  //console.log(restaurants[0].food[0])
   return (
     <>
       <h1 className='about--title'>About Us</h1>

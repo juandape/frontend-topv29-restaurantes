@@ -1,4 +1,4 @@
-.main__addfood-form {
+.main__addrest-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,13 +6,19 @@
   max-width: 400px;
 }
 
-.addfood-form__column {
+.Form__title {
+  font-size: 25px;
+  font-weight: bold;
+  color: orange;
+}
+
+.addrest-form__column {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.addfood-form__label {
+.addrest-form__label {
   color: rgb(190, 136, 34);
   font-size: 12px;
   background-color: aliceblue;
@@ -24,12 +30,17 @@
   margin-left: 0;
 }
 
-.addfood-form__input {
+.addrest-form__input {
   border-radius: 15px;
   border-color: orange;
   padding: 5px;
   width: 220px;
   background-color: aliceblue;
+}
+
+.options{
+  width: 230px;
+  border: 2px solid orange;
 }
 
 .container__filteradd--button {
@@ -48,7 +59,4 @@
   color: white;
   border: 1px solid orange;
 }
-
-
-
 

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './regform.css';
 import Swal from 'sweetalert2';
-
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/users`;
+import { useNavigate } from 'react-router-dom';
 
 function RegisterForm() {
+  const navigate = useNavigate();
   const initialState = {
     firstName: '',
     lastName: '',
@@ -18,7 +19,6 @@ function RegisterForm() {
 
   const [user, setUser] = useState(initialState);
   const [confirmPasword, setConfirmPasword] = useState(initialconfirm);
-
   const [error, setError] = useState({});
 
   const handleChangepassword = (event) => {
@@ -60,8 +60,9 @@ function RegisterForm() {
         Swal.fire({
           icon: 'info',
           title: 'created your account',
-          text: 'Enjoy all services that we have for you, start now!',
+          text: 'Please Verify your email to enjoy all services that we have for you, start now!',
         });
+        navigate('/');
       } catch (error) {
         console.log(error);
       }

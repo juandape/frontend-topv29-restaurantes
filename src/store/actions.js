@@ -5,6 +5,7 @@ import {
   SET_LOGIN,
   SIGN_SESSION,
   CLEAR_CART,
+  SET_RATING,
 } from './types';
 /**
  * Creates an action to set loading state
@@ -36,11 +37,16 @@ export const login = (dataUser) => ({
   payload: dataUser,
 });
 
-export const session = (singsesion) => ({
+export const session = (signsesion) => ({
   type: SIGN_SESSION,
-  payload: singsesion,
+  payload: signsesion,
 });
 
 export const clearCart = () => ({
   type: CLEAR_CART,
+});
+
+export const setRating = () => ({
+  type: SET_RATING,
+  payload: rating,
 });

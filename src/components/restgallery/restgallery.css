@@ -1,0 +1,40 @@
+.restgallery__container{
+  margin: 0 auto;
+  overflow-x: scroll;
+}
+
+.restgallery__container--slider{
+  display: flex;
+  cursor: grab;
+}
+
+.restgallery__container__img{
+  height: 230px;
+  width: 230px;
+  padding: 1rem;
+}
+
+.restgallery__container__img--img{
+  height: 200px;
+  width: 230px;
+  pointer-events: none;
+}
+
+.restgallery__container__img:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}

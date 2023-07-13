@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
 import './header.css';
@@ -9,28 +9,37 @@ import Badge from '../badge/Badge';
 import { useSelector, useDispatch } from '../../store';
 import { session } from '../../store/actions';
 import { TbLogout } from 'react-icons/tb';
+import { login } from '../../store/actions';
 
 function Header() {
   const state = useSelector();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const nick = state.login.profile.fullName;
+  const dispatch = useDispatch()
+
+  const nick= state.login.profile.fullName;
+
   const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClose = () => {
-    dispatch(session(null));
-    localStorage.clear('dataUser', JSON.stringify(state.login));
-    navigate('/');
+  useEffect(() => {
+    const userLocal = JSON.parse(localStorage.getItem('dataUser'));
+    if (!userLocal) return;
+    dispatch(login(userLocal));
+  }, []);
+
+  const handleClose = () =>{
+    localStorage.clear('dataUser', JSON.stringify('dataUser'));
     location.reload();
+
   };
+
+
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <>
+     <>
       <nav className='header-container'>
         <div className='header-container__logo'>
           <FaBiohazard />

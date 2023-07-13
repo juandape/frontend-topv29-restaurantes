@@ -4,16 +4,16 @@ import { login } from '../../store/actions';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import './loginform.css';
+import Swal from 'sweetalert2';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/auth/local/login`;
+const initialState = {
+  email: '',
+  password: '',
+};
 
 function LoginForm() {
-  const initialState = {
-    email: '',
-    password: '',
-  };
-
   const state = useSelector();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,18 +27,6 @@ function LoginForm() {
       [name]: value,
     });
   };
-
-
-  useEffect(() => {
-    const userLocal = JSON.parse(localStorage.getItem('dataUser'));
-    if(!userLocal) return;
-    dispatch(login(userLocal));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('dataUser', JSON.stringify(state.login));
-  }, [state.login]);
-  console.log(state.login);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -54,14 +42,37 @@ function LoginForm() {
 
       const response = await fetch(url, options);
       const data = await response.json();
+
+      if(response.status === 200){
+      localStorage.setItem('dataUser', JSON.stringify(data));
+      Swal.fire({
+        icon: 'info',
+        title: 'Registration successful',
+        text: 'Enjoy all services that we have for you, start now!',
+      });
+      navigate('/');
       dispatch(login(data));
+
+      setUser(initialState);
+    } else{
+      Swal.fire({
+        icon: 'info',
+        title: 'Failed',
+        text: 'Please try again.',
+      });
+      navigate('/');
+    }
+
+
     } catch (error) {
       console.log(error);
     }
 
-    navigate('/');
-    setUser(initialState);
+
   };
+
+
+
 
   return (
     <div className='container__login'>
