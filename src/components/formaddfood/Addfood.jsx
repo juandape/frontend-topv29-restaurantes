@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Addfood.css';
 import Swal from 'sweetalert2';
-import { getRestaurants } from '../../services';
+import { getRestaurants } from '../../services'; //comentario
 
 function Addfood() {
   const BASE_URL = import.meta.env.VITE_API_URL;
