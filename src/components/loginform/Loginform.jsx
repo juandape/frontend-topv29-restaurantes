@@ -47,8 +47,7 @@ function LoginForm() {
       localStorage.setItem('dataUser', JSON.stringify(data));
       Swal.fire({
         icon: 'info',
-        title: 'Registration successful',
-        text: 'Enjoy all services that we have for you, start now!',
+        title: 'Login Successful',
       });
       navigate('/');
       dispatch(login(data));
