@@ -16,9 +16,11 @@ function EditFood() {
     rate: '',
     restaurantsId: '',
   };
+
+
   const [food, setFood] = useState(initialState);
   const [restaurants, setRestaurants] = useState([]);
-  const [dataFood, setDataFood] = useState([]);
+  const [datarestaurant, setdatarestaurant] = useState([]);
   const url = `${BASE_URL}/api/food/${food.id}`;
   const navigate = useNavigate();
 
@@ -29,7 +31,23 @@ function EditFood() {
       ...food,
       [name]: value,
     });
+
+
   };
+
+  const handleChangeFood = (e) => {
+    const { name, value } = e.target;
+
+    setFood({
+      ...food,
+      [name]: value,
+    });
+
+    const rrestaurant=restaurants.find((restaurant) => restaurant.id === value)
+    setdatarestaurant(rrestaurant.food)
+  };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,6 +72,7 @@ function EditFood() {
           text: 'Successfully created food !',
         });
         setFood(initialState);
+        window.location.reload(true);
       } else {
         Swal.fire({
           icon: 'info',
@@ -77,7 +96,7 @@ function EditFood() {
     axios
     .delete(`${BASE_URL}/api/food/${food.id}`)
     .then((response) => {
-      console.log(response.data);
+
     });
     Swal.fire({
       icon: 'info',
@@ -85,7 +104,9 @@ function EditFood() {
       showConfirmButton: false,
       timer: 1500,
     });
-    navigate('/');
+    setFood(initialState);
+    window.location.reload(true);
+
   };
 
   useEffect(() => {
@@ -94,22 +115,19 @@ function EditFood() {
         const response = await getRestaurants();
         const data = await response.json();
         setRestaurants(data);
+
+
       } catch (error) {
         console.log('Error al obtener los restaurantes:', error);
       }
     };
-    const fetchFoods = async () => {
-      try {
-        const response = await getFoods();
-        const data = await response.json();
-        setDataFood(data);
-      } catch (error) {
-        console.log('Error al obtener los restaurantes:', error);
-      }
-    };
-    fetchFoods();
+
     fetchData();
-  }, []);
+  }, [food]);
+
+
+
+
 
   return (
     <>
@@ -122,7 +140,7 @@ function EditFood() {
             name='restaurantsId'
             className='addfood-form__input'
             value={food.restaurantsId}
-            onChange={handleChange}
+            onChange={handleChangeFood}
             required
           >
             <option value='defaultValue' hidden>Select restaurant</option>
@@ -132,6 +150,8 @@ function EditFood() {
               </option>
             ))}
           </select>
+
+
         </div>
 
         <div className='addfood-form__column'>
@@ -146,7 +166,7 @@ function EditFood() {
             <option value='defaultValue' hidden>
               Select Food
             </option>
-            {dataFood.map((food) => (
+            {datarestaurant.map((food) => (
               <option key={food.id} value={food.id}>
                 {food.name}
               </option>
