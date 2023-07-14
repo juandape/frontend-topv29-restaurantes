@@ -1,4 +1,4 @@
-input {
+.input-uploader {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -10,7 +10,7 @@ input {
   cursor:cell;
 }
 
-input [type="file"] {
+.input-uploader [type="file"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -21,10 +21,10 @@ input [type="file"] {
   border-radius: 20px;
 }
 
-input:hover {
+.input-uploader:hover {
   border-color: rgb(190, 136, 34);
 }
 
-input:active {
+.input-uploader:active {
   background-color: rgb(170, 136, 34);
 }
