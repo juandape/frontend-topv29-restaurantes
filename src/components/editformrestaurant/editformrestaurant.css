@@ -18,17 +18,23 @@
   margin-bottom: 20px;
 }
 
-.editrest__formUp--label {
+.editrest__formUp--label,
+.editrest__formUp--label--logo {
   color: rgb(190, 136, 34);
   font-size: 12px;
   background-color: aliceblue;
   position: relative;
-  left: 20px;
+  left: 50px;
   top: 4px;
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 0;
 }
+
+.editrest__formUp--label--logo{
+  top:-5px
+}
+
 
 .editrest__formUp--input {
   border-radius: 15px;
@@ -37,6 +43,7 @@
   width: 220px;
   background-color: aliceblue;
 }
+
 
 .editrest__form--button,
 .editrest__form--button--delete {

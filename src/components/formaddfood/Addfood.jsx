@@ -138,7 +138,7 @@ function Addfood() {
       </div>
 
       <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Reference photo </label>
+        <label className='addfood-form__label--photos'>Reference photo </label>
             <UploadImage
               setData={setFood}
               dataObj={food}
