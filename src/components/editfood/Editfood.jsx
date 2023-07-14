@@ -17,7 +17,6 @@ function EditFood() {
     restaurantsId: '',
   };
 
-
   const [food, setFood] = useState(initialState);
   const [restaurants, setRestaurants] = useState([]);
   const [datarestaurant, setdatarestaurant] = useState([]);
@@ -31,8 +30,6 @@ function EditFood() {
       ...food,
       [name]: value,
     });
-
-
   };
 
   const handleChangeFood = (e) => {
@@ -43,11 +40,11 @@ function EditFood() {
       [name]: value,
     });
 
-    const rrestaurant=restaurants.find((restaurant) => restaurant.id === value)
-    setdatarestaurant(rrestaurant.food)
+    const rrestaurant = restaurants.find(
+      (restaurant) => restaurant.id === value
+    );
+    setdatarestaurant(rrestaurant.food);
   };
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,11 +90,7 @@ function EditFood() {
         text: 'Please select a Food',
       });
     }
-    axios
-    .delete(`${BASE_URL}/api/food/${food.id}`)
-    .then((response) => {
-
-    });
+    axios.delete(`${BASE_URL}/api/food/${food.id}`).then((response) => {});
     Swal.fire({
       icon: 'info',
       title: 'Food deleted successfully',
@@ -106,7 +99,6 @@ function EditFood() {
     });
     setFood(initialState);
     window.location.reload(true);
-
   };
 
   useEffect(() => {
@@ -115,8 +107,6 @@ function EditFood() {
         const response = await getRestaurants();
         const data = await response.json();
         setRestaurants(data);
-
-
       } catch (error) {
         console.log('Error al obtener los restaurantes:', error);
       }
@@ -124,10 +114,6 @@ function EditFood() {
 
     fetchData();
   }, [food]);
-
-
-
-
 
   return (
     <>
@@ -143,15 +129,15 @@ function EditFood() {
             onChange={handleChangeFood}
             required
           >
-            <option value='defaultValue' hidden>Select restaurant</option>
+            <option value='defaultValue' hidden>
+              Select restaurant
+            </option>
             {restaurants.map((restaurant) => (
               <option key={restaurant.id} value={restaurant.id}>
                 {restaurant.name}
               </option>
             ))}
           </select>
-
-
         </div>
 
         <div className='addfood-form__column'>
@@ -216,11 +202,11 @@ function EditFood() {
         <div className='addfood-form__column'>
           <label className='addfood-form__label--photo'>Reference photo </label>
           <UploadImage
-              setData={setFood}
-              dataObj={food}
-              name={"image"}
-              required
-            />
+            setData={setFood}
+            dataObj={food}
+            name={'image'}
+            required
+          />
         </div>
 
         <button type='submit' className='editfood__form--button'>
@@ -234,10 +220,9 @@ function EditFood() {
         className='editfood__form--button--delete'
         onClick={handleDelete}
       >
-        Delete Restaurant
+        Delete Food
       </button>
     </>
-
   );
 }
 
