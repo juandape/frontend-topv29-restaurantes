@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from '../../store';
-import { login } from '../../store/actions';
+import { login,setLoading } from '../../store/actions';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import './loginform.css';
 import Swal from 'sweetalert2';
+import UseAnimations from 'react-useanimations';
+import loading from 'react-useanimations/lib/loading';
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/auth/local/login`;
@@ -32,6 +33,7 @@ function LoginForm() {
     event.preventDefault();
 
     try {
+      dispatch(setLoading(true));
       const options = {
         method: 'POST',
         headers: {
@@ -65,6 +67,9 @@ function LoginForm() {
 
     } catch (error) {
       console.log(error);
+    } finally {
+      // isLogin = false
+      dispatch(setLoading(false));
     }
 
 
@@ -76,7 +81,11 @@ function LoginForm() {
   return (
     <div className='container__login'>
       <h1 className='container__login--title'>Login</h1>
-      <form action='' onSubmit={handleSubmit}>
+      {state.isLoading ?
+      (
+        <UseAnimations animation={loading} size={56} wrapperStyle={{marginTop: '100px'}} strokeColor='orange' />
+      )
+        :(<form action='' onSubmit={handleSubmit}>
         <div className='container__login--form'>
           <label htmlFor='' className='container__login--label'>
             Email
@@ -111,7 +120,8 @@ function LoginForm() {
             ¿Forgot password?
           </a>
         </div>
-      </form>
+      </form>)}
+
     </div>
   );
 }
