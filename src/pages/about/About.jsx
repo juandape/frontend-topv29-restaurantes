@@ -1,5 +1,6 @@
 import './about.css';
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 function AboutPage() {
 
@@ -31,7 +32,8 @@ function AboutPage() {
           </ul>
         </div>
         <div className='about-container__social'>
-          <div>github:</div>
+          <div>
+            <div><FaGithub /></div>
           <div>
             <a href='https://github.com/guialexander'>@guialexander</a>
           </div>
@@ -42,6 +44,7 @@ function AboutPage() {
           </div>
           <div>
             <a href='https://github.com/juandape'>@juandape</a>
+          </div>
           </div>
         </div>
       </div>

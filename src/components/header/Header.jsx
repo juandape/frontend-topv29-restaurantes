@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import { useNavigate } from 'react-router';
 import React, { useState, useEffect } from 'react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaBiohazard } from 'react-icons/fa';
@@ -7,15 +6,15 @@ import './header.css';
 import International from '../international/International';
 import Badge from '../badge/Badge';
 import { useSelector, useDispatch } from '../../store';
-import { session } from '../../store/actions';
 import { TbLogout } from 'react-icons/tb';
 import { login } from '../../store/actions';
 
-function Header() {
+function Header () {
   const state = useSelector();
   const dispatch = useDispatch()
 
-  const nick= state.login.profile.fullName;
+  const nick = state.login.profile.fullName;
+  const avatar = state.login.profile.avatar;
 
   const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
@@ -69,10 +68,13 @@ function Header() {
           {nick !== null ? (
             <>
               <div
-                className='header-container__items--title'
+                className='header-container__items--title--nick'
                 onClick={handleClick}
               >
-                <NavLink to='/user-account'> {nick} </NavLink>
+                <NavLink to='/user-account'>
+                  <div className='nick'>{nick}</div>
+                  <div><img src={avatar} className='avatar--img' /></div>
+                </NavLink>
               </div>
 
               <div

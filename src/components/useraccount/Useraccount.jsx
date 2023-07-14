@@ -1,10 +1,11 @@
 import Swal from 'sweetalert2';
 import { useState } from 'react';
-import { useSelector } from '../../store';
+import { useSelector, useDispatch } from '../../store';
 import { useNavigate } from 'react-router-dom';
 import './useraccount.css';
 import axios from 'axios';
 import UploadImage from '../uploaderForm/uploader';
+import { login } from '../../store/actions';
 
 const defaultFormData = {
   firstName: '',
@@ -17,9 +18,11 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 function UserAccount() {
   const navigate = useNavigate();
   const state = useSelector();
+  const dispatch = useDispatch();
   const id = state.login.profile.id;
   const url = `${BASE_URL}/api/users/${id}`;
   const [formData, setFormData] = useState(defaultFormData);
+
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -38,9 +41,9 @@ function UserAccount() {
       text: 'Perfil updated',
     });
 
-    console.log(formData);
     setFormData(defaultFormData);
     navigate('/');
+
   };
 
   return (
