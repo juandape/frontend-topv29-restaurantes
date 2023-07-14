@@ -2,8 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Container, FormGroup, Input } from 'reactstrap';
 
-const BASE_URL = import.meta.env.CLOUDINARY_URL;
-const url = `${BASE_URL}/v1_1/dqrtsgiru/upload`;
+const url = 'https://api.cloudinary.com/v1_1/dqrtsgiru/upload';
 
 const UploadImage = ({ dataObj, setData, name }) => {
   const uploader = async (e) => {
