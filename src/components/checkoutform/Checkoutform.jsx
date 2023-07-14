@@ -3,12 +3,14 @@ import { useSelector, useDispatch } from '../../store';
 import './checkoutform.css';
 import Swal from 'sweetalert2';
 import { CLEAR_CART } from '../../store/types';
+import {useNavigate} from 'react-router-dom';
 
 function CheckoutForm() {
   const state = useSelector();
   const dispatch = useDispatch();
   const stripe = useStripe();
   const elements = useElements();
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -43,6 +45,7 @@ function CheckoutForm() {
           `<h5>Your order number is ${data.payment.id}</h5>`,
       });
       dispatch({ type: CLEAR_CART });
+      navigate('/');
     }
     if (error === 'card_declined') {
       return Swal.fire('payment failed', 'Please check your card details');
