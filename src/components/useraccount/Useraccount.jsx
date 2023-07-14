@@ -4,6 +4,7 @@ import { useSelector } from '../../store';
 import { useNavigate } from 'react-router-dom';
 import './useraccount.css';
 import axios from 'axios';
+import UploadImage from '../uploaderForm/uploader';
 
 const defaultFormData = {
   firstName: '',
@@ -90,14 +91,12 @@ function UserAccount() {
               >
                 Select Avatar
               </label>
-              <input
-                id='image-upload'
-                type='file'
-                name='avatar'
-                accept='.jpg,.png,.jpeg,.gif'
-                className='userpanel__container__form--form__input--input'
-                onChange={handleChange}
-              />
+              <UploadImage
+              setData={setFormData}
+              dataObj={formData}
+              name={"avatar"}
+              required
+            />
             </div>
             <div className='userpanel__container__button'>
               <button className='userpanel__container__button--button'>
