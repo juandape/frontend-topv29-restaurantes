@@ -10,7 +10,7 @@ const UploadImage = ({dataObj,setData,name}) => {
       data.append("file", files[0]);
       data.append("upload_preset", "chapitas_fail");
       const res = await fetch(
-        "http://api.cloudinary.com/v1_1/dqrtsgiru/upload",
+        "https://api.cloudinary.com/v1_1/dqrtsgiru/upload",
         {
           method: "POST",
           body: data,
