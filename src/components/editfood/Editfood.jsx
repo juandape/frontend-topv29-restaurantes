@@ -234,7 +234,7 @@ function EditFood() {
         className='editfood__form--button--delete'
         onClick={handleDelete}
       >
-        Delete Restaurant
+        Delete Food
       </button>
     </>
 
