@@ -64,7 +64,7 @@ function FormAddRestaurant() {
     <form className='main__addrest-form' onSubmit={handleSubmit}>
       <h1 className='Form__title'>Add New restaurant</h1>
       <div className='addrest-form__column'>
-        <label className='addrest-form__label'>restaurant Name </label>
+        <label className='addrest-form__label'>Restaurant Name </label>
         <input
           type='text'
           name='name'

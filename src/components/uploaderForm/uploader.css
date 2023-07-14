@@ -1,13 +1,10 @@
 .input-uploader {
-  position: relative;
   display: inline-block;
   overflow: hidden;
   padding: 8px 12px;
-  border: 1px solid orange;
+  border: 2px solid orange;
   border-radius: 25px;
-  background-color: orange;
-  color: white;
-  cursor:cell;
+  color: rgb(190, 136, 34);
 }
 
 .input-uploader [type="file"] {
@@ -28,4 +25,5 @@
 .input-uploader:active {
 input:hover {
   border-color: rgb(190, 136, 34);
+}
 }

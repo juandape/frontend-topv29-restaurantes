@@ -1,4 +1,4 @@
-.main__contact-form {
+.main__editfood-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,14 +6,18 @@
   max-width: 400px;
 }
 
-.addfood-form__column {
+.Form__title{
+  margin-bottom: 20px;
+}
+
+.editfood-form__column {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.addfood-form__label,
-.addfood-form__label--photo{
+.editfood-form__label,
+.editfood-form__label--photo{
   color: rgb(190, 136, 34);
   font-size: 12px;
   background-color: aliceblue;
@@ -25,22 +29,24 @@
   margin-left: 0;
 }
 
-.addfood-form__label--photo{
-  top:-5px;
-  left: 50px;
-}
-
-.addfood-form__label--photo{
-  margin-top: 10px;
+.editfood-form__label--photo{
+  top: 8px;
+  left: 60px;
   margin-bottom: 5px;
 }
-.addfood-form__input {
+
+.editfood-form__input,
+.editfood-form__input--select {
   border-radius: 15px;
   border-color: orange;
   padding: 5px;
   width: 220px;
   background-color: aliceblue;
+}
 
+.editfood-form__input--select{
+  width: 230px;
+  border: 2px solid orange;
 }
 
 .container__filteredit--button {
