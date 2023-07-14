@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Container, FormGroup, Input } from 'reactstrap';
+import './uploader.css'
 
 const url = 'https://api.cloudinary.com/v1_1/dqrtsgiru/upload';
 
