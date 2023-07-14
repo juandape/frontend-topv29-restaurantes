@@ -161,7 +161,7 @@ export const EditFormRestaurant = () => {
             />
           </div>
           <div className='addrest-form__column'>
-            <label className='addrest-form__label'>Food Type </label>
+            <label className='editrest__formUp--label'>Food Type </label>
             <select
               name='foodtype'
               className='addrest-form__input options'
@@ -192,7 +192,7 @@ export const EditFormRestaurant = () => {
             />
           </div>
           <div className='editrest__formUp--column'>
-            <label className='editrest__formUp--label'>Logo</label>
+            <label className='editrest__formUp--label--logo'>Logo</label>
             <UploadImage
               setData={setRestaurant}
               dataObj={restaurant}

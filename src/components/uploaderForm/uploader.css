@@ -1,4 +1,30 @@
-.container{
-  text-align: center;
+input {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 12px;
+  border: 1px solid orange;
+  border-radius: 25px;
+  background-color: orange;
+  color: white;
+  cursor:cell;
 }
 
+input [type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+input:hover {
+  border-color: rgb(190, 136, 34);
+}
+
+input:active {
+  background-color: rgb(170, 136, 34);
+}
