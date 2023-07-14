@@ -26,6 +26,11 @@
 }
 
 .addfood-form__label--photo{
+  top:-5px;
+  left: 50px;
+}
+
+.addfood-form__label--photo{
   margin-top: 10px;
   margin-bottom: 5px;
 }

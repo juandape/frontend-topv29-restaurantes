@@ -133,7 +133,7 @@ function FormAddRestaurant() {
         />
       </div>
       <div className='addrest-form__column'>
-        <label className='addrest-form__label'>Logo </label>
+        <label className='addrest-form__label--logo'>Logo </label>
         <UploadImage
               setData={setRestaurant}
               dataObj={restaurant}
