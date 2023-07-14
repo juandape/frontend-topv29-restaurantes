@@ -83,7 +83,7 @@ function Addfood() {
         <label className='addfood-form__label'>Select Restaurant </label>
         <select
           name='restaurantsId'
-          className='container__login--input'
+          className='addfood-form__input--select'
           value={food.restaurantsId}
           onChange={handleChange}
           required
@@ -123,7 +123,7 @@ function Addfood() {
       </div>
 
       <div className='addfood-form__column'>
-        <label className='addfood-form__label'>Rate </label>
+        <label className='addfood-form__label'>Rating </label>
         <input
           type='number'
           name='rate'

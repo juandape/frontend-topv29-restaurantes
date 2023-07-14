@@ -4,8 +4,15 @@ import Swal from 'sweetalert2';
 const BASE_URL = import.meta.env.VITE_API_URL;
 const url = `${BASE_URL}/api/users`;
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from '../../store';
+import { setLoading } from '../../store/actions';
+import UseAnimations from 'react-useanimations';
+import loading from 'react-useanimations/lib/loading';
 
 function RegisterForm() {
+
+  const state = useSelector();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const initialState = {
     firstName: '',
@@ -16,6 +23,7 @@ function RegisterForm() {
   const initialconfirm = {
     passConfirme: '',
   };
+
 
   const [user, setUser] = useState(initialState);
   const [confirmPasword, setConfirmPasword] = useState(initialconfirm);
@@ -46,6 +54,7 @@ function RegisterForm() {
     console.log(isValid);
     if (isValid) {
       try {
+        dispatch(setLoading(true));
         const options = {
           method: 'POST',
           headers: {
@@ -65,7 +74,11 @@ function RegisterForm() {
         navigate('/');
       } catch (error) {
         console.log(error);
+      } finally {
+        // disparar la accion del loading = false
+        dispatch(setLoading(false));
       }
+
 
       setUser(initialState);
       setConfirmPasword(initialconfirm);
@@ -88,6 +101,12 @@ function RegisterForm() {
   return (
     <div className='container__register'>
       <h1 className='container__register--title'>Register</h1>
+      {state.isLoading ?
+      (
+        <UseAnimations animation={loading} size={56} wrapperStyle={{marginTop: '100px'}} strokeColor='orange' />
+
+      )
+        :(
       <form action='' onSubmit={handleSubmit}>
         <div className='container__register__form'>
           <div className='container__register--box'>
@@ -175,7 +194,7 @@ function RegisterForm() {
         <button type='submit' className='container__register--button'>
           Register
         </button>
-      </form>
+      </form> )}
     </div>
   );
 }

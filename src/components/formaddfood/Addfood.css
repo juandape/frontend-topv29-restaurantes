@@ -25,16 +25,22 @@
 }
 
 .addfood-form__label--photos{
-  top: -5px;
-  left: 40px
+  left: 55px
 }
 
-.addfood-form__input {
+.addfood-form__input,
+.addfood-form__input--select {
   border-radius: 15px;
   border-color: orange;
   padding: 5px;
   width: 220px;
   background-color: aliceblue;
+}
+
+.addfood-form__input--select{
+  width: 240px;
+  border: 2px solid orange;
+  margin-bottom: 20px;
 }
 
 .container__filteradd--button {

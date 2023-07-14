@@ -25,6 +25,7 @@ function  VerifyAccount  () {
 
 
       if(response.status === 200){
+      localStorage.setItem('dataUser', JSON.stringify(data));
 
 
         Swal.fire({

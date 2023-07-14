@@ -1,4 +1,29 @@
-.container{
-  text-align: center;
+.input-uploader {
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 12px;
+  border: 2px solid orange;
+  border-radius: 25px;
+  color: rgb(190, 136, 34);
 }
 
+.input-uploader [type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.input-uploader:hover {
+  border-color: rgb(190, 136, 34);
+}
+
+.input-uploader:active {
+input:hover {
+  border-color: rgb(190, 136, 34);
+}
+}
