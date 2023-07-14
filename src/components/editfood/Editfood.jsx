@@ -65,8 +65,7 @@ function EditFood() {
       if (response.status === 200) {
         Swal.fire({
           icon: 'info',
-          title: 'Registration successful',
-          text: 'Successfully created food !',
+          text: 'Successfully food created !',
         });
         setFood(initialState);
         window.location.reload(true);
