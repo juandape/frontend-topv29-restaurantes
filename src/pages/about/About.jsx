@@ -1,15 +1,18 @@
 import './about.css';
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 function AboutPage() {
-
   return (
     <>
       <h1 className='about--title'>About Us</h1>
       <div className='about-container'>
         <div className='about-container__info'>
-          <img src='https://logowik.com/content/uploads/images/414_restaurant.jpg' alt='autor' className='about-container--img' />
+          <img
+            src='https://logowik.com/content/uploads/images/414_restaurant.jpg'
+            alt='autor'
+            className='about-container--img'
+          />
           <div className='about-container--description'>
             <h2 className='about-container--description--name'>
               <ul>
@@ -33,18 +36,40 @@ function AboutPage() {
         </div>
         <div className='about-container__social'>
           <div>
-            <div><FaGithub /></div>
-          <div>
-            <a href='https://github.com/guialexander'>@guialexander</a>
+            <div>
+              <FaGithub />
+            </div>
+            <div>
+              <a href='https://github.com/guialexander'>@guialexander</a>
+            </div>
+            <div>
+              <a href='https://github.com/miguelchaparrocolo'>
+                @miguelchaparrocolo
+              </a>
+            </div>
+            <div>
+              <a href='https://github.com/juandape'>@juandape</a>
+            </div>
           </div>
           <div>
-            <a href='https://github.com/miguelchaparrocolo'>
-              @miguelchaparrocolo
-            </a>
-          </div>
-          <div>
-            <a href='https://github.com/juandape'>@juandape</a>
-          </div>
+            <div>
+              <FaLinkedinIn style={{color: 'blue'}}/>
+            </div>
+            <div>
+              <a href='https://linkedin.com/in/guillermoalexanderherrerarodriguez29a816124'>Alexander Herrera</a>
+            </div>
+            <div>
+              <a href='https://linkedin.com/in/miguel-chaparro-74b81b1b7/'>
+                Miguel Chaparro
+              </a>
+            </div>
+            <div>
+              <a
+                href='https://linkedin.com/in/juan-david-peña-23936627b'
+              >
+                Juan David Peña
+              </a>
+            </div>
           </div>
         </div>
       </div>
