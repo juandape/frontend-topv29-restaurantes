@@ -13,10 +13,12 @@ function Header () {
   const state = useSelector();
   const dispatch = useDispatch()
 
-  const nick = state.login.profile.fullName;
-  const avatar = state.login.profile.avatar;
+  const { fullName, avatar } = state.login.profile ?? {};
+   const nick = fullName;
 
-  const admin = Object.values(state.login.profile.roles[0]);
+  const image = avatar;
+
+  const admin = state.login.profile?.roles?.[0] ? Object.values(state.login.profile.roles[0]) : [];
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ function Header () {
               >
                 <NavLink to='/user-account'>
                   <div className='nick'>{nick}</div>
-                  <div><img src={avatar} className='avatar--img' /></div>
+                  <div><img src={image} className='avatar--img' /></div>
                 </NavLink>
               </div>
 

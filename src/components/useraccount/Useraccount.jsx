@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import './useraccount.css';
 import axios from 'axios';
 import UploadImage from '../uploaderForm/uploader';
-import { login } from '../../store/actions';
+import { setAcount } from '../../store/actions';
+
 
 const defaultFormData = {
   firstName: '',
@@ -24,6 +25,7 @@ function UserAccount() {
   const [formData, setFormData] = useState(defaultFormData);
 
 
+
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData({
@@ -34,14 +36,21 @@ function UserAccount() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setFormData(formData);
     axios.patch(url, formData);
 
     Swal.fire({
       icon: 'info',
       text: 'Perfil updated',
     });
+    const fullName = formData.firstName + " " + formData.lastName;
+    const avatar = formData.avatar;
+    const dataLocalStore = { ...state, state: state.login.profile.fullName = fullName, state: state.login.profile.avatar = avatar }
+    console.log(dataLocalStore.login)
 
-    setFormData(defaultFormData);
+    dispatch(setAcount(formData));
+    localStorage.setItem('dataUser', JSON.stringify(dataLocalStore));
+
     navigate('/');
 
   };
