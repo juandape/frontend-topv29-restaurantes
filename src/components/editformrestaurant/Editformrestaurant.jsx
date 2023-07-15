@@ -98,7 +98,7 @@ export const EditFormRestaurant = () => {
   return (
     <>
       <form className='main__editrest--formUp' onSubmit={handleUpdate}>
-        <h1 className='editrest--title'>Edit Restaurant</h1>
+        <h1 className='Form__title'>Edit Restaurant</h1>
 
         <div>
           <div className='editrest__formUp--column'>

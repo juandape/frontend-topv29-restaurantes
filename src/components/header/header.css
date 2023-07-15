@@ -12,6 +12,25 @@ img {
   width: 100%;
 }
 
+.avatar--img{
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin-left: -75px;
+}
+.header-container__items--title--nick{
+  /* border: 1px solid white; */
+  width: 80px;
+  display: flex;
+  align-items: center;
+  margin-top: -8px;
+}
+.nick{
+  position: fixed;
+  margin-top: 8px;
+  margin-left: -35px;
+}
+
 .header-container__items {
   display: flex;
   position: relative;
@@ -66,7 +85,8 @@ a:hover {
     transition: 0.3s ease all;
   }
 
-  .header-container__items--title {
+  .header-container__items--title,
+  .header-container__items--title--nick {
     margin-left: 140px;
   }
 
@@ -140,7 +160,7 @@ a:hover {
   }
 
   .badge{
-    margin-top: -490px;
+    margin-top: -500px;
     margin-left: 90px;
   }
 

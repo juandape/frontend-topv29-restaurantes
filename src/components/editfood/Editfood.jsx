@@ -116,14 +116,14 @@ function EditFood() {
 
   return (
     <>
-      <form className='main__addfood-form' onSubmit={handleSubmit}>
+      <form className='main__editfood-form' onSubmit={handleSubmit}>
         <h1 className='Form__title'>Edit Food</h1>
 
-        <div className='addfood-form__column'>
-          <label className='addfood-form__label'>Restaurant</label>
+        <div className='editfood-form__column'>
+          <label className='editfood-form__label'>Restaurant</label>
           <select
             name='restaurantsId'
-            className='addfood-form__input'
+            className='editfood-form__input--select'
             value={food.restaurantsId}
             onChange={handleChangeFood}
             required
@@ -139,11 +139,11 @@ function EditFood() {
           </select>
         </div>
 
-        <div className='addfood-form__column'>
-          <label className='addfood-form__label'>Select Food </label>
+        <div className='editfood-form__column'>
+          <label className='editfood-form__label'>Select Food </label>
           <select
             name='id'
-            className='addfood-form__input'
+            className='editfood-form__input--select'
             value={food.id}
             onChange={handleChange}
             required
@@ -158,24 +158,24 @@ function EditFood() {
             ))}
           </select>
         </div>
-        <div className='addfood-form__column'>
-          <label className='addfood-form__label'>Food Name </label>
+        <div className='editfood-form__column'>
+          <label className='editfood-form__label'>Food Name </label>
           <input
             type='text'
             name='name'
-            className='addfood-form__input'
+            className='editfood-form__input'
             placeholder='Edit Food name'
             onChange={handleChange}
             value={food.name}
             required
           />
         </div>
-        <div className='addfood-form__column'>
-          <label className='addfood-form__label'>Price </label>
+        <div className='editfood-form__column'>
+          <label className='editfood-form__label'>Price </label>
           <input
             type='number'
             name='price'
-            className='addfood-form__input'
+            className='editfood-form__input'
             placeholder='Edit price'
             onChange={handleChange}
             value={food.price}
@@ -183,12 +183,12 @@ function EditFood() {
           />
         </div>
 
-        <div className='addfood-form__column'>
-          <label className='addfood-form__label'>Rate </label>
+        <div className='editfood-form__column'>
+          <label className='editfood-form__label'>Rate </label>
           <input
             type='number'
             name='rate'
-            className='addfood-form__input'
+            className='editfood-form__input'
             placeholder='Edit Rating'
             min='1'
             max='5'
@@ -198,8 +198,8 @@ function EditFood() {
           />
         </div>
 
-        <div className='addfood-form__column'>
-          <label className='addfood-form__label--photo'>Reference photo </label>
+        <div className='editfood-form__column'>
+          <label className='editfood-form__label--photo'>Reference photo </label>
           <UploadImage
             setData={setFood}
             dataObj={food}

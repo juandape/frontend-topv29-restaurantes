@@ -24,15 +24,11 @@
   font-size: 12px;
   background-color: aliceblue;
   position: relative;
-  left: 50px;
+  left: 70px;
   top: 4px;
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 0;
-}
-
-.editrest__formUp--label--logo{
-  top:-5px
 }
 
 

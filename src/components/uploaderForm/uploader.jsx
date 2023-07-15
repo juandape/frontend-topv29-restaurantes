@@ -26,6 +26,7 @@ const UploadImage = ({ dataObj, setData, name }) => {
       <Container>
         <FormGroup>
           <Input
+            className='input-uploader'
             type='file'
             name='file'
             placeholder='Click Aquí'

@@ -1,16 +1,13 @@
-input {
-  position: relative;
+.input-uploader {
   display: inline-block;
   overflow: hidden;
   padding: 8px 12px;
-  border: 1px solid orange;
+  border: 2px solid orange;
   border-radius: 25px;
-  background-color: orange;
-  color: white;
-  cursor:cell;
+  color: rgb(190, 136, 34);
 }
 
-input [type="file"] {
+.input-uploader [type="file"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -21,10 +18,12 @@ input [type="file"] {
   border-radius: 20px;
 }
 
-input:hover {
+.input-uploader:hover {
   border-color: rgb(190, 136, 34);
 }
 
-input:active {
-  background-color: rgb(170, 136, 34);
+.input-uploader:active {
+input:hover {
+  border-color: rgb(190, 136, 34);
+}
 }
