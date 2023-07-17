@@ -59,7 +59,7 @@ function Header () {
           { findAdminRole()?
           (
             <div
-              className='header-container__items--title'
+              className='header-container__items--title--admin'
               onClick={handleClick}
             >
               <NavLink to='/admin-tools'> ADMIN TOOLS </NavLink>
