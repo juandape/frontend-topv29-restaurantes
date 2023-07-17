@@ -7,6 +7,7 @@ import {
   SIGN_SESSION,
   CLEAR_CART,
   SET_RATING,
+  SET_ACOUNT,
  } from './types';
 
 function reducer(state, action) {
@@ -82,6 +83,12 @@ function reducer(state, action) {
     case SET_RATING: {
       const rating = action.payload;
       return { ...state, rating: rating };
+    }
+    case SET_ACOUNT: {
+      const {firstName,lastName, avatar} = action.payload;
+      const fullName = firstName + " " + lastName;
+      return { ...state, state: state.login.profile.fullName = fullName, state: state.login.profile.avatar = avatar };
+
     }
 
     default: {

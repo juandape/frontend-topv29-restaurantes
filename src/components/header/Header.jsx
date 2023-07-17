@@ -12,18 +12,20 @@ import { login } from '../../store/actions';
 function Header () {
   const state = useSelector();
   const dispatch = useDispatch()
-
-  const nick = state.login.profile.fullName;
-  const avatar = state.login.profile.avatar;
-
-  const admin = Object.values(state.login.profile.roles[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const {roles} = state.login.profile?? {};
+  const { fullName, avatar} = state.login.profile ?? {};
+  const nick = fullName;
+  const image = avatar;
+  const findAdminRole = () => roles && roles.find(role => role.name === 'ADMIN');
+
 
   useEffect(() => {
     const userLocal = JSON.parse(localStorage.getItem('dataUser'));
     if (!userLocal) return;
+    console.log(roles)
     dispatch(login(userLocal));
-  }, []);
+  }, [dispatch]);
 
   const handleClose = () =>{
     localStorage.clear('dataUser', JSON.stringify('dataUser'));
@@ -54,14 +56,17 @@ function Header () {
           <div className='header-container__items--title' onClick={handleClick}>
             <NavLink to='/about'> ABOUT </NavLink>
           </div>
-          {admin.includes('ADMIN') === true ? (
+          { findAdminRole()?
+          (
             <div
               className='header-container__items--title'
               onClick={handleClick}
             >
               <NavLink to='/admin-tools'> ADMIN TOOLS </NavLink>
             </div>
-          ) : (
+          )
+          :
+          (
             <div></div>
           )}
 
@@ -73,7 +78,7 @@ function Header () {
               >
                 <NavLink to='/user-account'>
                   <div className='nick'>{nick}</div>
-                  <div><img src={avatar} className='avatar--img' /></div>
+                  <div><img src={image} className='avatar--img' /></div>
                 </NavLink>
               </div>
 
