@@ -86,7 +86,7 @@ function Header () {
                 className='header-container__items--title'
                 onClick={handleClose}
               >
-                <TbLogout size={20} />{' '}
+                <TbLogout size={20} style={{color: 'white'}}/>{' '}
               </div>
             </>
           ) : (

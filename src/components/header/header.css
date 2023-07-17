@@ -16,19 +16,18 @@ img {
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  margin-left: -75px;
+  margin-left: -90px;
 }
 .header-container__items--title--nick{
-  /* border: 1px solid white; */
   width: 80px;
   display: flex;
   align-items: center;
   margin-top: -8px;
 }
 .nick{
-  position: fixed;
+  position: absolute;
   margin-top: 8px;
-  margin-left: -35px;
+  margin-left: -50px;
 }
 
 .header-container__items {
