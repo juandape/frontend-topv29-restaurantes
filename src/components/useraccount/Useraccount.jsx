@@ -38,18 +38,18 @@ function UserAccount() {
     event.preventDefault();
     setFormData(formData);
     axios.patch(url, formData);
+    const fullName = formData.firstName + " " + formData.lastName;
+    const avatar = formData.avatar;
+    const dataLocalStore = { ...state, state: state.login.profile.fullName = fullName, state: state.login.profile.avatar = avatar }
+
+    localStorage.setItem('dataUser', JSON.stringify(dataLocalStore.login));
+    dispatch(setAcount(formData));
 
     Swal.fire({
       icon: 'info',
       text: 'Perfil updated',
     });
-    const fullName = formData.firstName + " " + formData.lastName;
-    const avatar = formData.avatar;
-    const dataLocalStore = { ...state, state: state.login.profile.fullName = fullName, state: state.login.profile.avatar = avatar }
-    console.log(dataLocalStore.login)
 
-    dispatch(setAcount(formData));
-    localStorage.setItem('dataUser', JSON.stringify(dataLocalStore));
 
     navigate('/');
 
