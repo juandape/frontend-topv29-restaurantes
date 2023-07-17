@@ -45,8 +45,7 @@ function Addfood() {
       if (response.status === 200) {
         Swal.fire({
           icon: 'info',
-          title: 'Registration successful',
-          text: 'Successfully created food !',
+          text: 'Food Created Successfully !',
         });
         setFood(initialState);
       } else {

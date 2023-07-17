@@ -47,7 +47,7 @@ function UserAccount() {
 
     Swal.fire({
       icon: 'info',
-      text: 'Perfil updated',
+      text: 'Perfil Updated',
     });
 
 

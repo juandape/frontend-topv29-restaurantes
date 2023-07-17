@@ -68,8 +68,8 @@ function RegisterForm() {
         console.log(data);
         Swal.fire({
           icon: 'info',
-          title: 'created your account',
-          text: 'Please Verify your email to enjoy all services that we have for you, start now!',
+          title: 'Register Successfull',
+          text: 'Please Verify your email to activate your account !',
         });
         navigate('/');
       } catch (error) {
@@ -188,7 +188,6 @@ function RegisterForm() {
               onChange={handleChangepassword}
               onBlur={validateForm}
             />
-            {/* {error.confirmPassword && <span>{error.confirmPassword}</span>} */}
           </div>
         </div>
         <button type='submit' className='container__register--button'>

@@ -65,7 +65,7 @@ function EditFood() {
       if (response.status === 200) {
         Swal.fire({
           icon: 'info',
-          text: 'Successfully food created !',
+          text: 'Food Updated Successfully !',
         });
         setFood(initialState);
         window.location.reload(true);
@@ -92,7 +92,7 @@ function EditFood() {
     axios.delete(`${BASE_URL}/api/food/${food.id}`).then((response) => {});
     Swal.fire({
       icon: 'info',
-      title: 'Food deleted successfully',
+      title: 'Food Deleted Successfully',
       showConfirmButton: false,
       timer: 1500,
     });

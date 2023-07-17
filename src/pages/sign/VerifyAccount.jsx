@@ -29,7 +29,7 @@ function  VerifyAccount  () {
 
 
         Swal.fire({
-            icon: 'success',
+            icon: 'info',
             title: 'Registration successful',
             text: 'email is sent for account activation !',
           });
@@ -41,7 +41,7 @@ function  VerifyAccount  () {
       } else{
 
         Swal.fire({
-          icon: 'error',
+          icon: 'info',
           title: 'Failed',
           text: 'Please try again.',
         });
