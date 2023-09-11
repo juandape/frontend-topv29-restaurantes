@@ -32,7 +32,7 @@ I practice html, css, react and js
 
 Juan David Peña - Miguel Chaparro - Alex Herrera
 github - @juandape - @miguelchaparrocolo - @guialexander
-email - juandavidp76@hotmail.com - -
+email - juandavidp76@gmail.com - -
 
 ## Acknowledgments
 
